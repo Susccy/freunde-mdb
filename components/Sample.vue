@@ -3,14 +3,14 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue"
 export default Vue.extend({
-  data() {
+  data () {
     return {
-      message: 'test',
+      message: "test",
     }
   },
-  mounted() {
+  mounted () {
     console.log(process.env.nodeEnv)
 
     // this.$axios

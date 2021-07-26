@@ -1,6 +1,4 @@
-import server from './config/server'
-import './config/database'
-
-// const port = process.env.PORT || 5050
+import server from "./config/server"
+import "./config/database"
 
 export default server
