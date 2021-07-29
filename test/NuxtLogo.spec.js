@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils"
-import index from "@/pages/index.vue"
+import index from "~/pages/index.vue"
 
 describe("index page", () => {
   test("is a Vue instance", () => {
