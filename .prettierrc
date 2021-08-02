@@ -4,7 +4,7 @@
   "bracketSpacing": false,
   "spaceBeforeFunctionParen": true,
   "breakBeforeElse": true,
-  "arrowParens": "avoid",
+  "arrowParens": "always",
   "breakLongMethodChains": true,
   "offsetTernaryExpression": true
 }
