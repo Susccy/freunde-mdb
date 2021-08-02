@@ -42,7 +42,7 @@ export default {
   build: {},
 
   serverMiddleware: {
-    "/api": "~/api/index.ts",
+    "/api": "~/server/index.ts",
   },
 
   env: { nodeEnv: process.env.NODE_ENV },
