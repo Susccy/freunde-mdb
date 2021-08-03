@@ -1,5 +1,5 @@
 import { Document, Schema, model } from "mongoose"
-import { IGenre } from "./genre.model"
+import { IGenreDoc } from "./genre.model"
 
 export interface IMovieInput {
   title: {
@@ -11,7 +11,7 @@ export interface IMovieInput {
   dateSeen?: Date
   yearReleased?: number
   length?: number
-  genres?: IGenre["name"][]
+  genres?: IGenreDoc["name"][]
   fsk?: number
   starring?: string[]
   img?: { data: Buffer; contentType: string }

@@ -1,13 +1,13 @@
 import { Schema, model, Document } from "mongoose"
 
-export interface IGenrePublic {
+export interface IGenreInput {
   name: string
 }
 
-export interface IGenre extends IGenrePublic, Document {}
+export interface IGenreDoc extends IGenreInput, Document {}
 
-const GenreSchema = new Schema<IGenre>({
+const GenreSchema = new Schema<IGenreDoc>({
   name: { type: String, required: true },
 })
 
-export default model<IGenre>("Genre", GenreSchema)
+export default model<IGenreDoc>("Genre", GenreSchema)
