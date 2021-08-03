@@ -1,4 +1,4 @@
-import { FilterQuery } from "mongoose"
+import { FilterQuery, UpdateQuery } from "mongoose"
 import Movie, { IMovieDoc, IMovieInput } from "../models/movie.model"
 // import IService from "./IService"
 
@@ -17,6 +17,17 @@ export default {
       await Movie.create<IMovieInput>(movie)
     } catch (e) {
       throw new Error(`Error @postMovie: ${e}`)
+    }
+  },
+
+  updateMovie: async (
+    currentMovie: FilterQuery<IMovieDoc>,
+    newMovie: UpdateQuery<IMovieDoc>
+  ) => {
+    try {
+      return await Movie.findOneAndUpdate(currentMovie, newMovie)
+    } catch (e) {
+      // @todo continue
     }
   },
 } /*  as IService */
