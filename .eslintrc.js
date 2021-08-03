@@ -10,5 +10,7 @@ module.exports = {
     "prettier",
   ],
   plugins: [],
-  rules: {},
+  rules: {
+    "@typescript-eslint/no-unused-vars": "warn",
+  },
 }
