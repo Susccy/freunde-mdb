@@ -41,8 +41,10 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
+  srcDir: "./src/client",
+
   serverMiddleware: {
-    "/api": "~/server/index.ts",
+    "/api": "./src/server/index",
   },
 
   env: { nodeEnv: process.env.NODE_ENV },

@@ -13,12 +13,12 @@ export default Vue.extend({
   mounted () {
     console.log(process.env.nodeEnv)
 
-    // this.$axios
-    //   .$get('/api')
-    //   .then((res) => {
-    //     this.message = res
-    //   })
-    //   .catch(console.error)
+    this.$axios
+      .$get("/api")
+      .then((res) => {
+        this.message = res
+      })
+      .catch(console.error)
   },
 })
 </script>
