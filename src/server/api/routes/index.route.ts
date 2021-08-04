@@ -1,10 +1,7 @@
 import { Router } from "express"
-import MovieController from "../controllers/movie.controller"
 
 const router = Router()
 
-router.get("/", MovieController.getMovies)
-
-router.post("/", MovieController.postMovie)
+router.get("/", (_req, res) => res.send("freunde-mdb API"))
 
 export default router
