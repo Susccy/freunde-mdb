@@ -1,14 +1,16 @@
-import mongoose from "mongoose"
+import { connect } from "mongoose"
 
 class Connection {
   constructor () {
-    const uri = process.env.NUXT_ENV_MONGODB_LOCAL_URI!
-    mongoose.set("useNewUrlParser", true)
-    mongoose.set("useFindAndModify", false)
-    mongoose.set("useCreateIndex", true)
-    mongoose.set("useUnifiedTopology", true)
-    mongoose.connect(uri)
+    // Change env var depending on deployment.
+    connect(process.env.NUXT_ENV_MONGODB_LOCAL_URI!, {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false,
+    })
   }
 }
 
+// Export a new connection so we never accidentally create multiple at once.
 export default new Connection()
