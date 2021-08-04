@@ -1,4 +1,4 @@
-import { Document, Schema, model } from "mongoose"
+import { Document, Schema, model, models } from "mongoose"
 import { IGenreDoc } from "./genre.model"
 
 export interface IMovieInput {
@@ -66,4 +66,6 @@ MovieSchema.virtual("rating.total", function (this: IMovieDoc) {
     : (this.rating.ch + this.rating.rt) / 2
 })
 
-export default model<IMovieDoc>("Movie", MovieSchema)
+// Try to use the existing model if it's been created before.
+// Used to suppress a mongoose error on nuxt hot reload.
+export default models.Movie || model<IMovieDoc>("Movie", MovieSchema)
