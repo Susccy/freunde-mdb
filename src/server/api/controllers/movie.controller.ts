@@ -1,15 +1,50 @@
-import Movie, { IMovieDoc, IMovieInput } from "../models/movie.model"
+import { NotFoundError } from "../helpers/CustomError"
 import MovieService from "../services/movie.service"
-import Controller, { ControllerMethodChain } from "./Controller"
+import { ControllerMethodChain } from "./shared/types"
 
-class MovieController extends Controller<IMovieDoc, IMovieInput> {
-  getById: ControllerMethodChain = [
-    (req, res, next) => {
-      console.log("sample middleware")
-      next()
+export default {
+  getById: [
+    async (req, res) => {
+      const { id: _id } = req.params
+      const results = await MovieService.getAll({ _id }, { limit: 1 })
+      if (!results.length) throw new NotFoundError()
+      return res.status(200).json(results[0])
     },
-    ...this.getById,
-  ]
-}
+  ] as ControllerMethodChain,
 
-export default new MovieController(new MovieService(Movie))
+  get: [
+    async (req, res) => {
+      const { limit, page, ...where } = req.query
+      const options = {
+        limit: parseInt(limit as string) || undefined,
+        page: parseInt(page as string) || undefined,
+      }
+      const results = await MovieService.getAll(where, options)
+      return res.status(200).json(results)
+    },
+  ] as ControllerMethodChain,
+
+  post: [
+    async (req, res) => {
+      const doc = req.body
+      const inserted = await MovieService.insert(doc)
+      return res.status(201).json(inserted)
+    },
+  ] as ControllerMethodChain,
+
+  put: [
+    async (req, res) => {
+      const { id, ...doc } = req.body
+      const updated = await MovieService.update(id, doc)
+      return res.status(201).json(updated)
+    },
+  ] as ControllerMethodChain,
+
+  delete: [
+    async (req, res) => {
+      const { id } = req.body
+      const deleted = await MovieService.delete(id)
+      return res.status(200).json(deleted)
+    },
+  ] as ControllerMethodChain,
+}
