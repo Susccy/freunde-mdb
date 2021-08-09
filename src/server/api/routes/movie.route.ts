@@ -3,8 +3,8 @@ import MovieController from "../controllers/movie.controller"
 
 const router = Router()
 
-router.get("/", MovieController.getMany)
-router.get("/:id", MovieController.getOne)
+router.get("/", MovieController.get)
+router.get("/:id", MovieController.getById)
 
 router.post("/", MovieController.post)
 

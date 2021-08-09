@@ -7,11 +7,16 @@ import {
   /* mongo, */
 } from "mongoose"
 
+interface getAllOptions {
+  limit?: number
+  page?: number
+}
+
 /**
  * A general CRUD service class to be used as a basis for all services.
  */
-export default abstract class Service<Doc extends Document, Input> {
-  constructor (private readonly model: Model<Doc>) {
+export default abstract class Service<IModelDoc extends Document, IModelInput> {
+  constructor (private readonly model: Model<IModelDoc>) {
     this.model = model
   }
 
@@ -22,8 +27,11 @@ export default abstract class Service<Doc extends Document, Input> {
    * @param where an optional filter query for constrained search
    * @returns all (matched) items from the collection
    */
-  getAll = async (where: FilterQuery<Doc> = {}) => {
-    const { page = 0, limit = 0 } = where
+  getAll = async (
+    where: FilterQuery<IModelDoc> = {},
+    options: getAllOptions = {}
+  ) => {
+    const { page = 0, limit = 0 } = options
 
     /* @todo currently doesn't work due to whiny typescript
     // If a mongo id is sent we try to construct it to a proper ObjectId.
@@ -42,7 +50,7 @@ export default abstract class Service<Doc extends Document, Input> {
    * @param doc the valid document object to insert
    * @returns the inserted document
    */
-  insert = async (doc: Input) => await this.model.create<Input>(doc)
+  insert = async (doc: IModelInput) => await this.model.create<IModelInput>(doc)
 
   /**
    * Update an existing document.
@@ -50,7 +58,7 @@ export default abstract class Service<Doc extends Document, Input> {
    * @param doc the valid document object to insert
    * @returns the updated document
    */
-  update = async (id: ObjectId, doc: UpdateQuery<Doc>) =>
+  update = async (id: ObjectId, doc: UpdateQuery<IModelDoc>) =>
     await this.model.findByIdAndUpdate(id, doc, { new: true })
 
   /**

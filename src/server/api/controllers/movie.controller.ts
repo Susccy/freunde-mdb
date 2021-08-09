@@ -1,5 +1,15 @@
-import { NextFunction, Request, Response } from "express"
+import Movie, { IMovieDoc, IMovieInput } from "../models/movie.model"
 import MovieService from "../services/movie.service"
-import Controller from "./Controller"
+import Controller, { ControllerMethodChain } from "./Controller"
 
-export default class MovieController extends Controller {}
+class MovieController extends Controller<IMovieDoc, IMovieInput> {
+  getById: ControllerMethodChain = [
+    (req, res, next) => {
+      console.log("sample middleware")
+      next()
+    },
+    ...this.getById,
+  ]
+}
+
+export default new MovieController(new MovieService(Movie))
