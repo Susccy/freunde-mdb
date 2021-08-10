@@ -1,9 +1,10 @@
 <template>
-  <p>{{ message }}</p>
+  <pre>{{ message }}</pre>
 </template>
 
 <script lang="ts">
 import Vue from "vue"
+
 export default Vue.extend({
   data () {
     return {
@@ -11,10 +12,8 @@ export default Vue.extend({
     }
   },
   mounted () {
-    console.log(process.env.nodeEnv)
-
     this.$axios
-      .$get("/api")
+      .$get(`/api/movie`)
       .then((res) => {
         this.message = res
       })
