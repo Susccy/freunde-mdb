@@ -6,6 +6,6 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ limit: "10mb", extended: false }))
 
-setRoutes(app)
+export const createServerRoutes = () => setRoutes(app)
 
 export default app

@@ -1,9 +1,11 @@
 import { connect } from "mongoose"
 
 // Change env var depending on deployment.
-export default connect(process.env.NUXT_ENV_MONGODB_LOCAL_URI!, {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-})
+export default async () => {
+  await connect(process.env.NUXT_ENV_MONGODB_LOCAL_URI!, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  })
+}
