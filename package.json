@@ -19,7 +19,8 @@
     "mongoose": "^5.13.3",
     "nuxt": "^2.15.7",
     "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "vue-tabler-icons": "^1.12.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
