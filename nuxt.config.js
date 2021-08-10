@@ -47,5 +47,7 @@ export default {
     "/api": "./src/server/index",
   },
 
-  env: { nodeEnv: process.env.NODE_ENV },
+  router: {
+    middleware: ["userAgent"],
+  },
 }
