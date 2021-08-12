@@ -1,5 +1,7 @@
 <template>
-  <footer class="container-master">Da footah</footer>
+  <footer class="c-footer--mobile">
+    <p>Da footah</p>
+  </footer>
 </template>
 
 <script lang="ts">
@@ -9,8 +11,7 @@ export default Vue.extend({})
 </script>
 
 <style scoped lang="scss">
-.container-master {
-  position: absolute;
-  bottom: 0;
+.c-footer--mobile {
+  background-color: $col-black;
 }
 </style>

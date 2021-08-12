@@ -1,11 +1,12 @@
 <template>
-  <main class="container-master">
+  <main class="p-index">
     <div class="header">
       <h2>Zuletzt gesehen</h2>
-      <SharedTextButton icon="chevron-right"> Alle anzeigen </SharedTextButton>
+      <NuxtLink to="/sample">
+        Alle anzeigen <TablerIcon name="chevron-right" size="18" />
+      </NuxtLink>
     </div>
-    <Sample />
-    <NuxtLink :to="{ name: 'sample' }">LINK</NuxtLink>
+    <MovieCardContainer v-if="latestMovies" :movie-data="latestMovies" />
   </main>
 </template>
 
@@ -21,20 +22,32 @@ export default Vue.extend({
     console.log(`Set layout to ${layoutName}`)
     return layoutName
   },
-  mounted () {
-    console.log("index page mounted")
+  async asyncData (ctx) {
+    const latestMovies = await ctx.$axios
+      .$get("/movie")
+      .catch(
+        (e) =>
+          process.browser && alert("Something went wrong: " + JSON.stringify(e))
+      )
+
+    return { latestMovies }
   },
 })
 </script>
 
 <style lang="scss" scoped>
 .container-master {
-  // @todo 100vh is too much, somehow calculate so that footer is on the bottom if page is not full enough
-  min-height: 100vh;
+  padding: 0.25rem 1rem;
+
   .header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    padding: 0.25rem 0;
+
+    h2 {
+      // padding: 0.2em 0;
+    }
   }
 }
 </style>
