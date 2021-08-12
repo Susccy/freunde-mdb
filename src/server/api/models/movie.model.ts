@@ -7,15 +7,15 @@ export interface IMovieInput {
     eng?: string
     ger?: string
   }
-  rating: { ch: number; rt: number; total?: number }
+  rating: { ch: number; rt: number; total: number }
   dateSeen?: Date
   yearReleased?: number
   length?: number
-  genres?: IGenreDoc["name"][]
+  genres: IGenreDoc["name"][] | []
   fsk?: number
-  starring?: string[]
+  starring: string[] | []
   img?: { data: Buffer; contentType: string }
-  reviews?: string[]
+  reviews: string[] | []
   series?: string
 }
 
