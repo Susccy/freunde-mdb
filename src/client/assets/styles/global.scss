@@ -1,0 +1,15 @@
+html {
+  font-size: 16px;
+  background-color: $col-blue-medium;
+}
+
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  color: $col-white-light;
+  // min-height: 100vh;
+}
