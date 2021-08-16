@@ -1,0 +1,19 @@
+body {
+  background-color: $col-blue-medium;
+  color: $col-white-light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+// @media screen and (max-width: 350px) {
+//   html {
+//     font-size: 12px;
+//   }
+// }

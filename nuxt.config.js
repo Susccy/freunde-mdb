@@ -15,7 +15,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["./assets/styles/modern-normalize", "./assets/styles/global"],
+  css: ["./assets/styles/main"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -27,13 +27,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
-    // https://github.com/nuxt-community/style-resources-module
-    "@nuxtjs/style-resources",
   ],
-
-  styleResources: {
-    scss: ["./assets/styles/variables/*.scss"],
-  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
