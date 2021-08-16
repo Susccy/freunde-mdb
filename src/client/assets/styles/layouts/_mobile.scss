@@ -1,0 +1,16 @@
+.l-index {
+  min-height: 100vh;
+  display: grid;
+
+  &--mobile {
+    grid-template-rows: 4rem 1fr auto;
+
+    .c-navmenu {
+      position: absolute;
+    }
+
+    > * {
+      padding: 10px;
+    }
+  }
+}

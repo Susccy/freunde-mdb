@@ -1,9 +1,9 @@
 <template>
   <main class="p-index">
-    <div class="header">
+    <div class="p-index__heading">
       <h2>Zuletzt gesehen</h2>
-      <NuxtLink to="/sample">
-        Alle anzeigen <TablerIcon name="chevron-right" size="18" />
+      <NuxtLink to="/sample" class="p-index__heading__link">
+        Alle anzeigen <TablerIcon name="chevron-right" size="14" />
       </NuxtLink>
     </div>
     <MovieCardContainer v-if="latestMovies" :movie-data="latestMovies" />
@@ -34,20 +34,3 @@ export default Vue.extend({
   },
 })
 </script>
-
-<style lang="scss" scoped>
-.container-master {
-  padding: 0.25rem 1rem;
-
-  .header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 0.25rem 0;
-
-    h2 {
-      // padding: 0.2em 0;
-    }
-  }
-}
-</style>

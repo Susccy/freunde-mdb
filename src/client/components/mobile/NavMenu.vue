@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="c-navmenu c-navmenu--mobile">
     navbar <TablerIcon @click.native="$emit('closeMenu')" name="x" />
     <form method="post" action="/api/movie">
       <input type="text" name="title.original" placeholder="title" />
@@ -14,5 +14,3 @@ import Vue from "vue"
 
 export default Vue.extend({})
 </script>
-
-<style scoped lang="scss"></style>

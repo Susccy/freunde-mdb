@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="c-movie-card-container">
     <MovieCard v-for="movie in movieData" :key="movie._id" :movie="movie" />
   </div>
 </template>
@@ -20,5 +20,3 @@ export default Vue.extend({
   },
 })
 </script>
-
-<style lang="scss" scoped></style>

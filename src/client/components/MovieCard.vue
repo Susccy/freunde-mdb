@@ -1,16 +1,22 @@
 <template>
-  <article class="container-master">
-    <section>
+  <article class="c-movie-card">
+    <div class="c-movie-card__title">
       <h3>{{ title }}</h3>
-    </section>
-    <section>
-      <p>{{ genres }}</p>
-      <figure>{{ rating }}</figure>
-    </section>
-    <section>
-      <TablerIcon name="chevron-down" />
-      <details>Sample details screen</details>
-    </section>
+    </div>
+    <div class="c-movie-card__meta">
+      <p class="c-movie-card__genres">
+        {{ genres }}
+      </p>
+      <p class="c-movie-card__rating" :class="[ratingModifier]">
+        <strong>{{ rating }}</strong>
+      </p>
+    </div>
+    <div class="c-movie-card__expand">
+      <details>
+        <summary><TablerIcon name="chevron-down" /></summary>
+        <div>sample details screen</div>
+      </details>
+    </div>
   </article>
 </template>
 
@@ -38,8 +44,10 @@ export default Vue.extend({
       const { total } = this.movie.rating
       return (total / 100).toFixed(2)
     },
+    ratingModifier () {
+      // @todo fix ts error `Property 'rating' does not exist ...`
+      return "c-movie-card__rating--" + (this.rating < 1 ? "dire" : "bad")
+    },
   },
 })
 </script>
-
-<style lang="scss" scoped></style>
