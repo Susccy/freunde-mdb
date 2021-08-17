@@ -3,7 +3,7 @@
     <div class="p-index__heading">
       <h2>Zuletzt gesehen</h2>
       <NuxtLink to="/sample" class="p-index__heading__link">
-        Alle anzeigen <TablerIcon name="chevron-right" size="14" />
+        Alle anzeigen<TablerIcon name="chevron-right" size="14" />
       </NuxtLink>
     </div>
     <MovieCardContainer v-if="latestMovies" :movie-data="latestMovies" />

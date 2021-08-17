@@ -1,15 +1,18 @@
 <template>
   <article class="c-movie-card">
     <div class="c-movie-card__title">
-      <h3>{{ title }}</h3>
+      <div class="c-movie-card__date">
+        <span>{{ dateSeen }}</span>
+      </div>
+      <div class="c-movie-card__name">
+        <h3 ref="movieTitle">{{ title }}</h3>
+      </div>
     </div>
-    <div class="c-movie-card__meta">
-      <p class="c-movie-card__genres">
-        {{ genres }}
-      </p>
-      <p class="c-movie-card__rating" :class="[ratingModifier]">
-        <strong>{{ rating }}</strong>
-      </p>
+    <div class="c-movie-card__rating" :class="[ratingModifier]">
+      <strong>{{ rating }}</strong>
+    </div>
+    <div class="c-movie-card__genres">
+      {{ genres }}
     </div>
     <div class="c-movie-card__expand">
       <details>
@@ -32,17 +35,18 @@ export default Vue.extend({
     },
   },
   computed: {
+    dateSeen (): string {
+      return "20.04.2069"
+    },
     title (): string {
       const { title } = this.movie
       return title.ger || title.original
     },
     genres (): string {
-      const { genres } = this.movie
-      return genres.join(", ") || "keine Genres vorhanden"
+      return this.movie.genres.join(", ") || "keine Genres vorhanden"
     },
     rating (): string {
-      const { total } = this.movie.rating
-      return (total / 100).toFixed(2)
+      return (this.movie.rating.total / 100).toFixed(2)
     },
     ratingModifier (): string {
       const rating = parseFloat(this.rating)

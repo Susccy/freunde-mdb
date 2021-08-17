@@ -2,8 +2,8 @@
   background: linear-gradient(
     90deg,
     transparent 5%,
-    $color 40%,
-    $color 60%,
+    rgba($color, 0.9) 40%,
+    rgba($color, 0.9) 60%,
     transparent 95%
   );
 }

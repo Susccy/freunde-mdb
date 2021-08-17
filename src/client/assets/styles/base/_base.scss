@@ -12,6 +12,14 @@ p {
   margin: 0;
 }
 
+a {
+  color: $col-gray-light;
+
+  &:visited {
+    color: $col-gray-light;
+  }
+}
+
 // @media screen and (max-width: 350px) {
 //   html {
 //     font-size: 12px;
