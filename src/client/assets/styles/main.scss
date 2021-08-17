@@ -1,5 +1,6 @@
 /* variables, mixins & functions */
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 /* 3rd party libraries */
 @import "vendors/modern-normalize";
@@ -15,6 +16,7 @@
 @import "components/movie-card";
 @import "components/mobile/header";
 @import "components/mobile/footer";
+@import "components/mobile/navmenu";
 
 /* page components */
 @import "pages/index";

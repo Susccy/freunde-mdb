@@ -32,21 +32,32 @@ export default Vue.extend({
     },
   },
   computed: {
-    title () {
+    title (): string {
       const { title } = this.movie
       return title.ger || title.original
     },
-    genres () {
+    genres (): string {
       const { genres } = this.movie
       return genres.join(", ") || "keine Genres vorhanden"
     },
-    rating () {
+    rating (): string {
       const { total } = this.movie.rating
       return (total / 100).toFixed(2)
     },
-    ratingModifier () {
-      // @todo fix ts error `Property 'rating' does not exist ...`
-      return "c-movie-card__rating--" + (this.rating < 1 ? "dire" : "bad")
+    ratingModifier (): string {
+      const rating = parseFloat(this.rating)
+      return (
+        "c-movie-card__rating--" +
+        (rating < 1.0
+          ? "dire"
+          : rating <= 4.0
+          ? "bad"
+          : rating < 6.0
+          ? "meh"
+          : rating <= 9.0
+          ? "good"
+          : "great")
+      )
     },
   },
 })

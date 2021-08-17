@@ -3,14 +3,18 @@
   display: grid;
 
   &--mobile {
-    grid-template-rows: 4rem 1fr auto;
-
-    .c-navmenu {
-      position: absolute;
-    }
+    grid-template-rows: 3.5rem 1fr auto;
 
     > * {
       padding: 10px;
+    }
+
+    > *:nth-last-child(2) {
+      grid-row-start: 2;
+    }
+
+    > *:last-child {
+      grid-row-start: 3;
     }
   }
 }

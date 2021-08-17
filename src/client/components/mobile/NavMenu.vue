@@ -1,6 +1,6 @@
 <template>
   <nav class="c-navmenu c-navmenu--mobile">
-    navbar <TablerIcon @click.native="$emit('closeMenu')" name="x" />
+    NAVMENU
     <form method="post" action="/api/movie">
       <input type="text" name="title.original" placeholder="title" />
       <input type="text" name="rating.total" placeholder="rating" />

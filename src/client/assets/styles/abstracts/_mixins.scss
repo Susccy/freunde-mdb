@@ -1,0 +1,9 @@
+@mixin rating-gradient($color) {
+  background: linear-gradient(
+    90deg,
+    transparent 5%,
+    $color 40%,
+    $color 60%,
+    transparent 95%
+  );
+}

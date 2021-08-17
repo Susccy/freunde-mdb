@@ -11,7 +11,6 @@
 
   &__title {
     padding: 10px;
-    padding-bottom: 8px;
     height: 40%;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
@@ -31,6 +30,9 @@
   &__meta {
     padding: 0 10px;
     height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     #{$self}__genres {
       font-size: 0.8rem;
@@ -39,28 +41,28 @@
       opacity: 90%;
     }
 
-    #{self}__rating {
+    #{$self}__rating {
       text-align: center;
-      margin-top: 1rem;
+      margin-bottom: 0.5rem;
 
       &--dire {
-        background-color: black;
+        @include rating-gradient(black);
       }
 
       &--bad {
-        background-color: red;
+        @include rating-gradient(red);
       }
 
       &--meh {
-        background-color: yellow;
+        @include rating-gradient(orange);
       }
 
       &--good {
-        background-color: green;
+        @include rating-gradient(limegreen);
       }
 
       &--great {
-        background-color: darkgreen;
+        @include rating-gradient(darkgreen);
       }
     }
   }
