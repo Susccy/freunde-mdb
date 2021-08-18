@@ -15,18 +15,16 @@
   gap: 0.5rem;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.2);
 
-  > * {
-    padding: 0 10px;
-  }
-
   &__title {
     flex-basis: 45%;
+    padding: 0 10px;
+    overflow: hidden;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     background-color: $col-purple-dark;
     // background-image: url(https://theposterdb.com/api/assets/11949);
     // background-position-y: 100%;
-    background-size: cover;
+    // background-size: cover;
     display: flex;
     flex-direction: column;
     // gap: 0.25rem;
@@ -34,15 +32,13 @@
     #{$self}__date {
       align-self: flex-end;
       font-size: small;
-      padding: 0.1rem;
+      background-color: $col-gray-dark;
+      padding: 0.2rem;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
 
       span {
-        background-color: $col-gray-dark;
         opacity: 90%;
-        padding: 0.2rem 0.3rem;
-        padding-top: 0;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
       }
     }
 
@@ -53,14 +49,12 @@
       align-items: center;
 
       h3 {
+        /* recommended styles by fitty: https://github.com/rikschennink/fitty */
+        white-space: nowrap;
+        display: inline-block;
+
         text-align: center;
         padding-bottom: 0.1rem;
-        /* vertical overflow ellipsis: https://stackoverflow.com/a/13924997/16503617 */
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
       }
     }
   }
@@ -92,6 +86,7 @@
   &__genres {
     flex-grow: 1;
     font-size: small;
+    padding: 0 10px;
     color: $col-gray-light;
     font-style: italic;
     opacity: 90%;

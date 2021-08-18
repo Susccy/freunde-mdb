@@ -25,6 +25,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from "vue"
+import fitty from "fitty"
 import IMovie from "~e/movie.entity"
 
 export default Vue.extend({
@@ -63,6 +64,10 @@ export default Vue.extend({
           : "great")
       )
     },
+  },
+  mounted () {
+    /* automatically scales the font size of the movie title to fit its container */
+    fitty(this.$refs.movieTitle as HTMLElement, { minSize: 14, maxSize: 22 })
   },
 })
 </script>
