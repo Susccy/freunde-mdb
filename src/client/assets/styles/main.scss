@@ -1,22 +1,22 @@
-/* variables, mixins & functions */
+// variables, mixins & functions
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
-/* 3rd party libraries */
+// 3rd party libraries
 @import "vendors/modern-normalize";
 
-/* global styles & resets */
+// global styles & resets
 @import "base/base";
 
-/* layout components and grid macro layouts */
+// layout components and grid macro layouts
 @import "layouts/mobile";
 
-/* shared components */
+// shared components
 @import "components/movie-card-container";
 @import "components/movie-card";
 @import "components/mobile/header";
 @import "components/mobile/footer";
 @import "components/mobile/navmenu";
 
-/* page components */
+// page components
 @import "pages/index";
