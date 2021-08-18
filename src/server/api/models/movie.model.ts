@@ -14,7 +14,9 @@ export interface IMovieInput {
   genres: IGenreDoc["name"][] | []
   fsk?: number
   starring: string[] | []
-  img?: { data: Buffer; contentType: string }
+  img?:
+    | { __type: "buffer"; data: Buffer; contentType: string }
+    | { __type: "uri"; uri: string; position?: number }
   reviews: string[] | []
   series?: string
 }
@@ -29,6 +31,10 @@ const MovieSchema = new Schema<IMovieDoc>(
         type: String,
         index: {
           unique: true,
+          // since eng and ger titles are not required to be set,
+          // but we want them to be unique _if_ they are set,
+          // we create a filter expression to only apply
+          // the unique index when the value is a string (and not null)
           partialFilterExpression: { "title.eng": { $type: "string" } },
         },
       },
@@ -50,7 +56,7 @@ const MovieSchema = new Schema<IMovieDoc>(
     genres: [{ type: Schema.Types.ObjectId, ref: "Genre" }],
     fsk: Number,
     starring: [String],
-    img: { data: Buffer, contentType: String },
+    img: { data: Buffer, contentType: String, uri: String, position: Number },
     reviews: [String],
     series: String,
   },

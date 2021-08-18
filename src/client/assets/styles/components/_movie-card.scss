@@ -22,24 +22,16 @@
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     background-color: $col-purple-dark;
-    // background-image: url(https://theposterdb.com/api/assets/11949);
-    // background-position-y: 100%;
-    // background-size: cover;
     display: flex;
     flex-direction: column;
-    // gap: 0.25rem;
 
     #{$self}__date {
       align-self: flex-end;
       font-size: small;
-      background-color: $col-gray-dark;
+      background-color: rgba($col-gray-dark, 0.8);
       padding: 0.2rem;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
-
-      span {
-        opacity: 90%;
-      }
     }
 
     #{$self}__name {
@@ -49,7 +41,7 @@
       align-items: center;
 
       h3 {
-        /* recommended styles by fitty: https://github.com/rikschennink/fitty */
+        // recommended styles by fitty: https://github.com/rikschennink/fitty
         white-space: nowrap;
         display: inline-block;
 
@@ -99,7 +91,7 @@
     details {
       height: 100%;
 
-      /* removing default marker in different browsers: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget */
+      // removing default marker in different browsers: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
       > summary {
         height: 100%;
         list-style: none;

@@ -1,11 +1,11 @@
 <template>
   <article class="c-movie-card">
-    <div class="c-movie-card__title">
+    <div ref="movieTitleContainer" class="c-movie-card__title">
       <div class="c-movie-card__date">
-        <span>{{ dateSeen }}</span>
+        {{ dateSeen }}
       </div>
       <div class="c-movie-card__name">
-        <h3 ref="movieTitle">{{ title }}</h3>
+        <h3 v-if="!imgLoaded" ref="movieTitle">{{ title }}</h3>
       </div>
     </div>
     <div class="c-movie-card__rating" :class="[ratingModifier]">
@@ -34,6 +34,11 @@ export default Vue.extend({
       type: Object as PropType<IMovie>,
       required: true,
     },
+  },
+  data () {
+    return {
+      imgLoaded: false,
+    }
   },
   computed: {
     dateSeen (): string {
@@ -66,8 +71,52 @@ export default Vue.extend({
     },
   },
   mounted () {
-    /* automatically scales the font size of the movie title to fit its container */
-    fitty(this.$refs.movieTitle as HTMLElement, { minSize: 14, maxSize: 22 })
+    const { img } = this.movie
+    img
+      ? "uri" in img
+        ? this.loadImageFromUri(img.uri, img.position)
+        : this.loadImageFromBuffer(img.data, img.contentType)
+      : this.fittyTitle()
+  },
+  methods: {
+    // automatically scales the font size of the movie title to fit its container
+    fittyTitle () {
+      fitty(this.$refs.movieTitle as HTMLElement, { minSize: 14, maxSize: 22 })
+    },
+
+    // first checks if the stored image url exists,
+    // then sets the image as the css background;
+    // otherwise displays placeholder title
+    loadImageFromUri (
+      // lookup type of nested union object: https://stackoverflow.com/a/51285433/16503617
+      uri: Extract<IMovie["img"], { __type: "uri" }>["uri"],
+      position: Extract<IMovie["img"], { __type: "uri" }>["position"] = 0
+    ): void {
+      const setImage = () => {
+        const imgElement = this.$refs.movieTitleContainer as HTMLElement
+        imgElement.style.backgroundImage = `url(${uri})`
+        imgElement.style.backgroundPositionY = `${position}%`
+        imgElement.style.backgroundSize = "cover"
+        this.imgLoaded = true
+      }
+
+      const handleError = (e: ErrorEvent) => {
+        this.fittyTitle()
+        console.error("Error loading movie poster:", e)
+      }
+
+      const image = new Image()
+      image.addEventListener("load", setImage)
+      image.addEventListener("error", handleError)
+      image.src = uri
+    },
+
+    loadImageFromBuffer (
+      data: Extract<IMovie["img"], { __type: "buffer" }>["data"],
+      contentType: Extract<IMovie["img"], { __type: "buffer" }>["contentType"]
+    ): void {
+      // @todo implement
+    },
   },
 })
 </script>
