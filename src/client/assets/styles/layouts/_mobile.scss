@@ -9,11 +9,25 @@
       padding: 10px;
     }
 
-    > *:nth-last-child(2) {
+    > .p-index {
       grid-row-start: 2;
     }
 
-    > *:last-child {
+    > .c-footer {
+      grid-row-start: 3;
+    }
+  }
+
+  &--desktop {
+    grid-template-rows: 4rem 1fr auto;
+    > * {
+      padding: 30px;
+    }
+    > .p-index {
+      grid-row-start: 2;
+    }
+
+    > .c-footer {
       grid-row-start: 3;
     }
   }

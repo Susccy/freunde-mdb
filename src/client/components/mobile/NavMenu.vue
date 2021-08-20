@@ -1,5 +1,5 @@
 <template>
-  <nav class="c-navmenu c-navmenu--mobile">
+  <nav class="c-navmenu">
     NAVMENU
     <form method="post" action="/api/movie">
       <input type="text" name="title.original" placeholder="title" />

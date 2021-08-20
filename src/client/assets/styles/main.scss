@@ -15,8 +15,11 @@
 // shared components
 @import "components/movie-card-container";
 @import "components/movie-card";
+@import "components/header";
+@import "components/footer";
 @import "components/search";
 @import "components/mobile/navmenu";
+@import "components/desktop/navbar";
 
 // page components
 @import "pages/index";
