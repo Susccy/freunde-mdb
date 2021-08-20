@@ -4,9 +4,7 @@
       <div class="c-movie-card__date">
         {{ dateSeen }}
       </div>
-      <div class="c-movie-card__name">
-        <h3 v-if="!imgLoaded" ref="movieTitle">{{ title }}</h3>
-      </div>
+      <h3 ref="movieTitle" class="c-movie-card__name">{{ title }}</h3>
     </div>
     <div class="c-movie-card__rating" :class="[ratingModifier]">
       <strong>{{ rating }}</strong>
@@ -25,7 +23,6 @@
 
 <script lang="ts">
 import Vue, { PropType } from "vue"
-import fitty from "fitty"
 import IMovie from "~e/movie.entity"
 
 export default Vue.extend({
@@ -72,36 +69,28 @@ export default Vue.extend({
   },
   mounted () {
     const { img } = this.movie
-    img
-      ? "uri" in img
-        ? this.loadImageFromUri(img.uri, img.position)
-        : this.loadImageFromBuffer(img.data, img.contentType)
-      : this.fittyTitle()
+    img &&
+      ("uri" in img
+        ? this.loadImageFromUri(img.uri)
+        : this.loadImageFromBuffer(img.data, img.contentType))
   },
   methods: {
-    // automatically scales the font size of the movie title to fit its container
-    fittyTitle () {
-      fitty(this.$refs.movieTitle as HTMLElement, { minSize: 14, maxSize: 22 })
-    },
-
     // first checks if the stored image url exists,
     // then sets the image as the css background;
     // otherwise displays placeholder title
     loadImageFromUri (
       // lookup type of nested union object: https://stackoverflow.com/a/51285433/16503617
-      uri: Extract<IMovie["img"], { __type: "uri" }>["uri"],
-      position: Extract<IMovie["img"], { __type: "uri" }>["position"] = 0
+      uri: Extract<IMovie["img"], { __type: "uri" }>["uri"]
     ): void {
       const setImage = () => {
         const imgElement = this.$refs.movieTitleContainer as HTMLElement
         imgElement.style.backgroundImage = `url(${uri})`
-        imgElement.style.backgroundPositionY = `${position}%`
+        imgElement.style.backgroundPositionY = "50%"
         imgElement.style.backgroundSize = "cover"
         this.imgLoaded = true
       }
 
       const handleError = (e: ErrorEvent) => {
-        this.fittyTitle()
         console.error("Error loading movie poster:", e)
       }
 
