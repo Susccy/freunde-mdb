@@ -52,4 +52,8 @@ export default {
   router: {
     middleware: ["userAgent"],
   },
+
+  loading: {
+    color: "aqua",
+  },
 }
