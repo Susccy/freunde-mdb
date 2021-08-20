@@ -1,5 +1,6 @@
 <template>
   <main class="p-index">
+    <Searchbar />
     <div class="p-index__heading">
       <h2>Zuletzt gesehen</h2>
       <NuxtLink to="/sample" class="p-index__heading__link">

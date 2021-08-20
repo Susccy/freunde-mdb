@@ -10,6 +10,7 @@ import {
   ExternalLinkIcon,
   Menu2Icon,
   XIcon,
+  SearchIcon,
 } from "vue-tabler-icons"
 
 export default Vue.extend({
@@ -19,6 +20,7 @@ export default Vue.extend({
     ExternalLinkIcon,
     Menu2Icon,
     XIcon,
+    SearchIcon,
   },
   props: {
     name: {

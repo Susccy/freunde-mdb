@@ -7,6 +7,7 @@
 
 // global styles & resets
 @import "base/base";
+@import "base/button";
 
 // layout components and grid macro layouts
 @import "layouts/mobile";
@@ -14,8 +15,7 @@
 // shared components
 @import "components/movie-card-container";
 @import "components/movie-card";
-@import "components/mobile/header";
-@import "components/mobile/footer";
+@import "components/search";
 @import "components/mobile/navmenu";
 
 // page components
