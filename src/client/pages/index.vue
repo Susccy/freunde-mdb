@@ -7,7 +7,7 @@
         Alle anzeigen<TablerIcon name="chevron-right" size="14" />
       </NuxtLink>
     </div>
-    <MovieCardContainer v-if="latestMovies" :movie-data="latestMovies" />
+    <MovieCardContainer :movie-data="latestMovies" />
   </main>
 </template>
 
@@ -23,15 +23,19 @@ export default Vue.extend({
     console.log(`Set layout to ${layoutName}`)
     return layoutName
   },
-  async asyncData (ctx) {
-    const latestMovies = await ctx.$axios
+  data () {
+    return {
+      latestMovies: [],
+    }
+  },
+  async fetch () {
+    this.latestMovies = await this.$axios
       .$get("/movie")
       .catch(
         (e) =>
           process.browser && alert("Something went wrong: " + JSON.stringify(e))
       )
-
-    return { latestMovies }
   },
+  fetchOnServer: false,
 })
 </script>

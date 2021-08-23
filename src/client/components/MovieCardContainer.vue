@@ -1,17 +1,20 @@
 <template>
-  <div class="c-movie-card-container">
+  <div v-if="movieData.length" class="c-movie-card-container">
     <MovieCard v-for="movie in movieData" :key="movie._id" :movie="movie" />
+  </div>
+  <div v-else class="c-movie-card-container">
+    <MovieCardPlaceholder v-for="placeholder in 6" :key="placeholder" />
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue"
-// import IMovie from "~/src/entities/movie.entity"
+import Vue, { PropType } from "vue"
+import IMovie from "~e/movie.entity"
 
 export default Vue.extend({
   props: {
     movieData: {
-      type: Array,
+      type: Array as PropType<Array<IMovie>>,
       default: () => [],
     },
   },
