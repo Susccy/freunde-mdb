@@ -7,7 +7,11 @@
         Alle anzeigen<TablerIcon name="chevron-right" size="14" />
       </NuxtLink>
     </div>
-    <MovieCardContainer :movie-data="latestMovies" />
+    <DesktopMovieCardContainer
+      v-if="$nuxt.layoutName === 'desktop'"
+      :movie-data="latestMovies"
+    />
+    <MobileMovieCardContainer v-else :movie-data="latestMovies" />
   </main>
 </template>
 

@@ -7,110 +7,162 @@
     $col-purple-light 75%,
     $col-purple-medium 100%
   );
-  border-radius: 7px;
-  height: 12rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 0.5rem;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.2);
 
   &__title {
-    flex-basis: 45%;
+    // https://stackoverflow.com/a/13924997/13575631
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
     overflow: hidden;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    background-color: $col-purple-dark;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    #{$self}__date {
-      align-self: flex-end;
-      margin-right: 10px;
-      font-size: small;
-      background-color: rgba($col-gray-dark, 0.8);
-      padding: 0.2rem;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    // @todo overhaul title styling
-    #{$self}__name {
-      align-self: flex-start;
-      max-width: 80%;
-      font-size: medium;
-      padding: 0.2rem;
-      background-color: $col-black;
-
-      // https://stackoverflow.com/a/13924997/13575631
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-    }
-  }
-
-  &__rating {
-    text-align: center;
-
-    &--dire {
-      @include rating-gradient(black);
-    }
-
-    &--bad {
-      @include rating-gradient(red);
-    }
-
-    &--meh {
-      @include rating-gradient(orange);
-    }
-
-    &--good {
-      @include rating-gradient(rgb(47, 163, 36));
-    }
-
-    &--great {
-      @include rating-gradient(rgb(19, 228, 19));
-    }
   }
 
   &__genres {
-    flex-grow: 1;
     font-size: small;
-    padding: 0 10px;
     color: $col-gray-light;
     font-style: italic;
     opacity: 90%;
   }
 
-  &__expand {
-    flex-basis: 10%;
-    text-align: center;
+  &--desktop {
+    position: relative;
+    display: grid;
+    grid-template-areas:
+      "poster ."
+      "poster title"
+      "poster rating"
+      "poster genres"
+      "poster expand"
+      "poster .";
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: 1% 40% 1fr 1fr 1fr 1%;
+    gap: 0.5rem;
+    height: 15rem;
+    border-radius: 10px;
 
-    details {
-      height: 100%;
+    > *:not(#{$self}__poster) {
+      padding-right: 10px;
+    }
 
-      // removing default marker in different browsers: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
-      > summary {
-        height: 100%;
-        list-style: none;
+    #{$self}__date {
+      position: absolute;
+      background-color: red;
+      border-top-left-radius: inherit;
+      padding: 0.2rem;
+    }
+
+    #{$self}__poster {
+      grid-area: poster;
+      object-fit: cover;
+      max-height: 100%;
+      max-width: 100%;
+      border-top-left-radius: inherit;
+      border-bottom-left-radius: inherit;
+    }
+
+    #{$self}__title {
+      grid-area: title;
+      font-size: 1.25rem;
+    }
+
+    #{$self}__rating {
+      grid-area: rating;
+      margin-left: -0.5rem;
+      display: flex;
+      align-items: center;
+      padding-left: 0.5rem;
+      font-weight: bold;
+      font-size: 1rem;
+
+      @include rating-gradient(desktop);
+    }
+
+    #{$self}__genres {
+      grid-area: genres;
+    }
+
+    #{$self}__expand {
+      grid-area: expand;
+    }
+  }
+
+  &--mobile {
+    border-radius: 7px;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    #{$self}__title {
+      flex-basis: 45%;
+      overflow: hidden;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      background-color: $col-purple-dark;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      #{$self}__date {
+        align-self: flex-end;
+        margin-right: 10px;
+        font-size: small;
+        background-color: rgba($col-gray-dark, 0.8);
+        padding: 0.2rem;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
       }
-      > summary::-webkit-details-marker {
-        display: none;
+
+      // @todo overhaul title styling
+      #{$self}__name {
+        align-self: flex-start;
+        max-width: 80%;
+        font-size: medium;
+        padding: 0.2rem;
+        background-color: $col-black;
       }
     }
 
-    div {
-      position: absolute;
+    #{$self}__rating {
+      text-align: center;
+
+      @include rating-gradient(mobile);
+    }
+
+    #{$self}__genres {
+      flex-grow: 1;
+      padding: 0 10px;
+    }
+
+    #{$self}__expand {
+      flex-basis: 10%;
+      text-align: center;
+
+      details {
+        height: 100%;
+
+        // removing default marker in different browsers: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
+        > summary {
+          height: 100%;
+          list-style: none;
+        }
+        > summary::-webkit-details-marker {
+          display: none;
+        }
+      }
+
+      div {
+        position: absolute;
+      }
     }
   }
 
   &--placeholder,
-  &--placeholder &__title {
+  &--placeholder * {
     background: linear-gradient(90deg, $col-purple-light, $col-purple-dark);
     background-size: 400% 400%;
+    border-radius: 7px;
 
     -webkit-animation: loadingGradient 2s ease infinite;
     -moz-animation: loadingGradient 2s ease infinite;
@@ -162,15 +214,3 @@
     }
   }
 }
-
-// @todo why does this not work?
-// @media screen and (min-width: 356) {
-//   .c-movie-card {
-//     height: 12rem;
-//     background-color: aqua;
-
-//     &__title {
-//       flex-basis: 45%;
-//     }
-//   }
-// }

@@ -1,5 +1,5 @@
 <template>
-  <article class="c-movie-card">
+  <article class="c-movie-card c-movie-card--mobile">
     <div ref="movieTitleContainer" class="c-movie-card__title">
       <div class="c-movie-card__date">
         {{ dateSeen }}

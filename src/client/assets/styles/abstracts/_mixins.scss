@@ -1,9 +1,35 @@
-@mixin rating-gradient($color) {
-  background: linear-gradient(
-    90deg,
-    transparent 5%,
-    rgba($color, 0.9) 40%,
-    rgba($color, 0.9) 60%,
-    transparent 95%
-  );
+@mixin _rating-gradient($color, $layout) {
+  @if $layout == mobile {
+    background: linear-gradient(
+      90deg,
+      transparent 5%,
+      rgba($color, 0.9) 40%,
+      rgba($color, 0.9) 60%,
+      transparent 95%
+    );
+  } @else {
+    background: linear-gradient(90deg, rgba($color, 0.9), transparent 80%);
+  }
+}
+
+@mixin rating-gradient($layout) {
+  &--dire {
+    @include _rating-gradient(black, $layout);
+  }
+
+  &--bad {
+    @include _rating-gradient(red, $layout);
+  }
+
+  &--meh {
+    @include _rating-gradient(orange, $layout);
+  }
+
+  &--good {
+    @include _rating-gradient(rgb(47, 163, 36), $layout);
+  }
+
+  &--great {
+    @include _rating-gradient(rgb(19, 228, 19), $layout);
+  }
 }
