@@ -1,4 +1,4 @@
-import { FilterQuery, ObjectId, UpdateQuery } from "mongoose"
+import { mongo, FilterQuery, ObjectId, UpdateQuery } from "mongoose"
 import Movie, { IMovieDoc, IMovieInput } from "../models/movie.model"
 
 export default {
@@ -8,11 +8,7 @@ export default {
   ) => {
     const { page = 0, limit = 0 } = options
 
-    /* @todo currently doesn't work due to whiny typescript
-    // If a mongo id is sent we try to construct it to a proper ObjectId.
-    // Throws an error if it's an invalid id.
-    where._id &&= new mongo.ObjectId(where._id)
-    */
+    where._id && (where._id = new mongo.ObjectId(where._id))
 
     return await Movie.find(where)
       .skip(page * limit)
