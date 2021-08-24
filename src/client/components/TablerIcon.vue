@@ -33,7 +33,7 @@ export default Vue.extend({
     },
   },
   computed: {
-    iconComponentName () {
+    iconComponentName (): string {
       return this.name && `${this.name}-icon`
     },
   },
