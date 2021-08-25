@@ -1,6 +1,6 @@
 body {
-  background-color: $col-blue-medium;
-  color: $col-white-light;
+  background-color: $surface;
+  color: $on-surface;
 }
 
 h1,
@@ -13,10 +13,10 @@ p {
 }
 
 a {
-  color: $col-gray-light;
+  color: $primary-accent;
 
   &:visited {
-    color: $col-gray-light;
+    color: $primary-accent;
   }
 }
 

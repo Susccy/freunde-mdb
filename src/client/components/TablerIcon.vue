@@ -11,6 +11,7 @@ import {
   Menu2Icon,
   XIcon,
   SearchIcon,
+  ArrowsMaximizeIcon,
 } from "vue-tabler-icons"
 
 export default Vue.extend({
@@ -21,6 +22,7 @@ export default Vue.extend({
     Menu2Icon,
     XIcon,
     SearchIcon,
+    ArrowsMaximizeIcon,
   },
   props: {
     name: {
