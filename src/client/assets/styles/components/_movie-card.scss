@@ -3,8 +3,9 @@
   $self: &;
 
   @include background-layer(1);
-  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.4);
   overflow: hidden;
+  height: 100%;
 
   &__date,
   &__mm {
@@ -17,13 +18,13 @@
     // https://stackoverflow.com/a/13924997/13575631
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 2;
     overflow: hidden;
   }
 
   &__genres {
     font-size: $sm;
-    color: $on-surface-medium;
+    color: $on-surface-dim;
     font-style: italic;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -34,28 +35,26 @@
   &--desktop {
     position: relative;
     display: grid;
-    // @todo remove expand element, just put maximize icon in the corner
-    // of the card and let the button around the card do the job
     grid-template-areas:
-      "poster .      ."
-      "poster title  ."
-      "poster rating ."
-      "poster genres ."
-      "poster expand ."
-      "poster .      .";
-    grid-template-columns: 50% 1fr 0;
-    grid-template-rows: 0 40% 1fr 1fr 1fr 0;
-    gap: 0.5rem;
-    height: 15rem;
+      "poster title"
+      "poster genres"
+      "poster rating"
+      "poster expand";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 4rem 2fr 1fr 1fr;
     border-radius: 10px;
     transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
+    height: 11rem;
 
     // @todo add this effect to the parent button as well (for tab focus)
     &:hover {
       transform: scale(1.05);
       box-shadow: 0 0 15px 0 $primary;
       z-index: 1;
+
+      #{$self}__expand {
+        color: $primary;
+      }
     }
 
     #{$self}__date {
@@ -75,52 +74,47 @@
     #{$self}__poster-container {
       grid-area: poster;
       z-index: 0;
-      background-color: $primary-accent;
-      border-top-left-radius: inherit;
-      border-bottom-left-radius: inherit;
+      background-color: darkslategray;
 
       #{$self}__poster {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        max-height: 100%;
-        max-width: 100%;
       }
     }
 
     #{$self}__title {
       grid-area: title;
       font-size: $lg-x;
+      margin: 0.5rem;
     }
 
     #{$self}__rating {
       grid-area: rating;
-      margin-left: -0.5rem;
-      display: flex;
-      align-items: center;
-      padding-left: 0.5rem;
       font-weight: bold;
+      @include background-layer(3);
 
-      @include rating-gradient(desktop);
+      &__content {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+        @include rating-gradient(desktop);
+      }
     }
 
     #{$self}__genres {
       grid-area: genres;
+      padding: 0 0.5rem;
     }
 
     #{$self}__expand {
-      grid-area: expand;
-      margin: -0.5rem;
-      margin-top: 0;
-      border-bottom-right-radius: inherit;
-      @include background-layer(2);
+      color: $on-surface-4dim;
+      transition: color 0.1s;
+      padding: 0.5rem;
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 1rem;
-      font-size: $lg;
-
-      &:hover {
-        @include background-layer(3);
-      }
+      justify-content: flex-end;
     }
   }
 

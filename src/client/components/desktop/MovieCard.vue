@@ -14,13 +14,18 @@
         />
       </div>
       <h3 ref="movieTitle" class="c-movie-card__title">{{ title }}</h3>
-      <p class="c-movie-card__rating" :class="[ratingModifier]">{{ rating }}</p>
       <p class="c-movie-card__genres">
         {{ genres }}
       </p>
-      <button class="g-btn-reset c-movie-card__expand">
-        Details<TablerIcon name="arrows-maximize" size="20" />
-      </button>
+      <div class="c-movie-card__rating">
+        <div class="c-movie-card__rating__content" :class="[ratingModifier]">
+          {{ rating }}
+        </div>
+      </div>
+
+      <div class="c-movie-card__expand">
+        <TablerIcon name="arrows-maximize" size="20" />
+      </div>
     </div>
   </button>
 </template>
@@ -69,7 +74,7 @@ export default Vue.extend({
     ratingModifier (): string {
       const rating = parseFloat(this.rating)
       return (
-        "c-movie-card__rating--" +
+        "c-movie-card__rating__content--" +
         (rating < 1.0
           ? "dire"
           : rating <= 4.0

@@ -1,7 +1,10 @@
 // colors
 $surface: #121212;
 $on-surface: #ffffff;
-$on-surface-medium: rgba($on-surface, 0.8);
+$on-surface-dim: rgba($on-surface, 0.8);
+$on-surface-2dim: rgba($on-surface, 0.6);
+$on-surface-3dim: rgba($on-surface, 0.4);
+$on-surface-4dim: rgba($on-surface, 0.2);
 $on-color: #000000;
 $primary: #70e0dd;
 $primary-accent: #00999b;

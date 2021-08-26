@@ -8,29 +8,30 @@
       transparent 95%
     );
   } @else {
-    background: linear-gradient(90deg, rgba($color, 0.9), transparent 80%);
+    color: $color;
+    background: linear-gradient(90deg, rgba($color, 0.7), transparent 30%);
   }
 }
 
 @mixin rating-gradient($layout) {
   &--dire {
-    @include _rating-gradient(black, $layout);
+    @include _rating-gradient(hsl(0, 95%, 50%), $layout);
   }
 
   &--bad {
-    @include _rating-gradient(red, $layout);
+    @include _rating-gradient(hsl(0, 70%, 53%), $layout);
   }
 
   &--meh {
-    @include _rating-gradient(orange, $layout);
+    @include _rating-gradient(hsl(33, 75%, 53%), $layout);
   }
 
   &--good {
-    @include _rating-gradient(rgb(47, 163, 36), $layout);
+    @include _rating-gradient(hsl(120, 60%, 60%), $layout);
   }
 
   &--great {
-    @include _rating-gradient(rgb(19, 228, 19), $layout);
+    @include _rating-gradient(hsl(120, 95%, 50%), $layout);
   }
 }
 

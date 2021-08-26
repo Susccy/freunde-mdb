@@ -1,6 +1,7 @@
 .c-movie-card-container {
   display: grid;
   gap: 1rem;
+  justify-content: center;
 
   &--mobile {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
@@ -9,6 +10,6 @@
   }
 
   &--desktop {
-    grid-template-columns: repeat(auto-fit, 20rem);
+    grid-template-columns: repeat(auto-fit, 22rem);
   }
 }

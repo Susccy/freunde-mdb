@@ -1,12 +1,12 @@
 <template>
   <main class="p-index">
-    <Searchbar />
     <div class="p-index__heading">
       <h2>Zuletzt gesehen</h2>
       <NuxtLink to="/sample" class="p-index__heading__link">
         Alle anzeigen<TablerIcon name="chevron-right" size="14" />
       </NuxtLink>
     </div>
+    <!-- @todo add default element "Show more ->" to the end of the grid -->
     <DesktopMovieCardContainer
       v-if="$nuxt.layoutName === 'desktop'"
       :movie-data="latestMovies"

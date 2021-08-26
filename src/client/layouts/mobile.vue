@@ -1,6 +1,7 @@
 <template>
   <div class="l-index l-index--mobile">
     <MobileHeader @openMenu="menuVisible = true" />
+    <Searchbar />
     <Nuxt />
     <MobileFooter />
   </div>
