@@ -39,5 +39,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    h1 {
+      text-shadow: $primary 3px 3px 0;
+    }
   }
 }
