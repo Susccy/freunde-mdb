@@ -1,32 +1,35 @@
 <template>
-  <button class="g-btn-reset">
-    <div class="c-movie-card c-movie-card--desktop">
-      <p v-if="dateSeen" class="c-movie-card__date">
-        {{ dateSeen }}
-      </p>
-      <p v-if="mm" class="c-movie-card__mm">MM</p>
-      <div class="c-movie-card__poster-container">
+  <button class="g-btn-reset c-movie-card c-movie-card--desktop">
+    <div class="c-movie-card__poster">
+      <img ref="moviePoster" :src="imgSrc" :alt="imgAlt" />
+    </div>
+    <p v-if="mm" class="c-movie-card__mm">MM</p>
+    <div class="c-movie-card__title">
+      <h3 ref="movieTitle" class="c-movie-card__title__main">{{ title }}</h3>
+      <div class="c-movie-card__title__sub">
         <img
-          ref="moviePoster"
-          :src="imgSrc"
-          :alt="imgAlt"
-          class="c-movie-card__poster"
+          v-if="fskIcon"
+          :src="fskIcon"
+          :alt="`FSK ${movie.fsk}`"
+          class="c-movie-card__title__fsk"
+          :class="['c-movie-card__title__fsk--' + movie.fsk]"
         />
-      </div>
-      <h3 ref="movieTitle" class="c-movie-card__title">{{ title }}</h3>
-      <p class="c-movie-card__genres">
-        {{ genres }}
-      </p>
-      <div class="c-movie-card__rating">
-        <div class="c-movie-card__rating__content" :class="[ratingModifier]">
-          {{ rating }}
-        </div>
-      </div>
-
-      <div class="c-movie-card__expand">
-        <TablerIcon name="arrows-maximize" size="20" />
+        <p class="c-movie-card__title__genres">{{ genres }}</p>
       </div>
     </div>
+    <div class="c-movie-card__rating" :class="[ratingModifier]">
+      <p class="c-movie-card__rating__ch">{{ rating.ch }}ch</p>
+      <p class="c-movie-card__rating__total">{{ rating.total }}</p>
+      <p class="c-movie-card__rating__rt">{{ rating.rt }}rt</p>
+    </div>
+    <div class="c-movie-card__meta">
+      <p v-show="dateSeen">Gesehen: {{ dateSeen }}</p>
+      <p v-show="movie.yearReleased">
+        Erscheinungsjahr: {{ movie.yearReleased }}
+      </p>
+      <p v-show="movie.length">Länge: {{ movie.length }}min</p>
+    </div>
+    <TablerIcon name="arrows-maximize" size="20" class="c-movie-card__expand" />
   </button>
 </template>
 
@@ -65,16 +68,37 @@ export default Vue.extend({
       const { title } = this.movie
       return (title.ger || title.original).replace(/\s*\(mm\)\s*/gi, "")
     },
-    genres (): string {
-      return this.movie.genres.join(", ") || "keine Genres vorhanden"
+    fskIcon (): string | boolean {
+      const { fsk } = this.movie
+      return (
+        typeof fsk === "number" && require(`../../assets/svg/fsk-${fsk}.svg`)
+      )
     },
-    rating (): string {
-      return (this.movie.rating.total / 100).toFixed(2)
+    genres (): string {
+      return (
+        this.movie.genres.join(", ") ||
+        "keine Genres vorhandennnn nnnn nnnn nnn"
+      )
+    },
+    rating (): { ch: string; rt: string; total: string } {
+      const formatRating = (rating: number) => (rating / 100).toFixed(2)
+
+      const { rating } = this.movie
+
+      const total = formatRating(rating.total)
+      const ch = rating.ch < 0 ? total : formatRating(rating.ch)
+      const rt = rating.rt < 0 ? total : formatRating(rating.rt)
+
+      return {
+        ch,
+        rt,
+        total,
+      }
     },
     ratingModifier (): string {
-      const rating = parseFloat(this.rating)
+      const rating = parseFloat(this.rating.total)
       return (
-        "c-movie-card__rating__content--" +
+        "c-movie-card__rating--" +
         (rating < 1.0
           ? "dire"
           : rating <= 4.0

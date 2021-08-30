@@ -1,25 +1,26 @@
 // variables, mixins & functions
-@import "abstracts/variables";
-@import "abstracts/mixins";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
 
 // 3rd party libraries
-@import "vendors/modern-normalize";
+@import "./vendors/modern-normalize";
 
 // global styles & resets
-@import "base/base";
-@import "base/button";
+@import "./base/base";
+@import "./base/button";
 
 // layout components and grid macro layouts
-@import "layouts/mobile";
+@import "./layouts/mobile";
 
 // shared components
-@import "components/movie-card-container";
-@import "components/movie-card";
-@import "components/header";
-@import "components/footer";
-@import "components/search";
-@import "components/mobile/navmenu";
-@import "components/desktop/navbar";
+@import "./components/movie-card-container";
+@import "./components/movie-card";
+@import "./components/movie-card-placeholder";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/search";
+@import "./components/mobile/navmenu";
+@import "./components/desktop/navbar";
 
 // page components
-@import "pages/index";
+@import "./pages/index";
