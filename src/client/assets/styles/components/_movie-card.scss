@@ -41,7 +41,7 @@
       "poster rating"
       "poster expand";
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 4rem 2fr 1fr 1fr;
+    grid-template-rows: auto 2fr 1fr 1fr;
     border-radius: 10px;
     transition: transform 0.2s, box-shadow 0.2s;
     height: 11rem;
@@ -87,12 +87,13 @@
       grid-area: title;
       font-size: $lg-x;
       margin: 0.5rem;
+      max-height: 4rem;
     }
 
     #{$self}__rating {
       grid-area: rating;
       font-weight: bold;
-      @include background-layer(3);
+      // @include background-layer(3);
 
       &__content {
         text-align: center;
