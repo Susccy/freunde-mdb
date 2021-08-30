@@ -36,6 +36,5 @@
 }
 
 @mixin background-layer($layer) {
-  $col: rgba($surface, calc(1 - #{$layer} * 0.05));
-  background: linear-gradient($col, $col), $on-surface;
+  background-color: hsl(0, 0%, calc(7% + #{$layer} * 5%));
 }
