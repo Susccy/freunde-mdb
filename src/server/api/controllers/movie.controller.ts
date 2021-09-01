@@ -1,13 +1,13 @@
 import { PartialDeep } from "type-fest"
-import { ObjectId } from "mongoose"
-import { NotFoundError } from "../helpers/CustomError"
+import { Types } from "mongoose"
+import { NotFoundError } from "../misc/CustomError"
 import MovieService from "../services/movie.service"
 import { RatingIndividual, RatingTotal } from "../models/movie.model"
 import { ControllerMethodChain, ExpressRequest } from "./shared/types"
 import { IMovieInsert, IMovieRequest } from "~e/movie.entity"
 
 export interface GetMovieParams {
-  id?: ObjectId
+  id?: Types.ObjectId
 }
 export interface GetMovieQuery extends IMovieRequest {
   limit?: string
@@ -17,33 +17,38 @@ export interface GetMovieQuery extends IMovieRequest {
 export interface PostMovieBody extends IMovieInsert {}
 
 export interface PutMovieParams {
-  id: ObjectId
+  id: Types.ObjectId
 }
 export interface PutMovieBody extends PartialDeep<IMovieInsert> {
   rating?: RatingTotal | RatingIndividual
 }
 
 export interface DeleteMovieParams {
-  id: ObjectId
+  id: Types.ObjectId
 }
 
 export default {
   get: [
     async (req: ExpressRequest<GetMovieParams, GetMovieQuery>, res) => {
-      const { limit, page, ...query } = req.query
-      const { id } = req.params
+      try {
+        const { limit, page, ...query } = req.query
+        const { id } = req.params
 
-      const where = id || query
-      const options = {
-        limit: limit ? parseInt(limit) : undefined,
-        page: page ? parseInt(page) : undefined,
+        const where = id || query
+        const options = {
+          limit: limit ? parseInt(limit) : undefined,
+          page: page ? parseInt(page) : undefined,
+        }
+
+        const results = await MovieService.find(where, options)
+
+        if (!results || (Array.isArray(results) && !results.length))
+          throw new NotFoundError()
+
+        return res.status(200).json(results)
+      } catch (e) {
+        return res.sendStatus(e.status)
       }
-
-      const results = await MovieService.get(where, options)
-
-      if (!results.length) throw new NotFoundError()
-
-      return res.status(200).json(results)
     },
   ] as ControllerMethodChain,
 
