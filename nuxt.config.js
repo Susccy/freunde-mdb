@@ -54,6 +54,6 @@ export default {
   },
 
   loading: {
-    color: "aqua",
+    color: "#70e0dd",
   },
 }
