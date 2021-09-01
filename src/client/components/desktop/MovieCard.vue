@@ -35,12 +35,12 @@
 
 <script lang="ts">
 import Vue, { PropType } from "vue"
-import IMovie from "~e/movie.entity"
+import { IMovieResponse } from "~e/movie.entity"
 
 export default Vue.extend({
   props: {
     movie: {
-      type: Object as PropType<IMovie>,
+      type: Object as PropType<IMovieResponse>,
       required: true,
     },
   },

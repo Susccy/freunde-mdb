@@ -1,24 +1,31 @@
-import { mongo, FilterQuery, ObjectId, UpdateQuery } from "mongoose"
-import Movie, { IMovieDoc, IMovieInput } from "../models/movie.model"
+import { mongo, FilterQuery, ObjectId, UpdateQuery, Document } from "mongoose"
+import { PartialDeep } from "type-fest"
+import Movie, { RatingIndividual, RatingTotal } from "../models/movie.model"
+import { IMovieInsert, IMovieRequest } from "~e/movie.entity"
+
+interface IMovieUpdate extends PartialDeep<IMovieInsert> {
+  rating?: RatingTotal | RatingIndividual
+}
 
 export default {
-  getAll: async (
-    where: FilterQuery<IMovieDoc> = {},
+  get: async (
+    where: ObjectId | FilterQuery<IMovieRequest> = {},
     options: { page?: number; limit?: number } = {}
   ) => {
     const { page = 0, limit = 0 } = options
 
-    where._id && (where._id = new mongo.ObjectId(where._id))
-
-    return await Movie.find(where)
-      .skip(page * limit)
-      .limit(limit)
-      .exec()
+    return await (where instanceof mongo.ObjectId
+      ? Movie.findById(where)
+      : Movie.find(where)
+          .skip(page * limit)
+          .limit(limit)
+    ).exec()
   },
 
-  insert: async (doc: IMovieInput) => await new Movie(doc).save(),
+  insert: async (doc: IMovieInsert) =>
+    await (new Movie(doc) as Document).save(),
 
-  update: async (id: ObjectId, doc: UpdateQuery<IMovieDoc>) =>
+  update: async (id: ObjectId, doc: UpdateQuery<IMovieUpdate>) =>
     await Movie.findByIdAndUpdate(id, doc, { new: true }).exec(),
 
   delete: async (id: ObjectId) => await Movie.findByIdAndDelete(id).exec(),

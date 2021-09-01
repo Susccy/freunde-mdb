@@ -23,12 +23,12 @@
 
 <script lang="ts">
 import Vue, { PropType } from "vue"
-import IMovie from "~e/movie.entity"
+import { IMovieResponse } from "~e/movie.entity"
 
 export default Vue.extend({
   props: {
     movie: {
-      type: Object as PropType<IMovie>,
+      type: Object as PropType<IMovieResponse>,
       required: true,
     },
   },
@@ -80,7 +80,7 @@ export default Vue.extend({
     // otherwise displays placeholder title
     loadImageFromUri (
       // lookup type of nested union object: https://stackoverflow.com/a/51285433/16503617
-      uri: Extract<IMovie["img"], { __type: "uri" }>["uri"]
+      uri: Extract<IMovieResponse["img"], { __type: "uri" }>["uri"]
     ): void {
       const setImage = () => {
         const imgElement = this.$refs.movieTitleContainer as HTMLElement
@@ -101,8 +101,11 @@ export default Vue.extend({
     },
 
     loadImageFromBuffer (
-      data: Extract<IMovie["img"], { __type: "buffer" }>["data"],
-      contentType: Extract<IMovie["img"], { __type: "buffer" }>["contentType"]
+      data: Extract<IMovieResponse["img"], { __type: "buffer" }>["data"],
+      contentType: Extract<
+        IMovieResponse["img"],
+        { __type: "buffer" }
+      >["contentType"]
     ): void {
       // @todo implement
     },

@@ -1,27 +1,29 @@
 import { Document, Schema, model, models } from "mongoose"
-import { IGenreDoc } from "./genre.model"
 
-export interface IMovieInput {
+export type RatingIndividual = { ch: number; rt: number }
+export type RatingTotal = { total: number }
+
+export interface IMovieInsert {
   title: {
     original: string
     eng?: string
     ger?: string
   }
-  rating: { ch: number; rt: number; total: number }
+  rating: RatingIndividual | RatingTotal
   dateSeen?: Date
   yearReleased?: number
   length?: number
-  genres: IGenreDoc["name"][] | []
+  genres: string[]
   fsk?: number
-  starring: string[] | []
+  starring: string[]
   img?:
     | { __type: "buffer"; data: Buffer; contentType: string }
     | { __type: "uri"; uri: string; position?: number }
-  reviews: string[] | []
+  reviews: string[]
   series?: string
 }
 
-export interface IMovieDoc extends IMovieInput, Document {}
+interface IMovieDoc extends IMovieInsert, Document {}
 
 const MovieSchema = new Schema<IMovieDoc>(
   {
@@ -68,17 +70,14 @@ const MovieSchema = new Schema<IMovieDoc>(
 
 MovieSchema.virtual("rating.total")
   .get(function (this: IMovieDoc) {
-    const { ch, rt } = this.rating
+    const { ch, rt } = this.rating as RatingIndividual
     // Movies rated prior to the beginning of the FREUNDE Filmliste 2 didn't receive individual ratings, only a total.
     // If a user only inputs a total rating instead of individual ratings, one of the individuals will be automatically set to -1.
     // That's why we check if either value is negative here, in which case we simply return the other value, otherwise we calculate the average.
-    return Math.min(ch, rt) < 0
-      ? Math.max(ch, rt)
-      : (this.rating.ch + this.rating.rt) / 2
+    return Math.min(ch, rt) < 0 ? Math.max(ch, rt) : (ch + rt) / 2
   })
   .set(function (this: IMovieDoc, v: number) {
-    this.rating.ch = -1
-    this.rating.rt = v
+    this.rating = { ch: v, rt: -1 }
   })
 
 // Try to use the existing model if it's been created before.

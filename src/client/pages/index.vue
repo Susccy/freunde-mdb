@@ -17,6 +17,7 @@
 
 <script lang="ts">
 import Vue from "vue"
+import { IMovieResponse } from "~e/movie.entity"
 
 export default Vue.extend({
   // @todo why layout gets called twice?
@@ -27,7 +28,7 @@ export default Vue.extend({
     console.log(`Set layout to ${layoutName}`)
     return layoutName
   },
-  data () {
+  data (): { latestMovies: IMovieResponse[] } {
     return {
       latestMovies: [],
     }

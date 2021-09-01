@@ -5,7 +5,7 @@
   >
     <DesktopMovieCard
       v-for="movie in movieData"
-      :key="movie._id"
+      :key="movie.id"
       :movie="movie"
     />
   </div>
@@ -16,12 +16,12 @@
 
 <script lang="ts">
 import Vue, { PropType } from "vue"
-import IMovie from "~e/movie.entity"
+import { IMovieResponse } from "~e/movie.entity"
 
 export default Vue.extend({
   props: {
     movieData: {
-      type: Array as PropType<Array<IMovie>>,
+      type: Array as PropType<Array<IMovieResponse>>,
       default: () => [],
     },
   },
