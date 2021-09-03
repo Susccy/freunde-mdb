@@ -75,15 +75,13 @@ export default Vue.extend({
       )
     },
     genres (): string {
-      return (
-        this.movie.genres.join(", ") ||
-        "keine Genres vorhandennnn nnnn nnnn nnn"
-      )
+      return this.movie.genres.join(", ") || "keine Genres vorhanden"
     },
     rating (): { ch: string; rt: string; total: string } {
       const formatRating = (rating: number) => (rating / 100).toFixed(2)
 
       const { rating } = this.movie
+      console.log({ movie: this.movie.title.original, rating })
 
       const total = formatRating(rating.total)
       const ch = rating.ch < 0 ? total : formatRating(rating.ch)
@@ -115,7 +113,8 @@ export default Vue.extend({
     const { img, title } = this.movie
 
     img
-      ? "uri" in img && (this.imgSrc = img.uri)
+      ? img.__type === "uri" &&
+        (this.imgSrc = `http://image.tmdb.org/t/p/w154${img.uri}`)
       : (this.$refs.moviePoster as HTMLElement).remove()
 
     this.mm = /\s*\(mm\)\s*/i.test(title.original)

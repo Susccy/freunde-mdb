@@ -47,7 +47,7 @@ export default {
 
         return res.status(200).json(results)
       } catch (e) {
-        return res.sendStatus(e.status)
+        return res.sendStatus(e.status || 500)
       }
     },
   ] as ControllerMethodChain,

@@ -1,4 +1,3 @@
-import { ObjectId } from "mongoose"
 import { PartialDeep } from "type-fest"
 import {
   IMovieInsert,
@@ -10,7 +9,7 @@ export { IMovieInsert }
 
 export interface IMovieResponse extends IMovieInsert {
   rating: RatingIndividual & RatingTotal
-  id: ObjectId
+  id: string
 }
 
 export interface IMovieRequest extends PartialDeep<IMovieResponse> {}
