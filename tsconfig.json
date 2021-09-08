@@ -11,10 +11,9 @@
     "noEmit": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
+    "noErrorTruncation": true,
     "paths": {
-      "~s/*": ["./src/server/*"],
-      "~c/*": ["./src/client/*"],
-      "~e/*": ["./src/entities/*"],
+      "~/*": ["./src/*"],
       "~~/*": ["./*"]
     },
     "types": ["@nuxt/types", "@nuxtjs/axios", "@types/node"]
