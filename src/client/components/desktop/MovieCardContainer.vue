@@ -4,7 +4,7 @@
     class="c-movie-card-container c-movie-card-container--desktop"
   >
     <DesktopMovieCard
-      v-for="movie in movieData"
+      v-for="movie in movieDataFiltered"
       :key="movie.id"
       :movie="movie"
     />
@@ -16,13 +16,18 @@
 
 <script lang="ts">
 import Vue, { PropType } from "vue"
-import { IMovieResponse } from "~e/movie.entity"
+import { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
   props: {
     movieData: {
-      type: Array as PropType<Array<IMovieResponse>>,
+      type: Array as PropType<Array<MovieResponse>>,
       default: () => [],
+    },
+  },
+  computed: {
+    movieDataFiltered (): MovieResponse[] {
+      return this.movieData.filter((movie) => typeof movie.tmdb !== "number")
     },
   },
 })

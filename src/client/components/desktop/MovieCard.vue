@@ -24,9 +24,7 @@
     </div>
     <div class="c-movie-card__meta">
       <p v-show="dateSeen">Gesehen: {{ dateSeen }}</p>
-      <p v-show="movie.yearReleased">
-        Erscheinungsjahr: {{ movie.yearReleased }}
-      </p>
+      <p v-show="movie.tmdb">Erscheinungsjahr: {{ movie.yearReleased }}</p>
       <p v-show="movie.length">Länge: {{ movie.length }}min</p>
     </div>
     <TablerIcon name="arrows-maximize" size="20" class="c-movie-card__expand" />
@@ -35,12 +33,14 @@
 
 <script lang="ts">
 import Vue, { PropType } from "vue"
-import { IMovieResponse } from "~e/movie.entity"
+import { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
   props: {
     movie: {
-      type: Object as PropType<IMovieResponse>,
+      type: Object as PropType<
+        MovieResponse & { tmdb: Exclude<MovieResponse["tmdb"], number> }
+      >,
       required: true,
     },
   },
@@ -55,18 +55,17 @@ export default Vue.extend({
   computed: {
     dateSeen (): string | undefined {
       const { dateSeen } = this.movie
-      return (
-        dateSeen &&
-        new Date(dateSeen).toLocaleDateString("de", {
-          day: "2-digit",
-          month: "2-digit",
-          year: "numeric",
-        })
-      )
+      return dateSeen?.toLocaleDateString("de", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      })
     },
     title (): string {
-      const { title } = this.movie
-      return (title.ger || title.original).replace(/\s*\(mm\)\s*/gi, "")
+      const {
+        tmdb: { title },
+      } = this.movie
+      return (title.german || title.original).replace(/\s*\(mm\)\s*/gi, "")
     },
     fskIcon (): string | boolean {
       const { fsk } = this.movie
