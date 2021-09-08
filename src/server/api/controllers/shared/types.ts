@@ -10,6 +10,6 @@ type ControllerMethod = (
   req: ExpressRequest,
   res: express.Response,
   next: express.NextFunction
-) => express.Response | Promise<express.Response> | void
+) => express.Response | Promise<express.Response> | void | Promise<void>
 
 export type ControllerMethodChain = ControllerMethod[]

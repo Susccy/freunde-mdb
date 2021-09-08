@@ -1,100 +1,71 @@
-import { Document, Schema, model, models, Model } from "mongoose"
+import { Document, Schema, model, models, Model, Types } from "mongoose"
+import { TMDBMovieDetailsParsed } from "../services/movie.service"
 
 export type RatingIndividual = { ch: number; rt: number }
 export type RatingTotal = { total: number }
 
-// export interface IMovieInsert {
-//   title: {
-//     original: string
-//     eng?: string
-//     ger?: string
-//   }
-//   rating: RatingIndividual | RatingTotal
-//   tmdbId?: number
-//   dateSeen?: Date
-//   yearReleased?: number
-//   length?: number
-//   genres: string[]
-//   fsk?: number
-//   starring: string[]
-//   img?:
-//     | { __type: "buffer"; data: Buffer; contentType: string }
-//     | { __type: "uri"; uri: string; position?: number }
-//   reviews: string[]
-//   series?: string
-// }
+// only required when user submits a movie that's not registered on TMDB
+type CustomMovieDetailsInput = Partial<Omit<TMDBMovieDetailsParsed, "poster">> &
+  Pick<TMDBMovieDetailsParsed, "title"> & {
+    poster?: string | { data: Buffer; contentType: string }
+  }
 
-export interface TMDBMovieDetails {
-  // eslint-disable-next-line camelcase
-  original_title: string
-  title: string
-  // eslint-disable-next-line camelcase
-  release_date: string
-  runtime: number | null
-  genres: { name: string }[]
-  // eslint-disable-next-line camelcase
-  poster_path: string | null
-  // eslint-disable-next-line camelcase
-  belongs_to_collection: object | null
-}
+interface CustomMovieDetailsDoc extends CustomMovieDetailsInput, Document {}
+
+const CustomMovieDetailsSchema = new Schema<CustomMovieDetailsDoc>({
+  title: {
+    original: { type: String, required: true, unique: true },
+    german: String,
+  },
+  releaseDate: Date,
+  runtime: Number,
+  genres: [String],
+  poster: {
+    type: Schema.Types.Mixed,
+    validate: {
+      validator (v: any) {
+        return (
+          typeof v === "string" ||
+          (typeof v === "object" &&
+            v.data instanceof Buffer &&
+            typeof v.contentType === "string")
+        )
+      },
+    },
+  },
+  // @todo add all CustomMovieDetailsInput props
+})
 
 export interface MovieInput {
-  tmdb:
-    | number
-    | (Partial<TMDBMovieDetails> & {
-        // eslint-disable-next-line camelcase
-        original_title: string
-        // eslint-disable-next-line camelcase
-        poster_path?: string | { data: Buffer; contentType: string }
-      })
+  tmdb: number | CustomMovieDetailsInput
   rating: RatingIndividual | RatingTotal
   dateSeen?: Date
   fsk?: number
   mm?: boolean
 }
 
-export interface MovieDoc extends MovieInput, Document {
+export interface MovieDoc extends MovieInput, Document<Types.ObjectId> {
   rating: RatingIndividual & RatingTotal
 }
 
 const MovieSchema = new Schema<MovieDoc>(
   {
-    tmdb: { type: Schema.Types.Mixed, required: true },
-    // title: {
-    //   original: { type: String, required: true, unique: true, index: true },
-    //   eng: {
-    //     type: String,
-    //     index: {
-    //       unique: true,
-    //       // since eng and ger titles are not required to be set,
-    //       // but we want them to be unique _if_ they are set,
-    //       // we create a filter expression to only apply
-    //       // the unique index when the value is a string (and not null)
-    //       partialFilterExpression: { "title.eng": { $type: "string" } },
-    //     },
-    //   },
-    //   ger: {
-    //     type: String,
-    //     index: {
-    //       unique: true,
-    //       partialFilterExpression: { "title.ger": { $type: "string" } },
-    //     },
-    //   },
-    // },
-    // rating: {
-    //   ch: { type: Number, required: true },
-    //   rt: { type: Number, required: true },
-    // },
-    // tmdbId: Number,
-    // dateSeen: Date,
-    // yearReleased: Number,
-    // length: Number,
-    // genres: [{ type: Schema.Types.ObjectId, ref: "Genre" }],
-    // fsk: Number,
-    // starring: [String],
-    // img: { data: Buffer, contentType: String, uri: String, position: Number },
-    // reviews: [String],
-    // series: String,
+    tmdb: {
+      type: Schema.Types.Mixed,
+      required: true,
+      validate: {
+        validator (v: any) {
+          return typeof v === "number" || v === CustomMovieDetailsSchema
+        },
+      },
+    },
+    rating: {
+      ch: { type: Number, required: true },
+      rt: { type: Number, required: true },
+    },
+    dateSeen: Date,
+    fsk: Number,
+    mm: Boolean,
   },
   {
     // toObject: { getters: true, virtuals: true },

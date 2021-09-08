@@ -1,5 +1,5 @@
 abstract class HttpError {
-  constructor (public readonly status: number) {
+  constructor (public status: number) {
     this.status = status
   }
 }

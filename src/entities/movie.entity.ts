@@ -1,15 +1,6 @@
-import { PartialDeep } from "type-fest"
-import {
-  IMovieInsert,
-  RatingIndividual,
-  RatingTotal,
-} from "~s/api/models/movie.model"
+import { LeanDocument } from "mongoose"
+import { MovieInput, MovieDoc } from "../server/api/models/movie.model"
 
-export { IMovieInsert }
+export { MovieInput }
 
-export interface IMovieResponse extends IMovieInsert {
-  rating: RatingIndividual & RatingTotal
-  id: string
-}
-
-export interface IMovieRequest extends PartialDeep<IMovieResponse> {}
+export interface MovieResponse extends LeanDocument<MovieDoc> {}
