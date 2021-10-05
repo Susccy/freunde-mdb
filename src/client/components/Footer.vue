@@ -1,5 +1,5 @@
 <template>
-  <footer class="c-footer c-footer--desktop">
+  <footer class="c-footer">
     <p>Da footah</p>
   </footer>
 </template>

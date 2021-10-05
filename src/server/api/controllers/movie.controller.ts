@@ -1,95 +1,97 @@
-import { BadRequestError, NotFoundError } from "../misc/CustomError"
+import { RequestHandler } from "express"
+import { NotFoundError } from "../errors/HTTPError"
 import MovieService from "../services/movie.service"
-import { ControllerMethodChain, ExpressRequest } from "./shared/types"
 import { MovieInput, MovieResponse } from "~/entities/movie.entity"
 
-export default {
+type ID = { id: string }
+
+// @todo { [k: string]: string } best practice?
+interface MovieController {
   get: [
-    async (
-      req: ExpressRequest<
-        { id?: string },
-        { limit?: string; page?: string } & { [k: string]: string }
-      >,
-      res,
-      next
-    ) => {
+    RequestHandler<{}, MovieResponse[], {}, { [k: string]: string | undefined }>
+  ]
+  getByID: [RequestHandler<ID, MovieResponse>]
+  post: [RequestHandler<{}, MovieResponse, MovieInput>]
+  put: [RequestHandler<ID, MovieResponse, { [k: string]: string }>]
+  delete: [RequestHandler<ID>]
+}
+
+const movieController: MovieController = {
+  get: [
+    async (req, res, next) => {
       try {
-        const { id } = req.params
-
-        let results: MovieResponse | MovieResponse[] | null
-
-        if (id) {
-          results = await MovieService.findById(id)
-          if (!results) throw new NotFoundError()
+        const { limit, page, ...query } = req.query
+        const options = {
+          ...(limit && { limit: parseInt(limit) }),
+          ...(page && { page: parseInt(page) }),
         }
-        else {
-          const { limit, page, ...query } = req.query
 
-          const where = query
-          const options = {
-            ...(limit && { limit: parseInt(limit) }),
-            ...(page && { page: parseInt(page) }),
-          }
-
-          results = await MovieService.find(where, options)
-        }
+        const results: MovieResponse[] = await MovieService.find(query, options)
 
         res.status(200).json(results)
       } catch (e) {
         next(e)
       }
     },
-  ] as ControllerMethodChain,
+  ],
+
+  getByID: [
+    async (req, res, next) => {
+      try {
+        const { id } = req.params
+
+        const result: MovieResponse | null = await MovieService.findByID(id)
+
+        if (!result) throw new NotFoundError()
+
+        res.status(200).json(result)
+      } catch (e) {
+        next(e)
+      }
+    },
+  ],
 
   post: [
-    async (req: ExpressRequest<void, void, MovieInput>, res, next) => {
+    async (req, res, next) => {
       try {
         const doc = req.body
 
-        const inserted = await MovieService.insert(doc)
+        const inserted: MovieResponse = await MovieService.insert(doc)
 
         res.status(201).json(inserted)
       } catch (e) {
         next(e)
       }
     },
-  ] as ControllerMethodChain,
+  ],
 
   put: [
-    async (
-      req: ExpressRequest<
-        { id: string },
-        void,
-        Omit<Partial<MovieInput>, "tmdb" | "rating"> & {
-          "rating.total"?: number
-          "rating.individual"?: number
-          tmdb?: number
-          // @todo add flattened CustomMovieDetailsInput props
-        }
-      >,
-      res,
-      next
-    ) => {
+    async (req, res, next) => {
       try {
-        const updated = await MovieService.update(req.params.id, req.body)
+        const updated: MovieResponse | null = await MovieService.update(
+          req.params.id,
+          req.body
+        )
         if (!updated) throw new NotFoundError()
         return res.status(201).json(updated)
       } catch (e) {
         next(e)
       }
     },
-  ] as ControllerMethodChain,
+  ],
 
   delete: [
-    async (req: ExpressRequest<{ id: string }>, res, next) => {
+    async (req, res, next) => {
       try {
         const { id } = req.params
         const deleted = await MovieService.delete(id)
-        if (!deleted) throw new NotFoundError()
+        if (!deleted.ok) throw new NotFoundError()
         return res.status(200).json(deleted)
       } catch (e) {
         next(e)
       }
     },
-  ] as ControllerMethodChain,
+  ],
 }
+
+export default movieController

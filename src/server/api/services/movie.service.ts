@@ -1,22 +1,10 @@
 /* eslint-disable camelcase */
-import {
-  FilterQuery,
-  UpdateQuery,
-  Document,
-  Types,
-  LeanDocument,
-} from "mongoose"
-import { PartialDeep } from "type-fest"
-import Movie, {
-  MovieDoc,
-  RatingIndividual,
-  RatingTotal,
-} from "../models/movie.model"
-import { tmdbAPI, tmdbImage } from "../misc/axiosConfig"
-import { MovieInput, MovieResponse } from "~/entities/movie.entity"
-import { ExpandDeep } from "~~/.dev"
+import { FilterQuery, UpdateQuery } from "mongoose"
+import MovieModel, { Movie } from "../models/movie.model"
+import { tmdbAPI } from "../../config/axios"
+import { MovieInput } from "~/entities/movie.entity"
 
-interface TMDBMovieDetails {
+export interface TMDBMovieDetails {
   adult: boolean
   backdrop_path: string | null
   belongs_to_collection: {
@@ -66,31 +54,29 @@ interface TMDBMovieDetails {
   vote_count: number
 }
 
-export interface TMDBMovieDetailsParsedLean {
+interface TMDBMovieDetailsParsedLean {
   title: { original: string; german?: string }
   releaseDate: string
   genres: string[]
   runtime?: number
-  poster?: string
+  posterURL?: string
 }
 
-export interface TMDBMovieDetailsParsed extends TMDBMovieDetailsParsedLean {
+interface TMDBMovieDetailsParsed extends TMDBMovieDetailsParsedLean {
   budget: number
   revenue: number
   tagline?: string
   overview?: string
-  productionCompanies: {
-    id: number
-    logoPath?: string
-    name: string
-    originCountry: string
-  }[]
 }
 
-const parseMovieDetailsResponse = (
+type ResultType<T> = T extends true
+  ? TMDBMovieDetailsParsedLean
+  : TMDBMovieDetailsParsed
+
+function parseMovieDetailsResponse<T extends boolean> (
   response: TMDBMovieDetails,
-  lean = false
-): TMDBMovieDetailsParsed | TMDBMovieDetailsParsedLean => {
+  lean: T
+): ResultType<T> {
   const { original_title, title, release_date, runtime, genres, poster_path } =
     response
 
@@ -102,9 +88,9 @@ const parseMovieDetailsResponse = (
     ...(poster_path && { poster: poster_path }),
   }
 
-  if (lean) return parsedResponseLean
+  if (lean) return parsedResponseLean as ResultType<T>
 
-  const { budget, revenue, tagline, overview, production_companies } = response
+  const { budget, revenue, tagline, overview } = response
 
   const parsedResponse: TMDBMovieDetailsParsed = {
     ...parsedResponseLean,
@@ -112,27 +98,19 @@ const parseMovieDetailsResponse = (
     revenue,
     ...(tagline && { tagline }),
     ...(overview && { overview }),
-    productionCompanies: production_companies.map(
-      ({ id, name, logo_path, origin_country }) => ({
-        id,
-        name,
-        ...(logo_path && { logoPath: logo_path }),
-        originCountry: origin_country,
-      })
-    ),
   }
 
-  return parsedResponse
+  return parsedResponse as ResultType<T>
 }
 
 export default {
   find: async (
-    query: FilterQuery<MovieDoc> = {},
+    query: FilterQuery<Movie> = {},
     options: { page?: number; limit?: number } = {}
-  ): Promise<MovieResponse[]> => {
+  ) => {
     const { page = 0, limit = 0 } = options
 
-    const freundeData = await Movie.find(query)
+    const freundeData = await MovieModel.find(query)
       .skip(page * limit)
       .limit(limit)
       .select("-__v")
@@ -142,72 +120,76 @@ export default {
       mongooseDocument.toJSON()
     )
 
-    const tmdbDataAsync = []
+    return freundeDataLean
+    // const tmdbDataAsync = []
 
-    for (const movie of freundeDataLean) {
-      typeof movie.tmdb === "number" &&
-        tmdbDataAsync.push(
-          tmdbAPI
-            .get<TMDBMovieDetails>(`/movie/${movie.tmdb}`)
-            .then((res) => res.data)
-        )
-    }
+    // for (const movie of freundeDataLean) {
+    //   typeof movie.tmdb === "number" &&
+    //     tmdbDataAsync.push(
+    //       tmdbAPI
+    //         .get<TMDBMovieDetails>(`/movie/${movie.tmdb}`)
+    //         .then((res) => res.data)
+    //     )
+    // }
 
-    const tmdbData = await Promise.allSettled(tmdbDataAsync).then((results) =>
-      results.map((result) => ("value" in result ? result.value : null))
-    )
+    // const tmdbData = await Promise.allSettled(tmdbDataAsync).then((results) =>
+    //   results.map((result) => ("value" in result ? result.value : null))
+    // )
 
-    const tmdbDataIdObject = tmdbData.reduce<{
-      [k: number]: TMDBMovieDetailsParsedLean
-    }>((tmdbDataIdObject, tmdbDataItem) => {
-      if (tmdbDataItem)
-        tmdbDataIdObject[tmdbDataItem.id] = parseMovieDetailsResponse(
-          tmdbDataItem,
-          true
-        )
-      return tmdbDataIdObject
-    }, {})
+    // const tmdbDataIdObject = tmdbData.reduce<{
+    //   [k: number]: TMDBMovieDetailsParsedLean
+    // }>((tmdbDataIdObject, tmdbDataItem) => {
+    //   if (tmdbDataItem)
+    //     tmdbDataIdObject[tmdbDataItem.id] = parseMovieDetailsResponse(
+    //       tmdbDataItem,
+    //       true
+    //     )
+    //   return tmdbDataIdObject
+    // }, {})
 
-    const combinedData: MovieResponse[] = []
-    for (const { tmdb, ...movie } of freundeDataLean) {
-      combinedData.push({
-        ...movie,
-        tmdb:
-          typeof tmdb === "number" && tmdb in tmdbDataIdObject
-            ? tmdbDataIdObject[tmdb]
-            : tmdb,
-      })
-    }
+    // const combinedData: MovieResponse[] = []
+    // for (const { tmdb, ...movie } of freundeDataLean) {
+    //   combinedData.push({
+    //     ...movie,
+    //     tmdb:
+    //       typeof tmdb === "number" && tmdb in tmdbDataIdObject
+    //         ? tmdbDataIdObject[tmdb]
+    //         : tmdb,
+    //   })
+    // }
 
-    return combinedData
+    // return combinedData
   },
 
-  findById: async (id: string): Promise<MovieResponse | null> => {
-    const freundeData = await Movie.findById(id).exec()
+  findByID: async (id: string) => await MovieModel.findById(id).exec(),
+  // if (!freundeData) return null
 
-    if (!freundeData) return null
+  // const { tmdb, ...movie } = freundeData
+  // const tmdbData =
+  //   typeof tmdb === "number"
+  //     ? await tmdbAPI
+  //         .get<TMDBMovieDetails>(`/movie/${tmdb}`)
+  //         .then((res) => (res ? parseMovieDetailsResponse(res.data) : tmdb))
+  //         .catch(() => tmdb)
+  //     : tmdb
 
-    const { tmdb, ...movie } = freundeData
-    const tmdbData =
-      typeof tmdb === "number"
-        ? await tmdbAPI
-            .get<TMDBMovieDetails>(`/movie/${tmdb}`)
-            .then((res) => (res ? parseMovieDetailsResponse(res.data) : tmdb))
-            .catch(() => tmdb)
-        : tmdb
+  // return { ...movie, tmdb: tmdbData }
 
-    return { ...movie, tmdb: tmdbData }
+  insert: async (doc: MovieInput) => {
+    const { tmdbID } = doc
+
+    const tmdbResponse = await tmdbAPI
+      .get<TMDBMovieDetails>(`/movie/${tmdbID}`)
+      .then(({ data }) => parseMovieDetailsResponse(data, false))
+
+    const completeDoc: Movie = { ...doc, ...tmdbResponse }
+
+    return await new MovieModel(completeDoc).save()
   },
 
-  insert: async (doc: MovieInput): Promise<MovieResponse> =>
-    await new Movie(doc).save(),
+  // @todo enable update validation
+  update: async (id: string, doc: UpdateQuery<Movie>) =>
+    await MovieModel.findByIdAndUpdate(id, doc, { new: true }).exec(),
 
-  update: async (
-    id: string,
-    doc: UpdateQuery<MovieDoc>
-  ): Promise<MovieResponse | null> =>
-    await Movie.findByIdAndUpdate(id, doc, { new: true }).exec(),
-
-  delete: async (id: string): Promise<MovieResponse | null> =>
-    await Movie.findByIdAndDelete(id).exec(),
+  delete: async (id: string) => await MovieModel.deleteOne({ _id: id }).exec(),
 }

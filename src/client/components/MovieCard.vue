@@ -1,9 +1,12 @@
 <template>
-  <button class="g-btn-reset c-movie-card c-movie-card--desktop">
+  <button
+    v-if="layout === 'desktop'"
+    class="g-btn-reset c-movie-card c-movie-card--desktop"
+  >
     <div class="c-movie-card__poster">
       <img ref="moviePoster" :src="imgSrc" :alt="imgAlt" />
     </div>
-    <p v-if="mm" class="c-movie-card__mm">MM</p>
+    <p v-if="movie.mm" class="c-movie-card__mm">MM</p>
     <div class="c-movie-card__title">
       <h3 ref="movieTitle" class="c-movie-card__title__main">{{ title }}</h3>
       <div class="c-movie-card__title__sub">
@@ -24,10 +27,31 @@
     </div>
     <div class="c-movie-card__meta">
       <p v-show="dateSeen">Gesehen: {{ dateSeen }}</p>
-      <p v-show="movie.tmdb">Erscheinungsjahr: {{ movie.yearReleased }}</p>
-      <p v-show="movie.length">Länge: {{ movie.length }}min</p>
+      <p>Erscheinungsjahr: {{ movie.releaseDate }}</p>
+      <p v-show="movie.runtime">Länge: {{ movie.runtime }}min</p>
     </div>
     <TablerIcon name="arrows-maximize" size="20" class="c-movie-card__expand" />
+  </button>
+
+  <button v-else class="g-btn-reset c-movie-card c-movie-card--mobile">
+    <div ref="movieTitleContainer" class="c-movie-card__title">
+      <div class="c-movie-card__date">
+        {{ dateSeen }}
+      </div>
+      <h3 ref="movieTitle" class="c-movie-card__name">{{ title }}</h3>
+    </div>
+    <div class="c-movie-card__rating" :class="[ratingModifier]">
+      <strong>{{ rating }}</strong>
+    </div>
+    <div class="c-movie-card__genres">
+      {{ genres }}
+    </div>
+    <div class="c-movie-card__expand">
+      <details>
+        <summary><TablerIcon name="chevron-down" /></summary>
+        <div>sample details screen</div>
+      </details>
+    </div>
   </button>
 </template>
 
@@ -38,10 +62,12 @@ import { MovieResponse } from "~/entities/movie.entity"
 export default Vue.extend({
   props: {
     movie: {
-      type: Object as PropType<
-        MovieResponse & { tmdb: Exclude<MovieResponse["tmdb"], number> }
-      >,
+      type: Object as PropType<MovieResponse>,
       required: true,
+    },
+    layout: {
+      type: String,
+      default: "mobile",
     },
   },
   data () {
@@ -49,7 +75,6 @@ export default Vue.extend({
       imgLoaded: false,
       imgSrc: "",
       imgAlt: "Filmposter",
-      mm: false,
     }
   },
   computed: {
@@ -62,25 +87,20 @@ export default Vue.extend({
       })
     },
     title (): string {
-      const {
-        tmdb: { title },
-      } = this.movie
+      const { title } = this.movie
       return (title.german || title.original).replace(/\s*\(mm\)\s*/gi, "")
     },
     fskIcon (): string | boolean {
       const { fsk } = this.movie
-      return (
-        typeof fsk === "number" && require(`../../assets/svg/fsk-${fsk}.svg`)
-      )
+      return typeof fsk === "number" && require(`../assets/svg/fsk-${fsk}.svg`)
     },
     genres (): string {
-      return this.movie.genres.join(", ") || "keine Genres vorhanden"
+      return this.movie.genres?.join(", ") || "keine Genres vorhanden"
     },
     rating (): { ch: string; rt: string; total: string } {
       const formatRating = (rating: number) => (rating / 100).toFixed(2)
 
       const { rating } = this.movie
-      console.log({ movie: this.movie.title.original, rating })
 
       const total = formatRating(rating.total)
       const ch = rating.ch < 0 ? total : formatRating(rating.ch)
@@ -109,14 +129,11 @@ export default Vue.extend({
     },
   },
   mounted () {
-    const { img, title } = this.movie
+    const { posterURL } = this.movie
 
-    img
-      ? img.__type === "uri" &&
-        (this.imgSrc = `http://image.tmdb.org/t/p/w154${img.uri}`)
+    posterURL
+      ? (this.imgSrc = `http://image.tmdb.org/t/p/w154${posterURL}`)
       : (this.$refs.moviePoster as HTMLElement).remove()
-
-    this.mm = /\s*\(mm\)\s*/i.test(title.original)
   },
 })
 </script>

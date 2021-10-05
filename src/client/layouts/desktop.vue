@@ -2,7 +2,7 @@
   <div class="l-index l-index--desktop">
     <DesktopHeader />
     <Nuxt />
-    <DesktopFooter />
+    <Footer />
   </div>
 </template>
 

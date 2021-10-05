@@ -1,5 +1,6 @@
 <template>
   <main class="p-index">
+    <button @click="postCombinedData()">postCombinedData</button>
     <div class="p-index__heading">
       <h2>Zuletzt gesehen</h2>
       <NuxtLink to="/sample" class="p-index__heading__link">
@@ -7,16 +8,14 @@
       </NuxtLink>
     </div>
     <!-- @todo add default element "Show more ->" to the end of the grid -->
-    <DesktopMovieCardContainer
-      v-if="$nuxt.layoutName === 'desktop'"
-      :movie-data="latestMovies"
-    />
-    <MobileMovieCardContainer v-else :movie-data="latestMovies" />
+    <MovieCardContainer :movie-data="latestMovies" :layout="$nuxt.layoutName" />
+    <!-- <MobileMovieCardContainer v-else :movie-data="latestMovies" /> -->
   </main>
 </template>
 
 <script lang="ts">
 import Vue from "vue"
+import postCombinedData from "../../utils/postCombinedData"
 import { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
@@ -28,19 +27,21 @@ export default Vue.extend({
     console.log(`Set layout to ${layoutName}`)
     return layoutName
   },
-  data (): { latestMovies: MovieResponse[] } {
+  data (): { latestMovies: MovieResponse[]; postCombinedData: any } {
     return {
+      postCombinedData,
       latestMovies: [],
     }
   },
   async fetch () {
-    this.latestMovies = await this.$axios
-      .$get("/movie")
-      .catch(
-        (e) =>
-          process.browser && alert("Something went wrong: " + JSON.stringify(e))
-      )
+    this.latestMovies =
+      (await this.$axios
+        .$get<MovieResponse[]>("/movie")
+        .catch(
+          (e) =>
+            process.browser &&
+            alert("Something went wrong: " + JSON.stringify(e))
+        )) || []
   },
-  fetchOnServer: false,
 })
 </script>
