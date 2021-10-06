@@ -27,7 +27,7 @@
     </div>
     <div class="c-movie-card__meta">
       <p v-show="dateSeen">Gesehen: {{ dateSeen }}</p>
-      <p>Erscheinungsjahr: {{ movie.releaseDate }}</p>
+      <p>Erscheinungsjahr: {{ yearReleased }}</p>
       <p v-show="movie.runtime">Länge: {{ movie.runtime }}min</p>
     </div>
     <TablerIcon name="arrows-maximize" size="20" class="c-movie-card__expand" />
@@ -57,12 +57,13 @@
 
 <script lang="ts">
 import Vue, { PropType } from "vue"
-import { MovieResponse } from "~/entities/movie.entity"
+import formatDateDE from "../../utils/formatDateDE"
+import { MovieResponseJSON } from "~/entities/movie.entity"
 
 export default Vue.extend({
   props: {
     movie: {
-      type: Object as PropType<MovieResponse>,
+      type: Object as PropType<MovieResponseJSON>,
       required: true,
     },
     layout: {
@@ -78,13 +79,13 @@ export default Vue.extend({
     }
   },
   computed: {
-    dateSeen (): string | undefined {
+    dateSeen (): string | null | undefined {
       const { dateSeen } = this.movie
-      return dateSeen?.toLocaleDateString("de", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-      })
+      return dateSeen && formatDateDE(dateSeen)
+    },
+    yearReleased (): number {
+      const { releaseDate } = this.movie
+      return new Date(releaseDate).getFullYear()
     },
     title (): string {
       const { title } = this.movie

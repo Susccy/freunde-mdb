@@ -39,3 +39,8 @@ export type MoviePartial = Omit<
 }
 
 export type MovieResponse = Movie & MovieVirtuals
+
+export type MovieResponseJSON = Omit<
+  MovieResponse,
+  "dateSeen" | "releaseDate"
+> & { dateSeen?: string; releaseDate: string }

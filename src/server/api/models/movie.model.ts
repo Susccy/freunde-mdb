@@ -14,7 +14,7 @@ export interface Movie {
   tmdbID: number
   title: { original: string; german?: string }
   genres: string[]
-  releaseDate: string
+  releaseDate: Date
   runtime?: number
   posterURL?: string
   // reserved for custom movie input
@@ -36,13 +36,15 @@ const movieSchema = new Schema<Movie, MovieModel>({
   rating: {
     ch: { type: Number, required: true },
     rt: { type: Number, required: true },
+    // ch: { type: Number, required: true },
+    // rt: { type: Number, required: true },
   },
   dateSeen: Date,
   fsk: Number,
   mm: Boolean,
 
   // tmdb api data
-  tmdbID: { type: Number, required: true },
+  tmdbID: { type: Number, required: true, unique: true },
   title: {
     original: { type: String, required: true },
     german: String,
@@ -50,7 +52,7 @@ const movieSchema = new Schema<Movie, MovieModel>({
   releaseDate: { type: Date, required: true },
   runtime: { type: Number, required: true },
   genres: [String],
-  posterUrl: { type: String, required: true },
+  posterURL: String,
   // reserved for custom movie input
   // posterFile: {
   //   data: { type: Buffer, required: true },
@@ -58,8 +60,8 @@ const movieSchema = new Schema<Movie, MovieModel>({
   // },
   budget: { type: Number, required: true },
   revenue: { type: Number, required: true },
-  tagline: { type: String, required: true },
-  overview: { type: String, required: true },
+  tagline: String,
+  overview: String,
 })
 
 movieSchema

@@ -27,21 +27,22 @@ export default Vue.extend({
     console.log(`Set layout to ${layoutName}`)
     return layoutName
   },
-  data (): { latestMovies: MovieResponse[]; postCombinedData: any } {
+  data (): { latestMovies: MovieResponse[] } {
     return {
-      postCombinedData,
       latestMovies: [],
     }
   },
   async fetch () {
-    this.latestMovies =
-      (await this.$axios
-        .$get<MovieResponse[]>("/movie")
-        .catch(
-          (e) =>
-            process.browser &&
-            alert("Something went wrong: " + JSON.stringify(e))
-        )) || []
+    const movieResponse = await this.$axios.$get<MovieResponse[]>("/movie")
+    // .catch((e) => {
+    //   console.error(e)
+    //   process.browser && alert("Something went wrong: " + JSON.stringify(e))
+    //   return undefined
+    // })
+    this.latestMovies = movieResponse || []
+  },
+  methods: {
+    postCombinedData,
   },
 })
 </script>

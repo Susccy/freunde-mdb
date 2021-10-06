@@ -25,7 +25,7 @@ export default function () {
     asyncActions.push(
       axios.post<MovieInput>("http://localhost:3000/api/movie", {
         tmdbID: id,
-        rating: +movies[1].rating.trim().replace(",", "."),
+        rating: { total: +movies[1].rating.trim().replace(",", ".") * 100 },
         dateSeen:
           dateSeenDMY &&
           new Date(+dateSeenDMY[2], +dateSeenDMY[1] - 1, +dateSeenDMY[0]),

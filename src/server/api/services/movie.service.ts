@@ -56,7 +56,7 @@ export interface TMDBMovieDetails {
 
 interface TMDBMovieDetailsParsedLean {
   title: { original: string; german?: string }
-  releaseDate: string
+  releaseDate: Date
   genres: string[]
   runtime?: number
   posterURL?: string
@@ -82,10 +82,10 @@ function parseMovieDetailsResponse<T extends boolean> (
 
   const parsedResponseLean: TMDBMovieDetailsParsedLean = {
     title: { original: original_title, ...(title && { german: title }) },
-    releaseDate: release_date,
+    releaseDate: new Date(release_date),
     genres: genres.map((genre) => genre.name),
     ...(runtime && { runtime }),
-    ...(poster_path && { poster: poster_path }),
+    ...(poster_path && { posterURL: poster_path }),
   }
 
   if (lean) return parsedResponseLean as ResultType<T>
@@ -181,6 +181,10 @@ export default {
     const tmdbResponse = await tmdbAPI
       .get<TMDBMovieDetails>(`/movie/${tmdbID}`)
       .then(({ data }) => parseMovieDetailsResponse(data, false))
+      .catch((e) => {
+        console.error(e.response)
+        throw e
+      })
 
     const completeDoc: Movie = { ...doc, ...tmdbResponse }
 
