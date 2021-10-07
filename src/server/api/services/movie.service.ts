@@ -186,7 +186,10 @@ export default {
         throw e
       })
 
-    const completeDoc: Movie = { ...doc, ...tmdbResponse }
+    const completeDoc: Omit<Movie, "rating"> & Pick<MovieInput, "rating"> = {
+      ...doc,
+      ...tmdbResponse,
+    }
 
     return await new MovieModel(completeDoc).save()
   },

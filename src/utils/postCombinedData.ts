@@ -18,9 +18,11 @@ export default function () {
       console.log("No data for " + movieName)
       continue
     }
-    const { id } = movieData.tmdb.reduce((pre, cur) =>
-      pre.popularity > cur.popularity ? pre : cur
-    )
+    const { id } = movieData.tmdb.reduce((pre, cur) => {
+      // @todo refactor `if` above reduce so we don't loop through the array if we already know the id
+      if (movieName === "Frozen") return pre.id === 44363 ? pre : cur
+      return pre.popularity > cur.popularity ? pre : cur
+    })
     const dateSeenDMY = movieData.dateSeen?.split(".")
     asyncActions.push(
       axios.post<MovieInput>("http://localhost:3000/api/movie", {
@@ -29,11 +31,19 @@ export default function () {
         dateSeen:
           dateSeenDMY &&
           new Date(+dateSeenDMY[2], +dateSeenDMY[1] - 1, +dateSeenDMY[0]),
-        fsk: movieData.fsk,
+        fsk:
+          movieData.fsk === undefined || movieData.fsk === "N.E."
+            ? undefined
+            : +movieData.fsk,
         mm: movieData.mm,
-      })
+      } as MovieInput)
     )
   }
 
-  Promise.all(asyncActions).then(() => console.log("done!"))
+  Promise.allSettled(asyncActions).then((r) =>
+    console.log(
+      "done! rejected:",
+      r.filter((v) => v.status === "rejected")
+    )
+  )
 }

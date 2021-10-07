@@ -85,7 +85,7 @@ const movieController: MovieController = {
       try {
         const { id } = req.params
         const deleted = await MovieService.delete(id)
-        if (!deleted.ok) throw new NotFoundError()
+        if (!deleted.deletedCount) throw new NotFoundError()
         return res.status(200).json(deleted)
       } catch (e) {
         next(e)

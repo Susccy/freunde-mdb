@@ -1,7 +1,8 @@
 import { Schema, Model, model, models } from "mongoose"
+import mongooseUniqueValidator from "mongoose-unique-validator"
 
-type RatingIndividual = { ch: number; rt: number }
-type RatingTotal = { total: number }
+export type RatingIndividual = { ch: number; rt: number }
+export type RatingTotal = { total: number }
 
 export interface Movie {
   // custom input
@@ -31,7 +32,7 @@ export interface MovieVirtuals {
 
 type MovieModel = Model<Movie, {}, MovieVirtuals>
 
-const movieSchema = new Schema<Movie, MovieModel>({
+const movieSchema = new Schema<Movie, MovieModel, MovieVirtuals>({
   // custom input
   rating: {
     ch: { type: Number, required: true },
@@ -79,7 +80,9 @@ movieSchema
 
 movieSchema.set("toJSON", { getters: true, virtuals: true })
 
+movieSchema.plugin(mongooseUniqueValidator)
+
 // Try to use the existing model if it's been created before.
 // Used to suppress a mongoose error on nuxt hot reload.
 export default (models.Movie as MovieModel) ||
-  model<Movie, MovieModel>("Movie", movieSchema)
+  model<Movie>("Movie", movieSchema)

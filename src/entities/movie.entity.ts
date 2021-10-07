@@ -1,9 +1,13 @@
-import { Movie, MovieVirtuals } from "../server/api/models/movie.model"
-
-export type MovieInput = Pick<
+import {
   Movie,
-  "tmdbID" | "rating" | "dateSeen" | "fsk" | "mm"
->
+  MovieVirtuals,
+  RatingTotal,
+  RatingIndividual,
+} from "../server/api/models/movie.model"
+
+export type MovieInput = Pick<Movie, "tmdbID" | "dateSeen" | "fsk" | "mm"> & {
+  rating: RatingTotal | RatingIndividual
+}
 
 /**
  * @todo genres als array?
