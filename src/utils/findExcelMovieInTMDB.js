@@ -1,6 +1,7 @@
 const zlib = require("zlib")
 const fs = require("fs")
 const axios = require("axios")
+const fixUnknownMovieNames = require("./fixUnknownMovieNamesInCSV.js")
 console.log("requesting data...")
 axios
   .get("http://files.tmdb.org/p/exports/movie_ids_09_28_2021.json.gz", {
@@ -24,13 +25,13 @@ axios
           }
           return result
         })
+      fixUnknownMovieNames()
       const freundeData = fs
         .readFileSync(
           "C:/Users/erik-.DESKTOP-GUCFS2N/code/github/freunde-mdb/FREUNDE_Filmliste_1.csv"
         )
         .toString()
         .split("\n")
-        .slice(7, -1)
         .map((movie) => {
           const dataArray = movie.split(";")
           return {

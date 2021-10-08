@@ -18,11 +18,12 @@ export default function () {
       console.log("No data for " + movieName)
       continue
     }
-    const { id } = movieData.tmdb.reduce((pre, cur) => {
-      // @todo refactor `if` above reduce so we don't loop through the array if we already know the id
-      if (movieName === "Frozen") return pre.id === 44363 ? pre : cur
-      return pre.popularity > cur.popularity ? pre : cur
-    })
+    let id: number
+    if (movieName === "Frozen") id = 44363
+    else
+      id = movieData.tmdb.reduce((pre, cur) => {
+        return pre.popularity > cur.popularity ? pre : cur
+      }).id
     const dateSeenDMY = movieData.dateSeen?.split(".")
     asyncActions.push(
       axios.post<MovieInput>("http://localhost:3000/api/movie", {

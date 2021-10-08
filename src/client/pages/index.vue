@@ -33,7 +33,19 @@ export default Vue.extend({
     }
   },
   async fetch () {
-    const movieResponse = await this.$axios.$get<MovieResponse[]>("/movie")
+    const movieResponse = await this.$axios.$get<MovieResponse[]>("/movie", {
+      params: {
+        sort: "-rating.ch",
+        dateSeen: {
+          $lte: new Date(),
+          $gt: new Date(
+            new Date().getFullYear() - 2,
+            new Date().getMonth() - 1
+          ),
+        },
+        limit: 10,
+      },
+    })
     // .catch((e) => {
     //   console.error(e)
     //   process.browser && alert("Something went wrong: " + JSON.stringify(e))

@@ -58,11 +58,15 @@
     #{$self}__title {
       grid-area: title;
       margin: 0.5rem;
+      margin-bottom: 0;
       overflow: hidden;
 
       &__main {
+        font-family: "Roboto Slab";
+        font-weight: normal;
         font-size: $lg-x;
         padding-bottom: 0.1rem;
+        margin-bottom: 0.2rem;
         max-height: 4rem;
 
         // https://stackoverflow.com/a/13924997/13575631
@@ -74,7 +78,6 @@
 
       &__sub {
         font-size: $sm;
-        padding: 0.25rem 0;
         display: flex;
         align-items: center;
         gap: 0.25rem;
@@ -85,6 +88,7 @@
 
         #{$self}__title__genres {
           color: $on-surface-2dim;
+          padding: 0.1rem;
           font-style: italic;
           overflow: hidden;
           text-overflow: ellipsis;

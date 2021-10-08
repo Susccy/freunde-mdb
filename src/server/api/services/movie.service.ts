@@ -106,13 +106,14 @@ function parseMovieDetailsResponse<T extends boolean> (
 export default {
   find: async (
     query: FilterQuery<Movie> = {},
-    options: { page?: number; limit?: number } = {}
+    options: { page?: number; limit?: number; sort?: string } = {}
   ) => {
-    const { page = 0, limit = 0 } = options
+    const { page = 0, limit = 0, sort } = options
 
     const freundeData = await MovieModel.find(query)
       .skip(page * limit)
       .limit(limit)
+      .sort(sort)
       .select("-__v")
       .exec()
 

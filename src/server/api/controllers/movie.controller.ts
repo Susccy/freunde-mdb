@@ -20,10 +20,12 @@ const movieController: MovieController = {
   get: [
     async (req, res, next) => {
       try {
-        const { limit, page, ...query } = req.query
+        const { limit, page, sort, ...query } = req.query
+        query.dateSeen = JSON.parse(query.dateSeen!)
         const options = {
           ...(limit && { limit: parseInt(limit) }),
           ...(page && { page: parseInt(page) }),
+          sort,
         }
 
         const results: MovieResponse[] = await MovieService.find(query, options)
