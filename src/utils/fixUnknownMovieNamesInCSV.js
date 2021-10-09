@@ -11,7 +11,7 @@ module.exports = () => {
     ["The Eloise Asylum", "Eloise"],
     ["TAU", "Tau"],
     ["Rec", "[REC]"],
-    ["Ich seh Ich seh", "Goodnight Mommy"],
+    ["Ich seh Ich seh", "Ich seh, Ich seh"],
     ["IT Chapter Two", "It Chapter Two"],
     ["Ver�nica", "Verónica"],
     ["The Descend", "The Descent"],
@@ -29,9 +29,7 @@ module.exports = () => {
   ]
 
   const csv = fs
-    .readFileSync(
-      "C:/Users/erik-.DESKTOP-GUCFS2N/code/github/freunde-mdb/FREUNDE_Filmliste_1.csv"
-    )
+    .readFileSync("FREUNDE_Filmliste_1.csv")
     .toString()
     .split("\n")
     .slice(7, -1)
@@ -43,8 +41,5 @@ module.exports = () => {
 
   const csvEdited = csv.map((movie) => movie.join(";")).join("\n")
 
-  fs.writeFileSync(
-    "C:/Users/erik-.DESKTOP-GUCFS2N/code/github/freunde-mdb/FREUNDE_Filmliste_1.csv",
-    csvEdited
-  )
+  fs.writeFileSync("FREUNDE_Filmliste_1_EDITED.csv", csvEdited)
 }

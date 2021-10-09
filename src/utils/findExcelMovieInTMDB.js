@@ -4,7 +4,7 @@ const axios = require("axios")
 const fixUnknownMovieNames = require("./fixUnknownMovieNamesInCSV.js")
 console.log("requesting data...")
 axios
-  .get("http://files.tmdb.org/p/exports/movie_ids_09_28_2021.json.gz", {
+  .get("http://files.tmdb.org/p/exports/movie_ids_10_08_2021.json.gz", {
     responseType: "arraybuffer",
   })
   .then((res) =>
@@ -27,9 +27,7 @@ axios
         })
       fixUnknownMovieNames()
       const freundeData = fs
-        .readFileSync(
-          "C:/Users/erik-.DESKTOP-GUCFS2N/code/github/freunde-mdb/FREUNDE_Filmliste_1.csv"
-        )
+        .readFileSync("FREUNDE_Filmliste_1_EDITED.csv")
         .toString()
         .split("\n")
         .map((movie) => {
