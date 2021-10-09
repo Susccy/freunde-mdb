@@ -6,7 +6,7 @@ export type RatingTotal = { total: number }
 
 export interface Movie {
   // custom input
-  rating: RatingIndividual
+  rating: RatingTotal | (RatingTotal & RatingIndividual)
   dateSeen?: Date
   fsk?: number
   mm?: boolean
@@ -26,22 +26,76 @@ export interface Movie {
   overview?: string
 }
 
-export interface MovieVirtuals {
-  rating: RatingTotal
-}
+const ratingSchema = new Schema<Movie["rating"]>({
+  total: {
+    type: Number,
+    required: true,
+    validate: {
+      validator (v: number) {
+        return Number.isInteger(v) && v >= 0 && v <= 1000 && v % 25 === 0
+      },
+      message:
+        "Expected total rating to be an integer in the range from 0 to 1000 and an increment of 25, but got {VALUE}.",
+    },
+  },
+  ch: {
+    type: Number,
+    required (this: Movie["rating"]) {
+      return "rt" in this && typeof this.rt === "number"
+    },
+    validate: {
+      validator (v: number) {
+        return Number.isInteger(v) && v >= 0 && v <= 1000 && v % 50 === 0
+      },
+      message:
+        "Expected individual rating to be an integer in the range from 0 to 1000 and an increment of 50, but got {VALUE}.",
+    },
+  },
+  rt: {
+    type: Number,
+    required (this: Movie["rating"]) {
+      return "ch" in this && typeof this.ch === "number"
+    },
+    validate: {
+      validator (v: number) {
+        return Number.isInteger(v) && v >= 0 && v <= 1000 && v % 50 === 0
+      },
+      message:
+        "Expected individual rating to be an integer in the range from 0 to 1000 and an increment of 50, but got {VALUE}.",
+    },
+  },
+})
 
-type MovieModel = Model<Movie, {}, MovieVirtuals>
-
-const movieSchema = new Schema<Movie, MovieModel, MovieVirtuals>({
+const movieSchema = new Schema<Movie>({
   // custom input
   rating: {
-    ch: { type: Number, required: true },
-    rt: { type: Number, required: true },
-    // ch: { type: Number, required: true },
-    // rt: { type: Number, required: true },
+    type: ratingSchema,
+    validate: {
+      validator (v: Movie["rating"]) {
+        // console.log({
+        //   v,
+        //   result:
+        //     ("ch" in v && typeof v.ch === "number") ||
+        //     ("rt" in v && typeof v.rt === "number"),
+        // })
+        return ("ch" in v && typeof v.ch === "number") ||
+          ("rt" in v && typeof v.rt === "number")
+          ? (v.ch + v.rt) / 2 === v.total
+          : true
+      },
+      message: "Individual ratings don't match total rating.",
+    },
   },
   dateSeen: Date,
-  fsk: Number,
+  fsk: {
+    type: Number,
+    validate: {
+      validator (v: number) {
+        return [0, 6, 12, 16, 18].includes(v)
+      },
+      message: "Expected FSK to be (0 | 6 | 12 | 16 | 18), but got {VALUE}.",
+    },
+  },
   mm: Boolean,
 
   // tmdb api data
@@ -65,24 +119,11 @@ const movieSchema = new Schema<Movie, MovieModel, MovieVirtuals>({
   overview: String,
 })
 
-movieSchema
-  .virtual("rating.total")
-  .get(function (this: Movie) {
-    const { ch, rt } = this.rating
-    // Movies rated prior to the beginning of the FREUNDE Filmliste 2 didn't receive individual ratings, only a total.
-    // If a user only inputs a total rating instead of individual ratings, one of the individuals will be automatically set to -1.
-    // That's why we check if either value is negative here, in which case we simply return the other value, otherwise we calculate the average.
-    return Math.min(ch, rt) < 0 ? Math.max(ch, rt) : (ch + rt) / 2
-  })
-  .set(function (this: Movie, v: number) {
-    this.rating = { ch: v, rt: -1 }
-  })
-
 movieSchema.set("toJSON", { getters: true, virtuals: true })
 
 movieSchema.plugin(mongooseUniqueValidator)
 
 // Try to use the existing model if it's been created before.
 // Used to suppress a mongoose error on nuxt hot reload.
-export default (models.Movie as MovieModel) ||
+export default (models.Movie as Model<Movie>) ||
   model<Movie>("Movie", movieSchema)

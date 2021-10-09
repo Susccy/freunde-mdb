@@ -33,8 +33,9 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue"
-import { MovieResponse } from "~/entities/movie.entity"
+import Vue from "vue"
+import type { PropType } from "vue"
+import type { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
   props: {

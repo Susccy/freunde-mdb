@@ -21,9 +21,9 @@
       </div>
     </div>
     <div class="c-movie-card__rating" :class="[ratingModifier]">
-      <p class="c-movie-card__rating__ch">{{ rating.ch }}ch</p>
+      <p class="c-movie-card__rating__ch">{{ rating.ch }}</p>
       <p class="c-movie-card__rating__total">{{ rating.total }}</p>
-      <p class="c-movie-card__rating__rt">{{ rating.rt }}rt</p>
+      <p class="c-movie-card__rating__rt">{{ rating.rt }}</p>
     </div>
     <div class="c-movie-card__meta">
       <p v-show="dateSeen">Gesehen: {{ dateSeen }}</p>
@@ -56,7 +56,8 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue"
+import Vue from "vue"
+import type { PropType } from "vue"
 import formatDateDE from "../../utils/formatDateDE"
 import { MovieResponseJSON } from "~/entities/movie.entity"
 
@@ -98,19 +99,15 @@ export default Vue.extend({
     genres (): string {
       return this.movie.genres?.join(", ") || "keine Genres vorhanden"
     },
-    rating (): { ch: string; rt: string; total: string } {
+    rating (): { ch?: string; rt?: string; total: string } {
       const formatRating = (rating: number) => (rating / 100).toFixed(2)
 
       const { rating } = this.movie
 
-      const total = formatRating(rating.total)
-      const ch = rating.ch < 0 ? total : formatRating(rating.ch)
-      const rt = rating.rt < 0 ? total : formatRating(rating.rt)
-
       return {
-        ch,
-        rt,
-        total,
+        total: formatRating(rating.total),
+        ...("ch" in rating && { ch: formatRating(rating.ch) + "ch" }),
+        ...("rt" in rating && { rt: formatRating(rating.rt) + "rt" }),
       }
     },
     ratingModifier (): string {

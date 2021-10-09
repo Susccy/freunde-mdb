@@ -16,7 +16,7 @@
 <script lang="ts">
 import Vue from "vue"
 import postCombinedData from "../../utils/postCombinedData"
-import { MovieResponse } from "~/entities/movie.entity"
+import type { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
   // @todo why layout gets called twice?
@@ -35,15 +35,15 @@ export default Vue.extend({
   async fetch () {
     const movieResponse = await this.$axios.$get<MovieResponse[]>("/movie", {
       params: {
-        sort: "-rating.ch",
-        dateSeen: {
-          $lte: new Date(),
-          $gt: new Date(
-            new Date().getFullYear() - 2,
-            new Date().getMonth() - 1
-          ),
-        },
-        limit: 10,
+        sort: "-dateSeen",
+        // dateSeen: {
+        //   $lte: new Date(new Date().getFullYear() - 1, new Date().getMonth()),
+        //   $gt: new Date(
+        //     new Date().getFullYear() - 1,
+        //     new Date().getMonth() - 3
+        //   ),
+        // },
+        limit: 20,
       },
     })
     // .catch((e) => {

@@ -1,13 +1,9 @@
-import {
-  Movie,
-  MovieVirtuals,
-  RatingTotal,
-  RatingIndividual,
-} from "../server/api/models/movie.model"
+import { Movie } from "../server/api/models/movie.model"
 
-export type MovieInput = Pick<Movie, "tmdbID" | "dateSeen" | "fsk" | "mm"> & {
-  rating: RatingTotal | RatingIndividual
-}
+export type MovieInput = Pick<
+  Movie,
+  "tmdbID" | "dateSeen" | "fsk" | "mm" | "rating"
+>
 
 /**
  * @todo genres als array?
@@ -36,13 +32,14 @@ export type MoviePartial = Omit<
   | "overview"
 > & {
   dateSeen?: string
+  "rating.total"?: number
   "rating.ch"?: number
   "rating.rt"?: number
   "title.original"?: string
   "title.german"?: string
 }
 
-export type MovieResponse = Movie & MovieVirtuals
+export type MovieResponse = Movie
 
 export type MovieResponseJSON = Omit<
   MovieResponse,
