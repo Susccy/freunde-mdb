@@ -3,7 +3,7 @@
     <MobileHeader @openMenu="menuVisible = true" />
     <Searchbar />
     <Nuxt />
-    <MobileFooter />
+    <Footer />
   </div>
 </template>
 

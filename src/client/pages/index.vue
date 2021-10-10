@@ -1,5 +1,7 @@
 <template>
   <main class="p-index">
+    <!-- button to upload combinedData.json (run findExcelMovieInTMDB.js first) -->
+    <!-- <button @click="postCombinedData()">postCombinedData</button> -->
     <div class="p-index__heading">
       <h2>Zuletzt gesehen</h2>
       <NuxtLink to="/sample" class="p-index__heading__link">
@@ -7,17 +9,15 @@
       </NuxtLink>
     </div>
     <!-- @todo add default element "Show more ->" to the end of the grid -->
-    <DesktopMovieCardContainer
-      v-if="$nuxt.layoutName === 'desktop'"
-      :movie-data="latestMovies"
-    />
-    <MobileMovieCardContainer v-else :movie-data="latestMovies" />
+    <MovieCardContainer :movie-data="latestMovies" :layout="$nuxt.layoutName" />
+    <!-- <MobileMovieCardContainer v-else :movie-data="latestMovies" /> -->
   </main>
 </template>
 
 <script lang="ts">
 import Vue from "vue"
-import { IMovieResponse } from "~e/movie.entity"
+// import postCombinedData from "../../utils/postCombinedData"
+import type { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
   // @todo why layout gets called twice?
@@ -28,19 +28,34 @@ export default Vue.extend({
     console.log(`Set layout to ${layoutName}`)
     return layoutName
   },
-  data (): { latestMovies: IMovieResponse[] } {
+  data (): { latestMovies: MovieResponse[] } {
     return {
       latestMovies: [],
     }
   },
   async fetch () {
-    this.latestMovies = await this.$axios
-      .$get("/movie")
-      .catch(
-        (e) =>
-          process.browser && alert("Something went wrong: " + JSON.stringify(e))
-      )
+    // const now = new Date()
+    const movieResponse = await this.$axios.$get<MovieResponse[]>("/movie", {
+      params: {
+        sort: "-rating.total -dateSeen",
+        // @todo best practice for objects in query params? (have to parse on server side)
+        // dateSeen: { $ne: null },
+        // dateSeen: {
+        //   $lte: now,
+        //   $gt: new Date(now.getFullYear(), now.getMonth() - 3),
+        // },
+        // limit: 10,
+      },
+    })
+    // .catch((e) => {
+    //   console.error(e)
+    //   process.browser && alert("Something went wrong: " + JSON.stringify(e))
+    //   return undefined
+    // })
+    this.latestMovies = movieResponse || []
   },
-  fetchOnServer: false,
+  methods: {
+    // postCombinedData,
+  },
 })
 </script>
