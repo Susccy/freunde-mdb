@@ -26,7 +26,7 @@ axios
           return result
         })
       fixUnknownMovieNames()
-      const freundeData = fs
+      const freundeData1 = fs
         .readFileSync("FREUNDE_Filmliste_1_EDITED.csv")
         .toString()
         .split("\n")
@@ -40,21 +40,51 @@ axios
             mm: /\(mm\)/i.test(dataArray[0]),
           }
         })
-      for (const movie of freundeData) {
+      for (const movie of freundeData1) {
         movie.tmdb = dataArray.filter(
           (data) => data.original_title === movie.movieName
         )
       }
+      const freundeData2 = fs
+        .readFileSync("FREUNDE_Filmliste_2_EDITED.csv")
+        .toString()
+        .split("\n")
+        .map((movie) => {
+          const dataArray = movie.split(";")
+          if (!dataArray[0] || dataArray[0] === "???") return null
+          return {
+            movieName: dataArray[0],
+            rating: { total: dataArray[8], ch: dataArray[6], rt: dataArray[7] },
+            fsk: dataArray[3] === "?" ? undefined : dataArray[3],
+            dateSeen: dataArray[5] === "?" ? undefined : dataArray[5],
+          }
+        })
+      for (const movie of freundeData2) {
+        if (movie)
+          movie.tmdb = dataArray.filter(
+            (data) => data.original_title === movie.movieName
+          )
+      }
       fs.writeFileSync(
         "combinedData.json",
         JSON.stringify(
-          freundeData.reduce(
-            (obj, { movieName, ...rest }) => ({
-              ...obj,
-              [movieName]: rest,
-            }),
-            {}
-          ),
+          {
+            ...freundeData1.reduce(
+              (obj, { movieName, ...rest }) => ({
+                ...obj,
+                [movieName]: rest,
+              }),
+              {}
+            ),
+            ...freundeData2.reduce((obj, movie) => {
+              if (!movie) return obj
+              const { movieName, ...rest } = movie
+              return {
+                ...obj,
+                [movieName]: rest,
+              }
+            }, {}),
+          },
           null,
           4
         )

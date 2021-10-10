@@ -1,6 +1,7 @@
 <template>
   <main class="p-index">
-    <button @click="postCombinedData()">postCombinedData</button>
+    <!-- button to upload combinedData.json (run findExcelMovieInTMDB.js first) -->
+    <!-- <button @click="postCombinedData()">postCombinedData</button> -->
     <div class="p-index__heading">
       <h2>Zuletzt gesehen</h2>
       <NuxtLink to="/sample" class="p-index__heading__link">
@@ -15,7 +16,7 @@
 
 <script lang="ts">
 import Vue from "vue"
-import postCombinedData from "../../utils/postCombinedData"
+// import postCombinedData from "../../utils/postCombinedData"
 import type { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
@@ -33,17 +34,17 @@ export default Vue.extend({
     }
   },
   async fetch () {
+    // const now = new Date()
     const movieResponse = await this.$axios.$get<MovieResponse[]>("/movie", {
       params: {
-        sort: "-dateSeen",
+        sort: "-rating.total -dateSeen",
+        // @todo best practice for objects in query params? (have to parse on server side)
+        // dateSeen: { $ne: null },
         // dateSeen: {
-        //   $lte: new Date(new Date().getFullYear() - 1, new Date().getMonth()),
-        //   $gt: new Date(
-        //     new Date().getFullYear() - 1,
-        //     new Date().getMonth() - 3
-        //   ),
+        //   $lte: now,
+        //   $gt: new Date(now.getFullYear(), now.getMonth() - 3),
         // },
-        limit: 20,
+        // limit: 10,
       },
     })
     // .catch((e) => {
@@ -54,7 +55,7 @@ export default Vue.extend({
     this.latestMovies = movieResponse || []
   },
   methods: {
-    postCombinedData,
+    // postCombinedData,
   },
 })
 </script>

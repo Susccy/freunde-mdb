@@ -3,10 +3,10 @@ import { MovieInput } from "../entities/movie.entity"
 const combinedData: {
   [key: string]: {
     tmdb: { id: number; popularity: number }[]
-    rating: string
+    rating: string | { total: string; ch: string; rt: string }
     fsk?: string
     dateSeen?: string
-    mm: boolean
+    mm?: boolean
   }
 } = require("../../combinedData.json")
 
@@ -25,10 +25,20 @@ export default function () {
         return pre.popularity > cur.popularity ? pre : cur
       }).id
     const dateSeenDMY = movieData.dateSeen?.split(".")
+    const formatRating = (rating: string) =>
+      +rating.trim().replace(",", ".") * 100
+    const rating =
+      typeof movies[1].rating === "string"
+        ? { total: formatRating(movies[1].rating) }
+        : {
+            total: formatRating(movies[1].rating.total),
+            ch: formatRating(movies[1].rating.ch),
+            rt: formatRating(movies[1].rating.rt),
+          }
     asyncActions.push(
       axios.post<MovieInput>("http://localhost:3000/api/movie", {
         tmdbID: id,
-        rating: { total: +movies[1].rating.trim().replace(",", ".") * 100 },
+        rating,
         dateSeen:
           dateSeenDMY &&
           new Date(+dateSeenDMY[2], +dateSeenDMY[1] - 1, +dateSeenDMY[0]),
