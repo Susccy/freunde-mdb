@@ -3,9 +3,13 @@
     v-if="layout === 'desktop'"
     class="g-btn-reset c-movie-card c-movie-card--desktop"
   >
-    <div class="c-movie-card__poster">
-      <img ref="moviePoster" :src="imgSrc" :alt="imgAlt" />
-    </div>
+    <img
+      ref="moviePoster"
+      :src="imgSrc"
+      :alt="imgAlt"
+      class="c-movie-card__poster"
+    />
+
     <p v-if="movie.mm" class="c-movie-card__mm">MM</p>
     <div class="c-movie-card__title">
       <h3 ref="movieTitle" class="c-movie-card__title__main">{{ title }}</h3>
@@ -129,9 +133,7 @@ export default Vue.extend({
   mounted () {
     const { posterURL } = this.movie
 
-    posterURL
-      ? (this.imgSrc = `http://image.tmdb.org/t/p/w154${posterURL}`)
-      : (this.$refs.moviePoster as HTMLElement).remove()
+    posterURL && (this.imgSrc = `http://image.tmdb.org/t/p/w154${posterURL}`)
   },
 })
 </script>

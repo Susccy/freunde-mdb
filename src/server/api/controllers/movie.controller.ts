@@ -21,7 +21,12 @@ const movieController: MovieController = {
     async (req, res, next) => {
       try {
         const { limit, page, sort, ...query } = req.query
-        // query.dateSeen = query.dateSeen && JSON.parse(query.dateSeen)
+
+        // @todo1
+        try {
+          query.dateSeen && (query.dateSeen = JSON.parse(query.dateSeen))
+        } catch (e) {}
+
         const options = {
           ...(limit && { limit: parseInt(limit) }),
           ...(page && { page: parseInt(page) }),

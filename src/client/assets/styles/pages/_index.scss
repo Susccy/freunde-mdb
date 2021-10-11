@@ -1,10 +1,13 @@
 .p-index {
+  width: 90vw;
+  margin: 3rem auto;
+
   &__heading {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     padding: 0.5rem 0;
-
+    font-family: "Roboto Slab";
     &__link {
       display: flex;
       align-items: flex-end;

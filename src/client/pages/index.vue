@@ -8,8 +8,17 @@
         Alle anzeigen<TablerIcon name="chevron-right" size="14" />
       </NuxtLink>
     </div>
-    <!-- @todo add default element "Show more ->" to the end of the grid -->
     <MovieCardContainer :movie-data="latestMovies" :layout="$nuxt.layoutName" />
+    <div class="p-index__heading">
+      <h2>Top 10 des letzten Jahres</h2>
+      <NuxtLink to="/sample" class="p-index__heading__link">
+        Alle anzeigen<TablerIcon name="chevron-right" size="14" />
+      </NuxtLink>
+    </div>
+    <MovieCardContainer
+      :movie-data="bestRecentMovies"
+      :layout="$nuxt.layoutName"
+    />
   </main>
 </template>
 
@@ -26,31 +35,43 @@ export default Vue.extend({
     console.log(`Set layout to ${layoutName}`)
     return layoutName
   },
-  data (): { latestMovies: MovieResponse[] } {
+  data (): {
+    latestMovies: MovieResponse[]
+    bestRecentMovies: MovieResponse[]
+  } {
     return {
       latestMovies: [],
+      bestRecentMovies: [],
     }
   },
   async fetch () {
-    // const now = new Date()
-    const movieResponse = await this.$axios.$get<MovieResponse[]>("/movie", {
-      params: {
-        sort: "-dateSeen",
-        // @todo best practice for objects in query params? (have to parse on server side)
-        // dateSeen: { $ne: null },
-        // dateSeen: {
-        //   $lte: now,
-        //   $gt: new Date(now.getFullYear(), now.getMonth() - 3),
-        // },
-        limit: 10,
-      },
-    })
-    // .catch((e) => {
-    //   console.error(e)
-    //   process.browser && alert("Something went wrong: " + JSON.stringify(e))
-    //   return undefined
-    // })
-    this.latestMovies = movieResponse || []
+    // @todo error handling
+    const latestMoviesResponse = await this.$axios.$get<MovieResponse[]>(
+      "/movie",
+      {
+        params: {
+          sort: "-dateSeen -rating.total",
+          limit: 10,
+        },
+      }
+    )
+    const now = new Date()
+    const bestRecentMoviesResponse = await this.$axios.$get<MovieResponse[]>(
+      "/movie",
+      {
+        params: {
+          sort: "-rating.total -dateSeen",
+          // @todo1 best practice for objects in query params? (have to parse on server side)
+          dateSeen: {
+            $lte: now,
+            $gt: new Date(now.getFullYear(), now.getMonth() - 3),
+          },
+          limit: 10,
+        },
+      }
+    )
+    this.latestMovies = latestMoviesResponse
+    this.bestRecentMovies = bestRecentMoviesResponse
   },
   methods: {
     // postCombinedData,

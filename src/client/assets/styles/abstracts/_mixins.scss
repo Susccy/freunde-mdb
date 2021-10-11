@@ -38,3 +38,7 @@
 @mixin background-layer($layer) {
   background-color: hsl(0, 0%, calc(7% + #{$layer} * 5%));
 }
+
+@function background-layer-color($layer) {
+  @return hsl(0, 0%, calc(7% + #{$layer} * 5%));
+}

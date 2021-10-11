@@ -19,10 +19,8 @@
   }
 
   &--desktop {
-    grid-template-rows: 4rem 1fr auto;
-    > * {
-      padding: 1.5rem;
-    }
+    grid-template-rows: 7rem 1fr auto;
+
     > .p-index {
       grid-row-start: 2;
     }
