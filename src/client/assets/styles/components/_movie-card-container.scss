@@ -1,16 +1,23 @@
 .c-movie-card-container {
-  display: grid;
+  // display: grid;
+  // gap: 1rem;
+  // justify-content: center;
+
+  // &--mobile {
+  //   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  //   padding-top: 0.25rem;
+  //   padding-bottom: 1rem;
+  // }
+
+  // &--desktop {
+  //   padding: 1rem;
+  //   grid-template-columns: repeat(auto-fit, 22rem);
+  // }
+
+  display: flex;
   gap: 1rem;
-  justify-content: center;
-
-  &--mobile {
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    padding-top: 0.25rem;
-    padding-bottom: 1rem;
-  }
-
-  &--desktop {
-    padding: 1rem;
-    grid-template-columns: repeat(auto-fit, 22rem);
-  }
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  padding: 24px;
+  max-width: 90vw;
 }

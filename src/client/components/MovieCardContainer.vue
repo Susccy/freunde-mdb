@@ -2,11 +2,7 @@
   <div
     v-if="movieData.length"
     class="c-movie-card-container"
-    :class="[
-      layout === 'desktop'
-        ? 'c-movie-card-container--desktop'
-        : 'c-movie-card-container--mobile',
-    ]"
+    :class="[layout === 'desktop' && 'c-movie-card-container--desktop']"
   >
     <MovieCard
       v-for="movie in movieData"

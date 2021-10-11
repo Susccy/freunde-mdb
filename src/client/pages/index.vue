@@ -10,7 +10,6 @@
     </div>
     <!-- @todo add default element "Show more ->" to the end of the grid -->
     <MovieCardContainer :movie-data="latestMovies" :layout="$nuxt.layoutName" />
-    <!-- <MobileMovieCardContainer v-else :movie-data="latestMovies" /> -->
   </main>
 </template>
 
@@ -20,7 +19,6 @@ import Vue from "vue"
 import type { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
-  // @todo why layout gets called twice?
   layout (ctx) {
     const layoutName = /mobile/i.test(ctx.userAgent || "")
       ? "mobile"
@@ -37,14 +35,14 @@ export default Vue.extend({
     // const now = new Date()
     const movieResponse = await this.$axios.$get<MovieResponse[]>("/movie", {
       params: {
-        sort: "-rating.total -dateSeen",
+        sort: "-dateSeen",
         // @todo best practice for objects in query params? (have to parse on server side)
         // dateSeen: { $ne: null },
         // dateSeen: {
         //   $lte: now,
         //   $gt: new Date(now.getFullYear(), now.getMonth() - 3),
         // },
-        // limit: 10,
+        limit: 10,
       },
     })
     // .catch((e) => {

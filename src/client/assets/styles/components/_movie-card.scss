@@ -19,6 +19,7 @@
     border-radius: 10px;
     transition: transform 0.2s, box-shadow 0.2s;
     height: 11rem;
+    flex: 0 0 22rem;
 
     // @todo add this effect to the parent button as well (for tab focus)
     &:hover {
@@ -34,9 +35,7 @@
     #{$self}__poster {
       grid-area: poster;
       z-index: 0;
-      width: 100%;
-      height: 100%;
-      background-color: darkslategray;
+      background-color: red;
 
       img {
         width: 100%;
