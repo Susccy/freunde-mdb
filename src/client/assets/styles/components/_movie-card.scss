@@ -59,8 +59,8 @@
       overflow: hidden;
 
       &__main {
-        font-family: "Roboto Slab";
-        font-weight: normal;
+        font-family: Oswald;
+        font-weight: 400;
         font-size: $lg-x;
         padding-bottom: 0.1rem;
         margin-bottom: 0.2rem;
@@ -95,6 +95,7 @@
     }
 
     #{$self}__rating {
+      font-family: Oswald;
       grid-area: rating;
       margin: 0.3rem 0;
       padding: 0.2rem 0.5rem;
