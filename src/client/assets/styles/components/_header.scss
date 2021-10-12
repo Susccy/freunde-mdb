@@ -11,7 +11,8 @@
   @include background-layer(0);
 
   h1 {
-    padding: 1rem;
+    padding: 0.5rem;
+    font-size: $lg-2x;
     font-family: Comfortaa;
     font-weight: 700;
     // text-shadow: 0 0 7px $on-surface, 0 0 10px $on-surface, 0 0 21px $on-surface,
@@ -20,28 +21,34 @@
     border: 0.2rem solid $on-surface;
     border-radius: 20px;
     box-shadow: 0 0 0.2rem $on-surface, 0 0 0.2rem $on-surface,
-      0 0 2rem $primary-accent, 0 0 0.8rem $primary-accent,
+      0 0 0.2rem $primary-accent, 0 0 0.8rem $primary-accent,
       inset 0 0 1.3rem $primary-accent;
-    animation: pulsate 1.5s infinite alternate;
+    // animation: pulsate 1.5s infinite alternate;
+    text-shadow: 0 0 4px $on-surface, 0 0 11px $on-surface, 0 0 19px $on-surface,
+      0 0 40px $primary-accent, 0 0 80px $primary-accent,
+      0 0 90px $primary-accent /* ,
+      0 0 100px $primary-accent  */
+        /* ,
+      0 0 150px $primary-accent */;
   }
 
-  @keyframes pulsate {
-    100% {
-      text-shadow: 0 0 4px $on-surface, 0 0 11px $on-surface,
-        0 0 19px $on-surface, 0 0 40px $primary-accent, 0 0 80px $primary-accent,
-        0 0 90px $primary-accent,
-        0 0 100px $primary-accent /* ,
-        0 0 150px $primary-accent */;
-    }
+  // @keyframes pulsate {
+  //   100% {
+  //     text-shadow: 0 0 4px $on-surface, 0 0 11px $on-surface,
+  //       0 0 19px $on-surface, 0 0 40px $primary-accent, 0 0 80px $primary-accent,
+  //       0 0 90px $primary-accent,
+  //       0 0 100px $primary-accent /* ,
+  //       0 0 150px $primary-accent */;
+  //   }
 
-    0% {
-      text-shadow: 0 0 2px $on-surface, 0 0 4px $on-surface, 0 0 6px $on-surface,
-        0 0 10px $primary-accent, 0 0 45px $primary-accent,
-        0 0 55px $primary-accent,
-        0 0 70px $primary-accent /* ,
-        0 0 80px $primary-accent */;
-    }
-  }
+  //   0% {
+  //     text-shadow: 0 0 2px $on-surface, 0 0 4px $on-surface, 0 0 6px $on-surface,
+  //       0 0 10px $primary-accent, 0 0 45px $primary-accent,
+  //       0 0 55px $primary-accent,
+  //       0 0 70px $primary-accent /* ,
+  //       0 0 80px $primary-accent */;
+  //   }
+  // }
 
   &--mobile {
     transition: height 250ms;
@@ -73,7 +80,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 7rem;
+    height: 5rem;
     padding: 0 5vw;
   }
 }
