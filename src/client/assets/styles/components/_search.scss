@@ -1,8 +1,8 @@
 .c-search {
   border-radius: 15px;
-  max-width: 30rem;
+  max-width: 25rem;
   margin: 1rem 0;
-  @include background-layer(10);
+  background: $on-surface-dim;
   box-shadow: 3px 3px 3px 2px rgba(#000, 0.2);
   display: flex;
   justify-content: space-between;
@@ -13,7 +13,7 @@
     min-height: 1.5rem;
     line-height: 1.5rem;
     background: inherit;
-    color: $on-surface;
+    color: $on-surface-4dim;
     border: none;
 
     &:focus {
@@ -21,7 +21,7 @@
     }
 
     &::placeholder {
-      color: $on-surface-dim;
+      color: $on-surface-3dim;
     }
   }
 
@@ -29,5 +29,6 @@
     padding: 0 0.5rem;
     display: flex;
     align-items: center;
+    color: $on-surface-4dim;
   }
 }

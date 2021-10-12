@@ -3,7 +3,7 @@
     <input
       v-model="inputValue"
       type="text"
-      placeholder="Suchen..."
+      placeholder="Film suchen..."
       class="c-search__input"
     />
     <button @click="search" class="g-btn-reset c-search__btn">

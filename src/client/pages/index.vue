@@ -2,6 +2,10 @@
   <main class="p-index">
     <!-- button to upload combinedData.json (run findExcelMovieInTMDB.js first) -->
     <!-- <button @click="postCombinedData()">postCombinedData</button> -->
+    <div class="p-index__search">
+      <Searchbar />
+      <p>Erweiterte Suche <TablerIcon name="chevron-right" /></p>
+    </div>
     <div class="p-index__heading">
       <h2>Zuletzt gesehen</h2>
       <NuxtLink to="/sample" class="p-index__heading__link">
@@ -10,7 +14,7 @@
     </div>
     <MovieCardContainer :movie-data="latestMovies" :layout="$nuxt.layoutName" />
     <div class="p-index__heading">
-      <h2>Top 10 des letzten Jahres</h2>
+      <h2>Beste neue Filme</h2>
       <NuxtLink to="/sample" class="p-index__heading__link">
         Alle anzeigen<TablerIcon name="chevron-right" size="14" />
       </NuxtLink>
@@ -60,12 +64,13 @@ export default Vue.extend({
       "/movie",
       {
         params: {
-          sort: "-rating.total -dateSeen",
+          sort: "-rating.total -releaseDate",
           // @todo1 best practice for objects in query params? (have to parse on server side)
-          dateSeen: {
+          releaseDate: {
             $lte: now,
-            $gt: new Date(now.getFullYear(), now.getMonth() - 3),
+            $gt: new Date(now.getFullYear() - 1, now.getMonth()),
           },
+          "rating.total": { $gte: 500 },
           limit: 10,
         },
       }
