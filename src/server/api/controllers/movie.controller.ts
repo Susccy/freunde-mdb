@@ -24,7 +24,11 @@ const movieController: MovieController = {
 
         // @todo1
         try {
+          query["rating.total"] &&
+            (query["rating.total"] = JSON.parse(query["rating.total"]))
           query.dateSeen && (query.dateSeen = JSON.parse(query.dateSeen))
+          query.releaseDate &&
+            (query.releaseDate = JSON.parse(query.releaseDate))
         } catch (e) {}
 
         const options = {
