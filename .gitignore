@@ -91,3 +91,7 @@ sw.*
 
 # VS Code workspace settings
 .vscode
+
+# generated movie data files
+combinedData.json
+FREUNDE_Filmliste_*_EDITED.csv
