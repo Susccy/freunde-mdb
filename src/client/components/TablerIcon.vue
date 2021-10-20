@@ -1,5 +1,5 @@
 <template>
-  <component :is="iconComponentName" :size="size" />
+  <component :is="iconComponentName" :size="size" class="c-icon" />
 </template>
 
 <script lang="ts">
@@ -12,6 +12,8 @@ import {
   XIcon,
   SearchIcon,
   ArrowsMaximizeIcon,
+  FlameIcon,
+  RotateClockwise2Icon,
 } from "vue-tabler-icons"
 
 export default Vue.extend({
@@ -23,6 +25,8 @@ export default Vue.extend({
     XIcon,
     SearchIcon,
     ArrowsMaximizeIcon,
+    FlameIcon,
+    RotateClockwise2Icon,
   },
   props: {
     name: {

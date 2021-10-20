@@ -4,25 +4,36 @@
     <!-- <button @click="postCombinedData()">postCombinedData</button> -->
     <div class="p-index__search">
       <Searchbar />
-      <p>Erweiterte Suche <TablerIcon name="chevron-right" /></p>
+      <button class="g-btn-reset p-index__search__extended">
+        Erweiterte Suche<TablerIcon name="chevron-right" />
+      </button>
     </div>
-    <div class="p-index__heading">
-      <h2>Zuletzt gesehen</h2>
-      <NuxtLink to="/sample" class="p-index__heading__link">
-        Alle anzeigen<TablerIcon name="chevron-right" size="14" />
-      </NuxtLink>
+    <div class="p-index__movie-display">
+      <div class="p-index__movie-display__heading">
+        <h2>
+          <TablerIcon name="rotate-clockwise-2" size="38" />Zuletzt gesehen
+        </h2>
+        <NuxtLink to="/sample">
+          Alle anzeigen<TablerIcon name="chevron-right" size="14" />
+        </NuxtLink>
+      </div>
+      <MovieCardContainer
+        :movie-data="latestMovies"
+        :layout="$nuxt.layoutName"
+      />
     </div>
-    <MovieCardContainer :movie-data="latestMovies" :layout="$nuxt.layoutName" />
-    <div class="p-index__heading">
-      <h2>Beste neue Filme</h2>
-      <NuxtLink to="/sample" class="p-index__heading__link">
-        Alle anzeigen<TablerIcon name="chevron-right" size="14" />
-      </NuxtLink>
+    <div class="p-index__movie-display">
+      <div class="p-index__movie-display__heading">
+        <h2><TablerIcon name="flame" size="38" />Beste neue Filme</h2>
+        <NuxtLink to="/sample">
+          Alle anzeigen<TablerIcon name="chevron-right" size="14" />
+        </NuxtLink>
+      </div>
+      <MovieCardContainer
+        :movie-data="bestRecentMovies"
+        :layout="$nuxt.layoutName"
+      />
     </div>
-    <MovieCardContainer
-      :movie-data="bestRecentMovies"
-      :layout="$nuxt.layoutName"
-    />
   </main>
 </template>
 
@@ -78,6 +89,7 @@ export default Vue.extend({
     this.latestMovies = latestMoviesResponse
     this.bestRecentMovies = bestRecentMoviesResponse
   },
+  fetchOnServer: false,
   methods: {
     // postCombinedData,
   },

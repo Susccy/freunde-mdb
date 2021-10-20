@@ -1,4 +1,5 @@
 <template>
+  <!-- v-if="movieData.length" -->
   <div
     v-if="movieData.length"
     class="c-movie-card-container"
@@ -21,7 +22,7 @@
     ]"
   >
     <MovieCardPlaceholder
-      v-for="placeholder in 6"
+      v-for="placeholder in 10"
       :key="placeholder"
       :layout="layout"
     />
