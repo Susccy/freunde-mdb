@@ -1,35 +1,93 @@
-import { RequestHandler } from "express"
-import { NotFoundError } from "../errors/HTTPError"
+import type { RequestHandler } from "express"
+import { BadRequestError, NotFoundError } from "../errors/HTTPError"
 import MovieService from "../services/movie.service"
-import { MovieInput, MovieResponse } from "~/entities/movie.entity"
+import { MovieValidation } from "../middleware/validation"
+import type { MovieInput, MovieResponse } from "~/entities/movie.entity"
 
 type ID = { id: string }
 
 // @todo { [k: string]: string } best practice?
 interface MovieController {
   get: [
+    typeof MovieValidation.get,
     RequestHandler<{}, MovieResponse[], {}, { [k: string]: string | undefined }>
   ]
-  getByID: [RequestHandler<ID, MovieResponse>]
-  post: [RequestHandler<{}, MovieResponse, MovieInput>]
-  put: [RequestHandler<ID, MovieResponse, { [k: string]: string }>]
-  delete: [RequestHandler<ID>]
+  getByID: [typeof MovieValidation.getByID, RequestHandler<ID, MovieResponse>]
+  post: [
+    typeof MovieValidation.post,
+    RequestHandler<{}, MovieResponse, MovieInput>
+  ]
+  put: [
+    typeof MovieValidation.put,
+    RequestHandler<ID, MovieResponse, { [k: string]: string }>
+  ]
+  delete: [typeof MovieValidation.delete, RequestHandler<ID>]
 }
 
 const movieController: MovieController = {
   get: [
+    MovieValidation.get,
     async (req, res, next) => {
       try {
         const { limit, page, sort, ...query } = req.query
 
-        // @todo1
-        try {
-          query["rating.total"] &&
-            (query["rating.total"] = JSON.parse(query["rating.total"]))
-          query.dateSeen && (query.dateSeen = JSON.parse(query.dateSeen))
-          query.releaseDate &&
-            (query.releaseDate = JSON.parse(query.releaseDate))
-        } catch (e) {}
+        const validQueryParams = [
+          ["rating_total_min", "rating.total"],
+          ["rating_total_max", "rating.total"],
+          ["rating_ch_min", "rating.ch"],
+          ["rating_ch_max", "rating.ch"],
+          ["rating_rt_min", "rating.rt"],
+          ["rating_rt_max", "rating.rt"],
+          ["date_seen_min", "dateSeen"],
+          ["date_seen_max", "dateSeen"],
+          ["fsk", "fsk"],
+          ["mm", "mm"],
+          ["title_original", "title.original"],
+          ["title_german", "title.german"],
+          ["genre", "genre"],
+          ["date_released_min", "releaseDate"],
+          ["date_released_max", "releaseDate"],
+          ["runtime_min", "runtime"],
+          ["runtime_max", "runtime"],
+        ]
+
+        const validQuery = Object.entries(query).reduce(
+          (validQuery, queryParamEntry) => {
+            const queryParam = queryParamEntry[0]
+            const validQueryParam = validQueryParams.find(
+              (v) => v[0] === queryParam
+            )
+
+            if (!validQueryParam) return validQuery
+
+            const paramIsMin = /_min$/.test(validQueryParam[0])
+            const paramIsMax = !paramIsMin && /_max$/.test(validQueryParam[0])
+            const paramValue = queryParamEntry[1]
+
+            return {
+              ...validQuery,
+              [validQueryParam[1]]: paramIsMin
+                ? { $gte: paramValue }
+                : paramIsMax
+                ? { $lte: paramValue }
+                : paramValue,
+            }
+          },
+          {}
+        )
+
+        // const validQuery = validQueryParams.reduce(
+        //   (validQuery, validQueryParam) => {
+        //     const queryParam = validQueryParam[0]
+        //     const parsedParam = /_(min|max)$/.test(validQueryParam[1]) ? { []} : validQueryParam[1]
+        //     return {
+        //     ...validQuery,
+        //     ...(query[validQueryParam] && {
+        //       [validQueryParam]: query[validQueryParam],
+        //     }),
+        //   }},
+        //   {}
+        // )
 
         const options = {
           ...(limit && { limit: parseInt(limit) }),
@@ -37,46 +95,52 @@ const movieController: MovieController = {
           sort,
         }
 
-        const results: MovieResponse[] = await MovieService.find(query, options)
+        const results: MovieResponse[] = await MovieService.find(
+          validQuery,
+          options
+        )
 
         res.status(200).json(results)
-      } catch (e) {
-        next(e)
+      } catch (err) {
+        next(err)
       }
     },
   ],
 
   getByID: [
+    MovieValidation.getByID,
     async (req, res, next) => {
       try {
         const { id } = req.params
 
-        const result: MovieResponse | null = await MovieService.findByID(id)
+        const result = await MovieService.findByID(id)
 
         if (!result) throw new NotFoundError()
 
         res.status(200).json(result)
-      } catch (e) {
-        next(e)
+      } catch (err) {
+        next(err)
       }
     },
   ],
 
   post: [
+    MovieValidation.post,
     async (req, res, next) => {
       try {
         const doc = req.body
 
-        const inserted: MovieResponse = await MovieService.insert(doc)
+        const inserted = await MovieService.insert(doc)
 
         res.status(201).json(inserted)
-      } catch (e) {
-        next(e)
+      } catch (err) {
+        next(err)
       }
     },
   ],
 
   put: [
+    MovieValidation.put,
     async (req, res, next) => {
       try {
         const updated: MovieResponse | null = await MovieService.update(
@@ -85,21 +149,22 @@ const movieController: MovieController = {
         )
         if (!updated) throw new NotFoundError()
         return res.status(201).json(updated)
-      } catch (e) {
-        next(e)
+      } catch (err) {
+        next(err)
       }
     },
   ],
 
   delete: [
+    MovieValidation.delete,
     async (req, res, next) => {
       try {
         const { id } = req.params
         const deleted = await MovieService.delete(id)
         if (!deleted.deletedCount) throw new NotFoundError()
         return res.status(200).json(deleted)
-      } catch (e) {
-        next(e)
+      } catch (err) {
+        next(err)
       }
     },
   ],

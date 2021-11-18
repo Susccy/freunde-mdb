@@ -19,6 +19,15 @@
   overflow-x: auto;
   padding: 28px;
   margin: -20px 0;
+  scrollbar-color: background-layer-color(1) background-layer-color(3);
+
+  &::-webkit-scrollbar {
+    @include background-layer(3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @include background-layer(1);
+  }
 
   // @todo customize colors (esp. webkit)
 }

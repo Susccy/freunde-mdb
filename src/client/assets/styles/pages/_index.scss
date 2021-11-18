@@ -1,7 +1,4 @@
 .p-index {
-  width: 90vw;
-  margin: 3rem auto;
-
   &__search {
     display: flex;
     flex-direction: column;
@@ -26,14 +23,14 @@
     margin: 4rem 0 6rem;
 
     &__heading {
-      margin: 1rem 0;
+      margin: 0 0 1rem 28px;
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
 
       h2 {
         font-family: Comfortaa;
-        font-size: $lg-4x;
+        font-size: $lg-3x;
 
         .c-icon {
           margin: 0 0.5rem -0.2rem 0;

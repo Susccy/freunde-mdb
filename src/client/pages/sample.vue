@@ -9,5 +9,13 @@
 <script lang="ts">
 import Vue from "vue"
 
-export default Vue.extend({})
+export default Vue.extend({
+  layout (ctx) {
+    const layoutName = /mobile/i.test(ctx.userAgent || "")
+      ? "mobile"
+      : "desktop"
+    console.log(`Set layout to ${layoutName}`)
+    return layoutName
+  },
+})
 </script>

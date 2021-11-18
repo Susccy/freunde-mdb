@@ -10,7 +10,7 @@
 
   @include background-layer(0);
 
-  h1 {
+  &__logo {
     padding: 0.5rem;
     font-size: $lg-2x;
     font-family: Comfortaa;

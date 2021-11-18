@@ -1,12 +1,14 @@
-abstract class HTTPError {
-  constructor (public status: number) {
+abstract class HTTPError extends Error {
+  constructor (public status: number, public details?: any) {
+    super()
     this.status = status
+    this.details = details
   }
 }
 
 export class BadRequestError extends HTTPError {
-  constructor () {
-    super(400)
+  constructor (public details?: any) {
+    super(400, details)
   }
 }
 

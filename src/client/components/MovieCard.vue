@@ -63,7 +63,7 @@
 import Vue from "vue"
 import type { PropType } from "vue"
 import formatDateDE from "../../utils/formatDateDE"
-import { MovieResponseJSON } from "~/entities/movie.entity"
+import type { MovieResponseJSON } from "~/entities/movie.entity"
 
 export default Vue.extend({
   props: {

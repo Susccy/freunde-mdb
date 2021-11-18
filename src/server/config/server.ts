@@ -1,11 +1,39 @@
-import express, { Express } from "express"
+import express from "express"
+import type { ErrorRequestHandler } from "express"
+import { BadRequestError } from "../api/errors/HTTPError"
 import setRoutes from "./routes"
 
-const app: Express = express()
+const app = express()
 
-app.use(express.json())
-app.use(express.urlencoded({ limit: "10mb", extended: false }))
+export const init = () => {
+  app.use(express.json())
+  app.use(express.urlencoded({ limit: "10mb", extended: false }))
 
-export const createServerRoutes = () => setRoutes(app)
+  // manually set env to production for error response testing
+  // app.set("env", "production")
+
+  setRoutes(app)
+
+  // debug route for error handling testing
+  // app.get("/test", (req, res, next) => {
+  //   try {
+  //     // validate req
+  //     if (typeof req.query.foo !== "string") throw new BadRequestError()
+
+  //     // ... handle request ...
+  //     res.sendStatus(200)
+  //   } catch (error) {
+  //     next(error)
+  //   }
+  // })
+
+  // const errorHandler: ErrorRequestHandler = (err, _req, res) => {
+  //   // eslint-disable-next-line no-console
+  //   console.error({ err })
+  //   res.status(err.status || 500).send("Something broke!")
+  // }
+
+  // app.use(errorHandler)
+}
 
 export default app

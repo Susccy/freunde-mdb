@@ -1,0 +1,9 @@
+.c-movie-table {
+  width: 100%;
+
+  tbody tr td {
+    text-align: center;
+    border: 1px solid $secondary;
+    border-collapse: collapse;
+  }
+}

@@ -1,4 +1,4 @@
-import { Express } from "express"
+import type { Express } from "express"
 import { index, movie } from "../api/routes"
 
 export default (app: Express) => {

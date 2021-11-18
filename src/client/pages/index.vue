@@ -1,20 +1,28 @@
 <template>
-  <main class="p-index">
+  <main class="page p-index">
     <!-- button to upload combinedData.json (run findExcelMovieInTMDB.js first) -->
     <!-- <button @click="postCombinedData()">postCombinedData</button> -->
     <div class="p-index__search">
       <Searchbar />
-      <button class="g-btn-reset p-index__search__extended">
+      <NuxtLink
+        :to="{ name: 'search', params: { extended: true } }"
+        class="g-btn-reset p-index__search__extended"
+      >
         Erweiterte Suche<TablerIcon name="chevron-right" />
-      </button>
+      </NuxtLink>
     </div>
     <div class="p-index__movie-display">
       <div class="p-index__movie-display__heading">
         <h2>
-          <TablerIcon name="rotate-clockwise-2" size="38" />Zuletzt gesehen
+          <TablerIcon name="rotate-clockwise-2" size="30" />Zuletzt gesehen
         </h2>
-        <NuxtLink to="/sample">
-          Alle anzeigen<TablerIcon name="chevron-right" size="14" />
+        <NuxtLink
+          :to="{
+            name: 'search',
+            params: { s: { sort: '-dateSeen', page: 0, limit: 30 } },
+          }"
+        >
+          Mehr anzeigen<TablerIcon name="chevron-right" size="14" />
         </NuxtLink>
       </div>
       <MovieCardContainer
@@ -24,9 +32,14 @@
     </div>
     <div class="p-index__movie-display">
       <div class="p-index__movie-display__heading">
-        <h2><TablerIcon name="flame" size="38" />Beste neue Filme</h2>
-        <NuxtLink to="/sample">
-          Alle anzeigen<TablerIcon name="chevron-right" size="14" />
+        <h2><TablerIcon name="flame" size="30" />Beste neue Filme</h2>
+        <NuxtLink
+          :to="{
+            name: 'search',
+            params: { s: { sort: '-rating.total', page: 0, limit: 30 } },
+          }"
+        >
+          Alle besten Filme<TablerIcon name="chevron-right" size="14" />
         </NuxtLink>
       </div>
       <MovieCardContainer
@@ -76,12 +89,8 @@ export default Vue.extend({
       {
         params: {
           sort: "-rating.total -releaseDate",
-          // @todo1 best practice for objects in query params? (have to parse on server side)
-          releaseDate: {
-            $lte: now,
-            $gt: new Date(now.getFullYear() - 1, now.getMonth()),
-          },
-          "rating.total": { $gte: 500 },
+          date_released_min: new Date(now.getFullYear() - 1, now.getMonth()),
+          rating_total_min: 500,
           limit: 10,
         },
       }

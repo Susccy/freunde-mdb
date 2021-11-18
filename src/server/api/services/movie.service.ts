@@ -111,9 +111,9 @@ export default {
     const { page = 0, limit = 0, sort } = options
 
     const freundeData = await MovieModel.find(query)
+      .sort(sort)
       .skip(page * limit)
       .limit(limit)
-      .sort(sort)
       .select("-__v")
       .exec()
 

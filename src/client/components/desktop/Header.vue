@@ -1,6 +1,6 @@
 <template>
   <header class="c-header c-header--desktop">
-    <h1>FREundE MDB</h1>
+    <NuxtLink to="/" class="c-header__logo">FREundE MDB</NuxtLink>
     <DesktopNavbar />
   </header>
 </template>

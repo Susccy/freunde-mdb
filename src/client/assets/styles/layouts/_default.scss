@@ -9,7 +9,7 @@
       padding: 10px;
     }
 
-    > .p-index {
+    > .page {
       grid-row-start: 2;
     }
 
@@ -21,8 +21,10 @@
   &--desktop {
     grid-template-rows: 5rem 1fr auto;
 
-    > .p-index {
+    > .page {
       grid-row-start: 2;
+      width: 90vw;
+      margin: 3rem auto;
     }
 
     > .c-footer {

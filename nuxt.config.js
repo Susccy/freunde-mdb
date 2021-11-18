@@ -1,3 +1,5 @@
+import { resolve } from "path"
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -45,9 +47,10 @@ export default {
 
   srcDir: "./src/client",
 
-  serverMiddleware: {
-    "/api": "./src/server/index",
-  },
+  serverMiddleware: [
+    { path: "/api", handler: "./src/server/index" },
+    { path: "/api", handler: "./src/server/api/middleware/errorHandler" },
+  ],
 
   router: {
     middleware: ["userAgent"],
@@ -55,5 +58,10 @@ export default {
 
   loading: {
     color: "#70e0dd",
+  },
+
+  alias: {
+    "~": resolve(__dirname, "./src"),
+    "~~": resolve(__dirname, "./"),
   },
 }
