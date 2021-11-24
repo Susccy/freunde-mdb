@@ -68,6 +68,7 @@ const ratingSchema = new Schema<Movie["rating"]>({
 
 const movieSchema = new Schema<Movie>({
   // custom input
+  tmdbID: { type: Number, required: true, unique: true },
   rating: {
     type: ratingSchema,
     validate: {
@@ -99,7 +100,6 @@ const movieSchema = new Schema<Movie>({
   mm: Boolean,
 
   // tmdb api data
-  tmdbID: { type: Number, required: true, unique: true },
   title: {
     original: { type: String, required: true },
     german: String,

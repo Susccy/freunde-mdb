@@ -42,8 +42,7 @@ const movieController: MovieController = {
           ["date_seen_max", "dateSeen"],
           ["fsk", "fsk"],
           ["mm", "mm"],
-          ["title_original", "title.original"],
-          ["title_german", "title.german"],
+          ["title", "$or"],
           ["genre", "genre"],
           ["date_released_min", "releaseDate"],
           ["date_released_max", "releaseDate"],
@@ -52,42 +51,45 @@ const movieController: MovieController = {
         ]
 
         const validQuery = Object.entries(query).reduce(
-          (validQuery, queryParamEntry) => {
-            const queryParam = queryParamEntry[0]
+          (validQuery, [queryParamName, queryParamValue]) => {
+            if (!queryParamValue) return validQuery
+
             const validQueryParam = validQueryParams.find(
-              (v) => v[0] === queryParam
+              (v) => v[0] === queryParamName
             )
 
             if (!validQueryParam) return validQuery
 
-            const paramIsMin = /_min$/.test(validQueryParam[0])
-            const paramIsMax = !paramIsMin && /_max$/.test(validQueryParam[0])
-            const paramValue = queryParamEntry[1]
+            const [validParamName, dbParamPath] = validQueryParam
+
+            const paramIsTitle = validParamName === "title"
+            const paramIsMin = /_min$/.test(validParamName)
+            const paramIsMax = !paramIsMin && /_max$/.test(validParamName)
 
             return {
               ...validQuery,
-              [validQueryParam[1]]: paramIsMin
-                ? { $gte: paramValue }
+              [dbParamPath]: paramIsTitle
+                ? [
+                    {
+                      "title.original": {
+                        $regex: new RegExp(queryParamValue, "i"),
+                      },
+                    },
+                    {
+                      "title.german": {
+                        $regex: new RegExp(queryParamValue, "i"),
+                      },
+                    },
+                  ]
+                : paramIsMin
+                ? { $gte: queryParamValue }
                 : paramIsMax
-                ? { $lte: paramValue }
-                : paramValue,
+                ? { $lte: queryParamValue }
+                : queryParamValue,
             }
           },
           {}
         )
-
-        // const validQuery = validQueryParams.reduce(
-        //   (validQuery, validQueryParam) => {
-        //     const queryParam = validQueryParam[0]
-        //     const parsedParam = /_(min|max)$/.test(validQueryParam[1]) ? { []} : validQueryParam[1]
-        //     return {
-        //     ...validQuery,
-        //     ...(query[validQueryParam] && {
-        //       [validQueryParam]: query[validQueryParam],
-        //     }),
-        //   }},
-        //   {}
-        // )
 
         const options = {
           ...(limit && { limit: parseInt(limit) }),

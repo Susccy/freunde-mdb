@@ -27,19 +27,8 @@ export default Vue.extend({
       this.$router.push({
         name: "search",
         params: {
-          s: {
-            $or: [
-              {
-                "title.original":
-                  /* new RegExp(this.inputValue, "i") */ this.inputValue,
-              },
-              {
-                "title.german":
-                  /* new RegExp(this.inputValue, "i") */ this.inputValue,
-              },
-            ],
-          },
-        } as any,
+          title: this.inputValue,
+        },
       })
     },
   },

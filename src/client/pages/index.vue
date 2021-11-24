@@ -53,16 +53,11 @@
 <script lang="ts">
 import Vue from "vue"
 // import postCombinedData from "../../utils/postCombinedData"
+import deviceLayout from "~/client/mixins/deviceLayout"
 import type { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
-  layout (ctx) {
-    const layoutName = /mobile/i.test(ctx.userAgent || "")
-      ? "mobile"
-      : "desktop"
-    console.log(`Set layout to ${layoutName}`)
-    return layoutName
-  },
+  mixins: [deviceLayout],
   data (): {
     latestMovies: MovieResponse[]
     bestRecentMovies: MovieResponse[]
