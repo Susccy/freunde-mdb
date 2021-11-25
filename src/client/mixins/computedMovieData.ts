@@ -45,8 +45,8 @@ export default Vue.extend({
 
       return {
         total: formatRating(rating.total),
-        ...("ch" in rating && { ch: formatRating(rating.ch) + "ch" }),
-        ...("rt" in rating && { rt: formatRating(rating.rt) + "rt" }),
+        ...("ch" in rating && { ch: formatRating(rating.ch) }),
+        ...("rt" in rating && { rt: formatRating(rating.rt) }),
       }
     },
     ratingModifier (): string {
@@ -68,7 +68,7 @@ export default Vue.extend({
 
   mounted () {
     const { posterURL } = this.movie
-
+    // w154
     posterURL && (this.imgSrc = `http://image.tmdb.org/t/p/w154${posterURL}`)
   },
 })

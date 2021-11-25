@@ -25,9 +25,9 @@
       </div>
     </div>
     <div class="c-movie-card__rating" :class="[ratingModifier]">
-      <p class="c-movie-card__rating__ch">{{ rating.ch }}</p>
+      <p class="c-movie-card__rating__ch">{{ rating.ch + "ch" }}</p>
       <p class="c-movie-card__rating__total">{{ rating.total }}</p>
-      <p class="c-movie-card__rating__rt">{{ rating.rt }}</p>
+      <p class="c-movie-card__rating__rt">{{ rating.rt + "rt" }}</p>
     </div>
     <div class="c-movie-card__meta">
       <p v-show="dateSeen">Gesehen: {{ dateSeen }}</p>

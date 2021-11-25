@@ -1,5 +1,8 @@
 <template>
-  <main class="page" style="display: flex; gap: 1rem; flex-wrap: wrap">
+  <main class="page p-search">
+    <div class="p-search__search">
+      <Searchbar />
+    </div>
     <MovieTable :movie-data="movies" />
   </main>
 </template>
@@ -16,12 +19,20 @@ export default Vue.extend({
       movies: [],
     }
   },
-  async mounted () {
-    const searchQuery = this.$route.params
-    searchQuery &&
-      (this.movies = await this.$axios.$get<MovieResponseJSON[]>("/movie", {
-        params: searchQuery,
-      }))
+  watch: {
+    "$route.query": "search",
+  },
+  mounted () {
+    this.search()
+  },
+  methods: {
+    async search () {
+      const searchQuery = this.$route.query
+      searchQuery &&
+        (this.movies = await this.$axios.$get<MovieResponseJSON[]>("/movie", {
+          params: searchQuery,
+        }))
+    },
   },
 })
 </script>

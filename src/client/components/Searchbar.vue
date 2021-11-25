@@ -1,7 +1,7 @@
 <template>
   <div @keyup.enter="search" class="c-search">
     <input
-      v-model="inputValue"
+      v-model.trim="inputValue"
       type="text"
       placeholder="Film suchen..."
       class="c-search__input"
@@ -26,7 +26,7 @@ export default Vue.extend({
       if (!this.inputValue) return
       this.$router.push({
         name: "search",
-        params: {
+        query: {
           title: this.inputValue,
         },
       })

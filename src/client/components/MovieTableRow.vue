@@ -5,7 +5,7 @@
     </td>
     <td>{{ movie.title.german || "-" }}</td>
     <td>{{ movie.title.original }}</td>
-    <td>{{ movie.mm }}</td>
+    <td>{{ movie.mm ? "✔" : "✖" }}</td>
     <td>
       <img
         v-if="fskIcon"
@@ -14,13 +14,14 @@
         class="c-movie-card__title__fsk"
         :class="['c-movie-card__title__fsk--' + movie.fsk]"
       />
+      <span v-else>?</span>
     </td>
     <td>{{ genres }}</td>
     <td>{{ movie.runtime || "-" }}</td>
     <td>{{ yearReleased }}</td>
-    <td>{{ dateSeen || "unbekannt" }}</td>
-    <td>{{ rating.ch || "nur Gesamt" }}</td>
-    <td>{{ rating.rt || "nur Gesamt" }}</td>
+    <td>{{ dateSeen || "?" }}</td>
+    <td>{{ rating.ch || "n. G." }}</td>
+    <td>{{ rating.rt || "n. G." }}</td>
     <td>{{ rating.total }}</td>
   </tr>
 </template>
@@ -34,5 +35,10 @@ export default (
   Vue as VueConstructor<Vue & InstanceType<typeof computedMovieData>>
 ).extend({
   mixins: [computedMovieData],
+  methods: {
+    click () {
+      console.log("click!")
+    },
+  },
 })
 </script>

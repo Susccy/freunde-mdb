@@ -1,9 +1,114 @@
 .c-movie-table {
   width: 100%;
+  border-spacing: 0 1rem;
+  table-layout: fixed;
 
-  tbody tr td {
-    text-align: center;
-    border: 1px solid $secondary;
-    border-collapse: collapse;
+  tr > * {
+    &:first-child {
+      width: 33px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      // max-width: 20%;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      width: calc((48 / 16 * 1rem));
+    }
+
+    &:nth-child(6) {
+      // max-width: 15%;
+    }
+
+    &:nth-child(7) {
+      width: calc(55 / 16 * 1rem);
+    }
+
+    &:nth-child(8) {
+      width: calc(63 / 16 * 1rem);
+    }
+
+    &:nth-child(9) {
+      width: calc(110 / 16 * 1rem);
+    }
+
+    &:nth-child(10),
+    &:nth-child(11),
+    &:last-child {
+      width: calc(66 / 16 * 1rem);
+    }
+  }
+
+  tbody tr {
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, color 0.1s;
+    border-radius: 10px;
+
+    // @todo add this effect to the parent button as well (for tab focus)
+    &:hover {
+      transform: scale(1.04);
+      box-shadow: 0 0 10px 0 $primary;
+      z-index: 1;
+      color: $primary;
+    }
+
+    td {
+      margin: 0;
+      height: $lg-5x;
+      padding: 0 $sm-x;
+      font-size: $md;
+      overflow: hidden;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: center;
+      border-right: 4px solid background-layer-color(2);
+
+      @include background-layer(1);
+
+      &:first-child {
+        padding: 0;
+        border: none;
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+
+        img {
+          display: block;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        font-weight: 600;
+        text-align: left;
+        font-size: $lg;
+      }
+
+      &:nth-child(5) {
+        img {
+          display: block;
+          width: $lg-x;
+          margin: 0 auto;
+        }
+      }
+
+      &:nth-child(6) {
+        text-align: left;
+      }
+
+      &:last-child {
+        border: none;
+        border-top-right-radius: inherit;
+        border-bottom-right-radius: inherit;
+        font-size: $lg;
+        font-weight: 600;
+      }
+    }
   }
 }
