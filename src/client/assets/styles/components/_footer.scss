@@ -1,4 +1,26 @@
 .c-footer {
   @include background-layer(1);
   padding: 2rem;
+
+  &__tmdb {
+    display: block;
+    height: $lg-5x;
+
+    figure {
+      display: flex;
+      gap: $sm;
+      width: 22rem;
+      margin: 0 auto;
+      height: 100%;
+
+      figcaption {
+        text-align: left;
+        margin: auto 0;
+      }
+
+      img {
+        height: 100%;
+      }
+    }
+  }
 }
