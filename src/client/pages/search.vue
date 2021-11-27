@@ -1,7 +1,7 @@
 <template>
   <main class="page p-search">
     <div class="p-search__search">
-      <Searchbar />
+      <SearchExtended />
     </div>
     <MovieTable :movie-data="movies" />
   </main>
@@ -32,6 +32,14 @@ export default Vue.extend({
         (this.movies = await this.$axios.$get<MovieResponseJSON[]>("/movie", {
           params: searchQuery,
         }))
+    },
+    refreshSearch (movieTitle: string) {
+      this.$router.push({
+        name: "search",
+        query: {
+          title: movieTitle,
+        },
+      })
     },
   },
 })
