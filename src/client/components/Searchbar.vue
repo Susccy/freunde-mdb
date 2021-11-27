@@ -16,20 +16,21 @@
 import Vue from "vue"
 
 export default Vue.extend({
+  inheritAttrs: false,
+  props: {
+    defaultValue: {
+      type: String,
+      default: "",
+    },
+  },
   data () {
     return {
-      inputValue: "",
+      inputValue: this.defaultValue,
     }
   },
   methods: {
     search () {
-      if (!this.inputValue) return
-      this.$router.push({
-        name: "search",
-        query: {
-          title: this.inputValue,
-        },
-      })
+      this.inputValue && this.$emit("search", this.inputValue)
     },
   },
 })

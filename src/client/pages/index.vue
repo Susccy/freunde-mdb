@@ -3,7 +3,7 @@
     <!-- button to upload combinedData.json (run findExcelMovieInTMDB.js first) -->
     <!-- <button @click="postCombinedData()">postCombinedData</button> -->
     <div class="p-index__search">
-      <Searchbar />
+      <Searchbar @search="searchMovieTitle" />
       <NuxtLink
         :to="{ name: 'search', params: { extended: true } }"
         class="g-btn-reset p-index__search__extended"
@@ -95,7 +95,14 @@ export default Vue.extend({
   },
   fetchOnServer: false,
   methods: {
-    // postCombinedData,
+    searchMovieTitle (movieTitle: string) {
+      this.$router.push({
+        name: "search",
+        query: {
+          title: movieTitle,
+        },
+      })
+    },
   },
 })
 </script>
