@@ -1,15 +1,15 @@
 <template>
-  <table class="c-movie-table">
+  <table v-if="movieData.length" class="c-movie-table">
     <thead>
       <tr>
-        <th>Poster</th>
+        <th></th>
         <th>Titel (deutsch)</th>
         <th>Titel (original)</th>
         <th>MM</th>
         <th>FSK</th>
         <th>Genres</th>
-        <th>Laufzeit</th>
-        <th>Jahr</th>
+        <th>min</th>
+        <th>Ersch.</th>
         <th>Gesehen</th>
         <th>CH</th>
         <th>RT</th>
@@ -24,6 +24,7 @@
       />
     </tbody>
   </table>
+  <p v-else>Keine Ergebnisse</p>
 </template>
 
 <script lang="ts">
