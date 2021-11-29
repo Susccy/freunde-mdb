@@ -17,7 +17,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["./assets/styles/main"],
+  css: ["~/assets/styles/main"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ["~/plugins/vue-slider-component.client.ts"],
@@ -41,15 +41,18 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    transpile: ["fitty"],
-  },
+  build: {},
 
   srcDir: "./src/client",
 
+  alias: {
+    "~": resolve(__dirname, "./src"),
+    "~~": resolve(__dirname, "./"),
+  },
+
   serverMiddleware: [
-    { path: "/api", handler: "./src/server/index" },
-    { path: "/api", handler: "./src/server/api/middleware/errorHandler" },
+    { path: "/api", handler: "~/../server/index" },
+    { path: "/api", handler: "~/../server/api/middleware/errorHandler" },
   ],
 
   router: {
@@ -58,10 +61,5 @@ export default {
 
   loading: {
     color: "#70e0dd",
-  },
-
-  alias: {
-    "~": resolve(__dirname, "./src"),
-    "~~": resolve(__dirname, "./"),
   },
 }
