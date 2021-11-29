@@ -33,7 +33,9 @@ export default Vue.extend({
     },
     fskIcon (): string | boolean {
       const { fsk } = this.movie
-      return typeof fsk === "number" && require(`../assets/svg/fsk-${fsk}.svg`)
+      return (
+        typeof fsk === "number" && require(`~/client/assets/svg/fsk-${fsk}.svg`)
+      )
     },
     genres (): string {
       return this.movie.genres?.join(", ") || "keine Genres vorhanden"
