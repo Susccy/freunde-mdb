@@ -2,6 +2,7 @@
   <main class="page p-index">
     <!-- button to upload combinedData.json (run findExcelMovieInTMDB.js first) -->
     <!-- <button @click="postCombinedData()">postCombinedData</button> -->
+    <h1>FREundE MDB Startseite</h1>
     <div class="p-index__search">
       <Searchbar @search="searchMovieTitle" />
       <NuxtLink

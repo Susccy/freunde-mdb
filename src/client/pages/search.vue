@@ -1,8 +1,10 @@
 <template>
   <main class="page p-search">
+    <h1>Film-Datenbank</h1>
     <div class="p-search__search-extended">
       <SearchExtended />
     </div>
+    <h2>Ergebnisse</h2>
     <MovieTable :movie-data="movies" />
   </main>
 </template>
