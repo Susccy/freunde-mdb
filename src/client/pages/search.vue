@@ -1,6 +1,6 @@
 <template>
   <main class="page p-search">
-    <div class="p-search__search">
+    <div class="p-search__search-extended">
       <SearchExtended />
     </div>
     <MovieTable :movie-data="movies" />

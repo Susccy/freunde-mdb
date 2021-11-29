@@ -19,7 +19,7 @@
         <NuxtLink
           :to="{
             name: 'search',
-            params: { s: { sort: '-dateSeen', page: 0, limit: 30 } },
+            query: { sort: '-dateSeen', page: 0, limit: 30 },
           }"
         >
           Mehr anzeigen<TablerIcon name="chevron-right" size="14" />
@@ -36,7 +36,7 @@
         <NuxtLink
           :to="{
             name: 'search',
-            params: { s: { sort: '-rating.total', page: 0, limit: 30 } },
+            query: { sort: '-rating.total', page: 0, limit: 30 },
           }"
         >
           Alle besten Filme<TablerIcon name="chevron-right" size="14" />

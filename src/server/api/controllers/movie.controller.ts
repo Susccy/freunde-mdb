@@ -43,7 +43,7 @@ const movieController: MovieController = {
           ["fsk", "fsk"],
           ["mm", "mm"],
           ["title", "$or"],
-          ["genre", "genre"],
+          ["genre", "genres"],
           ["date_released_min", "releaseDate"],
           ["date_released_max", "releaseDate"],
           ["runtime_min", "runtime"],
