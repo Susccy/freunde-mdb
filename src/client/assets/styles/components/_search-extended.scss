@@ -1,5 +1,105 @@
 .c-search-extended {
-  > * {
-    margin-block: 2rem;
+  $self: &;
+  @include background-layer(1);
+  padding: $sm;
+  margin-bottom: $lg;
+  border: 3px solid background-layer-color(2);
+  max-width: 60rem;
+  margin-inline: auto;
+
+  input,
+  select,
+  button {
+    background: $on-surface-dim;
+    color: $on-surface-5dim;
+    border: none;
+    border-radius: 5px;
+  }
+
+  button {
+    height: 100%;
+  }
+
+  &__row {
+    border-bottom: 2px solid background-layer-color(2);
+    padding-block: $lg;
+    display: flex;
+    justify-content: space-between;
+    gap: $lg;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    > p {
+      flex: 0 0 15%;
+    }
+
+    > div {
+      flex: 1;
+    }
+  }
+
+  &__primary {
+    > div {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: $sm;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: $sm-3x;
+
+        > div {
+          display: flex;
+          justify-content: space-between;
+
+          input,
+          select {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    #{$self}__title {
+      flex: 0 1 20rem;
+    }
+
+    #{$self}__mm input {
+      margin: 0 $sm-x 0 $sm-4x;
+    }
+  }
+
+  &__rating {
+    transition: height 1s;
+    > div {
+      > div:not(:last-child) {
+        display: flex;
+        justify-content: space-between;
+        gap: $sm;
+        padding-bottom: $lg-2x;
+
+        > label {
+          flex: 0 0 15%;
+        }
+
+        #{$self}__slider {
+          flex: 1;
+        }
+      }
+
+      > div:last-child {
+        margin-top: $sm;
+      }
+    }
   }
 }

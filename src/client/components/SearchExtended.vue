@@ -1,174 +1,224 @@
 <template>
   <form @submit.prevent="submit" class="c-search-extended">
-    <div>
-      <label for="title">Filmtitel (deutsch oder original)</label>
-      <input id="title" v-model="title" type="text" />
+    <h2>Erweiterte Suche</h2>
+    <div class="c-search-extended__row c-search-extended__primary">
+      <p>Allgemein</p>
+      <div>
+        <div class="c-search-extended__title">
+          <label for="title">Filmtitel (deutsch oder original)</label>
+          <div>
+            <input id="title" v-model="title" type="text" />
+            <button @click="title = null" type="button">❌</button>
+          </div>
+        </div>
+        <div>
+          <label for="fsk">FSK</label>
+          <div>
+            <select id="fsk" v-model="fsk">
+              <option value="0">0</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
+              <option value="16">16</option>
+              <option value="18">18</option>
+            </select>
+            <button @click="fsk = null" type="button">❌</button>
+          </div>
+        </div>
+        <!-- @todo create genre table in db and request all available genres for select here -->
+        <div class="c-search-extended__genre">
+          <label for="genre">Genre</label>
+          <div>
+            <select id="genre" v-model="genre">
+              <option value="horror">Horror</option>
+            </select>
+            <button @click="genre = null" type="button">❌</button>
+          </div>
+        </div>
+        <div class="c-search-extended__mm">
+          <span>MindestMovie</span>
+          <div>
+            <label for="mm-true">Ja</label>
+            <input
+              id="mm-true"
+              v-model="mm"
+              type="radio"
+              name="mm"
+              :value="true"
+            />
+            <label for="mm-false">Nein</label>
+            <input
+              id="mm-false"
+              v-model="mm"
+              type="radio"
+              name="mm"
+              :value="false"
+            />
+            <button @click="mm = null" type="button">❌</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div>
-      <label for="rating-total">Rating Gesamt</label>
-      <VueSlider
-        id="rating-total"
-        v-model="ratingTotal"
-        :interval="25"
-        :max="1000"
-        :marks="STATIC.ratingMarks"
-        :tooltip-formatter="STATIC.ratingTooltips"
-      />
+    <div class="c-search-extended__row c-search-extended__rating">
+      <p>Rating</p>
+      <div>
+        <div>
+          <label for="rating-total">Gesamt</label>
+          <VueSlider
+            id="rating-total"
+            v-model="ratingTotal"
+            :interval="25"
+            :max="1000"
+            :drag-on-click="true"
+            :marks="STATIC.ratingMarks"
+            :tooltip-formatter="STATIC.ratingTooltips"
+            :contained="true"
+            class="c-search-extended__slider"
+          />
+        </div>
+        <div :class="[!includeIndividualRatings && 'hidden']">
+          <label for="rating-ch">CH</label>
+          <VueSlider
+            id="rating-ch"
+            v-model="ratingCH"
+            :interval="50"
+            :max="1000"
+            :drag-on-click="true"
+            :marks="STATIC.ratingMarks"
+            :tooltip-formatter="STATIC.ratingTooltips"
+            :disabled="!includeIndividualRatings"
+            :contained="true"
+            class="c-search-extended__slider"
+          />
+        </div>
+        <div :class="[!includeIndividualRatings && 'hidden']">
+          <label for="rating-rt">RT</label>
+          <VueSlider
+            id="rating-rt"
+            v-model="ratingRT"
+            :interval="50"
+            :max="1000"
+            :drag-on-click="true"
+            :marks="STATIC.ratingMarks"
+            :tooltip-formatter="STATIC.ratingTooltips"
+            :disabled="!includeIndividualRatings"
+            :contained="true"
+            class="c-search-extended__slider"
+          />
+        </div>
+        <div>
+          <button
+            @click="includeIndividualRatings = !includeIndividualRatings"
+            type="button"
+          >
+            {{
+              `Individuelle Ratings ${
+                includeIndividualRatings ? "de" : ""
+              }aktivieren`
+            }}
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div style="display: flex; gap: 1rem">
-      <div style="flex-grow: 1">
-        <label for="rating-ch">Rating CH</label>
-        <VueSlider
-          id="rating-ch"
-          v-model="ratingCH"
-          :interval="50"
-          :max="1000"
-          :marks="STATIC.ratingMarks"
-          :tooltip-formatter="STATIC.ratingTooltips"
-          :disabled="chNull"
+    <div class="c-search-extended__row">
+      <p>Gesehen (Datum)</p>
+      <div>
+        <label for="seen-min">von</label>
+        <input
+          id="seen-min"
+          v-model="dateSeen[0]"
+          type="date"
+          min="2016-01-01"
+          :max="STATIC.now.toLocaleDateString('en-ca')"
+        />
+        <label for="seen-max">bis</label>
+        <input
+          id="seen-max"
+          v-model="dateSeen[1]"
+          type="date"
+          min="2016-01-01"
+          :max="STATIC.now.toLocaleDateString('en-ca')"
         />
       </div>
-      <div>
-        <label for="ch-null">null</label>
-        <input id="ch-null" v-model="chNull" type="checkbox" />
-      </div>
     </div>
 
-    <div style="display: flex; gap: 1rem">
-      <div style="flex-grow: 1">
-        <label for="rating-rt">Rating RT</label>
-        <VueSlider
-          id="rating-rt"
-          v-model="ratingRT"
-          :interval="50"
-          :max="1000"
-          :marks="STATIC.ratingMarks"
-          :tooltip-formatter="STATIC.ratingTooltips"
-          :disabled="rtNull"
+    <div class="c-search-extended__row">
+      <p>Erschienen (Jahr)</p>
+      <div>
+        <label for="released-min">von</label>
+        <input
+          id="released-min"
+          v-model="yearReleased[0]"
+          type="number"
+          min="1900"
+          :max="STATIC.now.getUTCFullYear()"
+        />
+        <label for="released-max">bis</label>
+        <input
+          id="released-max"
+          v-model="yearReleased[1]"
+          type="number"
+          min="1900"
+          :max="STATIC.now.getUTCFullYear()"
         />
       </div>
+    </div>
+
+    <div class="c-search-extended__row">
+      <p>Laufzeit (Minuten)</p>
       <div>
-        <label for="rt-null">null</label>
-        <input id="rt-null" v-model="rtNull" type="checkbox" />
+        <label for="runtime-min">von</label>
+        <input
+          id="runtime-min"
+          v-model="runtime[0]"
+          type="number"
+          min="0"
+          max="500"
+        />
+        <label for="runtime-max">bis</label>
+        <input
+          id="runtime-max"
+          v-model="runtime[1]"
+          type="number"
+          min="0"
+          max="500"
+        />
       </div>
     </div>
 
-    <div>
-      <label for="seen-min">Gesehen (von)</label>
-      <input
-        id="seen-min"
-        v-model="dateSeen[0]"
-        type="date"
-        min="2016-01-01"
-        :max="STATIC.now.toLocaleDateString('en-ca')"
-      />
-      <label for="seen-max">Gesehen (bis)</label>
-      <input
-        id="seen-max"
-        v-model="dateSeen[1]"
-        type="date"
-        min="2016-01-01"
-        :max="STATIC.now.toLocaleDateString('en-ca')"
-      />
-    </div>
-
-    <div>
-      <label for="released-min">Erscheinungsjahr (von)</label>
-      <input
-        id="released-min"
-        v-model="yearReleased[0]"
-        type="number"
-        min="1900"
-        :max="STATIC.now.getUTCFullYear()"
-      />
-      <label for="released-max">Erscheinungsjahr (bis)</label>
-      <input
-        id="released-max"
-        v-model="yearReleased[1]"
-        type="number"
-        min="1900"
-        :max="STATIC.now.getUTCFullYear()"
-      />
-    </div>
-
-    <!-- @todo create genre table in db and request all available genres for select here -->
-    <div>
-      <label for="genre">Genre</label>
-      <select id="genre" v-model="genre">
-        <option value="horror">Horror</option>
-      </select>
-    </div>
-
-    <div>
-      <label for="fsk">FSK</label>
-      <select id="fsk" v-model="fsk">
-        <option value="0">0</option>
-        <option value="6">6</option>
-        <option value="12">12</option>
-        <option value="16">16</option>
-        <option value="18">18</option>
-      </select>
-    </div>
-
-    <div>
-      <p>MindestMovie</p>
-      <label for="mm-true">Ja</label>
-      <input id="mm-true" v-model="mm" type="radio" name="mm" :value="true" />
-      <label for="mm-false">Nein</label>
-      <input id="mm-false" v-model="mm" type="radio" name="mm" :value="false" />
-    </div>
-
-    <div>
-      <label for="runtime-min">Laufzeit in min (von)</label>
-      <input
-        id="runtime-min"
-        v-model="runtime[0]"
-        type="number"
-        min="0"
-        max="500"
-      />
-      <label for="runtime-max">Laufzeit in min (bis)</label>
-      <input
-        id="runtime-max"
-        v-model="runtime[1]"
-        type="number"
-        min="0"
-        max="500"
-      />
-    </div>
-
-    <div>
+    <div class="c-search-extended__row">
       <label for="sort">Sortieren</label>
-      <select id="sort" v-model="sortParam">
-        <option value="title.original">Titel (original)</option>
-        <option value="title.german">Titel (deutsch)</option>
-        <option value="rating.total">Rating Gesamt</option>
-        <option value="rating.ch">Rating CH</option>
-        <option value="rating.rt">Rating RT</option>
-        <option value="dateSeen">Gesehen</option>
-        <option value="releaseDate">Erscheinungsjahr</option>
-        <option value="fsk">FSK</option>
-        <option value="mm">MM</option>
-        <option value="runtime">Laufzeit</option>
-      </select>
-      <label for="sort-asc">aufsteigend</label>
-      <input
-        id="sort-asc"
-        v-model="sortOrder"
-        type="radio"
-        name="sort"
-        value="ASC"
-      />
-      <label for="sort-des">absteigend</label>
-      <input
-        id="sort-des"
-        v-model="sortOrder"
-        type="radio"
-        name="sort"
-        value="DES"
-      />
+      <div>
+        <select id="sort" v-model="sortParam">
+          <option value="title.german">Titel (deutsch)</option>
+          <option value="title.original">Titel (original)</option>
+          <option value="rating.total">Rating Gesamt</option>
+          <option value="rating.ch">Rating CH</option>
+          <option value="rating.rt">Rating RT</option>
+          <option value="dateSeen">Gesehen</option>
+          <option value="releaseDate">Erscheinungsjahr</option>
+          <option value="fsk">FSK</option>
+          <option value="mm">MM</option>
+          <option value="runtime">Laufzeit</option>
+        </select>
+        <label for="sort-asc">aufsteigend</label>
+        <input
+          id="sort-asc"
+          v-model="sortOrder"
+          type="radio"
+          name="sort"
+          value="ASC"
+        />
+        <label for="sort-des">absteigend</label>
+        <input
+          id="sort-des"
+          v-model="sortOrder"
+          type="radio"
+          name="sort"
+          value="DES"
+        />
+      </div>
     </div>
 
     <button type="submit">Suchen</button>
@@ -187,36 +237,34 @@ const STATIC = {
 export default Vue.extend({
   data () {
     return {
-      title: this.$route.query.title || "",
+      title: this.$route.query.title || null,
       ratingTotal: [
         this.$route.query.rating_total_min || 0,
         this.$route.query.rating_total_max || 1000,
       ],
       ratingCH: [
-        this.$route.query.rating_ch_min || null,
-        this.$route.query.rating_ch_max || null,
+        this.$route.query.rating_ch_min || 0,
+        this.$route.query.rating_ch_max || 1000,
       ] as null[] | number[],
-      // @todo fix logic
-      chNull:
-        !(this.$route.query.rating_ch_min || this.$route.query.rating_ch_max) ||
-        true,
       ratingRT: [
-        this.$route.query.rating_rt_min || null,
-        this.$route.query.rating_rt_max || null,
+        this.$route.query.rating_rt_min || 0,
+        this.$route.query.rating_rt_max || 1000,
       ] as null[] | number[],
-      // @todo fix logic
-      rtNull:
-        !(this.$route.query.rating_rt_min || this.$route.query.rating_rt_max) ||
-        true,
+      includeIndividualRatings: [
+        this.$route.query.rating_ch_min,
+        this.$route.query.rating_ch_max,
+        this.$route.query.rating_rt_min,
+        this.$route.query.rating_rt_max,
+      ].some((v) => typeof v === "number"),
       dateSeen: [
-        this.$route.query.date_seen_min || "",
-        this.$route.query.date_seen_max || "",
+        this.$route.query.date_seen_min || null,
+        this.$route.query.date_seen_max || null,
       ],
       yearReleased: [
         this.$route.query.date_released_min || null,
         this.$route.query.date_released_max || null,
       ],
-      genre: this.$route.query.genre || "",
+      genre: this.$route.query.genre || null,
       fsk: this.$route.query.fsk || null,
       mm: this.$route.query.mm || null,
       runtime: [
@@ -226,7 +274,7 @@ export default Vue.extend({
       sortParam:
         this.$route.query.sort?.indexOf("-") === 0
           ? this.$route.query.sort.slice(1)
-          : this.$route.query.sort || null,
+          : this.$route.query.sort || "title.german",
       sortOrder: "ASC",
       STATIC,
     }
@@ -241,23 +289,15 @@ export default Vue.extend({
     },
   },
 
-  watch: {
-    chNull (newValue) {
-      this.ratingCH = newValue ? [null, null] : [0, 1000]
-    },
-    rtNull (newValue) {
-      this.ratingRT = newValue ? [null, null] : [0, 1000]
-    },
-  },
-
   methods: {
     submit () {
-      // @todo fix annoying ts error that occurs without the any cast, then remove any cast
       const QUERY_PARAM_MAP = {
         title: "title",
         ratingTotal: ["rating_total_min", "rating_total_max"],
-        ratingCH: ["rating_ch_min", "rating_ch_max"],
-        ratingRT: ["rating_rt_min", "rating_rt_max"],
+        ...(this.includeIndividualRatings && {
+          ratingCH: ["rating_ch_min", "rating_ch_max"],
+          ratingRT: ["rating_rt_min", "rating_rt_max"],
+        }),
         dateSeen: ["date_seen_min", "date_seen_max"],
         fsk: "fsk",
         mm: "mm",
@@ -274,19 +314,20 @@ export default Vue.extend({
         (requestObject, [dataName, dataValue]) => ({
           ...requestObject,
           ...(dataName in QUERY_PARAM_MAP &&
+            dataValue !== null &&
             (Array.isArray(
               QUERY_PARAM_MAP[dataName as keyof typeof QUERY_PARAM_MAP]
             )
               ? {
-                  ...(dataValue![0] && {
+                  ...(dataValue[0] !== null && {
                     [QUERY_PARAM_MAP[
                       dataName as keyof typeof QUERY_PARAM_MAP
-                    ][0]]: dataValue![0],
+                    ]![0]]: dataValue[0],
                   }),
-                  ...(dataValue![1] && {
+                  ...(dataValue[1] !== null && {
                     [QUERY_PARAM_MAP[
                       dataName as keyof typeof QUERY_PARAM_MAP
-                    ][1]]: dataValue![1],
+                    ]![1]]: dataValue[1],
                   }),
                 }
               : { ...(dataValue && { [dataName]: dataValue }) })),
