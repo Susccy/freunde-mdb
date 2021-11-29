@@ -5,6 +5,7 @@ $on-surface-dim: hsl(0, 0%, 80%);
 $on-surface-2dim: hsl(0, 0%, 60%);
 $on-surface-3dim: hsl(0, 0%, 40%);
 $on-surface-4dim: hsl(0, 0%, 20%);
+$on-surface-5dim: hsl(0, 0%, 10%);
 $on-color: #000000;
 $primary: #70e0dd;
 $primary-accent: #00999b;
@@ -12,6 +13,8 @@ $secondary: #b499f3;
 $secondary-accent: #a200c0;
 
 // font-sizes
+$sm-4x: 0.25rem;
+$sm-3x: 0.5rem;
 $sm-2x: 0.625rem;
 $sm-x: 0.75rem;
 $sm: 0.875rem;
