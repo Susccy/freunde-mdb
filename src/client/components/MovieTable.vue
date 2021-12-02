@@ -1,5 +1,5 @@
 <template>
-  <table v-if="movieData.length" class="c-movie-table">
+  <table class="c-movie-table">
     <thead>
       <tr>
         <th></th>
@@ -24,7 +24,6 @@
       />
     </tbody>
   </table>
-  <p v-else>Keine Ergebnisse</p>
 </template>
 
 <script lang="ts">
