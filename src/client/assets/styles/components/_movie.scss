@@ -1,0 +1,21 @@
+.c-movie {
+  $self: &;
+
+  &--modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($surface, 85%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #{$self}__content {
+      z-index: 9999;
+      @include background-layer(1);
+    }
+  }
+}

@@ -27,6 +27,7 @@
         </NuxtLink>
       </div>
       <MovieCardContainer
+        @movie-click="handleMovieClick"
         :movie-data="latestMovies"
         :layout="$nuxt.layoutName"
       />
@@ -44,33 +45,44 @@
         </NuxtLink>
       </div>
       <MovieCardContainer
+        @movie-click="handleMovieClick"
         :movie-data="bestRecentMovies"
         :layout="$nuxt.layoutName"
       />
     </div>
+    <Movie v-if="activeModal" @close="hideMovieModal" :movie="movie" modal />
   </main>
 </template>
 
 <script lang="ts">
 import Vue from "vue"
+import type { Route } from "vue-router"
 // import postCombinedData from "../../utils/postCombinedData"
 import deviceLayout from "~/client/mixins/deviceLayout"
-import type { MovieResponse } from "~/entities/movie.entity"
+import type { MovieResponseJSON } from "~/entities/movie.entity"
 
 export default Vue.extend({
   mixins: [deviceLayout],
+  beforeRouteLeave (to, _from, next) {
+    if (to.name !== "movie-id") next()
+    this.displayMovieModal(to)
+  },
   data (): {
-    latestMovies: MovieResponse[]
-    bestRecentMovies: MovieResponse[]
+    latestMovies: MovieResponseJSON[]
+    bestRecentMovies: MovieResponseJSON[]
+    movie: MovieResponseJSON | null
+    activeModal: string
   } {
     return {
       latestMovies: [],
       bestRecentMovies: [],
+      movie: null,
+      activeModal: "",
     }
   },
   async fetch () {
     // @todo error handling
-    const latestMoviesResponse = await this.$axios.$get<MovieResponse[]>(
+    const latestMoviesResponse = await this.$axios.$get<MovieResponseJSON[]>(
       "/movie",
       {
         params: {
@@ -80,17 +92,16 @@ export default Vue.extend({
       }
     )
     const now = new Date()
-    const bestRecentMoviesResponse = await this.$axios.$get<MovieResponse[]>(
-      "/movie",
-      {
-        params: {
-          sort: "-rating.total -releaseDate",
-          date_released_min: new Date(now.getFullYear() - 1, now.getMonth()),
-          rating_total_min: 500,
-          limit: 10,
-        },
-      }
-    )
+    const bestRecentMoviesResponse = await this.$axios.$get<
+      MovieResponseJSON[]
+    >("/movie", {
+      params: {
+        sort: "-rating.total -releaseDate",
+        date_released_min: new Date(now.getFullYear() - 1, now.getMonth()),
+        rating_total_min: 500,
+        limit: 10,
+      },
+    })
     this.latestMovies = latestMoviesResponse
     this.bestRecentMovies = bestRecentMoviesResponse
   },
@@ -103,6 +114,18 @@ export default Vue.extend({
           title: movieTitle,
         },
       })
+    },
+    handleMovieClick (movie: MovieResponseJSON) {
+      this.movie = movie
+      this.$router.push({ name: "movie-id", params: { id: movie.id } })
+    },
+    displayMovieModal (route: Route) {
+      this.activeModal = route.params.id
+      window.history.pushState({}, "", route.path)
+    },
+    hideMovieModal () {
+      this.activeModal = ""
+      window.history.pushState({}, "", this.$route.path)
     },
   },
 })

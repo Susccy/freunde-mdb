@@ -1,4 +1,9 @@
 <template>
+  <!-- <NuxtLink
+    v-if="layout === 'desktop'"
+    :to="{ name: 'movie-id', params: { id: movie.id } }"
+    class="c-movie-card c-movie-card--desktop"
+  > -->
   <button
     v-if="layout === 'desktop'"
     class="g-btn-reset c-movie-card c-movie-card--desktop"
@@ -9,7 +14,6 @@
       :alt="imgAlt"
       class="c-movie-card__poster"
     />
-
     <p v-if="movie.mm" class="c-movie-card__mm">MM</p>
     <div class="c-movie-card__title">
       <h3 ref="movieTitle" class="c-movie-card__title__main">{{ title }}</h3>
@@ -40,7 +44,13 @@
     </div>
     <TablerIcon name="arrows-maximize" size="20" class="c-movie-card__expand" />
   </button>
+  <!-- </NuxtLink> -->
 
+  <!-- <NuxtLink
+    v-else
+    :to="{ name: 'movie', params: { id: movie.id } }"
+    class="g-btn-reset c-movie-card c-movie-card--mobile"
+  > -->
   <button v-else class="g-btn-reset c-movie-card c-movie-card--mobile">
     <div ref="movieTitleContainer" class="c-movie-card__title">
       <div class="c-movie-card__date">
@@ -61,6 +71,7 @@
       </details>
     </div>
   </button>
+  <!-- </NuxtLink> -->
 </template>
 
 <script lang="ts">
@@ -72,6 +83,7 @@ export default (
   Vue as VueConstructor<Vue & InstanceType<typeof computedMovieData>>
 ).extend({
   mixins: [computedMovieData],
+
   props: {
     layout: {
       type: String,
