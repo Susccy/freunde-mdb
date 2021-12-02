@@ -43,5 +43,5 @@ export type MovieResponse = Movie
 
 export type MovieResponseJSON = Omit<
   MovieResponse,
-  "dateSeen" | "releaseDate"
-> & { dateSeen?: string; releaseDate: string }
+  "dateSeen" | "releaseDate" | "id"
+> & { dateSeen?: string; releaseDate: string; id: string }

@@ -1,10 +1,13 @@
-import { Schema, Model, model, models } from "mongoose"
+import { Schema, Model, model, models, ObjectId } from "mongoose"
 import mongooseUniqueValidator from "mongoose-unique-validator"
 
 export type RatingIndividual = { ch: number; rt: number }
 export type RatingTotal = { total: number }
 
 export interface Movie {
+  // mongodb
+  id: ObjectId
+
   // custom input
   rating: RatingTotal | (RatingTotal & RatingIndividual)
   dateSeen?: Date

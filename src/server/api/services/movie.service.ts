@@ -162,7 +162,10 @@ export default {
     // return combinedData
   },
 
-  findByID: async (id: string) => await MovieModel.findById(id).exec(),
+  findByID: async (id: string) =>
+    await MovieModel.findById(id)
+      .select("-__v")
+      .exec(),
   // if (!freundeData) return null
 
   // const { tmdb, ...movie } = freundeData
@@ -187,7 +190,8 @@ export default {
         throw e
       })
 
-    const completeDoc: Omit<Movie, "rating"> & Pick<MovieInput, "rating"> = {
+    const completeDoc: Omit<Movie, "rating" | "id"> &
+      Pick<MovieInput, "rating"> = {
       ...doc,
       ...tmdbResponse,
     }
