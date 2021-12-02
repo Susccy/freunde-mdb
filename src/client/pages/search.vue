@@ -2,10 +2,15 @@
   <main class="page p-search">
     <h1>Film-Datenbank</h1>
     <div class="p-search__search-extended">
+      <h2>Suche</h2>
       <SearchExtended />
     </div>
-    <h2>Ergebnisse</h2>
-    <MovieTable :movie-data="movies" />
+    <div class="p-search__results">
+      <h2>Ergebnisse</h2>
+      <p v-if="queryIsEmpty">Warte auf Suchanfrage...</p>
+      <p v-else-if="!movies.length">Keine Ergebnisse</p>
+      <MovieTable v-else :movie-data="movies" />
+    </div>
   </main>
 </template>
 
@@ -21,6 +26,11 @@ export default Vue.extend({
       movies: [],
     }
   },
+  computed: {
+    queryIsEmpty (): boolean {
+      return !Object.keys(this.$route.query).length
+    },
+  },
   watch: {
     "$route.query": "search",
   },
@@ -29,20 +39,19 @@ export default Vue.extend({
   },
   methods: {
     async search () {
-      const searchQuery = this.$route.query
-      searchQuery &&
-        (this.movies = await this.$axios.$get<MovieResponseJSON[]>("/movie", {
-          params: searchQuery,
-        }))
-    },
-    refreshSearch (movieTitle: string) {
-      this.$router.push({
-        name: "search",
-        query: {
-          title: movieTitle,
-        },
+      if (this.queryIsEmpty) return
+      this.movies = await this.$axios.$get<MovieResponseJSON[]>("/movie", {
+        params: this.$route.query,
       })
     },
+    // refreshSearch (movieTitle: string) {
+    //   this.$router.push({
+    //     name: "search",
+    //     query: {
+    //       title: movieTitle,
+    //     },
+    //   })
+    // },
   },
 })
 </script>

@@ -1,6 +1,5 @@
 <template>
   <form @submit.prevent="submit" class="c-search-extended">
-    <h2>Erweiterte Suche</h2>
     <div class="c-search-extended__row c-search-extended__primary">
       <p>Allgemein</p>
       <div>
@@ -64,45 +63,39 @@
       <div>
         <div>
           <label for="rating-total">Gesamt</label>
-          <VueSlider
+          <StyledVueSlider
             id="rating-total"
             v-model="ratingTotal"
             :interval="25"
             :max="1000"
-            :drag-on-click="true"
             :marks="STATIC.ratingMarks"
             :tooltip-formatter="STATIC.ratingTooltips"
-            :contained="true"
             class="c-search-extended__slider"
           />
         </div>
         <div :class="[!includeIndividualRatings && 'hidden']">
           <label for="rating-ch">CH</label>
-          <VueSlider
+          <StyledVueSlider
             id="rating-ch"
             v-model="ratingCH"
             :interval="50"
             :max="1000"
-            :drag-on-click="true"
             :marks="STATIC.ratingMarks"
             :tooltip-formatter="STATIC.ratingTooltips"
             :disabled="!includeIndividualRatings"
-            :contained="true"
             class="c-search-extended__slider"
           />
         </div>
         <div :class="[!includeIndividualRatings && 'hidden']">
           <label for="rating-rt">RT</label>
-          <VueSlider
+          <StyledVueSlider
             id="rating-rt"
             v-model="ratingRT"
             :interval="50"
             :max="1000"
-            :drag-on-click="true"
             :marks="STATIC.ratingMarks"
             :tooltip-formatter="STATIC.ratingTooltips"
             :disabled="!includeIndividualRatings"
-            :contained="true"
             class="c-search-extended__slider"
           />
         </div>
@@ -221,7 +214,9 @@
       </div>
     </div>
 
-    <button type="submit">Suchen</button>
+    <div class="c-search-extended__row">
+      <button type="submit">Suchen</button>
+    </div>
   </form>
 </template>
 
