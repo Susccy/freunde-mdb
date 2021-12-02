@@ -50,46 +50,45 @@ const movieController: MovieController = {
           ["runtime_max", "runtime"],
         ]
 
-        const validQuery = Object.entries(query).reduce(
-          (validQuery, [queryParamName, queryParamValue]) => {
-            if (!queryParamValue) return validQuery
+        const validQuery = Object.entries(query).reduce<{
+          [k: string]: string | any[] | { [k: string]: string } | undefined
+        }>((validQuery, [queryParamName, queryParamValue]) => {
+          if (!queryParamValue) return validQuery
 
-            const validQueryParam = validQueryParams.find(
-              (v) => v[0] === queryParamName
-            )
+          const validQueryParam = validQueryParams.find(
+            (v) => v[0] === queryParamName
+          )
 
-            if (!validQueryParam) return validQuery
+          if (!validQueryParam) return validQuery
 
-            const [validParamName, dbParamPath] = validQueryParam
+          const [validParamName, dbParamPath] = validQueryParam
 
-            const paramIsTitle = validParamName === "title"
-            const paramIsMin = /_min$/.test(validParamName)
-            const paramIsMax = !paramIsMin && /_max$/.test(validParamName)
+          const paramIsTitle = validParamName === "title"
+          const paramIsMin = /_min$/.test(validParamName)
+          const paramIsMax = !paramIsMin && /_max$/.test(validParamName)
 
-            return {
-              ...validQuery,
-              [dbParamPath]: paramIsTitle
-                ? [
-                    {
-                      "title.original": {
-                        $regex: new RegExp(queryParamValue, "i"),
-                      },
+          return {
+            ...validQuery,
+            [dbParamPath]: paramIsTitle
+              ? [
+                  {
+                    "title.original": {
+                      $regex: new RegExp(queryParamValue, "i"),
                     },
-                    {
-                      "title.german": {
-                        $regex: new RegExp(queryParamValue, "i"),
-                      },
+                  },
+                  {
+                    "title.german": {
+                      $regex: new RegExp(queryParamValue, "i"),
                     },
-                  ]
-                : paramIsMin
-                ? { $gte: queryParamValue }
-                : paramIsMax
-                ? { $lte: queryParamValue }
-                : queryParamValue,
-            }
-          },
-          {}
-        )
+                  },
+                ]
+              : paramIsMin
+              ? { ...(validQuery[dbParamPath] as {}), $gte: queryParamValue }
+              : paramIsMax
+              ? { ...(validQuery[dbParamPath] as {}), $lte: queryParamValue }
+              : queryParamValue,
+          }
+        }, {})
 
         const options = {
           ...(limit && { limit: parseInt(limit) }),
