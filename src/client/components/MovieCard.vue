@@ -23,7 +23,6 @@
           :src="fskIcon"
           :alt="`FSK ${movie.fsk}`"
           class="c-movie-card__title__fsk"
-          :class="['c-movie-card__title__fsk--' + movie.fsk]"
         />
         <p class="c-movie-card__title__genres">{{ genres }}</p>
       </div>
