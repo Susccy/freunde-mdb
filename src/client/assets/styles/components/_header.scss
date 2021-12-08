@@ -8,7 +8,7 @@
   // overflow: hidden;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 
-  @include background-layer(0);
+  @include background-layer(0.5);
 
   &__logo {
     padding: 0.5rem;
