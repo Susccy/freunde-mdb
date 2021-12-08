@@ -27,7 +27,6 @@
         </NuxtLink>
       </div>
       <MovieCardContainer
-        @movie-click="handleMovieClick"
         :movie-data="latestMovies"
         :layout="$nuxt.layoutName"
       />
@@ -45,12 +44,11 @@
         </NuxtLink>
       </div>
       <MovieCardContainer
-        @movie-click="handleMovieClick"
         :movie-data="bestRecentMovies"
         :layout="$nuxt.layoutName"
       />
     </div>
-    <Movie v-if="activeModal" @close="hideMovieModal" :movie="movie" modal />
+    <Movie v-if="movie" @close="hideMovieModal" :movie="movie" modal />
   </main>
 </template>
 
@@ -70,14 +68,12 @@ export default Vue.extend({
   data (): {
     latestMovies: MovieResponseJSON[]
     bestRecentMovies: MovieResponseJSON[]
-    movie: MovieResponseJSON | null
-    activeModal: string
+    movie?: MovieResponseJSON | null
   } {
     return {
       latestMovies: [],
       bestRecentMovies: [],
       movie: null,
-      activeModal: "",
     }
   },
   async fetch () {
@@ -115,16 +111,15 @@ export default Vue.extend({
         },
       })
     },
-    handleMovieClick (movie: MovieResponseJSON) {
-      this.movie = movie
-      this.$router.push({ name: "movie-id", params: { id: movie.id } })
-    },
     displayMovieModal (route: Route) {
-      this.activeModal = route.params.id
+      this.movie =
+        [...this.latestMovies, ...this.bestRecentMovies].find(
+          ({ id }) => id === route.params.id
+        ) || null
       window.history.pushState({}, "", route.path)
     },
     hideMovieModal () {
-      this.activeModal = ""
+      this.movie = null
       window.history.pushState({}, "", this.$route.path)
     },
   },

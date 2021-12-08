@@ -1,17 +1,20 @@
 .c-footer {
   @include background-layer(1);
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
 
   &__tmdb {
-    display: block;
+    // display: block;
     height: $lg-5x;
 
     figure {
       display: flex;
       gap: $sm;
       width: 22rem;
-      margin: 0 auto;
       height: 100%;
+      margin: 0;
 
       figcaption {
         text-align: left;

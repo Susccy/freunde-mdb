@@ -1,13 +1,13 @@
 <template>
-  <!-- <NuxtLink
+  <NuxtLink
     v-if="layout === 'desktop'"
     :to="{ name: 'movie-id', params: { id: movie.id } }"
     class="c-movie-card c-movie-card--desktop"
-  > -->
-  <button
+  >
+    <!-- <button
     v-if="layout === 'desktop'"
     class="g-btn-reset c-movie-card c-movie-card--desktop"
-  >
+  > -->
     <img
       ref="moviePoster"
       :src="imgSrc"
@@ -43,8 +43,8 @@
       <p v-show="movie.runtime">Länge: {{ movie.runtime }}min</p>
     </div>
     <TablerIcon name="arrows-maximize" size="20" class="c-movie-card__expand" />
-  </button>
-  <!-- </NuxtLink> -->
+    <!-- </button> -->
+  </NuxtLink>
 
   <!-- <NuxtLink
     v-else

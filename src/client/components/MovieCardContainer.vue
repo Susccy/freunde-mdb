@@ -8,7 +8,6 @@
     <MovieCard
       v-for="movie in movieData"
       :key="movie.tmdbID"
-      @click.native="$emit('movie-click', movie)"
       :movie="movie"
       :layout="layout"
     />

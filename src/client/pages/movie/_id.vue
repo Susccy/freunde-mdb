@@ -15,10 +15,9 @@ export default Vue.extend({
     const movie = await $axios.$get<MovieResponseJSON>(`/movie/${params.id}`)
     return { movie }
   },
+  // workaround for asyncData not properly returning a type
   data () {
-    return {
-      movie: undefined as MovieResponseJSON,
-    }
+    return {} as { movie: MovieResponseJSON }
   },
 })
 </script>
