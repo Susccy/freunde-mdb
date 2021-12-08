@@ -1,4 +1,5 @@
 <template>
+  <!-- @todo! paginate via infinite scrolling and https://developers.google.com/search/blog/2014/02/infinite-scroll-search-friendly -->
   <table class="c-movie-table">
     <thead>
       <tr>
