@@ -25,6 +25,7 @@
     "nuxt": "^2.15.7",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+    "vue-fragment": "^1.5.2",
     "vue-slider-component": "^3.2.15",
     "vue-tabler-icons": "^1.12.1"
   },
