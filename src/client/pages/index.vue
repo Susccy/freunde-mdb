@@ -48,7 +48,7 @@
         :layout="$nuxt.layoutName"
       />
     </div>
-    <Movie v-if="movie" @close="hideMovieModal" :movie="movie" modal />
+    <Movie v-if="movie" @close="hideMovieModal" :movie="movie" is-modal />
   </main>
 </template>
 
@@ -114,6 +114,7 @@ export default Vue.extend({
     displayMovieModal (route: Route) {
       this.movie =
         [...this.latestMovies, ...this.bestRecentMovies].find(
+          // @todo! use slugs instead of ObjectIDs
           ({ id }) => id === route.params.id
         ) || null
       window.history.pushState({}, "", route.path)

@@ -5,26 +5,34 @@
   height: 100%;
   width: 100%;
   background-color: rgba($surface, 85%);
-  cursor: pointer;
 
-  @keyframes modalPopup {
-    0% {
-      transform: translate(-50%, -50%) scale(90%);
-      opacity: 0%;
-    }
-    // 100% {
-    //   transform: translate(-50%, -50%) scale(100%);
-    // }
+  &.fade-enter-active,
+  &.fade-leave-active {
+    transition: background-color 0.2s;
+  }
+
+  &.fade-enter,
+  &.fade-leave-to {
+    background-color: rgba($surface, 0%);
   }
 
   > :only-child {
     z-index: 9999;
-    cursor: initial;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    animation: modalPopup 0.2s;
+
+    &.grow-fade-enter-active,
+    &.grow-fade-leave-active {
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    &.grow-fade-enter,
+    &.grow-fade-leave-to {
+      transform: translate(-50%, -50%) scale(90%);
+      opacity: 0;
+    }
   }
 }
 

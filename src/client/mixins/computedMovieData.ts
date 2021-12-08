@@ -21,7 +21,7 @@ export default Vue.extend({
   computed: {
     dateSeen (): string | null | undefined {
       const { dateSeen } = this.movie
-      return dateSeen && formatDateDE(dateSeen)
+      return dateSeen && this.formatDateDE(dateSeen)
     },
     yearReleased (): number {
       const { releaseDate } = this.movie
@@ -72,5 +72,9 @@ export default Vue.extend({
     const { posterURL } = this.movie
     // w154
     posterURL && (this.imgSrc = `http://image.tmdb.org/t/p/w154${posterURL}`)
+  },
+
+  methods: {
+    formatDateDE,
   },
 })

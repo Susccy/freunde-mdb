@@ -1,5 +1,6 @@
 <template>
-  <tr>
+  <!-- @todo! optimize link with https://stackoverflow.com/a/4904983/16503617 -->
+  <tr @click="$router.push({ name: 'movie-id', params: { id: movie.id } })">
     <td>
       <img :src="imgSrc" :alt="imgAlt" />
     </td>
@@ -7,13 +8,7 @@
     <td>{{ movie.title.original }}</td>
     <td>{{ movie.mm ? "✔" : "✖" }}</td>
     <td>
-      <img
-        v-if="fskIcon"
-        :src="fskIcon"
-        :alt="`FSK ${movie.fsk}`"
-        class="c-movie-card__title__fsk"
-        :class="['c-movie-card__title__fsk--' + movie.fsk]"
-      />
+      <img v-if="fskIcon" :src="fskIcon" :alt="`FSK ${movie.fsk}`" />
       <span v-else>?</span>
     </td>
     <td>{{ genres }}</td>

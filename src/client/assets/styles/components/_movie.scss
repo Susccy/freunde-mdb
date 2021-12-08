@@ -9,6 +9,16 @@
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
     border-radius: 1rem;
 
+    scrollbar-color: background-layer-color(2) background-layer-color(4);
+
+    &::-webkit-scrollbar {
+      @include background-layer(4);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @include background-layer(2);
+    }
+
     @include background-layer(1);
   }
 }
