@@ -22,7 +22,9 @@
     flex: 0 0 22rem;
 
     // @todo add this effect to the parent button as well (for tab focus)
-    &:hover {
+    &:hover,
+    &:focus {
+      outline: none;
       transform: scale(1.05);
       box-shadow: 0 0 15px 0 $primary;
       z-index: 1;
