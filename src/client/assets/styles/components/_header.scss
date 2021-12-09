@@ -19,10 +19,11 @@
     //   0 0 42px $primary-accent, 0 0 82px $primary-accent,
     //   0 0 92px $primary-accent, 0 0 102px $primary-accent;
     border: 0.2rem solid $on-surface;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     box-shadow: 0 0 0.2rem $on-surface, 0 0 0.2rem $on-surface,
-      0 0 0.2rem $primary-accent, 0 0 0.8rem $primary-accent,
-      inset 0 0 1.3rem $primary-accent;
+      0 0 0 $on-surface, 0 0 0.2rem $primary-accent, 0 0 0.8rem $primary-accent,
+      0 0 0 $primary-accent, 0 0 0 $primary-accent,
+      inset 0 0 1.3rem $primary-accent, inset 0 0 0 $primary-accent;
     // animation: pulsate 1.5s infinite alternate;
     text-shadow: 0 0 4px $on-surface, 0 0 11px $on-surface, 0 0 19px $on-surface,
       0 0 40px $primary-accent, 0 0 80px $primary-accent,
@@ -30,6 +31,17 @@
       0 0 100px $primary-accent  */
         /* ,
       0 0 150px $primary-accent */;
+    white-space: nowrap;
+    transition: box-shadow 0.2s;
+
+    &:hover {
+      color: unset;
+      box-shadow: 0 0 0.2rem $on-surface, 0 0 0.2rem $on-surface,
+        0 0 0.4rem $on-surface, 0 0 0.2rem $primary-accent,
+        0 0 0.8rem $primary-accent, 0 0 1rem $primary-accent,
+        0 0 1.5rem $primary-accent, inset 0 0 1.3rem $primary-accent,
+        inset 0 0 1.5rem $primary-accent;
+    }
   }
 
   // @keyframes pulsate {

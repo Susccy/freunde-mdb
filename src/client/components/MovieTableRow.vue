@@ -2,7 +2,7 @@
   <!-- @todo! optimize link with https://stackoverflow.com/a/4904983/16503617 -->
   <tr @click="$router.push({ name: 'movie-id', params: { id: movie.id } })">
     <td>
-      <img :src="getPosterSrc(92)" :alt="imgAlt" />
+      <img :src="getPosterSrc(92)" :alt="imgAlt" class="hide-alt" />
     </td>
     <td>{{ movie.title.german || "-" }}</td>
     <td>{{ movie.title.original }}</td>

@@ -1,11 +1,13 @@
 <template>
   <nav class="c-navbar">
     <ul class="c-navbar__list">
-      <li class="c-navbar__item">1</li>
-      <li class="c-navbar__item">2</li>
-      <li class="c-navbar__item">3</li>
-      <li class="c-navbar__item">4</li>
-      <li class="c-navbar__item">5</li>
+      <li class="c-navbar__item"><NuxtLink to="/">Startseite</NuxtLink></li>
+      <li class="c-navbar__item"><NuxtLink to="/search">Suche</NuxtLink></li>
+      <li class="c-navbar__item">
+        <NuxtLink to="/search?sort=title.german">Alle Filme</NuxtLink>
+      </li>
+      <!-- <li class="c-navbar__item"><NuxtLink></NuxtLink></li>
+      <li class="c-navbar__item"><NuxtLink></NuxtLink></li> -->
     </ul>
   </nav>
 </template>
