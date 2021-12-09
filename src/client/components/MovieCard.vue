@@ -10,7 +10,7 @@
   > -->
     <img
       ref="moviePoster"
-      :src="imgSrc"
+      :src="getPosterSrc(154)"
       :alt="imgAlt"
       class="c-movie-card__poster"
     />

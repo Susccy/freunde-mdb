@@ -13,7 +13,6 @@ export default Vue.extend({
 
   data () {
     return {
-      imgSrc: "",
       imgAlt: `${this.movie.title.original} Poster`,
     }
   },
@@ -68,13 +67,14 @@ export default Vue.extend({
     },
   },
 
-  mounted () {
-    const { posterURL } = this.movie
-    // w154
-    posterURL && (this.imgSrc = `http://image.tmdb.org/t/p/w154${posterURL}`)
-  },
-
   methods: {
     formatDateDE,
+
+    getPosterSrc (size?: 92 | 154 | 185 | 342 | 500 | 780) {
+      const { posterURL } = this.movie
+      return `http://image.tmdb.org/t/p/${
+        size ? `w${size}` : "original"
+      }${posterURL}`
+    },
   },
 })
