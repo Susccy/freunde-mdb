@@ -14,7 +14,13 @@
       <p v-else-if="!movies.length">Keine Ergebnisse</p>
       <MovieTable v-else :movie-data="movies" />
     </div>
-    <Movie v-if="movie" @close="hideMovieModal" :movie="movie" is-modal />
+    <Movie
+      v-if="movie"
+      ref="movieModal"
+      @close="hideMovieModal"
+      :movie="movie"
+      is-modal
+    />
   </main>
 </template>
 
@@ -26,27 +32,38 @@ import type { MovieResponseJSON } from "~/entities/movie.entity"
 
 export default Vue.extend({
   mixins: [deviceLayout],
+
   beforeRouteLeave (to, _from, next) {
     if (to.name !== "movie-id") next()
     this.displayMovieModal(to)
   },
+
   data (): { movies: MovieResponseJSON[]; movie: MovieResponseJSON | null } {
     return {
       movies: [],
       movie: null,
     }
   },
+
   computed: {
     queryIsEmpty (): boolean {
       return !Object.keys(this.$route.query).length
     },
   },
+
   watch: {
     "$route.query": "search",
   },
+
   mounted () {
     this.search()
+
+    window.addEventListener("popstate", () => {
+      // @todo fix any cast
+      ;(this.$refs.movieModal as any)?.closeModal()
+    })
   },
+
   methods: {
     async search () {
       if (this.queryIsEmpty) return

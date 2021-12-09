@@ -48,7 +48,13 @@
         :layout="$nuxt.layoutName"
       />
     </div>
-    <Movie v-if="movie" @close="hideMovieModal" :movie="movie" is-modal />
+    <Movie
+      v-if="movie"
+      ref="movieModal"
+      @close="hideMovieModal"
+      :movie="movie"
+      is-modal
+    />
   </main>
 </template>
 
@@ -61,10 +67,12 @@ import type { MovieResponseJSON } from "~/entities/movie.entity"
 
 export default Vue.extend({
   mixins: [deviceLayout],
+
   beforeRouteLeave (to, _from, next) {
     if (to.name !== "movie-id") next()
     this.displayMovieModal(to)
   },
+
   data (): {
     latestMovies: MovieResponseJSON[]
     bestRecentMovies: MovieResponseJSON[]
@@ -76,6 +84,7 @@ export default Vue.extend({
       movie: null,
     }
   },
+
   async fetch () {
     // @todo error handling
     const latestMoviesResponse = await this.$axios.$get<MovieResponseJSON[]>(
@@ -101,7 +110,16 @@ export default Vue.extend({
     this.latestMovies = latestMoviesResponse
     this.bestRecentMovies = bestRecentMoviesResponse
   },
+
   fetchOnServer: false,
+
+  mounted () {
+    window.addEventListener("popstate", () => {
+      // @todo fix any cast
+      ;(this.$refs.movieModal as any)?.closeModal()
+    })
+  },
+
   methods: {
     searchMovieTitle (movieTitle: string) {
       this.$router.push({
