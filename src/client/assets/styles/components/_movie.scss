@@ -1,9 +1,77 @@
 .c-movie {
   $self: &;
 
+  width: 50rem;
+  max-width: 90%;
+  margin-inline: auto;
+  display: grid;
+  gap: $sm;
+  grid-template-areas:
+    "poster title"
+    "poster meta"
+    "main main"
+    "overview overview";
+
+  .area {
+    &-poster {
+      grid-area: poster;
+      width: 100%;
+      // max-width: 100%;
+      object-fit: contain;
+    }
+    &-title {
+      grid-area: title;
+
+      h1 {
+        font-family: Oswald;
+        font-weight: 400;
+        font-size: $lg-4x;
+        max-width: 95%;
+      }
+
+      p {
+        font-style: italic;
+        color: $on-surface-2dim;
+      }
+    }
+    &-meta {
+      grid-area: meta;
+
+      h2 {
+        font-weight: 600;
+        font-size: $lg;
+        margin-bottom: 0.25rem;
+      }
+
+      table {
+        width: 100%;
+        min-width: 0;
+        border-collapse: collapse;
+
+        th {
+          text-align: left;
+          font-weight: 500;
+          padding-left: 0;
+        }
+
+        td {
+          text-align: right;
+        }
+      }
+    }
+    &-main {
+      grid-area: main;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    &-overview {
+      grid-area: overview;
+    }
+  }
+
   &--modal {
+    margin-inline: 0;
     max-height: 90%;
-    width: 50%;
     overflow-y: auto;
     padding: 1rem;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
@@ -20,5 +88,11 @@
     }
 
     @include background-layer(1);
+
+    &__close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
   }
 }

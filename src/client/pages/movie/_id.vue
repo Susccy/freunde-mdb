@@ -11,10 +11,12 @@ import deviceLayout from "~/client/mixins/deviceLayout"
 
 export default Vue.extend({
   mixins: [deviceLayout],
+
   async asyncData ({ params, $axios }) {
     const movie = await $axios.$get<MovieResponseJSON>(`/movie/${params.id}`)
     return { movie }
   },
+
   // workaround for asyncData not properly returning a type
   data () {
     return {} as { movie: MovieResponseJSON }

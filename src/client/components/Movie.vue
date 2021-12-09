@@ -8,7 +8,7 @@
       class="g-modal-backdrop"
       tabindex="0"
     >
-      <transition :name="isModal ? 'grow-fade' : ''">
+      <transition :name="isModal ? 'grow-fade' : ''" appear>
         <article
           v-if="!isModal || modalOpen"
           ref="modalContent"
@@ -17,22 +17,22 @@
           :class="[isModal && 'c-movie--modal']"
           tabindex="0"
         >
-          <h1>{{ title }}</h1>
-          <p>{{ movie.tagline }}</p>
-          <img :src="imgSrc" :alt="imgAlt" />
-          <p>{{ dateSeen }}</p>
-          <p>
-            <span>
-              {{ (rating.ch && `${rating.ch}ch`) || "nur Gesamt" }}
-            </span>
-            <span>
-              {{ rating.total }}
-            </span>
-            <span>
-              {{ (rating.rt && `${rating.rt}rt`) || "nur Gesamt" }}
-            </span>
-          </p>
-          <section>
+          <button
+            v-if="isModal"
+            @click="closeModal"
+            class="c-movie--modal__close-btn"
+          >
+            X
+          </button>
+
+          <img :src="getPosterSrc(342)" :alt="imgAlt" class="area-poster" />
+
+          <section class="area-title">
+            <h1>{{ title }}</h1>
+            <p>{{ movie.tagline }}</p>
+          </section>
+
+          <section class="area-meta">
             <h2>Allgemeine Daten</h2>
             <table>
               <tr>
@@ -54,6 +54,7 @@
                     v-if="fskIcon"
                     :src="fskIcon"
                     :alt="`FSK ${movie.fsk}`"
+                    style="height: 1rem"
                   />
                 </td>
               </tr>
@@ -63,11 +64,29 @@
               </tr>
               <tr>
                 <th>Budget</th>
-                <td>{{ movie.budget || "?" }}</td>
+                <td>
+                  {{
+                    movie.budget
+                      ? new Intl.NumberFormat("de-DE", {
+                          style: "currency",
+                          currency: "USD",
+                        }).format(movie.budget)
+                      : "?"
+                  }}
+                </td>
               </tr>
               <tr>
-                <th>Umsatz</th>
-                <td>{{ movie.revenue || "?" }}</td>
+                <th>Eingespielt</th>
+                <td>
+                  {{
+                    movie.revenue
+                      ? new Intl.NumberFormat("de-DE", {
+                          style: "currency",
+                          currency: "USD",
+                        }).format(movie.revenue)
+                      : "?"
+                  }}
+                </td>
               </tr>
               <tr>
                 <th>MM</th>
@@ -75,11 +94,29 @@
               </tr>
             </table>
           </section>
-          <section>
+
+          <div class="area-main">
+            <p>Gesehen: {{ dateSeen }}</p>
+            <p>
+              Rating:
+              <span>
+                {{ (rating.ch && `${rating.ch}ch`) || "nur Gesamt" }}
+              </span>
+              |
+              <span>
+                {{ rating.total }}
+              </span>
+              |
+              <span>
+                {{ (rating.rt && `${rating.rt}rt`) || "nur Gesamt" }}
+              </span>
+            </p>
+          </div>
+
+          <section class="area-overview">
             <h2>Zusammenfassung</h2>
             <p>{{ movie.overview || "keine Beschreibung vorhanden" }}</p>
           </section>
-          <button v-if="isModal" @click="closeModal">X</button>
         </article>
       </transition>
     </component>
@@ -97,6 +134,7 @@ export default (
   Vue as VueConstructor<Vue & InstanceType<typeof computedMovieData>>
 ).extend({
   mixins: [computedMovieData],
+
   props: {
     isModal: {
       type: Boolean,
