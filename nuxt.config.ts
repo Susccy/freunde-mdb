@@ -66,6 +66,4 @@ export default {
   loading: {
     color: "#70e0dd",
   },
-
-  ssr: false,
 } as NuxtConfig
