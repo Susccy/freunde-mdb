@@ -1,4 +1,5 @@
 import { resolve } from "path"
+import type { NuxtConfig } from "@nuxt/types"
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -65,4 +66,6 @@ export default {
   loading: {
     color: "#70e0dd",
   },
-}
+
+  ssr: false,
+} as NuxtConfig
