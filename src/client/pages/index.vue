@@ -60,6 +60,7 @@
 
 <script lang="ts">
 import Vue from "vue"
+import type { FetchReturn } from "@nuxt/content/types/query-builder"
 import type { Route } from "vue-router"
 // import postCombinedData from "../../utils/postCombinedData"
 import deviceLayout from "~/client/mixins/deviceLayout"
@@ -74,9 +75,9 @@ export default Vue.extend({
   },
 
   data (): {
-    latestMovies: MovieResponseJSON[]
-    bestRecentMovies: MovieResponseJSON[]
-    movie?: MovieResponseJSON | null
+    latestMovies: (MovieResponseJSON & FetchReturn)[]
+    bestRecentMovies: (MovieResponseJSON & FetchReturn)[]
+    movie?: (MovieResponseJSON & FetchReturn) | null
   } {
     return {
       latestMovies: [],
@@ -87,26 +88,26 @@ export default Vue.extend({
 
   async fetch () {
     // @todo error handling
-    const latestMoviesResponse = await this.$axios.$get<MovieResponseJSON[]>(
-      "/movie",
-      {
-        params: {
-          sort: "-dateSeen -rating.total",
-          limit: 10,
-        },
-      }
-    )
+    const latestMoviesResponse = (await this.$content()
+      .sortBy("dateSeen", "desc")
+      .sortBy("rating.total", "desc")
+      .limit(10)
+      .fetch<MovieResponseJSON>()) as (MovieResponseJSON & FetchReturn)[]
+
     const now = new Date()
-    const bestRecentMoviesResponse = await this.$axios.$get<
-      MovieResponseJSON[]
-    >("/movie", {
-      params: {
-        sort: "-rating.total -releaseDate",
-        date_released_min: new Date(now.getFullYear() - 1, now.getMonth()),
-        rating_total_min: 500,
-        limit: 10,
-      },
-    })
+
+    const bestRecentMoviesResponse = (await this.$content()
+      .where({
+        releaseDate: {
+          $gte: new Date(now.getFullYear() - 1, now.getMonth()).toJSON(),
+        },
+        "rating.total": { $gte: 500 },
+      })
+      .sortBy("rating.total", "desc")
+      .sortBy("releaseDate", "desc")
+      .limit(10)
+      .fetch<MovieResponseJSON>()) as (MovieResponseJSON & FetchReturn)[]
+
     this.latestMovies = latestMoviesResponse
     this.bestRecentMovies = bestRecentMoviesResponse
   },

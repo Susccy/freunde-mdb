@@ -28,6 +28,7 @@
 import { Component, mixins, Watch } from "nuxt-property-decorator"
 import type { Route, NavigationGuard } from "vue-router"
 import type { MetaInfo } from "vue-meta"
+import type { FetchReturn } from "@nuxt/content/types/query-builder"
 import deviceLayout from "~/client/mixins/deviceLayout"
 import type { MovieResponseJSON } from "~/entities/movie.entity"
 
@@ -86,9 +87,100 @@ export default class Search extends mixins(deviceLayout) {
 
   async search () {
     if (this.queryIsEmpty) return
-    this.movies = await this.$axios.$get<MovieResponseJSON[]>("/movie", {
-      params: this.$route.query,
-    })
+
+    const validQueryParams = [
+      ["limit", "limit"],
+      ["page", "page"],
+      ["sort", "sort"],
+      ["rating_total_min", "rating.total"],
+      ["rating_total_max", "rating.total"],
+      ["rating_ch_min", "rating.ch"],
+      ["rating_ch_max", "rating.ch"],
+      ["rating_rt_min", "rating.rt"],
+      ["rating_rt_max", "rating.rt"],
+      ["date_seen_min", "dateSeen"],
+      ["date_seen_max", "dateSeen"],
+      ["fsk", "fsk"],
+      ["mm", "mm"],
+      ["title", "$or"],
+      ["genre", "genres"],
+      ["date_released_min", "releaseDate"],
+      ["date_released_max", "releaseDate"],
+      ["runtime_min", "runtime"],
+      ["runtime_max", "runtime"],
+    ]
+
+    const { limit, page, sort, ...validatedQuery } = Object.fromEntries(
+      Object.entries(this.$route.query).filter(
+        ([queryParamName, queryParamValue]) =>
+          validQueryParams.some((v) => v[0] === queryParamName) &&
+          queryParamValue &&
+          !Array.isArray(queryParamValue)
+      )
+    ) as { [k: string]: string } & {
+      limit: string | undefined
+      page: string | undefined
+      sort: string | undefined
+    }
+
+    const validQuery = Object.entries(validatedQuery).reduce<{
+      [k: string]: string | any[] | { [k: string]: string } | undefined
+    }>((validQuery, [queryParamName, queryParamValue]) => {
+      const validQueryParam = validQueryParams.find(
+        (v) => v[0] === queryParamName
+      )
+
+      if (!validQueryParam) return validQuery
+
+      const [validParamName, dbParamPath] = validQueryParam
+
+      const paramIsTitle = validParamName === "title"
+      const paramIsMin = /_min$/.test(validParamName)
+      const paramIsMax = !paramIsMin && /_max$/.test(validParamName)
+
+      return {
+        ...validQuery,
+        [dbParamPath]: paramIsTitle
+          ? [
+              {
+                "title.original": {
+                  $regex: new RegExp(queryParamValue, "i"),
+                },
+              },
+              {
+                "title.german": {
+                  $regex: new RegExp(queryParamValue, "i"),
+                },
+              },
+            ]
+          : paramIsMin
+          ? { ...(validQuery[dbParamPath] as {}), $gte: queryParamValue }
+          : paramIsMax
+          ? { ...(validQuery[dbParamPath] as {}), $lte: queryParamValue }
+          : queryParamValue,
+      }
+    }, {})
+
+    let builtQuery = this.$content().where(validQuery)
+
+    if (limit && !isNaN(parseInt(limit))) {
+      const limitParsed = parseInt(limit)
+      if (page && !isNaN(parseInt(page))) {
+        const pageParsed = parseInt(page)
+        builtQuery = builtQuery.skip(pageParsed * limitParsed)
+      }
+      builtQuery = builtQuery.limit(limitParsed)
+    }
+    // @todo sort doesn't work properly with nullable fields
+    if (sort) {
+      const sortParsed = sort.indexOf("-") === 0 ? sort.slice(1) : sort
+      const direction = sortParsed.length < sort.length ? "desc" : "asc"
+      console.log({ sortParsed, direction })
+      builtQuery = builtQuery.sortBy(sortParsed, direction)
+    }
+
+    this.movies = (await builtQuery.fetch()) as (MovieResponseJSON &
+      FetchReturn)[]
   }
 
   displayMovieModal (route: Route) {

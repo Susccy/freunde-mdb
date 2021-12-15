@@ -7,13 +7,18 @@
 <script lang="ts">
 import { Vue, Component, mixins } from "nuxt-property-decorator"
 import type { MetaInfo } from "vue-meta"
+import type { FetchReturn } from "@nuxt/content/types/query-builder"
 import type { MovieResponseJSON } from "~/entities/movie.entity"
 import type { MovieInstance } from "~/client/components/Movie.vue"
 import deviceLayout from "~/client/mixins/deviceLayout"
 
 @Component({
-  async asyncData ({ params, $axios }) {
-    const movie = await $axios.$get<MovieResponseJSON>(`/movie/${params.id}`)
+  async asyncData ({ params, $content }) {
+    const movie = (
+      (await $content()
+        .where({ id: params.id })
+        .fetch()) as (MovieResponseJSON & FetchReturn)[]
+    )[0]
     return { movie }
   },
 })

@@ -1,5 +1,9 @@
 import { resolve } from "path"
+import axios from "axios"
 import type { NuxtConfig } from "@nuxt/types"
+import type { MovieResponse } from "./src/entities/movie.entity"
+
+const apiBaseURL = process.env.API_URL || "http://localhost:3030/"
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -28,7 +32,6 @@ export default {
   plugins: [
     "~/plugins/vue-slider-component.client.ts",
     "~/plugins/vue-fragment.ts",
-    "~/plugins/axios-host.client.ts",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -41,13 +44,10 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    "@nuxtjs/axios",
-  ],
+  modules: ["@nuxt/content", "@nuxtjs/sitemap"],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: { prefix: "/api" },
+  // axios: { prefix: "/api" },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -59,18 +59,52 @@ export default {
     "~~": resolve(__dirname, "./"),
   },
 
-  serverMiddleware: [
-    { path: "/api", handler: "./src/server/index" },
-    { path: "/api", handler: "./src/server/api/middleware/errorHandler" },
-  ],
+  // serverMiddleware: [
+  //   { path: "/api", handler: "./src/server/index" },
+  //   { path: "/api", handler: "./src/server/api/middleware/errorHandler" },
+  // ],
 
   // router: {
   //   middleware: ["userAgent"],
   // },
+
+  content: {
+    fullTextSearchFields: () => [
+      /* "title.original", "title.german" */
+    ],
+    nestedProperties: [
+      "title.original",
+      "title.german",
+      "rating.total",
+      "rating.ch",
+      "rating.rt",
+    ],
+  },
 
   loading: {
     color: "#70e0dd",
   },
 
   target: "static",
+
+  generate: {
+    fallback: true,
+    async routes () {
+      return [
+        ...(await axios
+          .get<MovieResponse[]>(`${apiBaseURL}movie`)
+          .then((r) => r.data.map(({ id }) => `/movie/${id}`))),
+        "/",
+        "/search",
+      ]
+    },
+    crawler: false,
+  },
+
+  sitemap: {
+    hostname: "https://susccy.dev",
+    gzip: true,
+    trailingSlash: true,
+    // routes: [{ url: "/", changefreq: "weekly" }],
+  },
 } as NuxtConfig
