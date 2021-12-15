@@ -72,7 +72,7 @@ export default Vue.extend({
 
     getPosterSrc (size?: 92 | 154 | 185 | 342 | 500 | 780) {
       const { posterURL } = this.movie
-      return `http://image.tmdb.org/t/p/${
+      return `https://image.tmdb.org/t/p/${
         size ? `w${size}` : "original"
       }${posterURL}`
     },
