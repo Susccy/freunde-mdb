@@ -28,7 +28,7 @@
 import Vue from "vue"
 import type { Route } from "vue-router"
 import deviceLayout from "~/client/mixins/deviceLayout"
-import type { MovieResponseJSON } from "~/entities/movie.entity"
+import type { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
   mixins: [deviceLayout],
@@ -38,7 +38,7 @@ export default Vue.extend({
     this.displayMovieModal(to)
   },
 
-  data (): { movies: MovieResponseJSON[]; movie: MovieResponseJSON | null } {
+  data (): { movies: MovieResponse[]; movie: MovieResponse | null } {
     return {
       movies: [],
       movie: null,
@@ -67,7 +67,7 @@ export default Vue.extend({
   methods: {
     async search () {
       if (this.queryIsEmpty) return
-      this.movies = await this.$axios.$get<MovieResponseJSON[]>("/movie", {
+      this.movies = await this.$axios.$get<MovieResponse[]>("/movie", {
         params: this.$route.query,
       })
     },

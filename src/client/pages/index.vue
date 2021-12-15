@@ -63,7 +63,7 @@ import Vue from "vue"
 import type { Route } from "vue-router"
 // import postCombinedData from "../../utils/postCombinedData"
 import deviceLayout from "~/client/mixins/deviceLayout"
-import type { MovieResponseJSON } from "~/entities/movie.entity"
+import type { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
   mixins: [deviceLayout],
@@ -74,9 +74,9 @@ export default Vue.extend({
   },
 
   data (): {
-    latestMovies: MovieResponseJSON[]
-    bestRecentMovies: MovieResponseJSON[]
-    movie?: MovieResponseJSON | null
+    latestMovies: MovieResponse[]
+    bestRecentMovies: MovieResponse[]
+    movie?: MovieResponse | null
   } {
     return {
       latestMovies: [],
@@ -87,7 +87,7 @@ export default Vue.extend({
 
   async fetch () {
     // @todo error handling
-    const latestMoviesResponse = await this.$axios.$get<MovieResponseJSON[]>(
+    const latestMoviesResponse = await this.$axios.$get<MovieResponse[]>(
       "/movie",
       {
         params: {
@@ -97,16 +97,17 @@ export default Vue.extend({
       }
     )
     const now = new Date()
-    const bestRecentMoviesResponse = await this.$axios.$get<
-      MovieResponseJSON[]
-    >("/movie", {
-      params: {
-        sort: "-rating.total -releaseDate",
-        date_released_min: new Date(now.getFullYear() - 1, now.getMonth()),
-        rating_total_min: 500,
-        limit: 10,
-      },
-    })
+    const bestRecentMoviesResponse = await this.$axios.$get<MovieResponse[]>(
+      "/movie",
+      {
+        params: {
+          sort: "-rating.total -releaseDate",
+          date_released_min: new Date(now.getFullYear() - 1, now.getMonth()),
+          rating_total_min: 500,
+          limit: 10,
+        },
+      }
+    )
     this.latestMovies = latestMoviesResponse
     this.bestRecentMovies = bestRecentMoviesResponse
   },
