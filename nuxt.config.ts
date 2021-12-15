@@ -39,6 +39,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    "~/modules/api",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -54,10 +55,10 @@ export default {
     "~~": resolve(__dirname, "./"),
   },
 
-  serverMiddleware: [
-    { path: "/api", handler: "~/../server/index" },
-    { path: "/api", handler: "~/../server/api/middleware/errorHandler" },
-  ],
+  // serverMiddleware: [
+  //   { path: "/api", handler: "~/../server/index" },
+  //   { path: "/api", handler: "~/../server/api/middleware/errorHandler" },
+  // ],
 
   router: {
     middleware: ["userAgent"],
@@ -66,6 +67,8 @@ export default {
   loading: {
     color: "#70e0dd",
   },
+
+  target: "server",
 
   ssr: false,
 } as NuxtConfig
