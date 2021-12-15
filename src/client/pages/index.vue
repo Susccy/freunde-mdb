@@ -64,7 +64,7 @@ import type { FetchReturn } from "@nuxt/content/types/query-builder"
 import type { Route } from "vue-router"
 // import postCombinedData from "../../utils/postCombinedData"
 import deviceLayout from "~/client/mixins/deviceLayout"
-import type { MovieResponseJSON } from "~/entities/movie.entity"
+import type { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
   mixins: [deviceLayout],
@@ -75,9 +75,9 @@ export default Vue.extend({
   },
 
   data (): {
-    latestMovies: (MovieResponseJSON & FetchReturn)[]
-    bestRecentMovies: (MovieResponseJSON & FetchReturn)[]
-    movie?: (MovieResponseJSON & FetchReturn) | null
+    latestMovies: (MovieResponse & FetchReturn)[]
+    bestRecentMovies: (MovieResponse & FetchReturn)[]
+    movie?: (MovieResponse & FetchReturn) | null
   } {
     return {
       latestMovies: [],
@@ -92,7 +92,7 @@ export default Vue.extend({
       .sortBy("dateSeen", "desc")
       .sortBy("rating.total", "desc")
       .limit(10)
-      .fetch<MovieResponseJSON>()) as (MovieResponseJSON & FetchReturn)[]
+      .fetch<MovieResponse>()) as (MovieResponse & FetchReturn)[]
 
     const now = new Date()
 
@@ -106,7 +106,7 @@ export default Vue.extend({
       .sortBy("rating.total", "desc")
       .sortBy("releaseDate", "desc")
       .limit(10)
-      .fetch<MovieResponseJSON>()) as (MovieResponseJSON & FetchReturn)[]
+      .fetch<MovieResponse>()) as (MovieResponse & FetchReturn)[]
 
     this.latestMovies = latestMoviesResponse
     this.bestRecentMovies = bestRecentMoviesResponse

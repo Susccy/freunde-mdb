@@ -59,15 +59,6 @@ export default {
     "~~": resolve(__dirname, "./"),
   },
 
-  // serverMiddleware: [
-  //   { path: "/api", handler: "./src/server/index" },
-  //   { path: "/api", handler: "./src/server/api/middleware/errorHandler" },
-  // ],
-
-  // router: {
-  //   middleware: ["userAgent"],
-  // },
-
   content: {
     fullTextSearchFields: () => [
       /* "title.original", "title.german" */

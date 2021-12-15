@@ -8,8 +8,7 @@
 import { Vue, Component, mixins } from "nuxt-property-decorator"
 import type { MetaInfo } from "vue-meta"
 import type { FetchReturn } from "@nuxt/content/types/query-builder"
-import type { MovieResponseJSON } from "~/entities/movie.entity"
-import type { MovieInstance } from "~/client/components/Movie.vue"
+import type { MovieResponse } from "~/entities/movie.entity"
 import deviceLayout from "~/client/mixins/deviceLayout"
 
 @Component({
@@ -17,13 +16,13 @@ import deviceLayout from "~/client/mixins/deviceLayout"
     const movie = (
       (await $content()
         .where({ id: params.id })
-        .fetch()) as (MovieResponseJSON & FetchReturn)[]
+        .fetch()) as (MovieResponse & FetchReturn)[]
     )[0]
     return { movie }
   },
 })
 export default class MoviePage extends mixins(deviceLayout) {
-  movie!: MovieResponseJSON
+  movie!: MovieResponse
 
   head (): MetaInfo {
     const { overview, rating, releaseDate, title } = this.movie

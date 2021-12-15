@@ -1,47 +1,33 @@
-import { Movie } from "../server/api/models/movie.model"
+type RatingIndividual = { ch: number; rt: number }
+type RatingTotal = { total: number }
 
+interface Movie {
+  // mongodb
+  id: string
+
+  // custom input
+  rating: RatingTotal | (RatingTotal & RatingIndividual)
+  dateSeen?: Date
+  fsk?: number
+  mm?: boolean
+
+  // tmdb api data
+  tmdbID: number
+  title: { original: string; german?: string }
+  genres: string[]
+  releaseDate: string
+  runtime?: number
+  posterURL?: string
+  budget: number
+  revenue: number
+  tagline?: string
+  overview?: string
+}
+
+// @todo? change rating type to `RatingTotal | RatingIndividual`
 export type MovieInput = Pick<
   Movie,
   "tmdbID" | "dateSeen" | "fsk" | "mm" | "rating"
 >
 
-/**
- * @todo genres als array?
- * ^^^^^^^^^^^^^^^^^
- * fsk?: number | undefined;
- * mm?: boolean | undefined;
- * genres?: string[] | undefined;
- * releaseDate?: string | undefined;
- * runtime?: number | undefined;
- * budget?: number | undefined;
- * revenue?: number | undefined;
- * dateSeen?: string;
- * "rating.ch"?: number;
- * "rating.rt"?: number;
- * "title.original"?: string;
- * "title.german"?: string;
- */
-export type MoviePartial = Omit<
-  Movie,
-  | "rating"
-  | "dateSeen"
-  | "tmdbID"
-  | "title"
-  | "posterURL"
-  | "tagline"
-  | "overview"
-> & {
-  dateSeen?: string
-  "rating.total"?: number
-  "rating.ch"?: number
-  "rating.rt"?: number
-  "title.original"?: string
-  "title.german"?: string
-}
-
-export type MovieResponse = Movie
-
-export type MovieResponseJSON = Omit<
-  MovieResponse,
-  "dateSeen" | "releaseDate" | "id"
-> & { dateSeen?: string; releaseDate: string; id: string }
+export type MovieResponse = Omit<Movie, "dateSeen"> & { dateSeen?: string }

@@ -30,12 +30,12 @@
 <script lang="ts">
 import Vue from "vue"
 import type { PropType } from "vue"
-import type { MovieResponseJSON } from "~/entities/movie.entity"
+import type { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
   props: {
     movieData: {
-      type: Array as PropType<MovieResponseJSON[]>,
+      type: Array as PropType<MovieResponse[]>,
       default: () => [],
     },
   },

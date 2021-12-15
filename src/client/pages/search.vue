@@ -30,7 +30,7 @@ import type { Route, NavigationGuard } from "vue-router"
 import type { MetaInfo } from "vue-meta"
 import type { FetchReturn } from "@nuxt/content/types/query-builder"
 import deviceLayout from "~/client/mixins/deviceLayout"
-import type { MovieResponseJSON } from "~/entities/movie.entity"
+import type { MovieResponse } from "~/entities/movie.entity"
 
 @Component({
   async fetch (this: Search) {
@@ -43,8 +43,8 @@ export default class Search extends mixins(deviceLayout) {
     this.displayMovieModal(to)
   }
 
-  movies: MovieResponseJSON[] = []
-  movie: MovieResponseJSON | null = null
+  movies: MovieResponse[] = []
+  movie: MovieResponse | null = null
 
   head (): MetaInfo {
     const { query } = this.$route
@@ -175,12 +175,10 @@ export default class Search extends mixins(deviceLayout) {
     if (sort) {
       const sortParsed = sort.indexOf("-") === 0 ? sort.slice(1) : sort
       const direction = sortParsed.length < sort.length ? "desc" : "asc"
-      console.log({ sortParsed, direction })
       builtQuery = builtQuery.sortBy(sortParsed, direction)
     }
 
-    this.movies = (await builtQuery.fetch()) as (MovieResponseJSON &
-      FetchReturn)[]
+    this.movies = (await builtQuery.fetch()) as (MovieResponse & FetchReturn)[]
   }
 
   displayMovieModal (route: Route) {
