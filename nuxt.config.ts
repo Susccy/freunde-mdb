@@ -62,6 +62,10 @@ export default {
     color: "#70e0dd",
   },
 
+  generate: {
+    fallback: true
+  },
+
   target: "static",
 
   ssr: false,
