@@ -34,10 +34,10 @@
       }
     }
 
+    // @todo add placeholder background image
     #{$self}__poster {
       grid-area: poster;
       z-index: 0;
-      background-color: red;
       width: 100%;
       height: 100%;
       object-fit: cover;
