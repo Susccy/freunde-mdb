@@ -55,8 +55,8 @@ export default {
   },
 
   serverMiddleware: [
-    { path: "/api", handler: "~/../server/index" },
-    { path: "/api", handler: "~/../server/api/middleware/errorHandler" },
+    { path: "/api", handler: "./src/server/index" },
+    { path: "/api", handler: "./src/server/api/middleware/errorHandler" },
   ],
 
   router: {
