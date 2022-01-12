@@ -24,7 +24,7 @@ export default {
   plugins: [
     "~/plugins/vue-slider-component.client.ts",
     "~/plugins/vue-fragment.ts",
-    "~/axios-host.client.ts",
+    "~/plugins/axios-host.client.ts",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
