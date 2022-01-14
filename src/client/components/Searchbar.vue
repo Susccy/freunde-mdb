@@ -6,7 +6,11 @@
       placeholder="Film suchen..."
       class="c-search__input"
     />
-    <button @click="search" class="g-btn-reset c-search__btn">
+    <button
+      @click="search"
+      aria-label="Suche"
+      class="g-btn-reset c-search__btn"
+    >
       <TablerIcon name="search" size="18" />
     </button>
   </div>
