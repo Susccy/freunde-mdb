@@ -31,11 +31,9 @@ import type { MetaInfo } from "vue-meta"
 import deviceLayout from "~/client/mixins/deviceLayout"
 import type { MovieResponseJSON } from "~/entities/movie.entity"
 
-Component.registerHooks(["beforeRouteLeave"])
-
 @Component
 export default class Search extends mixins(deviceLayout) {
-  beforeRouteLeave: NavigationGuard = (to, _from, next) => {
+  beforeRouteLeave (to: Route, _from: Route, next: () => void) {
     if (to.name !== "movie-id") next()
     this.displayMovieModal(to)
   }
