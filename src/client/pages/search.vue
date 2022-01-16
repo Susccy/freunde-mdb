@@ -25,35 +25,55 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue"
-import type { Route } from "vue-router"
+import { Component, mixins, Watch } from "nuxt-property-decorator"
+import type { Route, NavigationGuard } from "vue-router"
+import type { MetaInfo } from "vue-meta"
 import deviceLayout from "~/client/mixins/deviceLayout"
 import type { MovieResponse } from "~/entities/movie.entity"
 
-export default Vue.extend({
-  mixins: [deviceLayout],
+Component.registerHooks(["beforeRouteLeave"])
 
-  beforeRouteLeave (to, _from, next) {
+@Component
+export default class Search extends mixins(deviceLayout) {
+  beforeRouteLeave: NavigationGuard = (to, _from, next) => {
     if (to.name !== "movie-id") next()
     this.displayMovieModal(to)
-  },
+  }
 
-  data (): { movies: MovieResponse[]; movie: MovieResponse | null } {
+  movies: MovieResponse[] = []
+  movie: MovieResponse | null = null
+
+  head (): MetaInfo {
+    const { query } = this.$route
+
+    const isAllMoviesQuery =
+      Object.keys(query).length === 1 && query.sort === "title.german"
+
     return {
-      movies: [],
-      movie: null,
+      title: isAllMoviesQuery
+        ? "Alle Filme | FREundE MDB"
+        : "Suche | FREundE MDB",
+
+      meta: [
+        {
+          name: "description",
+          hid: "description",
+          content: isAllMoviesQuery
+            ? "Durchstöbere alle Einträge der FREundE MDB Datenbank auf einer Seite."
+            : "Starte eine detaillierte Suche durch die gesamten FREundE MDB Datenbank.",
+        },
+      ],
     }
-  },
+  }
 
-  computed: {
-    queryIsEmpty (): boolean {
-      return !Object.keys(this.$route.query).length
-    },
-  },
+  get queryIsEmpty (): boolean {
+    return !Object.keys(this.$route.query).length
+  }
 
-  watch: {
-    "$route.query": "search",
-  },
+  @Watch("$route.query")
+  onPropertyChange () {
+    this.search()
+  }
 
   mounted () {
     this.search()
@@ -62,23 +82,23 @@ export default Vue.extend({
       // @todo fix any cast
       ;(this.$refs.movieModal as any)?.closeModal()
     })
-  },
+  }
 
-  methods: {
-    async search () {
-      if (this.queryIsEmpty) return
-      this.movies = await this.$axios.$get<MovieResponse[]>("/movie", {
-        params: this.$route.query,
-      })
-    },
-    displayMovieModal (route: Route) {
-      this.movie = this.movies.find(({ id }) => id === route.params.id) || null
-      window.history.pushState({}, "", route.path)
-    },
-    hideMovieModal () {
-      this.movie = null
-      window.history.pushState({}, "", this.$route.fullPath)
-    },
-  },
-})
+  async search () {
+    if (this.queryIsEmpty) return
+    this.movies = await this.$axios.$get<MovieResponse[]>("/movie", {
+      params: this.$route.query,
+    })
+  }
+
+  displayMovieModal (route: Route) {
+    this.movie = this.movies.find(({ id }) => id === route.params.id) || null
+    window.history.pushState({}, "", route.path)
+  }
+
+  hideMovieModal () {
+    this.movie = null
+    window.history.pushState({}, "", this.$route.fullPath)
+  }
+}
 </script>

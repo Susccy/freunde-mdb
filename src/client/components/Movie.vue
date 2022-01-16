@@ -130,7 +130,7 @@ import computedMovieData from "~/client/mixins/computedMovieData"
 
 const MODAL_OPEN = "modal-open"
 
-export default (
+const Movie = (
   Vue as VueConstructor<Vue & InstanceType<typeof computedMovieData>>
 ).extend({
   mixins: [computedMovieData],
@@ -182,4 +182,8 @@ export default (
     },
   },
 })
+
+export default Movie
+
+export type MovieInstance = InstanceType<typeof Movie>
 </script>
