@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { Component, mixins } from "nuxt-property-decorator"
+import { Vue, Component, mixins } from "nuxt-property-decorator"
 import type { MetaInfo } from "vue-meta"
 import type { MovieResponse } from "~/entities/movie.entity"
 import type { MovieInstance } from "~/client/components/Movie.vue"
@@ -17,21 +17,26 @@ import deviceLayout from "~/client/mixins/deviceLayout"
     return { movie }
   },
 })
-export default class Movie extends mixins(deviceLayout) {
+export default class MoviePage extends mixins(deviceLayout) {
   movie!: MovieResponse
 
-  head (): MetaInfo {
-    const movie = this.$refs.movieComponent as MovieInstance
+  async head (): Promise<MetaInfo> {
+    await Vue.nextTick()
+
+    const movieInstance = this.$refs.movieComponent as MovieInstance
     const { overview } = this.movie
 
-    const description = `${movie.rating.total} • ${movie.yearReleased}${
+    const description = `${movieInstance.rating.total} • ${
+      movieInstance.yearReleased
+    }${
       overview &&
       ` • ${overview.length > 156 ? `${overview.slice(0, 153)}...` : overview}`
     }`
 
-    return {
-      title: `${movie.title} | FREundE MDB`,
+    console.log({ description, title: `${movieInstance.title} | FREundE MDB` })
 
+    return {
+      title: `${movieInstance.title} | FREundE MDB`,
       meta: [
         {
           name: "description",
