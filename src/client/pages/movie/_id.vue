@@ -1,25 +1,45 @@
 <template>
   <main class="page p-movie">
-    <Movie :movie="movie" />
+    <Movie ref="movieComponent" :movie="movie" />
   </main>
 </template>
 
 <script lang="ts">
-import Vue from "vue"
+import { Component, mixins } from "nuxt-property-decorator"
+import type { MetaInfo } from "vue-meta"
 import type { MovieResponseJSON } from "~/entities/movie.entity"
+import type { MovieInstance } from "~/client/components/Movie.vue"
 import deviceLayout from "~/client/mixins/deviceLayout"
 
-export default Vue.extend({
-  mixins: [deviceLayout],
-
+@Component({
   async asyncData ({ params, $axios }) {
     const movie = await $axios.$get<MovieResponseJSON>(`/movie/${params.id}`)
     return { movie }
   },
-
-  // workaround for asyncData not properly returning a type
-  data () {
-    return {} as { movie: MovieResponseJSON }
-  },
 })
+export default class Movie extends mixins(deviceLayout) {
+  movie!: MovieResponseJSON
+
+  head (): MetaInfo {
+    const movie = this.$refs.movieComponent as MovieInstance
+    const { overview } = this.movie
+
+    const description = `${movie.rating.total} • ${movie.yearReleased}${
+      overview &&
+      ` • ${overview.length > 156 ? `${overview.slice(0, 153)}...` : overview}`
+    }`
+
+    return {
+      title: `${movie.title} | FREundE MDB`,
+
+      meta: [
+        {
+          name: "description",
+          hid: "description",
+          content: description,
+        },
+      ],
+    }
+  }
+}
 </script>
