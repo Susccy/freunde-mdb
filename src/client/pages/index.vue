@@ -22,7 +22,7 @@
             query: { sort: '-dateSeen', page: 0, limit: 30 },
           }" -->
         <a>
-          Mehr<!--  anzeigen --><TablerIcon name="chevron-right" size="14" />
+          More<!--  anzeigen --><TablerIcon name="chevron-right" size="14" />
         </a>
       </div>
       <MovieCardContainer
@@ -39,10 +39,7 @@
             query: { sort: '-rating.total', page: 0, limit: 30 },
           }"
         >
-          Mehr<!-- Alle besten Filme --><TablerIcon
-            name="chevron-right"
-            size="14"
-          />
+          Alle besten Filme<TablerIcon name="chevron-right" size="14" />
         </NuxtLink>
       </div>
       <MovieCardContainer
