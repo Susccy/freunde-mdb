@@ -8,10 +8,10 @@
     v-if="layout === 'desktop'"
     class="g-btn-reset c-movie-card c-movie-card--desktop"
   > -->
+    <!-- :alt="imgAlt" -->
     <img
       ref="moviePoster"
       :src="getPosterSrc(154)"
-      :alt="imgAlt"
       class="c-movie-card__poster"
     />
     <p v-if="movie.mm" class="c-movie-card__mm">MM</p>

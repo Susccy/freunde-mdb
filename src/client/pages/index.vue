@@ -17,14 +17,13 @@
         <h2>
           <TablerIcon name="rotate-clockwise-2" size="30" />Zuletzt gesehen
         </h2>
-        <NuxtLink
-          :to="{
+        <!-- NuxtLink :to="{
             name: 'search',
             query: { sort: '-dateSeen', page: 0, limit: 30 },
-          }"
-        >
-          Mehr anzeigen<TablerIcon name="chevron-right" size="14" />
-        </NuxtLink>
+          }" -->
+        <a>
+          Mehr<!--  anzeigen --><TablerIcon name="chevron-right" size="14" />
+        </a>
       </div>
       <MovieCardContainer
         :movie-data="latestMovies"
@@ -40,7 +39,10 @@
             query: { sort: '-rating.total', page: 0, limit: 30 },
           }"
         >
-          Alle besten Filme<TablerIcon name="chevron-right" size="14" />
+          Mehr<!-- Alle besten Filme --><TablerIcon
+            name="chevron-right"
+            size="14"
+          />
         </NuxtLink>
       </div>
       <MovieCardContainer
