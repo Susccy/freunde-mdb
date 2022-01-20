@@ -31,7 +31,13 @@ import type { MetaInfo } from "vue-meta"
 import deviceLayout from "~/client/mixins/deviceLayout"
 import type { MovieResponseJSON } from "~/entities/movie.entity"
 
-@Component
+@Component({
+  async fetch (this: Search) {
+    this.movies = await this.$axios.$get<MovieResponseJSON[]>("/movie", {
+      params: this.$route.query,
+    })
+  },
+})
 export default class Search extends mixins(deviceLayout) {
   beforeRouteLeave (to: Route, _from: Route, next: () => void) {
     if (to.name !== "movie-id") next()
@@ -74,8 +80,6 @@ export default class Search extends mixins(deviceLayout) {
   }
 
   mounted () {
-    this.search()
-
     window.addEventListener("popstate", () => {
       // @todo fix any cast
       ;(this.$refs.movieModal as any)?.closeModal()
