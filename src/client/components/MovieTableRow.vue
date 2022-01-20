@@ -1,10 +1,14 @@
 <template>
-  <!-- @todo! optimize link with https://stackoverflow.com/a/4904983/16503617 -->
   <tr @click="$router.push({ name: 'movie-id', params: { id: movie.id } })">
     <td>
       <img :src="getPosterSrc(92)" :alt="imgAlt" class="hide-alt" />
     </td>
-    <td>{{ movie.title.german || "-" }}</td>
+    <!-- redundant anchor for indexing (see https://stackoverflow.com/a/4904983/16503617) -->
+    <td>
+      <NuxtLink :to="{ name: 'movie-id', params: { id: movie.id } }">{{
+        movie.title.german || "-"
+      }}</NuxtLink>
+    </td>
     <td>{{ movie.title.original }}</td>
     <td>{{ movie.mm ? "✔" : "✖" }}</td>
     <td>

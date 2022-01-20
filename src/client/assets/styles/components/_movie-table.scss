@@ -69,6 +69,10 @@
 
       @include background-layer(1);
 
+      a:hover {
+        color: unset;
+      }
+
       &:first-child {
         padding: 0;
         border: none;
