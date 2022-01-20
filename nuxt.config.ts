@@ -10,7 +10,7 @@ export default {
     },
     meta: [
       { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "viewport", content: "width=1000, initial-scale=1" },
       {
         hid: "description",
         name: "description",
@@ -64,9 +64,9 @@ export default {
     { path: "/api", handler: "./src/server/api/middleware/errorHandler" },
   ],
 
-  router: {
-    middleware: ["userAgent"],
-  },
+  // router: {
+  //   middleware: ["userAgent"],
+  // },
 
   loading: {
     color: "#70e0dd",
