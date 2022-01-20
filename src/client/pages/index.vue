@@ -17,13 +17,13 @@
         <h2>
           <TablerIcon name="rotate-clockwise-2" size="30" />Zuletzt gesehen
         </h2>
-        <!-- NuxtLink :to="{
+        <NuxtLink
+          :to="{
             name: 'search',
             query: { sort: '-dateSeen', page: 0, limit: 30 },
-          }" -->
-        <a>
-          More<!--  anzeigen --><TablerIcon name="chevron-right" size="14" />
-        </a>
+          }"
+          >Mehr anzeigen<TablerIcon name="chevron-right" size="14"
+        /></NuxtLink>
       </div>
       <MovieCardContainer
         :movie-data="latestMovies"
