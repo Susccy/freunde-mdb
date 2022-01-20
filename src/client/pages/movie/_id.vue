@@ -20,23 +20,22 @@ import deviceLayout from "~/client/mixins/deviceLayout"
 export default class MoviePage extends mixins(deviceLayout) {
   movie!: MovieResponseJSON
 
-  async head (): Promise<MetaInfo> {
-    await Vue.nextTick()
+  head (): MetaInfo {
+    const { overview, rating, releaseDate, title } = this.movie
 
-    const movieInstance = this.$refs.movieComponent as MovieInstance
-    const { overview } = this.movie
+    const formatRating = (rating: number) => (rating / 100).toFixed(2)
+    const sliceWithEllipsis = (input: string, maxLength: number) =>
+      input.length > maxLength ? `${input.slice(0, maxLength - 3)}...` : input
 
-    const description = `${movieInstance.rating.total} • ${
-      movieInstance.yearReleased
-    }${
-      overview &&
-      ` • ${overview.length > 156 ? `${overview.slice(0, 153)}...` : overview}`
-    }`
-
-    console.log({ description, title: `${movieInstance.title} | FREundE MDB` })
+    const description = `${formatRating(rating.total)} • ${new Date(
+      releaseDate
+    ).getFullYear()}${overview && ` • ${sliceWithEllipsis(overview, 156)}`}` // maximum recommended meta description length = 155
 
     return {
-      title: `${movieInstance.title} | FREundE MDB`,
+      title: `${sliceWithEllipsis(
+        title.german || title.original,
+        42
+      )} | FREundE MDB`, // maximum recommended meta title length = 55
       meta: [
         {
           name: "description",
