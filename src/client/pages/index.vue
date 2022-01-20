@@ -111,8 +111,6 @@ export default Vue.extend({
     this.bestRecentMovies = bestRecentMoviesResponse
   },
 
-  fetchOnServer: false,
-
   mounted () {
     window.addEventListener("popstate", () => {
       // @todo fix any cast
