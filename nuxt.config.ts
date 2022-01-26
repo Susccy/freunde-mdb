@@ -1,5 +1,6 @@
 import { resolve } from "path"
 import type { NuxtConfig } from "@nuxt/types"
+import allMovieIDs from "./allMovieIDs"
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -44,6 +45,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    "@nuxtjs/sitemap",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -70,5 +72,14 @@ export default {
 
   loading: {
     color: "#70e0dd",
+  },
+
+  sitemap: {
+    hostname: "https://d2amo.com",
+    gzip: true,
+    routes: [
+      ...allMovieIDs.map((id) => `/movie/${id}`),
+      { url: "/", changefreq: "weekly" },
+    ],
   },
 } as NuxtConfig
