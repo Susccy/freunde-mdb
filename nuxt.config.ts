@@ -1,5 +1,9 @@
 import { resolve } from "path"
+import axios from "axios"
 import type { NuxtConfig } from "@nuxt/types"
+import type { MovieResponse } from "./src/entities/movie.entity"
+
+const apiBaseURL = process.env.API_URL || "http://localhost:3030/"
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -43,10 +47,11 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    "@nuxtjs/sitemap",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: { baseURL: apiBaseURL },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -73,4 +78,16 @@ export default {
   target: "static",
 
   ssr: false,
+
+  sitemap: {
+    hostname: "https://freundemdb.net",
+    gzip: true,
+    async routes () {
+      const movieRoutes = await axios
+        .get<MovieResponse[]>(`${apiBaseURL}movie`)
+        .then((r) => r.data.map(({ id }) => `/movie/${id}`))
+
+      return [...movieRoutes, { url: "/", changefreq: "weekly" }]
+    },
+  },
 } as NuxtConfig
