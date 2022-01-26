@@ -27,9 +27,12 @@ export default class MoviePage extends mixins(deviceLayout) {
     const sliceWithEllipsis = (input: string, maxLength: number) =>
       input.length > maxLength ? `${input.slice(0, maxLength - 3)}...` : input
 
-    const description = `${formatRating(rating.total)} • ${new Date(
-      releaseDate
-    ).getFullYear()}${overview && ` • ${sliceWithEllipsis(overview, 156)}`}` // maximum recommended meta description length = 155
+    const description = sliceWithEllipsis(
+      `${formatRating(rating.total)} • ${new Date(releaseDate).getFullYear()}${
+        overview || "Keine Zusammenfassung für diesen Film vorhanden."
+      }`,
+      156
+    ) // maximum recommended meta description length = 155
 
     return {
       title: `${sliceWithEllipsis(
