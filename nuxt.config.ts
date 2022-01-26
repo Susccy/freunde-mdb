@@ -71,4 +71,6 @@ export default {
   loading: {
     color: "#70e0dd",
   },
+
+  target: "static",
 } as NuxtConfig
