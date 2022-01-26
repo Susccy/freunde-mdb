@@ -33,9 +33,7 @@ import type { MovieResponseJSON } from "~/entities/movie.entity"
 
 @Component({
   async fetch (this: Search) {
-    this.movies = await this.$axios.$get<MovieResponseJSON[]>("/movie", {
-      params: this.$route.query,
-    })
+    await this.search()
   },
 })
 export default class Search extends mixins(deviceLayout) {
