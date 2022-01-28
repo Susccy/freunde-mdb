@@ -1,9 +1,5 @@
 import { resolve } from "path"
-import axios from "axios"
 import type { NuxtConfig } from "@nuxt/types"
-import type { MovieResponse } from "./src/entities/movie.entity"
-
-const apiBaseURL = process.env.API_URL || "http://localhost:3030/"
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -46,9 +42,6 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxt/content", "@nuxtjs/sitemap"],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  // axios: { prefix: "/api" },
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
@@ -80,16 +73,19 @@ export default {
 
   generate: {
     fallback: true,
+    crawler: false,
+
     async routes () {
+      const { $content } = await import("@nuxt/content")
       return [
-        ...(await axios
-          .get<MovieResponse[]>(`${apiBaseURL}movie`)
-          .then((r) => r.data.map(({ id }) => `/movie/${id}`))),
+        ...(await $content()
+          .only("id")
+          .fetch()
+          .then((r) => r.map(({ id }: { id: string }) => `/movie/${id}`))),
         "/",
         "/search",
       ]
     },
-    crawler: false,
   },
 
   sitemap: {
