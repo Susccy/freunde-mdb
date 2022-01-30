@@ -32,7 +32,9 @@ export default class MoviePage extends mixins(deviceLayout) {
       input.length > maxLength ? `${input.slice(0, maxLength - 3)}...` : input
 
     const description = sliceWithEllipsis(
-      `${formatRating(rating.total)} • ${new Date(releaseDate).getFullYear()} • ${
+      `${formatRating(rating.total)} • ${new Date(
+        releaseDate
+      ).getFullYear()} • ${
         overview || "Keine Zusammenfassung für diesen Film vorhanden."
       }`,
       156
