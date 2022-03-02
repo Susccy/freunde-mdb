@@ -66,6 +66,12 @@ export default class Search extends mixins(deviceLayout) {
             : "Starte eine detaillierte Suche durch die gesamten FREundE MDB Datenbank.",
         },
       ],
+      link: [
+        {
+          rel: "canonical",
+          href: "http://localhost:3000/search",
+        },
+      ],
     }
   }
 
