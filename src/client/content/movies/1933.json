@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "The Others",
+    "german": "The Others"
+  },
+  "rating": {
+    "total": 550
+  },
+  "dateSeen": "2017-02-12T23:00:00.000Z",
+  "fsk": 12,
+  "mm": false,
+  "tmdbID": 1933,
+  "releaseDate": "2001-08-02T00:00:00.000Z",
+  "runtime": 101,
+  "genres": [
+    "Horror",
+    "Drama",
+    "Mystery",
+    "Thriller"
+  ],
+  "posterURL": "/p8g1vlTvpM6nr2hMMiZ1fUlKF0D.jpg",
+  "budget": 17000000,
+  "revenue": 209947037,
+  "tagline": "Früher oder später finden sie Dich.",
+  "overview": "Jersey, England. 1945. Grace, deren Ehemann nach dem Ende des Zweiten Weltkriegs noch immer nicht von der Front zurückgekehrt ist, lebt mit ihren beiden Kindern Anne und Nicholas und einigen Bediensteten in einem unheimlichen viktorianischen Anwesen. Anne und Nicholas leiden an einer seltenen Krankheit durch die sie allergisch auf direktes Sonnenlicht reagieren. Das Haus muß daher stets in Dunkelheit gehüllt sein, um die Gesundheit der beiden nicht zu gefährden."
+}

@@ -1,0 +1,24 @@
+{
+  "title": {
+    "original": "The Lost World: Jurassic Park",
+    "german": "Vergessene Welt: Jurassic Park"
+  },
+  "rating": {
+    "total": 775
+  },
+  "fsk": 12,
+  "mm": false,
+  "tmdbID": 330,
+  "releaseDate": "1997-05-23T00:00:00.000Z",
+  "runtime": 129,
+  "genres": [
+    "Abenteuer",
+    "Action",
+    "Science Fiction"
+  ],
+  "posterURL": "/zZgk9X8YWlUBZv7ZqkCRQv5hxzL.jpg",
+  "budget": 73000000,
+  "revenue": 618638999,
+  "tagline": "Etwas hat überlebt",
+  "overview": "Vier Jahre nach dem Desaster im Jurassic Park: Auf einer nahegelegenen Insel haben die Dinosaurier unbemerkt überlebt und können sich frei bewegen. Doch jetzt droht eine noch viel größere Gefahr - der Plan, die Dinosaurier einzufangen und auf das Festland zu bringen. John Hammond, der die Kontrolle über seine Gesellschaft \"InGen\" verloren hat, sieht die Chance, seine Fehler aus der Vergangenheit wiedergutzumachen und sendet eine Expedition, geleitet von Ian Malcolm, zur Insel, bevor der beauftragte Jagd-Trupp dort ankommt. Die zwei Gruppen stehen sich in extremer Gefahr gegenüber und müssen sich in einem Wettlauf gegen die Zeit zusammenschließen, um zu überleben..."
+}

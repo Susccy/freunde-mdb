@@ -1,0 +1,23 @@
+{
+  "title": {
+    "original": "Saw 3D",
+    "german": "Saw 3D - Vollendung"
+  },
+  "rating": {
+    "total": 675
+  },
+  "fsk": 18,
+  "mm": false,
+  "tmdbID": 41439,
+  "releaseDate": "2010-10-21T00:00:00.000Z",
+  "runtime": 90,
+  "genres": [
+    "Horror",
+    "Krimi"
+  ],
+  "posterURL": "/aAVPztIueBUwWE20l9mPXPIYNu8.jpg",
+  "budget": 20000000,
+  "revenue": 136150434,
+  "tagline": "Ihr habt noch gar nichts gesehen!",
+  "overview": "Die Fußgängerzone einer amerikanischen Großstadt am hellichten Tag. Die Passanten werden Zeuge einer ménage à trois, die für einen der drei tödlich endet. Die Jigsaw-Morde nehmen kein Ende und werden immer brutaler. Jill Tuck, Jigsaws Witwe, handelt mit dem Leiter der Ermittlung, Detective Gibson, eine Deal aus, der Hoffmann  endlich überführen soll. Dieser jedoch scheint allen immer zwei Schritte voraus und mordet sich durch die Reihen der Polizisten hin zu seinem letzten potentiellen Opfer."
+}

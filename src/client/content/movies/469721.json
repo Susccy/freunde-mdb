@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "The Cured",
+    "german": "The Cured: Infiziert. Geheilt. Verstoßen."
+  },
+  "rating": {
+    "total": 100,
+    "ch": 50,
+    "rt": 150
+  },
+  "dateSeen": "2021-01-25T23:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 469721,
+  "releaseDate": "2017-11-24T00:00:00.000Z",
+  "runtime": 95,
+  "genres": [
+    "Horror",
+    "Drama",
+    "Science Fiction"
+  ],
+  "posterURL": "/mSBSh2Ysv3aI0hLT2BQDXJa7scn.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "Infiziert. Geheilt. Verstoßen.",
+  "overview": "Einige Jahre nachdem ein fürchterlicher Virus ausbrach und einen Großteil der Menschheit in blutdürstige Zombies verwandelt hat, finden Wissenschaftler endlich ein Gegenmittel gegen die Seuche. Senan (Sam Keeley) wird geheilt: Er darf nach Hause zurückkehren und zieht zu seiner Schwägerin Abbie (Ellen Page) und ihrem kleinen Sohn. Doch nicht alle Geheilten werden mit offenen Armen empfangen. Viele der überlebenden Menschen können den ehemals Infizierten ihre grausamen Taten nicht verzeihen. Die Gesellschaft spaltet sich in Nicht-Infizierte, Infizierte und Geheilte, und die fragile neue Welt wird erneut ins Chaos gestürzt …"
+}

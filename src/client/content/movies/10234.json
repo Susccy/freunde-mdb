@@ -1,0 +1,24 @@
+{
+  "title": {
+    "original": "Funny Games",
+    "german": "Funny Games"
+  },
+  "rating": {
+    "total": 600
+  },
+  "fsk": 18,
+  "mm": false,
+  "tmdbID": 10234,
+  "releaseDate": "1997-05-14T00:00:00.000Z",
+  "runtime": 104,
+  "genres": [
+    "Drama",
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/o8Sxq6dYiYDuH5N6NjjPTTE6oIN.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "Ein Alptraum.",
+  "overview": "Für Anna, Georg, Sohnemann und dem lieben Hundi soll es ein schöner Urlaub werden. Im großen Ferienhaus will die wohlhabende Familie endlich mal ausspannen, golfen, Boot fahren und grillen. Doch die Ruhe wird durch zwei wohl erzogene junge Männer gestört, die sich als waschechte Psychopathen entpuppen. Beide rufen sich als Peter und Paul, Tom und Jerry oder auch Beavis und Butthead und terrorisieren die Familie..."
+}

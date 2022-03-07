@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "1917",
+    "german": "1917"
+  },
+  "rating": {
+    "total": 875
+  },
+  "dateSeen": "2020-01-17T23:00:00.000Z",
+  "fsk": 12,
+  "mm": false,
+  "tmdbID": 530915,
+  "releaseDate": "2019-12-25T00:00:00.000Z",
+  "runtime": 119,
+  "genres": [
+    "Kriegsfilm",
+    "Drama",
+    "Action",
+    "Thriller"
+  ],
+  "posterURL": "/fOiEG38F5gls6YtybJJHNN9h2W2.jpg",
+  "budget": 100000000,
+  "revenue": 374733942,
+  "tagline": "Zeit ist der Feind",
+  "overview": "Auf dem Höhepunkt des Ersten Weltkriegs wird Schofield und Blake, zwei jungen britischen Soldaten, eine scheinbar unmögliche Mission gegeben: In einem Wettlauf gegen die Zeit sollen sie das Feindesgebiet durchqueren und eine höchst dringliche Nachricht überbringen, die hunderte Männer retten kann – darunter Blakes eigenen Bruder."
+}

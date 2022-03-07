@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "Inception",
+    "german": "Inception"
+  },
+  "rating": {
+    "total": 850,
+    "ch": 800,
+    "rt": 900
+  },
+  "dateSeen": "2020-12-28T23:00:00.000Z",
+  "fsk": 12,
+  "tmdbID": 27205,
+  "releaseDate": "2010-07-15T00:00:00.000Z",
+  "runtime": 148,
+  "genres": [
+    "Action",
+    "Science Fiction",
+    "Abenteuer"
+  ],
+  "posterURL": "/xymM5aW6MDcH5AR9I3CamSegJd6.jpg",
+  "budget": 160000000,
+  "revenue": 825532764,
+  "tagline": "Dein Verstand ist der Ort des Verbrechens.",
+  "overview": "Beim Versuch in das Unterbewusstsein des Industriellen Saito einzudringen, stoßen Cobb und seine Mitstreiter auf unerwartete Schwierigkeiten. Saito hatte Verteidigungsstrategien gegen den Gedankendiebstahl trainiert und baut nun einen Abwehrriegel auf, doch erst der Verrat eines Kollegen lässt den Versuch scheitern, dem Schlafenden Geheimnisse zu entlocken. Da seine Auftraggeber unbedingten Erfolg gefordert hatten, muss Cobb, der auf Grund einer drohenden Verurteilung nicht mehr in die USA zurück kann, fliehen, doch Saito kommt ihm zuvor. Allerdings nicht um ihn zu bestrafen, sondern um ihm einen Deal vorzuschlagen."
+}

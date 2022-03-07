@@ -1,0 +1,22 @@
+{
+  "title": {
+    "original": "Pet Sematary",
+    "german": "Friedhof der Kuscheltiere"
+  },
+  "rating": {
+    "total": 675
+  },
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 8913,
+  "releaseDate": "1989-04-21T00:00:00.000Z",
+  "runtime": 103,
+  "genres": [
+    "Horror"
+  ],
+  "posterURL": "/2vq7k9ig2AIPGe9Pw7wWLXS6Q7X.jpg",
+  "budget": 11500000,
+  "revenue": 57469467,
+  "tagline": "Manchmal ist der Tod besser.",
+  "overview": "Der Arzt Louis Creed zieht mit seiner Frau Rachel, den Kindern Ellie und Gage und dem Kater Church aufs Land. Ihr neuer Nachbar Judd warnt sie vor der Landstraße. Für die dort überfahrenen Haustiere ist ein eigener Friedhof eingerichtet worden, gleich neben einem mythenumwobenen Indianerfriedhof, der angeblich Tote wiederkehren lässt. Als eines Tages ihre Katze überfahren wird, begräbt Louis den Leichnam auf dem Indianerfriedhof, und tatsächlich kehrt das Tier lebendig zurück ..."
+}

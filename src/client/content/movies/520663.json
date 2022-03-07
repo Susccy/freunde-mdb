@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "The Woman in the Window",
+    "german": "The Woman in the Window"
+  },
+  "rating": {
+    "total": 600,
+    "ch": 450,
+    "rt": 750
+  },
+  "dateSeen": "2021-05-14T22:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 520663,
+  "releaseDate": "2021-05-14T00:00:00.000Z",
+  "runtime": 102,
+  "genres": [
+    "Drama",
+    "Thriller",
+    "Krimi",
+    "Mystery"
+  ],
+  "posterURL": "/gUnMWEtz07x5ZeNT7dOZpvDK8Hb.jpg",
+  "budget": 4000000,
+  "revenue": 0,
+  "overview": "Anna Fox führt in ihrer New Yorker Wohnung ein Einsiedlerleben. Der Grund: Die junge Frau leidet extrem an Agoraphobie, der Angst vor weiten Plätzen und Menschenansammlungen. Ihre deshalb eher einsamen Tage verbringt die frühere Kinder-Psychologin mit dem exzessiven Konsum von Alkohol und damit, im Fernsehen alte Film-Klassiker zu schauen. Während sie einer glücklichen, längst vergangenen Zeit nachtrauert, spioniert sie zudem am liebsten ihre Nachbarn aus..."
+}

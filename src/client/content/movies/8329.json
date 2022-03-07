@@ -1,0 +1,23 @@
+{
+  "title": {
+    "original": "[REC]",
+    "german": "[REC]"
+  },
+  "rating": {
+    "total": 675
+  },
+  "fsk": 18,
+  "mm": false,
+  "tmdbID": 8329,
+  "releaseDate": "2007-11-23T00:00:00.000Z",
+  "runtime": 78,
+  "genres": [
+    "Horror",
+    "Mystery"
+  ],
+  "posterURL": "/hJx9gqUJgWXRkFpIbCcNYrkqAQX.jpg",
+  "budget": 1500000,
+  "revenue": 32511655,
+  "tagline": "Ein Zeuge. Eine Kamera",
+  "overview": "Die Fernsehreporterin Ángela Vidal und ihr Kameramann begleiten für ihre Sendung \"Wenn sie schlafen\" einen nächtlichen Feuerwehreinsatz. Eine Frau soll sich in ihrer Wohnung eingesperrt haben, die Hausbewohner haben Schreie vernommen - reine Routine. Doch kaum haben sie sich Zutritt zu der betreffenden Wohnung verschafft, werden sie von der ungewöhnlich aggressiven Frau attackiert. Doch damit nicht genug – die Umweltbehörde hat das Haus unter Quarantäne gestellt, für die Eingesperrten gibt es kein Entrinnen…"
+}

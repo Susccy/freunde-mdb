@@ -1,0 +1,23 @@
+{
+  "title": {
+    "original": "The Blair Witch Project",
+    "german": "Blair Witch Project"
+  },
+  "rating": {
+    "total": 850
+  },
+  "fsk": 12,
+  "mm": false,
+  "tmdbID": 2667,
+  "releaseDate": "1999-07-14T00:00:00.000Z",
+  "runtime": 78,
+  "genres": [
+    "Horror",
+    "Mystery"
+  ],
+  "posterURL": "/y8gbR6XhkicEwxTuokBPpGCCi8E.jpg",
+  "budget": 60000,
+  "revenue": 248639099,
+  "tagline": "Der gruseligste Film aller Zeiten ist eine wahre Geschichte.",
+  "overview": "Am 21. Oktober 1994 brechen die drei Filmstudenten Heather Donahue, Michael Williams und Joshua Leonard in den Blackhill Forest in Maryland auf. Dort wollen sie einen Dokumentarfilm über eine legendäre Spukgestalt drehen, die sogenannte Hexe von Blair. Ein Jahr später wird ihr Filmmaterial gefunden. Die erhaltenen Filmaufnahmen sind ihr Vermächtnis. Sie zeigen die letzten Tage der Filmemacher, ihre quälende fünftägige Wanderung durch den undurchdringlichen Wald und die grauenerregenden Vorgänge, die zu ihrem Verschwinden geführt haben."
+}

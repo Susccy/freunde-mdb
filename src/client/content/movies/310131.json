@@ -1,0 +1,27 @@
+{
+  "title": {
+    "original": "The Witch",
+    "german": "The Witch"
+  },
+  "rating": {
+    "total": 375,
+    "ch": 250,
+    "rt": 500
+  },
+  "dateSeen": "2021-01-26T23:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 310131,
+  "releaseDate": "2015-01-27T00:00:00.000Z",
+  "runtime": 90,
+  "genres": [
+    "Horror",
+    "Drama",
+    "Mystery",
+    "Historie"
+  ],
+  "posterURL": "/qnWyyq547CnzXgxURt5VyOeAMSq.jpg",
+  "budget": 4000000,
+  "revenue": 40423945,
+  "tagline": "Das Böse hat viele Gesichter.",
+  "overview": "Neuengland im 17. Jahrhundert: Das Ehepaar William und Katherine führt mit seinen fünf Kindern ein tiefreligiöses, christliches Leben am Rande eines unzugänglichen Waldes, der angeblich von einer Hexe heimgesucht wird. Schon bald häufen sich hier die merkwürdigen Vorkommnisse, denn die Tiere drehen durch, die Ernte geht ein und dann verschwindet auch noch der kleine Samuel unter den Augen seiner Schwester Thomasin. Wenig später taucht das Baby zwar wieder auf, scheint aber besessen zu sein. Die Eltern können sich auf die Geschehnisse keinen Reim machen und wissen nicht mit den Vorwürfen der Zwillinge Jonas und Mercy umzugehen, die Thomasin der Hexerei bezichtigen. Liegt auf der Familie ein Fluch oder treibt draußen im Wald eine andere, finstere Macht ihr Unwesen?"
+}

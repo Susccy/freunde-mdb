@@ -1,0 +1,27 @@
+{
+  "title": {
+    "original": "Sonic the Hedgehog",
+    "german": "Sonic the Hedgehog"
+  },
+  "rating": {
+    "total": 500,
+    "ch": 400,
+    "rt": 600
+  },
+  "dateSeen": "2021-02-05T23:00:00.000Z",
+  "fsk": 6,
+  "tmdbID": 454626,
+  "releaseDate": "2020-02-12T00:00:00.000Z",
+  "runtime": 99,
+  "genres": [
+    "Action",
+    "Science Fiction",
+    "Komödie",
+    "Familie"
+  ],
+  "posterURL": "/rj1SNscG6hiHmAOpPrEsJaMpvos.jpg",
+  "budget": 85000000,
+  "revenue": 306766470,
+  "tagline": "Ein Held auf der Überholspur.",
+  "overview": "Sonic ist mit seinen 15 Jahren ein pubertierendes Powerpaket, aber dessen ist er sich selbst noch nicht wirklich bewusst. Zu seiner eigenen Sicherheit soll er sich auf dem Planeten Erde verstecken. Allerdings gibt es hierfür eine Bedingung: Die Welt soll niemals von seiner Existenz erfahren. Doch das erweist sich für den extrovertierten Igel als schier unmöglich, vor allem im Hinblick auf seine Super-Power, die er erst noch entdecken muss. Es ist also nur eine Frage der Zeit, bis jemand auf ihn aufmerksam wird. Zum Glück gerät Sonic an Tom, einen zynischen Polizisten, der aber das Herz am rechten Fleck hat. Gemeinsam nehmen es die beiden mit Sonics verrücktem Erzfeind Dr. Robotnik auf, der sie schon bald über den ganzen Planeten jagt. Eine atemberaubende Verfolgungsjagd in Schallgeschwindigkeit beginnt …"
+}

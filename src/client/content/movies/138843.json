@@ -1,0 +1,23 @@
+{
+  "title": {
+    "original": "The Conjuring",
+    "german": "Conjuring - Die Heimsuchung"
+  },
+  "rating": {
+    "total": 725
+  },
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 138843,
+  "releaseDate": "2013-03-20T00:00:00.000Z",
+  "runtime": 112,
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/si1ikQk2YHIQFSbGLN1tTBsQ6be.jpg",
+  "budget": 13000000,
+  "revenue": 319494638,
+  "tagline": "Basierend auf einer wahren Geschichte",
+  "overview": "‘Endlich ausreichend Platz!’ sagt sich die Großfamilie um Mutter Carolyn und Vater Roger, als sie das abgelegene Landhaus in Rhode Island beziehen. Doch anscheinend sind sie nicht allein: Eine fremde und zunehmend böse Macht wohnt mitten unter ihnen und macht ein normales Leben unmöglich. In ihrer Verzweiflung wenden sie sich an das renommierte Pärchen Ed und Lorraine Warren, die als Fachleute auf dem Gebiet der Geisteraustreibung gelten. Doch ihre anfängliche Souveränität weicht der puren Angst, als sie bemerken, mit welch bösen Kräften sie es hier zu tun haben."
+}

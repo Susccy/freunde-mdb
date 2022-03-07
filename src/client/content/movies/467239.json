@@ -1,0 +1,23 @@
+{
+  "title": {
+    "original": "Temple",
+    "german": "Temple"
+  },
+  "rating": {
+    "total": 350,
+    "ch": 450,
+    "rt": 250
+  },
+  "dateSeen": "2020-09-13T22:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 467239,
+  "releaseDate": "2017-09-01T00:00:00.000Z",
+  "runtime": 78,
+  "genres": [
+    "Historie",
+    "Horror"
+  ],
+  "posterURL": "/AjG0N5uWAWfF4HlYT2feb7tnFHo.jpg",
+  "budget": 0,
+  "revenue": 0
+}

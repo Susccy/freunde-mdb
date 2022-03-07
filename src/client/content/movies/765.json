@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "Evil Dead II",
+    "german": "Tanz der Teufel 2 - Jetzt wird noch mehr getanzt"
+  },
+  "rating": {
+    "total": 450,
+    "ch": 250,
+    "rt": 650
+  },
+  "dateSeen": "2021-05-30T22:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 765,
+  "releaseDate": "1987-03-13T00:00:00.000Z",
+  "runtime": 84,
+  "genres": [
+    "Horror",
+    "Komödie",
+    "Fantasy"
+  ],
+  "posterURL": "/mzpIIiFmf9wugVhTnJlO80sRExk.jpg",
+  "budget": 3600000,
+  "revenue": 5923044,
+  "tagline": "Tod bei Morgengrauen",
+  "overview": "Der Student Ash will mit seiner Freundin ein Wochenende in einem abgelegenen Landhaus verbringen. Als er ein Tonband von Professor Knowby findet und abspielt, auf dem dieser Verse aus dem sagenumwobenen Buch des Todes übersetzt, beginnt der Tanz der Teufel. Unheimliche Wesen zwingen Ash, seine Freundin zu töten und bringen ihn fast um den Verstand. Der Spuk endet erst, als Knowbys Tochter mit den richtigen Versen aus dem Buch den Zauber bannt."
+}

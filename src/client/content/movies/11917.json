@@ -1,0 +1,24 @@
+{
+  "title": {
+    "original": "Saw V",
+    "german": "Saw V"
+  },
+  "rating": {
+    "total": 850
+  },
+  "fsk": 18,
+  "mm": false,
+  "tmdbID": 11917,
+  "releaseDate": "2008-10-23T00:00:00.000Z",
+  "runtime": 92,
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Krimi"
+  ],
+  "posterURL": "/nw9iDPRV8XGjkWWAlk2J50jVAzr.jpg",
+  "budget": 10800000,
+  "revenue": 113857533,
+  "tagline": "Mein ist die Rache",
+  "overview": "Der Schrecken des Killers Jigsaw geht weiter, obwohl der längst tot ist. Agent Hoffman ist in die Fußstapfen seines Vorbildes getreten und führt dessen Werk fort. Sieben Fallen, eine schlimmer als die andere, warten auf ihre Opfer, zu denen auch Agent Strahm gehört."
+}

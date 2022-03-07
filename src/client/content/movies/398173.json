@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "The House That Jack Built",
+    "german": "The House That Jack Built"
+  },
+  "rating": {
+    "total": 725,
+    "ch": 700,
+    "rt": 750
+  },
+  "dateSeen": "2021-09-21T22:00:00.000Z",
+  "fsk": 18,
+  "tmdbID": 398173,
+  "releaseDate": "2018-10-04T00:00:00.000Z",
+  "runtime": 152,
+  "genres": [
+    "Drama",
+    "Horror",
+    "Krimi",
+    "Thriller"
+  ],
+  "posterURL": "/58qv5WJes9Wvx0e8nhggLO7RSp2.jpg",
+  "budget": 9800000,
+  "revenue": 5566776,
+  "overview": "Über einen Zeitraum von 12 Jahren hat der hochintelligente Psychopath Jack mehr als 60 Morde verübt. Nun soll er, der sich selbst den Künstlernamen Mr. Sophisticated gegeben hat, dem mysteriösen Verge in fünf Episoden seine Geschichte vom Abstieg in den kompletten Wahnsinn erzählen. Eigentlich hatte Jack Architekt werden wollen. Doch seit dem ersten, eher zufälligen Mord an einer Mitfahrerin steigert sich Jack in einen beispiellosen Tötungsrausch."
+}

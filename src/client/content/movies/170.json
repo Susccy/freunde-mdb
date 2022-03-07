@@ -1,0 +1,24 @@
+{
+  "title": {
+    "original": "28 Days Later",
+    "german": "28 Days Later"
+  },
+  "rating": {
+    "total": 600
+  },
+  "fsk": 18,
+  "mm": false,
+  "tmdbID": 170,
+  "releaseDate": "2002-10-31T00:00:00.000Z",
+  "runtime": 113,
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Science Fiction"
+  ],
+  "posterURL": "/vPqKQukqrz81wHky9ZvaYunEgo.jpg",
+  "budget": 5000000,
+  "revenue": 85720385,
+  "tagline": "Deine Tage sind gezählt",
+  "overview": "Bei einer Aktion militanter Tierschützer wird in London ein tödlicher, sich rasend schnell verbreitender Virus freigesetzt, der friedliche Menschen innerhalb von Sekunden in mörderische Bestien verwandelt. 28 Tage nach der Katastrophe machen sich vier Überlebende auf den Weg nach Manchester, wo eine kleine Armee-Einheit angeblich Herr der Lage sein soll. Die Reise durch das verwüstete Großbritannien erweist sich als überaus gefährlich. Auf der Militärbasis angekommen, müssen Jim, Selina, Hannah und Frank erkennen, daß das schlimmste erst noch vor ihnen liegt."
+}

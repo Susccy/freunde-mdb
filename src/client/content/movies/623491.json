@@ -1,0 +1,24 @@
+{
+  "title": {
+    "original": "The Babysitter: Killer Queen",
+    "german": "The Babysitter: Killer Queen"
+  },
+  "rating": {
+    "total": 350,
+    "ch": 300,
+    "rt": 400
+  },
+  "dateSeen": "2020-09-25T22:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 623491,
+  "releaseDate": "2020-09-10T00:00:00.000Z",
+  "runtime": 100,
+  "genres": [
+    "Komödie",
+    "Horror"
+  ],
+  "posterURL": "/yx7akzfwbPCLlxKgZ1NycThFC92.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Es ist zwei Jahre her, dass Cole den von seiner Babysitterin Bee angeführten satanischen Kult besiegte. Nun versucht er nur noch, die Vergangenheit hinter sich zu lassen und die Highschool irgendwie zu überleben. Als jedoch alte Feinde unerwartet wieder auftauchen, muss Cole erneut den Mächten des Bösen ein Schnippchen schlagen."
+}

@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "Boogeyman",
+    "german": "Boogeyman - Der schwarze Mann"
+  },
+  "rating": {
+    "total": 150,
+    "ch": 150,
+    "rt": 150
+  },
+  "dateSeen": "2020-09-08T22:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 8968,
+  "releaseDate": "2005-02-04T00:00:00.000Z",
+  "runtime": 89,
+  "genres": [
+    "Thriller",
+    "Horror",
+    "Drama",
+    "Mystery"
+  ],
+  "posterURL": "/5KffN0UcuAKJdUAcOvZ21OrqXc8.jpg",
+  "budget": 20000000,
+  "revenue": 67192859,
+  "overview": "Seit einem traumatischen Ereignis in seiner Kindheit, bei dem der Boogieman Tims Vater auf grausame Art verschwinden ließ, wird er immer wieder von Angstattacken heimgesucht. Auf Anraten seiner Therapeutin begibt sich Tim erneut in das Haus seiner Kindheit, um sich seinen Ängsten zu stellen. In der alten Villa erlebt Tim mit seinen Freunden eine Nacht mit unheimlichen Geschehnissen."
+}

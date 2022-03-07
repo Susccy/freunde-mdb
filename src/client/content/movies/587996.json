@@ -1,0 +1,25 @@
+{
+  "title": {
+    "original": "Bajocero",
+    "german": "Bajocero (Unter Null)"
+  },
+  "tmdbID": 587996,
+  "rating": {
+    "total": 400,
+    "ch": 300,
+    "rt": 500
+  },
+  "dateSeen": "2021-12-20T00:00:00.000Z",
+  "fsk": 16,
+  "releaseDate": "2021-01-29T00:00:00.000Z",
+  "runtime": 106,
+  "genres": [
+    "Action",
+    "Krimi",
+    "Thriller"
+  ],
+  "posterURL": "/tcAcDkh6oLL9wi4dIwKF5XqzHHx.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Beim Überfall auf einen Gefangenentransporter muss sich der Fahrer nicht nur den Insassen und den Angreifern von außen stellen, sondern auch der eisigen Kälte."
+}

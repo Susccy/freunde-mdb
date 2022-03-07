@@ -1,0 +1,22 @@
+{
+  "title": {
+    "original": "1408",
+    "german": "Zimmer 1408"
+  },
+  "rating": {
+    "total": 750
+  },
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 3021,
+  "releaseDate": "2007-06-22T00:00:00.000Z",
+  "runtime": 104,
+  "genres": [
+    "Horror"
+  ],
+  "posterURL": "/sI8kuf8uCBIyEeNosxJUFmWtFgp.jpg",
+  "budget": 25000000,
+  "revenue": 132963417,
+  "tagline": "Schließe diese Türe nicht.",
+  "overview": "Mike Enslin hat zwei erfolgreiche Bücher über Hotels, in denen es angeblich spukt, veröffentlicht. Nach dem Tod seiner Tochter stürzt er sich noch kompromissloser in die Arbeit. Derzeit fasziniert ihn ein besonders mysteriöser Fall: Im Zimmer 1408 des New Yorker Dolphin Hotel sind unter seltsamen Umständen bereits 56 Gäste gestorben. Um der Wahrheit auf den Grund zu gehen, schlägt Mike alle Warnungen des Hotelmanagers in den Wind und übernachtet in Nr. 1408 – ein kafkaesker Alptraum beginnt."
+}

@@ -1,0 +1,25 @@
+{
+  "title": {
+    "original": "Resident Evil",
+    "german": "Resident Evil"
+  },
+  "rating": {
+    "total": 550
+  },
+  "dateSeen": "2019-04-06T22:00:00.000Z",
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 1576,
+  "releaseDate": "2002-03-15T00:00:00.000Z",
+  "runtime": 100,
+  "genres": [
+    "Horror",
+    "Action",
+    "Science Fiction"
+  ],
+  "posterURL": "/1UKNef590A0ZaMnxsscIcWuK1Em.jpg",
+  "budget": 33000000,
+  "revenue": 102984862,
+  "tagline": "Ein geheimes Experiment. Ein tödlicher Virus. Ein fataler Fehler.",
+  "overview": "Alice und Rain müssen ein Kommando-Team in eine riesige unterirdische Genforschungsfabrik führen, in welcher eine Stunde zuvor ein tödlicher Virus ausgebrochen ist. Der Virus hat binnen Sekunden das gesamte Forschungspersonal getötet und als blutrünstige Untote wieder auferstehen lassen. Alice hat weniger als drei Stunden Zeit, den Virus zu isolieren und einen die Welt vernichtenden Outbreak an die Oberfläche zu verhindern. Doch schnell wird dem Team klar, dass es nicht nur von den Untoten bedroht wird. Ein Horrortrip beginnt..."
+}

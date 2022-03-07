@@ -1,0 +1,24 @@
+{
+  "title": {
+    "original": "Curse of Chucky",
+    "german": "Curse of Chucky"
+  },
+  "rating": {
+    "total": 400,
+    "ch": 400,
+    "rt": 400
+  },
+  "dateSeen": "2020-09-25T22:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 167032,
+  "releaseDate": "2013-10-04T00:00:00.000Z",
+  "runtime": 97,
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/7mcXDa7dhkPUUzEEBsNT74OYCNt.jpg",
+  "budget": 5000000,
+  "revenue": 3800000,
+  "overview": "Eines Tages hat Nica die mysteriöse sprechende Puppe Chucky in der Post. Sie überzeugt ihre Eltern, dass sie die Puppe behalten darf. Ein grober Fehler, denn schon bald folgt eine brutale Mordserie und der Verdacht fällt auf das rothaarige sprechende Spielzeug. Jedenfalls Nica ist davon überzeugt, doch selbst sie ahnt nicht, dass Chucky noch eine blutige Rechnung begleichen will."
+}

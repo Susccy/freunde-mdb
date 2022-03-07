@@ -1,0 +1,25 @@
+{
+  "title": {
+    "original": "His House",
+    "german": "His House"
+  },
+  "rating": {
+    "total": 300,
+    "ch": 200,
+    "rt": 400
+  },
+  "dateSeen": "2020-12-15T23:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 575774,
+  "releaseDate": "2020-01-27T00:00:00.000Z",
+  "runtime": 93,
+  "genres": [
+    "Drama",
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/s6XxJEe4ovVTMgmGmKeO87OFANU.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Nach ihrer beschwerlichen Flucht vor dem Krieg im Südsudan hat ein junges Paar in der neuen Heimat Schwierigkeiten, sich an das englische Kleinstadtleben anzupassen, wo etwas unaussprechlich Böses unter der Oberfläche lauert."
+}

@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "german": "Fluch der Karibik"
+  },
+  "rating": {
+    "total": 875,
+    "ch": 750,
+    "rt": 1000
+  },
+  "dateSeen": "2021-06-29T22:00:00.000Z",
+  "fsk": 12,
+  "tmdbID": 22,
+  "releaseDate": "2003-07-09T00:00:00.000Z",
+  "runtime": 143,
+  "genres": [
+    "Abenteuer",
+    "Fantasy",
+    "Action"
+  ],
+  "posterURL": "/vkhtjKufYHp2OHpnbGJLOLtbkK1.jpg",
+  "budget": 140000000,
+  "revenue": 655011224,
+  "tagline": "3000 Inseln im Paradies. Für einige ein Segen, für andere... ein Fluch.",
+  "overview": "Im 17.Jahrhundert sucht der Pirat Jack Sparrow nach einem sagenumwobenen Schatz in der Karibik, als ihn das Schicksal mit dem jungen Will Turner zusammenführt, der aus anderen Gründen auf derselben Fährte ist: nämlich den berüchtigten Captain Barbossa und seine Crew abzufangen, die Wills große Liebe Elizabeth, die Tochter des britischen Gouverneurs entführt haben. Doch Barbossa umhüllt selbst ein düsteres Geheimnis: er und seine Männer sind verflucht und das Licht des Mondes bringt ihre Existenz zum Vorschein: sie sind wie lebende Skelette, monströs und tödlich. Um den Fluch zu brechen, brauchen sie Elizabeth als Opfer. Ein Wettrennen zur Insel des Todes beginnt..."
+}

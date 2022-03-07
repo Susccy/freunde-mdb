@@ -1,0 +1,25 @@
+{
+  "title": {
+    "original": "The Lord of the Rings",
+    "german": "Der Herr der Ringe"
+  },
+  "tmdbID": 123,
+  "rating": {
+    "total": 1000,
+    "ch": 1000,
+    "rt": 1000
+  },
+  "dateSeen": "1999-01-01T00:00:00.000Z",
+  "fsk": 0,
+  "releaseDate": "1978-11-15T00:00:00.000Z",
+  "runtime": 132,
+  "genres": [
+    "Abenteuer",
+    "Animation",
+    "Fantasy"
+  ],
+  "posterURL": "/oNOiV1wlIsbfQCoXNb5xV7wPwe5.jpg",
+  "budget": 4000000,
+  "revenue": 30471420,
+  "overview": "Der Herr der Ringe ist ein Zeichentrickfilm aus dem Jahr 1978, dessen Handlung die erste Hälfte der Geschichte von J.R.R. Tolkiens 'Der Herr der Ringe' erzählt. Regisseur Ralph Bakshi drehte hierbei nahezu alle Szenen mit realen Schauspielern, die dann im sogenannten Rotoskopie-Verfahren nachgezeichnet wurden. Aufgrund des mäßigen Erfolges blieb Bakshi jedoch eine Fortsetzung verwehrt."
+}

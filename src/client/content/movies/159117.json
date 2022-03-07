@@ -1,0 +1,23 @@
+{
+  "title": {
+    "original": "V/H/S/2",
+    "german": "S-VHS aka. V/H/S/2"
+  },
+  "rating": {
+    "total": 850
+  },
+  "fsk": 18,
+  "mm": false,
+  "tmdbID": 159117,
+  "releaseDate": "2013-06-06T00:00:00.000Z",
+  "runtime": 95,
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/7tdHgMOyyylpMhr05MhQ5IYmD50.jpg",
+  "budget": 0,
+  "revenue": 21833,
+  "tagline": "Who's Tracking You?",
+  "overview": "Zwei Privatdetektive dringen in die Wohnung eines von der Mutter als vermisst gemeldeten Studenten ein und entdecken einen Stapel Videokassetten. Auf den Tapes finden sich Home Videos aus der jüngeren Vergangenheit mit höchst bedrohlich wirkendem Inhalt. Eines handelt von dem Ausbruch einer Zombieseuche, ein anderes von einer gemeingefährlichen Sekte, und wiederum ein anderes von einer außerirdischen Invasion. Die Bilder scheinen echt zu sein, und wer sie zu lange anschaut, den holt der Sensenmann."
+}

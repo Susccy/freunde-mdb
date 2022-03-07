@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "The Invisible Man",
+    "german": "Der Unsichtbare"
+  },
+  "tmdbID": 570670,
+  "rating": {
+    "total": 700,
+    "ch": 600,
+    "rt": 800
+  },
+  "dateSeen": "2021-11-23T00:00:00.000Z",
+  "fsk": 16,
+  "releaseDate": "2020-02-26T00:00:00.000Z",
+  "runtime": 124,
+  "genres": [
+    "Thriller",
+    "Science Fiction",
+    "Horror"
+  ],
+  "posterURL": "/3gnc1zBJldKG2DcyAFMJuPzNVsD.jpg",
+  "budget": 7000000,
+  "revenue": 130234661,
+  "tagline": "Was du nicht sehen kannst, kann dich verletzen.",
+  "overview": "Cecilia Kass flieht mitten in der Nacht aus der Beziehung mit einem wohlhabenden, genialen wie auch gewalttätigen Wissenschaftler. Als dieser Selbstmord begeht und ihr einen erheblichen Teil seines Vermögens hinterlässt, befürchtet Cecilia, er habe seinen Tod inszeniert und tatsächlich beginnt anschließend eine Serie unheimlicher Zufälle, deren Opfer ihre am meisten geliebten Menschen sind."
+}

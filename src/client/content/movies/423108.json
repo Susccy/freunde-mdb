@@ -1,0 +1,25 @@
+{
+  "title": {
+    "original": "The Conjuring: The Devil Made Me Do It",
+    "german": "Conjuring 3 - Im Bann des Teufels"
+  },
+  "rating": {
+    "total": 700,
+    "ch": 750,
+    "rt": 650
+  },
+  "dateSeen": "2021-07-01T22:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 423108,
+  "releaseDate": "2021-05-25T00:00:00.000Z",
+  "runtime": 111,
+  "genres": [
+    "Horror",
+    "Mystery",
+    "Thriller"
+  ],
+  "posterURL": "/cHnY1O4gxcdCcbBKDHvKzFcOpVp.jpg",
+  "budget": 39000000,
+  "revenue": 199166992,
+  "overview": "Ein erschreckender Mordfall und eine mysteriöse böse Präsenz erschüttern selbst die paranormalen Ermittler Ed und Lorraine Warren bis ins Mark. In ihrem aktuellen Fall geht es um den Schutz der Seele eines kleinen Jungen. Dabei begeben sie sich in eine unbekannte Welt. Es ist das erste Mal in der amerikanischen Geschichte, dass sich ein des Mordes verdächtiger Mann auf dämonische Besessenheit als Verteidigungslinie beruft."
+}

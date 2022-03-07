@@ -1,0 +1,24 @@
+{
+  "title": {
+    "original": "The Autopsy of Jane Doe",
+    "german": "The Autopsy of Jane Doe"
+  },
+  "rating": {
+    "total": 700
+  },
+  "dateSeen": "2019-07-03T22:00:00.000Z",
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 397243,
+  "releaseDate": "2016-12-21T00:00:00.000Z",
+  "runtime": 90,
+  "genres": [
+    "Horror",
+    "Mystery"
+  ],
+  "posterURL": "/jSgWA2ldUpZgUsthJbv6QOGFFQ7.jpg",
+  "budget": 0,
+  "revenue": 5972942,
+  "tagline": "Jeder Körper hat ein Geheimnis.",
+  "overview": "Ein Haus irgendwo in den USA ist Schauplatz eines grausamen Verbrechens. Während die Ermittler den Tatort untersuchen, entdecken sie im Keller eine nackte Frauenleiche begraben. Austin, der zusammen mit seinem Vater Tommy als Gerichtsmediziner arbeitet, wird mit der Inspektion des leblosen Körpers beauftragt. Die tote Frau gibt jede Menge Rätsel auf: Ihre Personalien können nicht herausgefunden werden und selbst ihre Fingerabdrücke sind nicht im Polizeisystem registriert. Sie ist eine vollkommen Unbekannte, weshalb sie einfach nur noch Jane Doe genannt wird. Während Austin und Tommy die Autopsie durchführen, wird das Geheimnis um Jane immer mysteriöser. Plötzlich geschehen Dinge, die sich nicht rational erklären lassen. Und schon bald müssen Vater und Sohn feststellen, dass die Tote viel lebendiger ist, als ihnen lieb ist..."
+}

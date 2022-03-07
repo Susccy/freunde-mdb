@@ -1,0 +1,23 @@
+{
+  "title": {
+    "original": "Book of Shadows: Blair Witch 2",
+    "german": "Blair Witch 2"
+  },
+  "rating": {
+    "total": 325
+  },
+  "fsk": 18,
+  "mm": false,
+  "tmdbID": 11531,
+  "releaseDate": "2000-10-27T00:00:00.000Z",
+  "runtime": 90,
+  "genres": [
+    "Mystery",
+    "Thriller",
+    "Horror"
+  ],
+  "posterURL": "/v8sAcqLlQj2SzT7o93f4cjyqDlN.jpg",
+  "budget": 15000000,
+  "revenue": 47737094,
+  "overview": "Es handelt sich um die Fortsetzung der überaus erfolgreichen, inszenierten Doku \"Blair Witch Project\", der Nachfolger wurde jedoch als konventioneller Horrorfilm inszeniert. Die Blair-Wälder sind zur Touristenhochburg geworden, doch der Schrecken bleibt: zahlreiche Touristen kommen unter mysteriösen Umständen ums Leben."
+}

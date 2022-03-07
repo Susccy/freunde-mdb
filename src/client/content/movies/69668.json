@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "Dream House",
+    "german": "Dream House"
+  },
+  "rating": {
+    "total": 700,
+    "ch": 750,
+    "rt": 650
+  },
+  "dateSeen": "2021-08-16T22:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 69668,
+  "releaseDate": "2011-09-29T00:00:00.000Z",
+  "runtime": 84,
+  "genres": [
+    "Drama",
+    "Thriller",
+    "Mystery"
+  ],
+  "posterURL": "/xgZnjCYpf6eZB3NSYiB0azJ8WGf.jpg",
+  "budget": 50000000,
+  "revenue": 38502340,
+  "tagline": "Es waren einmal zwei kleine Mädchen, sie lebten in einem Haus.",
+  "overview": "Der erfolgreiche Verleger Will Atenton fasst den Entschluss, der Geschäftswelt den Rücken zu kehren und mit seiner Ehefrau Libby und seinen beiden Töchtern in ein ländliches Städtchen ziehen. Doch ihr scheinbar perfektes neues Traumhaus birgt eine schreckliche Vergangenheit es war Schauplatz eines grausamen Mordszenarios, dem eine Familie zum Opfer fiel. Zusammen mit seiner mysteriösen Nachbarin, die die Opfer persönlich kannte, versucht Will das Puzzle Stück für Stück zusammensetzen, bevor der noch nicht gefasste Mörder erneut zum Traumhaus zurückkehrt."
+}

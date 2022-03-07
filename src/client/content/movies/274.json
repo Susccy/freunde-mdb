@@ -1,0 +1,25 @@
+{
+  "title": {
+    "original": "The Silence of the Lambs",
+    "german": "Das Schweigen der Lämmer"
+  },
+  "rating": {
+    "total": 475
+  },
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 274,
+  "releaseDate": "1991-02-01T00:00:00.000Z",
+  "runtime": 118,
+  "genres": [
+    "Krimi",
+    "Drama",
+    "Thriller",
+    "Horror"
+  ],
+  "posterURL": "/yyW5OFz5r8S81R2Afj9ILiEa70w.jpg",
+  "budget": 19000000,
+  "revenue": 272742922,
+  "tagline": "Um den Geist eines Mörders zu verstehen, muss sie den Geist eines Wahnsinnigen herausfordern.",
+  "overview": "Clarice Starling, Auszubildende beim FBI, bekommt von einem ihrer Lehrer den Auftrag, sich im Gefängnis mit Dr. Hannibal Lecter, einem Massenmörder und Psychiater, zu befassen. Durch ihre Unbefangenheit hoffen sie, daß Lecter ihnen bei der Suche nach einem anderen Serienkiller hilft, aber es ist nicht leicht, an Lecter heranzukommen."
+}

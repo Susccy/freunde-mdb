@@ -1,0 +1,23 @@
+{
+  "title": {
+    "original": "The Descent",
+    "german": "The Descent - Abgrund des Grauens"
+  },
+  "rating": {
+    "total": 600
+  },
+  "fsk": 18,
+  "mm": false,
+  "tmdbID": 9392,
+  "releaseDate": "2005-07-08T00:00:00.000Z",
+  "runtime": 99,
+  "genres": [
+    "Abenteuer",
+    "Horror"
+  ],
+  "posterURL": "/iMNvwfAFTqvQwMbQp7XE2gFgVxZ.jpg",
+  "budget": 3500000,
+  "revenue": 57051053,
+  "tagline": "Angst vor der Dunkelheit?",
+  "overview": "Sechs Frauen treffen sich an einem abgelegenen Gebirgszug der Appalachen, um dort ein verzweigtes Höhlensystem zu erforschen. Als sie jedoch den Rückweg antreten wollen, versperrt ein herabgefallener Felsen den Ausgang. Auf der Suche nach einem anderen Ausweg bemerken die Frauen, dass in der Höhle blutdurstige Kreaturen leben, die sich perfekt an die Umgebung angepasst haben und ohne Vorwarnung angreifen."
+}

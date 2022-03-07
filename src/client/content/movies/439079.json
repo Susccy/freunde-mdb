@@ -1,0 +1,25 @@
+{
+  "title": {
+    "original": "The Nun",
+    "german": "The Nun"
+  },
+  "rating": {
+    "total": 600
+  },
+  "dateSeen": "2020-05-13T22:00:00.000Z",
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 439079,
+  "releaseDate": "2018-09-05T00:00:00.000Z",
+  "runtime": 96,
+  "genres": [
+    "Horror",
+    "Mystery",
+    "Thriller"
+  ],
+  "posterURL": "/nuItlOKVmngMR9fkgQzqItGizBn.jpg",
+  "budget": 22000000,
+  "revenue": 365550119,
+  "tagline": "Bete um Vergebung.",
+  "overview": "Im Mittelpunkt steht der fiese Nonnen-Dämon Valak. In den 50ern wird Father Burke auf dessen Spur angesetzt, als ihm seine Vorgesetzten im Vatikan den Auftrag erteilen, den mysteriösen Tod einer Ordensschwester zu untersuchen. Sie nahm sich in einem abgelegenen rumänischen Kloster das Leben. Burke, durch seine Vergangenheit tief traumatisiert, wird von der Novizin Irene begleitet, die bald ihr Ordensgelübde ablegen soll. Zusammen erforschen sie das schreckliche Geheimnis des Klosters..."
+}

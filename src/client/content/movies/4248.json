@@ -1,0 +1,23 @@
+{
+  "title": {
+    "original": "Scary Movie 2",
+    "german": "Scary Movie 2"
+  },
+  "rating": {
+    "total": 675
+  },
+  "dateSeen": "2017-04-15T22:00:00.000Z",
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 4248,
+  "releaseDate": "2001-07-04T00:00:00.000Z",
+  "runtime": 83,
+  "genres": [
+    "Komödie"
+  ],
+  "posterURL": "/2SdKbgT74TzsrrHBuAhEWJQIKdt.jpg",
+  "budget": 45000000,
+  "revenue": 141220678,
+  "tagline": "Noch schamloser. Noch gnadenloser.",
+  "overview": "Eine Gruppe von Studenten verbringt auf Einladung des vordergründig charmanten Geisteswissenschaftlers Prof. Oldman ein Wochenende in einer berühmt-berüchtigten Spukvilla namens \"Hell House\", um ein paar nicht genauer definierte Schlafexperimente durchzuführen. Natürlich führt der suspekte Oldman alles andere als seriöse Wissenschaft im Schilde, wenn er seine Schutzbefohlenen einem groben Poltergeist und seinen dämonischen Heerscharen sozusagen auf dem Silbertablett serviert."
+}

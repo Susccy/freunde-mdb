@@ -1,0 +1,23 @@
+{
+  "title": {
+    "original": "The Matrix",
+    "german": "Matrix"
+  },
+  "rating": {
+    "total": 600
+  },
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 603,
+  "releaseDate": "1999-03-30T00:00:00.000Z",
+  "runtime": 136,
+  "genres": [
+    "Action",
+    "Science Fiction"
+  ],
+  "posterURL": "/e2TJalTg6apJ1jWmA0rkltumpuK.jpg",
+  "budget": 63000000,
+  "revenue": 463517383,
+  "tagline": "Glaube das Unglaubliche.",
+  "overview": "Der Hacker Neo wird übers Internet von einer geheimnisvollen Untergrund-Organisation kontaktiert. Der Kopf der Gruppe – der gesuchte Terrorist Morpheus – weiht ihn in ein entsetzliches Geheimnis ein: Die Realität, wie wir sie erleben, ist nur eine Scheinwelt. In Wahrheit werden die Menschen längst von einer unheimlichen virtuellen Macht beherrscht – der „Matrix“, deren Agenten Neo bereits im Visier haben ..."
+}

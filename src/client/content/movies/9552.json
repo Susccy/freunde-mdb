@@ -1,0 +1,23 @@
+{
+  "title": {
+    "original": "The Exorcist",
+    "german": "Der Exorzist"
+  },
+  "rating": {
+    "total": 700
+  },
+  "dateSeen": "2017-12-19T23:00:00.000Z",
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 9552,
+  "releaseDate": "1973-05-31T00:00:00.000Z",
+  "runtime": 122,
+  "genres": [
+    "Horror"
+  ],
+  "posterURL": "/yoz0fMjfpf6SKh6iaDAJtvWZGx5.jpg",
+  "budget": 8000000,
+  "revenue": 441306145,
+  "tagline": "Irgendwo zwischen Wissenschaft und Aberglaube, gibt es eine andere Welt. Die Welt der Finsternis.",
+  "overview": "Regan MacNeill, zwölfjährige Tochter der berühmten Filmschauspielerin Chris MacNeill, leidet seit kurzem unter hysterischen, von heftigen Krämpfen begleiteten Wutausbrüchen. Als die versammelte, hochdotierte Ärzteschar Hilflosigkeit demonstriert und die Anfälle eskalieren, sucht Mutter MacNeill die Hilfe katholischer Geistlicher. Zwei herbeieilende Jesuitenpater diagnostizieren teuflische Besessenheit und verschreiben dem Teenager einen klassischen Exorzismus. Der alte Kampf zwischen Gut und Böse entbricht."
+}

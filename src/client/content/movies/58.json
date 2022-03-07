@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "Pirates of the Caribbean: Dead Man's Chest",
+    "german": "Pirates of the Caribbean - Fluch der Karibik 2"
+  },
+  "rating": {
+    "total": 875,
+    "ch": 750,
+    "rt": 1000
+  },
+  "dateSeen": "2021-07-04T22:00:00.000Z",
+  "fsk": 12,
+  "tmdbID": 58,
+  "releaseDate": "2006-07-06T00:00:00.000Z",
+  "runtime": 151,
+  "genres": [
+    "Abenteuer",
+    "Fantasy",
+    "Action"
+  ],
+  "posterURL": "/2VE3fkPsUCR41ZuHdD37Eggpcn3.jpg",
+  "budget": 200000000,
+  "revenue": 1065659812,
+  "tagline": "Captain Jack Sparrow ist zurück.",
+  "overview": "Diesmal sieht sich Captain Jack Sparrow, gerade erst dem Fluch der Black Pearl entkommen, mit einem neuen lebensbedrohenden Abenteuer konfrontiert: Denn Jack steht in lebenslanger Schuld bei Davy Jones, dem legendären Kapitän des Flying Dutchman und Herrscher über die Tiefen des Ozeans. Wenn er keinen Weg findet, den Bann zu brechen, ist er zu einem höllischen Leben nach dem Tode in ewiger Finsternis verdammt. Doch damit nicht genug: Jacks ausgesprochen existenzielle Probleme erweisen sich obendrein als Hindernis für die bevorstehende Hochzeit seiner Freunde Will Turner und Elizabeth Swann, die wider Willen in die andauernden Eskapaden des Kapitäns verwickelt werden. Das Abenteuer kann beginnen ..."
+}

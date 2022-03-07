@@ -1,0 +1,25 @@
+{
+  "title": {
+    "original": "Shutter Island",
+    "german": "Shutter Island"
+  },
+  "rating": {
+    "total": 825
+  },
+  "dateSeen": "2016-10-04T22:00:00.000Z",
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 11324,
+  "releaseDate": "2010-02-14T00:00:00.000Z",
+  "runtime": 138,
+  "genres": [
+    "Drama",
+    "Thriller",
+    "Mystery"
+  ],
+  "posterURL": "/mm07ImVjMcrBFhcepmy63toBfax.jpg",
+  "budget": 80000000,
+  "revenue": 294800000,
+  "tagline": "Diese Insel wirst du nie verlassen.",
+  "overview": "1954 soll der U.S. Marshall Teddy Daniels das Verschwinden eines Patienten aus dem Bostoner Shutter Island Ashecliffe Hospital aufklären. Er hat sich aus persönlichen Gründen um diesen Auftrag bemüht, aber schon bald muss er sich fragen, ob er nicht durch die Ärzte manipuliert wurde, deren Methoden von unethisch über illegal bis skrupellos gehen. Teddys scharfsinnige Ermittlungsmethoden führen rasch zu einer vielversprechenden Spur, aber das Hospital verweigert ihm Zugriff auf Informationen, die den Fall erhellen könnten. Als ein Hurrikan die Verbindung zum Festland unterbricht, \"entkommen\" weitere gefährliche Kriminelle in dem Chaos und die verwirrenden Hinweise mehren sich, so dass Teddy an allem zu zweifeln beginnt - seinem Gedächtnis, seinem Partner und sogar seinem eigenen Verstand."
+}

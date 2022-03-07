@@ -1,0 +1,24 @@
+{
+  "title": {
+    "original": "Saw",
+    "german": "Saw"
+  },
+  "rating": {
+    "total": 950
+  },
+  "fsk": 18,
+  "mm": false,
+  "tmdbID": 176,
+  "releaseDate": "2004-10-01T00:00:00.000Z",
+  "runtime": 103,
+  "genres": [
+    "Horror",
+    "Mystery",
+    "Krimi"
+  ],
+  "posterURL": "/pparEGTCxcTiImyVFoKD0LX11N8.jpg",
+  "budget": 1200000,
+  "revenue": 103911669,
+  "tagline": "Wessen Blut wird fließen?",
+  "overview": "Ohne die leiseste Ahnung, wie sie in diesen Albtraum geraten sind, erwachen zwei Männer angekettet an gegenüberliegenden Wänden in einem Kellerverlies. Hinterlassen hat ihr Entführer lediglich eine ausgeblutete Leiche und ein Tonband, auf dem er den Gefangenen einen Ausweg anbietet. Wenn sie beweisen, dass sie bereit sind, wirklich alles für ihr überleben zu tun, haben sie die Chance, aus ihrem Verlies zu entkommen. Doch die Spielregeln des Sadisten sind gnadenlos. Wer die Freiheit will, muss sich selbst verstümmeln oder zum Mörder werden..."
+}

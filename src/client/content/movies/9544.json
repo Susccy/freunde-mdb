@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "FearDotCom",
+    "german": "FearDotCom"
+  },
+  "rating": {
+    "total": 400,
+    "ch": 450,
+    "rt": 350
+  },
+  "dateSeen": "2021-01-06T23:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 9544,
+  "releaseDate": "2002-08-09T00:00:00.000Z",
+  "runtime": 97,
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Krimi"
+  ],
+  "posterURL": "/9MEjtTznyi9All2MZh6y3QNiJA1.jpg",
+  "budget": 40000000,
+  "revenue": 18902015,
+  "tagline": "Die letzte Webseite, die du jemals sehen wirst.",
+  "overview": "In New York treibt ein Serienmörder sein Unwesen - er hinterlässt seine Opfer immer in der selben Position, das Blut quillt ihnen aus den selben Öffnungen und merkwürdiger Weise weisen sie auch alle den selben verzerrten Gesichtsausdruck auf.  Detektiv Mike Reilly und die Gesundheitsbeamtin Terry Huston nehmen die Ermittlungen auf, immerhin könnte es sich ja auch um einen Virus handeln. Als sie das dann ausschließen können, werden sie auf eine mysteriöse Webseite aufmerksam, die alle Opfer vor ihrem Tod besucht haben."
+}

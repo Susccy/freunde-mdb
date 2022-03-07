@@ -1,0 +1,25 @@
+{
+  "title": {
+    "original": "The Patriot",
+    "german": "Der Patriot"
+  },
+  "rating": {
+    "total": 500
+  },
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 2024,
+  "releaseDate": "2000-06-28T00:00:00.000Z",
+  "runtime": 165,
+  "genres": [
+    "Drama",
+    "Historie",
+    "Kriegsfilm",
+    "Action"
+  ],
+  "posterURL": "/1iXMmBZ0X98J8JYEeuwxXT0SaPK.jpg",
+  "budget": 110000000,
+  "revenue": 215294342,
+  "tagline": "Für manche Dinge lohnt es sich zu kämpfen.",
+  "overview": "Ende des 18. Jahrhunderts, South Carolina, USA. Benjamin Martin hat sich zurückgezogen und kümmert sich nach den Tagen als Kriegsheld nur noch um sein Gut und seine Familie. Die Engländer dringen als Kolonialmacht vor und gefährden seinen Besitz, sein ältester Sohn stirbt und sein Haus wird niedergerissen. Martin möchte jedoch nur Frieden, erkennt aber relativ schnell, dass er seine Existenz samt Familie nur dann beschützen kann, wenn er gegen die Engländer zu den Waffen greift..."
+}

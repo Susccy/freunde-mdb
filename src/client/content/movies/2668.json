@@ -1,0 +1,28 @@
+{
+  "title": {
+    "original": "Sleepy Hollow",
+    "german": "Sleepy Hollow"
+  },
+  "rating": {
+    "total": 500,
+    "ch": 500,
+    "rt": 500
+  },
+  "dateSeen": "2020-10-14T22:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 2668,
+  "releaseDate": "1999-11-18T00:00:00.000Z",
+  "runtime": 105,
+  "genres": [
+    "Drama",
+    "Fantasy",
+    "Thriller",
+    "Mystery",
+    "Horror"
+  ],
+  "posterURL": "/5r5qM47DQP2BGatpMzt8Jyuk8Ta.jpg",
+  "budget": 100000000,
+  "revenue": 206071502,
+  "tagline": "Es werden Köpfe rollen",
+  "overview": "Der Ermittler Ichabod Crane aus New York ist auf mehrere mysteriöse Todesfälle angesetzt worden, die sich in dem unscheinbaren Städtchen Sleepy Hollow zugetragen haben. Crane ist ein Mann des Verstandes und der Vernunft und gibt sich an die Aufklärung der Verbrechen mit neuartigen kriminalistischen Methoden. Doch schon bald muss er feststellen, dass in Sleepy Hollow der Wissenschaft schnell Grenzen gesetzt sind; spätestens dann, wenn sich Ichabod Crane dem leibhaftigen Hessen ohne Kopf persönlich gegenüber stehen sieht."
+}

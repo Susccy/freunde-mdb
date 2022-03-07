@@ -1,0 +1,25 @@
+{
+  "title": {
+    "original": "Hide and Seek",
+    "german": "Hide and Seek - Du kannst dich nicht verstecken"
+  },
+  "rating": {
+    "total": 550,
+    "ch": 450,
+    "rt": 650
+  },
+  "dateSeen": "2021-09-21T22:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 11096,
+  "releaseDate": "2005-01-27T00:00:00.000Z",
+  "runtime": 101,
+  "genres": [
+    "Horror",
+    "Mystery",
+    "Thriller"
+  ],
+  "posterURL": "/ms4KiZ0tox0EaQU1L8K9nm2Lxgh.jpg",
+  "budget": 30000000,
+  "revenue": 122650962,
+  "overview": "Nach dem Tod von Frau und Mutter ziehen der Witwer David Callaway und seine Tochter Emily in eine neue Nachbarschaft. Emily erfindet daraufhin einen imaginären Freund namens Charlie, mit dem sie Verstecken spielt. Aber die Erfindung nimmt unerwartete beängstigende Folgen an. Emilys Vater und ihre Ärztin müssen sich die Frage stellen, wer oder was Charlie wirklich ist..."
+}

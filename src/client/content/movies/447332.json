@@ -1,0 +1,26 @@
+{
+  "title": {
+    "original": "A Quiet Place",
+    "german": "A Quiet Place"
+  },
+  "rating": {
+    "total": 400,
+    "ch": 250,
+    "rt": 550
+  },
+  "dateSeen": "2021-09-20T22:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 447332,
+  "releaseDate": "2018-04-03T00:00:00.000Z",
+  "runtime": 90,
+  "genres": [
+    "Horror",
+    "Drama",
+    "Science Fiction"
+  ],
+  "posterURL": "/m6OdNzxFMU4CCZIFThzLP8Hj00L.jpg",
+  "budget": 17000000,
+  "revenue": 340677200,
+  "tagline": "Wenn sie dich hören, jagen sie dich.",
+  "overview": "Die Welt ist von rätselhaften, scheinbar unverwundbaren Kreaturen eingenommen worden, die durch jedes noch so kleine Geräusch angelockt werden und sich auf die Jagd begeben. Lediglich einer einzigen Familie gelang es bisher zu überleben. Der Preis hierfür ist jedoch hoch: Ihr gesamter Alltag ist darauf ausgerichtet, sich vollkommen lautlos zu verhalten, denn das kleinste Geräusch könnte ihr Ende bedeuten."
+}

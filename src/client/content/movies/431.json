@@ -1,0 +1,25 @@
+{
+  "title": {
+    "original": "Cube",
+    "german": "Cube"
+  },
+  "rating": {
+    "total": 375
+  },
+  "dateSeen": "2020-08-03T22:00:00.000Z",
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 431,
+  "releaseDate": "1997-09-09T00:00:00.000Z",
+  "runtime": 90,
+  "genres": [
+    "Thriller",
+    "Science Fiction",
+    "Mystery"
+  ],
+  "posterURL": "/eUgfqHKTiiHDf9uYBADLLvoIec6.jpg",
+  "budget": 350000,
+  "revenue": 8969065,
+  "tagline": "Angst...Paranoia...Misstrauen...Verzweiflung",
+  "overview": "Sechs Fremde wachen inmitten eines bizarren Gebildes auf, das aus zahlreichen Würfelräumen besteht. Sie haben nicht die geringste Ahnung, wie sie dort hingekommen sind. Gemeinsam versuchen sie einen Weg nach draußen zu finden, doch einige dieser Würfelräume beinhalten gefährliche Fallen. Zudem wächst das gegenseitige Misstrauen und macht die verzweifelte Flucht aus dem Würfel zum Horrortrip."
+}

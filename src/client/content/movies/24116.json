@@ -1,0 +1,22 @@
+{
+  "title": {
+    "original": "The Skeptic",
+    "german": "The Skeptic"
+  },
+  "rating": {
+    "total": 425
+  },
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 24116,
+  "releaseDate": "2009-05-01T00:00:00.000Z",
+  "runtime": 89,
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/x7K5DIDhCwqDD9VIMVCMdDld9pK.jpg",
+  "budget": 0,
+  "revenue": 205585,
+  "overview": "Als der Rechtsanwalt Bryan Becket das Haus seiner Tante erbt, ist er überglücklich. Denn Behauptungen, dass es in dem Haus spuken würde schenkt er keinen Glauben. Selbst die ersten mysteriösen Ereignisse lassen den überzeugten Skeptiker nicht von seiner Überzeugung abrücken."
+}

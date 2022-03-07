@@ -1,0 +1,24 @@
+{
+  "title": {
+    "original": "El hoyo",
+    "german": "Der Schacht"
+  },
+  "rating": {
+    "total": 750
+  },
+  "dateSeen": "2020-03-20T23:00:00.000Z",
+  "fsk": 18,
+  "mm": false,
+  "tmdbID": 619264,
+  "releaseDate": "2019-11-08T00:00:00.000Z",
+  "runtime": 95,
+  "genres": [
+    "Drama",
+    "Science Fiction",
+    "Thriller"
+  ],
+  "posterURL": "/dDsZnwHeMOBBK9uXledhw8Wuy6d.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "In einer dystopischen Zukunft hausen Gefangene hungernd in übereinander gestapelten Zellen, vor denen die Nahrung von oben nach unten herabgelassen wird. Dabei bekommen die oberen Gefangen stets etwas ab, die weiter unten sind ausgehungert und reagieren immer radikaler."
+}

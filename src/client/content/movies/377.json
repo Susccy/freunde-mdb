@@ -1,0 +1,22 @@
+{
+  "title": {
+    "original": "A Nightmare on Elm Street",
+    "german": "Nightmare on Elm Street - Mörderische Träume"
+  },
+  "rating": {
+    "total": 675
+  },
+  "fsk": 16,
+  "mm": false,
+  "tmdbID": 377,
+  "releaseDate": "1984-11-14T00:00:00.000Z",
+  "runtime": 91,
+  "genres": [
+    "Horror"
+  ],
+  "posterURL": "/Ag6y6ISnOhNhw9nqiGPSmxw1CKQ.jpg",
+  "budget": 1800000,
+  "revenue": 57000000,
+  "tagline": "Falls Nancy nicht schreiend aufwacht, wacht sie nie mehr auf.",
+  "overview": "Praktisch über Nacht hält der blanke Horror Einzug in das Leben der jungen Nancy Thompson. Eines Nachts wird der hübsche Vorstadt-Teenager von einem erschreckend realen Alptraum heimgesucht: Ein narbengesichtiger Fremder mit Rasiermessern statt Fingern jagt sie durch den Heizungskeller, um sie zu massakrieren. Schreiend und schweißgebadet wacht Nancy auf und muss feststellen, dass ihr Nachthemd zerschlitzt ist! Ihre Eltern zeigen wenig Verständnis für die Schlafparanoia der Heranwachsenden, doch..."
+}

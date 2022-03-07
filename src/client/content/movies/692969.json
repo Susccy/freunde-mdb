@@ -1,0 +1,25 @@
+{
+  "title": {
+    "original": "Kadaver",
+    "german": "Kadaver"
+  },
+  "rating": {
+    "total": 625,
+    "ch": 600,
+    "rt": 650
+  },
+  "dateSeen": "2020-11-11T23:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 692969,
+  "releaseDate": "2020-10-22T00:00:00.000Z",
+  "runtime": 86,
+  "genres": [
+    "Drama",
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/jbYvBVXbNW3eVZqKNB4FxMpSvci.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Nach einem Atomdesaster nimmt eine hungernde Familie für eine Mahlzeit an einem Theaterstück in einem Hotel teil. Doch plötzlich verschwinden Mitglieder des Publikums."
+}

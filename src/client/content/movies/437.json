@@ -1,0 +1,25 @@
+{
+  "title": {
+    "original": "Cube 2: Hypercube",
+    "german": "Cube 2: Hypercube"
+  },
+  "rating": {
+    "total": 275,
+    "ch": 150,
+    "rt": 400
+  },
+  "dateSeen": "2021-04-26T22:00:00.000Z",
+  "fsk": 16,
+  "tmdbID": 437,
+  "releaseDate": "2002-04-15T00:00:00.000Z",
+  "runtime": 94,
+  "genres": [
+    "Thriller",
+    "Science Fiction",
+    "Mystery"
+  ],
+  "posterURL": "/bEqqwtwUP7lm56VyeVONhv9JtYu.jpg",
+  "budget": 0,
+  "revenue": 3563603,
+  "overview": "Acht Fremde wachen plötzlich in einem würfelförmigen Raum auf, ohne zu wissen, wie sie dort hingekommen sind. Bald stellt sich heraus, dass sie in einer mysteriösen vierten Dimension gefangen sind, wo die bekannten Naturgesetze aufgehoben scheinen."
+}
