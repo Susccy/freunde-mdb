@@ -21,5 +21,6 @@
   "budget": 350000,
   "revenue": 8969065,
   "tagline": "Angst...Paranoia...Misstrauen...Verzweiflung",
-  "overview": "Sechs Fremde wachen inmitten eines bizarren Gebildes auf, das aus zahlreichen Würfelräumen besteht. Sie haben nicht die geringste Ahnung, wie sie dort hingekommen sind. Gemeinsam versuchen sie einen Weg nach draußen zu finden, doch einige dieser Würfelräume beinhalten gefährliche Fallen. Zudem wächst das gegenseitige Misstrauen und macht die verzweifelte Flucht aus dem Würfel zum Horrortrip."
+  "overview": "Sechs Fremde wachen inmitten eines bizarren Gebildes auf, das aus zahlreichen Würfelräumen besteht. Sie haben nicht die geringste Ahnung, wie sie dort hingekommen sind. Gemeinsam versuchen sie einen Weg nach draußen zu finden, doch einige dieser Würfelräume beinhalten gefährliche Fallen. Zudem wächst das gegenseitige Misstrauen und macht die verzweifelte Flucht aus dem Würfel zum Horrortrip.",
+  "slug": "cube"
 }

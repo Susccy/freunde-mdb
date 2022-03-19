@@ -70,7 +70,7 @@ export default Vue.extend({
   mixins: [deviceLayout],
 
   beforeRouteLeave (to, _from, next) {
-    if (to.name !== "movie-id") next()
+    if (to.name !== "movie-slug") return next()
     this.displayMovieModal(to)
   },
 
@@ -88,7 +88,7 @@ export default Vue.extend({
 
   async fetch () {
     // @todo error handling
-    const latestMoviesResponse = (await this.$content()
+    const latestMoviesResponse = (await this.$content("movies")
       .sortBy("dateSeen", "desc")
       .sortBy("rating.total", "desc")
       .limit(10)
@@ -96,7 +96,7 @@ export default Vue.extend({
 
     const now = new Date()
 
-    const bestRecentMoviesResponse = (await this.$content()
+    const bestRecentMoviesResponse = (await this.$content("movies")
       .where({
         releaseDate: {
           $gte: new Date(now.getFullYear() - 1, now.getMonth()).toJSON(),
@@ -131,8 +131,8 @@ export default Vue.extend({
     displayMovieModal (route: Route) {
       this.movie =
         [...this.latestMovies, ...this.bestRecentMovies].find(
-          // @todo! use slugs instead of ObjectIDs
-          ({ id }) => id === route.params.id
+          ({ slug, tmdbID }) =>
+            slug === route.params.slug || tmdbID === parseInt(route.params.slug)
         ) || null
       window.history.pushState({}, "", route.path)
     },

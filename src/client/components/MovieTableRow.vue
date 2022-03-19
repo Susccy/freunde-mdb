@@ -1,13 +1,24 @@
 <template>
-  <tr @click="$router.push({ name: 'movie-id', params: { id: movie.id } })">
+  <tr
+    @click="
+      $router.push({
+        name: 'movie-slug',
+        params: { slug: movie.slug || movie.tmdbID.toString() },
+      })
+    "
+  >
     <td>
       <img :src="getPosterSrc(92)" :alt="imgAlt" class="hide-alt" />
     </td>
     <!-- redundant anchor for indexing (see https://stackoverflow.com/a/4904983/16503617) -->
     <td>
-      <NuxtLink :to="{ name: 'movie-id', params: { id: movie.id } }">{{
-        movie.title.german || "-"
-      }}</NuxtLink>
+      <NuxtLink
+        :to="{
+          name: 'movie-slug',
+          params: { slug: movie.slug || movie.tmdbID },
+        }"
+        >{{ movie.title.german || "-" }}</NuxtLink
+      >
     </td>
     <td>{{ movie.title.original }}</td>
     <td>{{ movie.mm ? "✔" : "✖" }}</td>
@@ -34,10 +45,5 @@ export default (
   Vue as VueConstructor<Vue & InstanceType<typeof computedMovieData>>
 ).extend({
   mixins: [computedMovieData],
-  methods: {
-    click () {
-      console.log("click!")
-    },
-  },
 })
 </script>

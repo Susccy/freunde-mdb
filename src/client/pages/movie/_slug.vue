@@ -12,13 +12,24 @@ import type { MovieResponse } from "~/entities/movie.entity"
 import deviceLayout from "~/client/mixins/deviceLayout"
 
 @Component({
-  async asyncData ({ params, $content }) {
-    const movie = (
-      (await $content()
-        .where({ id: params.id })
+  async asyncData ({ params, $content, error }) {
+    let movieResponse = (await $content("movies")
+      .where({ slug: params.slug })
+      .fetch()) as (MovieResponse & FetchReturn)[]
+
+    if (!movieResponse.length)
+      movieResponse = (await $content("movies")
+        .where({ tmdbID: parseInt(params.slug) })
         .fetch()) as (MovieResponse & FetchReturn)[]
-    )[0]
-    return { movie }
+
+    movieResponse.length > 1 &&
+      console.error(
+        `more than 1 movie response for slug "${params.slug}" shouldn't happen`
+      )
+
+    const movie = movieResponse[0]
+
+    return movie ? { movie } : error({ statusCode: 404 })
   },
 })
 export default class MoviePage extends mixins(deviceLayout) {

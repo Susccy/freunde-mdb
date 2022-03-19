@@ -2,8 +2,8 @@ type RatingIndividual = { ch: number; rt: number }
 type RatingTotal = { total: number }
 
 interface Movie {
-  // mongodb
-  id: string
+  // content
+  slug: string
 
   // custom input
   rating: RatingTotal | (RatingTotal & RatingIndividual)

@@ -1,7 +1,12 @@
 <template>
   <NuxtLink
     v-if="layout === 'desktop'"
-    :to="{ name: 'movie-id', params: { id: movie.id } }"
+    :to="{
+      name: 'movie-slug',
+      params: {
+        slug: movie.slug || movie.tmdbID,
+      },
+    }"
     class="c-movie-card c-movie-card--desktop"
   >
     <!-- <button

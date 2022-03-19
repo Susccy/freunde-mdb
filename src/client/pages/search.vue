@@ -21,6 +21,13 @@
       :movie="movie"
       is-modal
     />
+    <div infinite-wrapper>
+      <InfiniteLoading
+        @infinite="infiniteHandler"
+        :identifier="infiniteID"
+        force-use-infinite-wrapper
+      ></InfiniteLoading>
+    </div>
   </main>
 </template>
 
@@ -32,19 +39,28 @@ import type { FetchReturn } from "@nuxt/content/types/query-builder"
 import deviceLayout from "~/client/mixins/deviceLayout"
 import type { MovieResponse } from "~/entities/movie.entity"
 
-@Component({
-  async fetch (this: Search) {
-    await this.search()
-  },
-})
+@Component
 export default class Search extends mixins(deviceLayout) {
   beforeRouteLeave (to: Route, _from: Route, next: () => void) {
-    if (to.name !== "movie-id") next()
+    if (to.name !== "movie-slug") return next()
     this.displayMovieModal(to)
   }
 
   movies: MovieResponse[] = []
   movie: MovieResponse | null = null
+  options: {
+    limit: number
+    page: number
+    sort: { field: string; direction: "asc" | "desc" }
+  } = {
+    limit: 20,
+    page: 0,
+    sort: { field: "title.german", direction: "asc" },
+  }
+
+  whereQuery = {}
+  titleQuery = ""
+  infiniteID = +new Date()
 
   head (): MetaInfo {
     const { query } = this.$route
@@ -69,7 +85,7 @@ export default class Search extends mixins(deviceLayout) {
       link: [
         {
           rel: "canonical",
-          href: "http://localhost:3000/search",
+          href: "https://freundemdb.net/search",
         },
       ],
     }
@@ -85,6 +101,7 @@ export default class Search extends mixins(deviceLayout) {
   }
 
   mounted () {
+    this.search()
     window.addEventListener("popstate", () => {
       // @todo fix any cast
       ;(this.$refs.movieModal as any)?.closeModal()
@@ -93,6 +110,8 @@ export default class Search extends mixins(deviceLayout) {
 
   async search () {
     if (this.queryIsEmpty) return
+
+    this.infiniteID++
 
     const validQueryParams = [
       ["limit", "limit"],
@@ -108,7 +127,6 @@ export default class Search extends mixins(deviceLayout) {
       ["date_seen_max", "dateSeen"],
       ["fsk", "fsk"],
       ["mm", "mm"],
-      ["title", "$or"],
       ["genre", "genres"],
       ["date_released_min", "releaseDate"],
       ["date_released_max", "releaseDate"],
@@ -129,37 +147,32 @@ export default class Search extends mixins(deviceLayout) {
       sort: string | undefined
     }
 
-    const validQuery = Object.entries(validatedQuery).reduce<{
+    limit && !isNaN(parseInt(limit)) && (this.options.limit = parseInt(limit))
+    this.options.page = (page && !isNaN(parseInt(page)) && parseInt(page)) || 0
+    if (sort) {
+      this.options.sort.field = sort.indexOf("-") === 0 ? sort.slice(1) : sort
+      this.options.sort.direction =
+        this.options.sort.field.length < sort.length ? "desc" : "asc"
+    }
+
+    this.whereQuery = Object.entries(validatedQuery).reduce<{
       [k: string]: string | any[] | { [k: string]: string } | undefined
     }>((validQuery, [queryParamName, queryParamValue]) => {
       const validQueryParam = validQueryParams.find(
         (v) => v[0] === queryParamName
       )
 
-      if (!validQueryParam) return validQuery
+      // @todo test if this really is redundant (see line 137)
+      // if (!validQueryParam) return validQuery
 
-      const [validParamName, dbParamPath] = validQueryParam
+      const [validParamName, dbParamPath] = validQueryParam!
 
-      const paramIsTitle = validParamName === "title"
       const paramIsMin = /_min$/.test(validParamName)
       const paramIsMax = !paramIsMin && /_max$/.test(validParamName)
 
       return {
         ...validQuery,
-        [dbParamPath]: paramIsTitle
-          ? [
-              {
-                "title.original": {
-                  $regex: new RegExp(queryParamValue, "i"),
-                },
-              },
-              {
-                "title.german": {
-                  $regex: new RegExp(queryParamValue, "i"),
-                },
-              },
-            ]
-          : paramIsMin
+        [dbParamPath]: paramIsMin
           ? { ...(validQuery[dbParamPath] as {}), $gte: queryParamValue }
           : paramIsMax
           ? { ...(validQuery[dbParamPath] as {}), $lte: queryParamValue }
@@ -167,34 +180,54 @@ export default class Search extends mixins(deviceLayout) {
       }
     }, {})
 
-    let builtQuery = this.$content().where(validQuery)
+    console.log(this.whereQuery)
 
-    if (limit && !isNaN(parseInt(limit))) {
-      const limitParsed = parseInt(limit)
-      if (page && !isNaN(parseInt(page))) {
-        const pageParsed = parseInt(page)
-        builtQuery = builtQuery.skip(pageParsed * limitParsed)
-      }
-      builtQuery = builtQuery.limit(limitParsed)
-    }
-    // @todo sort doesn't work properly with nullable fields
-    if (sort) {
-      const sortParsed = sort.indexOf("-") === 0 ? sort.slice(1) : sort
-      const direction = sortParsed.length < sort.length ? "desc" : "asc"
-      builtQuery = builtQuery.sortBy(sortParsed, direction)
-    }
+    const titleQuery = this.$route.query.title
 
-    this.movies = (await builtQuery.fetch()) as (MovieResponse & FetchReturn)[]
+    if (titleQuery && !Array.isArray(titleQuery)) this.titleQuery = titleQuery
+
+    this.movies = await this.contentRequest()
+  }
+
+  async contentRequest () {
+    console.log({ limit: this.options.limit })
+    let contentQuery = this.$content("movies")
+      .where(this.whereQuery)
+      .search(this.titleQuery)
+      .skip(this.options.page * this.options.limit)
+      .limit(this.options.limit)
+      .sortBy(this.options.sort.field, this.options.sort.direction)
+
+    // secondary sort in order to make sort by nullable fields work properly
+    if (!/(title\.original)|(rating\.total)/.test(this.options.sort.field))
+      contentQuery = contentQuery.sortBy("title.original")
+
+    return (await contentQuery.fetch()) as (MovieResponse & FetchReturn)[]
   }
 
   displayMovieModal (route: Route) {
-    this.movie = this.movies.find(({ id }) => id === route.params.id) || null
+    this.movie =
+      this.movies.find(
+        ({ slug, tmdbID }) =>
+          slug === route.params.slug || tmdbID === parseInt(route.params.slug)
+      ) || null
     window.history.pushState({}, "", route.path)
   }
 
   hideMovieModal () {
     this.movie = null
     window.history.pushState({}, "", this.$route.fullPath)
+  }
+
+  async infiniteHandler ($state: any) {
+    this.options.page++
+    const result = await this.contentRequest()
+    if (result.length) {
+      this.movies.push(...result)
+      $state.loaded()
+      return
+    }
+    $state.complete()
   }
 }
 </script>

@@ -28,6 +28,7 @@ export default {
   plugins: [
     "~/plugins/vue-slider-component.client.ts",
     "~/plugins/vue-fragment.ts",
+    "~/plugins/vue-infinite-loading.client.ts",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -53,9 +54,7 @@ export default {
   },
 
   content: {
-    fullTextSearchFields: () => [
-      /* "title.original", "title.german" */
-    ],
+    fullTextSearchFields: () => ["title.original", "title.german"],
     nestedProperties: [
       "title.original",
       "title.german",
@@ -78,10 +77,15 @@ export default {
     async routes () {
       const { $content } = await import("@nuxt/content")
       return [
-        ...(await $content()
-          .only("id")
+        ...(await $content("movies")
+          .only(["tmdbID", "slug"])
           .fetch()
-          .then((r) => r.map(({ id }: { id: string }) => `/movie/${id}`))),
+          .then((r) =>
+            r.map(
+              ({ tmdbID, slug }: { tmdbID: number; slug: string }) =>
+                `/movie/${slug || tmdbID}`
+            )
+          )),
         "/",
         "/search",
       ]

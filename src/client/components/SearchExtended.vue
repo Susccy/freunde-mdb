@@ -106,8 +106,8 @@
           >
             {{
               `Individuelle Ratings ${
-                includeIndividualRatings ? "de" : ""
-              }aktivieren`
+                includeIndividualRatings ? "ignorieren" : "hinzuziehen"
+              }`
             }}
           </button>
         </div>
@@ -192,7 +192,6 @@
           <option value="dateSeen">Gesehen</option>
           <option value="releaseDate">Erscheinungsjahr</option>
           <option value="fsk">FSK</option>
-          <option value="mm">MM</option>
           <option value="runtime">Laufzeit</option>
         </select>
         <label for="sort-asc">aufsteigend</label>
@@ -329,8 +328,6 @@ export default Vue.extend({
         }),
         {}
       )
-
-      console.log(requestObject, this.$data.sort)
 
       this.$router.push({ name: "search", query: requestObject })
     },
