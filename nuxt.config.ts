@@ -93,9 +93,6 @@ export default {
   },
 
   sitemap: {
-    hostname: "https://susccy.dev",
-    gzip: true,
-    trailingSlash: true,
-    // routes: [{ url: "/", changefreq: "weekly" }],
+    hostname: "https://freundemdb.net",
   },
 } as NuxtConfig
