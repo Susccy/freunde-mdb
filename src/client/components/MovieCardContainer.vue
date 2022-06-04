@@ -2,31 +2,13 @@
   <!-- v-if="movieData.length" -->
   <div
     v-if="movieData.length"
-    class="c-movie-card-container"
-    :class="[layout === 'desktop' && 'c-movie-card-container--desktop']"
+    class="c-movie-card-container c-movie-card-container--desktop"
     tabindex="-1"
   >
-    <MovieCard
-      v-for="movie in movieData"
-      :key="movie.tmdbID"
-      :movie="movie"
-      :layout="layout"
-    />
+    <MovieCard v-for="movie in movieData" :key="movie.tmdbID" :movie="movie" />
   </div>
-  <div
-    v-else
-    class="c-movie-card-container"
-    :class="[
-      layout === 'desktop'
-        ? 'c-movie-card-container--desktop'
-        : 'c-movie-card-container--mobile',
-    ]"
-  >
-    <MovieCardPlaceholder
-      v-for="placeholder in 10"
-      :key="placeholder"
-      :layout="layout"
-    />
+  <div v-else class="c-movie-card-container c-movie-card-container--desktop">
+    <MovieCardPlaceholder v-for="placeholder in 10" :key="placeholder" />
   </div>
 </template>
 
@@ -40,10 +22,6 @@ export default Vue.extend({
     movieData: {
       type: Array as PropType<MovieResponse[]>,
       default: () => [],
-    },
-    layout: {
-      type: String,
-      default: "mobile",
     },
   },
 })

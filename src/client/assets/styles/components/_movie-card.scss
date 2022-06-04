@@ -18,8 +18,8 @@
     grid-template-rows: 45% 1fr 2fr;
     border-radius: 10px;
     transition: transform 0.2s, box-shadow 0.2s;
-    height: 11rem;
-    flex: 0 0 22rem;
+    height: 10rem;
+    flex: 0 0 20rem;
 
     &:hover,
     &:focus {
@@ -63,7 +63,7 @@
       &__main {
         font-family: Oswald;
         font-weight: 400;
-        font-size: $lg-x;
+        font-size: $lg;
         padding-bottom: 0.1rem;
         margin-bottom: 0.2rem;
         max-height: 4rem;
@@ -88,7 +88,7 @@
         #{$self}__title__genres {
           color: $on-surface-2dim;
           padding: 0.1rem;
-          font-style: italic;
+          // font-style: italic;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
@@ -175,9 +175,20 @@
     #{$self}__meta {
       grid-area: meta;
       margin: 0.5rem;
+      // margin-top: 0;
       font-size: $sm-x;
       line-height: $sm;
       color: $on-surface-dim;
+
+      > p {
+        // @include background-layer(2);
+        // width: max-content;
+        text-align: center;
+
+        &:first-child {
+          margin-bottom: 0.3rem;
+        }
+      }
     }
 
     #{$self}__expand {

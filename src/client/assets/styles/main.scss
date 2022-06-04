@@ -12,22 +12,12 @@
 @import "./base/utilities";
 @import "./base/modal";
 
-// layout components and grid macro layouts
-@import "./layouts/default";
-
 // shared components
 @import "./components/movie-card-container";
 @import "./components/movie-card";
 @import "./components/movie-card-placeholder";
-@import "./components/header";
 @import "./components/footer";
 @import "./components/search";
 @import "./components/movie-table";
-@import "./components/mobile/navmenu";
-@import "./components/desktop/navbar";
 @import "./components/search-extended";
 @import "./components/movie";
-
-// page components
-@import "./pages/index";
-@import "./pages/search";

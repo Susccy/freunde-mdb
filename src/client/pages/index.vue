@@ -2,20 +2,33 @@
   <main class="page p-index">
     <!-- button to upload combinedData.json (run findExcelMovieInTMDB.js first) -->
     <!-- <button @click="postCombinedData()">postCombinedData</button> -->
-    <h1>FREundE MDB Startseite</h1>
     <div class="p-index__search">
-      <Searchbar @search="searchMovieTitle" />
+      <svg
+        fill="white"
+        style="width: 100%; font-family:'Oswald'; font-weight: 400"
+        viewBox="0 0 150 50"
+      >
+        <text y="15" style="font-size: 0.8em">Film-Reviewer</text>
+        <text textLength="150" y="30">Erich und Eckert</text>
+        <!-- <text style="text-anchor:start" y="30">Erich</text>
+        <text style="text-anchor:middle" x="50%" y="30">und</text>
+        <text style="text-anchor:end" x="100%" y="30">Eckert</text> -->
+        <text style="text-anchor:end; font-size: 0.8em" x="100%" y="45">
+          Movie Database
+        </text>
+      </svg>
+      <TheSearchbar @search="searchMovieTitle" />
       <NuxtLink
         :to="{ name: 'search', params: { extended: true } }"
         class="g-btn-reset p-index__search__extended"
       >
-        Erweiterte Suche<TablerIcon name="chevron-right" />
+        Erweiterte Suche<TablerIcon name="chevron-right" size="14" />
       </NuxtLink>
     </div>
     <div class="p-index__movie-display">
       <div class="p-index__movie-display__heading">
         <h2>
-          <TablerIcon name="rotate-clockwise-2" size="30" />Zuletzt gesehen
+          <TablerIcon name="rotate-clockwise-2" size="28" />Zuletzt gesehen
         </h2>
         <NuxtLink
           :to="{
@@ -26,10 +39,7 @@
           Mehr anzeigen<TablerIcon name="chevron-right" size="14" />
         </NuxtLink>
       </div>
-      <MovieCardContainer
-        :movie-data="latestMovies"
-        :layout="$nuxt.layoutName"
-      />
+      <MovieCardContainer :movie-data="latestMovies" />
     </div>
     <div class="p-index__movie-display">
       <div class="p-index__movie-display__heading">
@@ -43,12 +53,9 @@
           Alle besten Filme<TablerIcon name="chevron-right" size="14" />
         </NuxtLink>
       </div>
-      <MovieCardContainer
-        :movie-data="bestRecentMovies"
-        :layout="$nuxt.layoutName"
-      />
+      <MovieCardContainer :movie-data="bestRecentMovies" />
     </div>
-    <Movie
+    <MoviePageContent
       v-if="movie"
       ref="movieModal"
       @close="hideMovieModal"
@@ -63,12 +70,9 @@ import Vue from "vue"
 import type { FetchReturn } from "@nuxt/content/types/query-builder"
 import type { Route } from "vue-router"
 // import postCombinedData from "../../utils/postCombinedData"
-import deviceLayout from "~/client/mixins/deviceLayout"
 import type { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({
-  mixins: [deviceLayout],
-
   beforeRouteLeave (to, _from, next) {
     if (to.name !== "movie-slug") return next()
     this.displayMovieModal(to)
@@ -143,3 +147,53 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+.p-index {
+  &__search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 30rem;
+    margin: 1rem auto;
+    gap: 0.5rem;
+
+    &__extended {
+      display: flex;
+      align-items: center;
+      align-self: flex-end;
+
+      .c-icon {
+        // margin: 0 -3px -2px 0;
+      }
+    }
+  }
+
+  &__movie-display {
+    margin: 4rem 0 6rem;
+
+    &__heading {
+      margin: 0 0 1rem 28px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      h2 {
+        font-family: Comfortaa;
+        font-size: $lg-3x;
+
+        .c-icon {
+          margin: 0 0.5rem -0.2rem 0;
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 0.1rem;
+      }
+    }
+  }
+}
+</style>

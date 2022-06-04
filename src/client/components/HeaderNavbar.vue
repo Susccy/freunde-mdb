@@ -17,3 +17,34 @@ import Vue from "vue"
 
 export default Vue.extend({})
 </script>
+
+<style lang="scss" scoped>
+.c-navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    font-size: $lg;
+    height: 40%;
+    margin: 0;
+
+    li {
+      border-right: 0.25rem solid background-layer-color(3);
+      padding-inline: 1rem;
+      height: 100%;
+      vertical-align: middle;
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        border: none;
+        padding-right: 0;
+      }
+    }
+  }
+}
+</style>

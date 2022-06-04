@@ -1,6 +1,5 @@
 <template>
   <NuxtLink
-    v-if="layout === 'desktop'"
     :to="{
       name: 'movie-slug',
       params: {
@@ -9,10 +8,6 @@
     }"
     class="c-movie-card c-movie-card--desktop"
   >
-    <!-- <button
-    v-if="layout === 'desktop'"
-    class="g-btn-reset c-movie-card c-movie-card--desktop"
-  > -->
     <img
       ref="moviePoster"
       :src="getPosterSrc(154)"
@@ -33,18 +28,20 @@
       </div>
     </div>
     <div class="c-movie-card__rating" :class="[ratingModifier]">
-      <p class="c-movie-card__rating__ch">
+      <!-- <p class="c-movie-card__rating__ch">
         {{ rating.ch && `${rating.ch}ch` }}
-      </p>
+      </p> -->
       <p class="c-movie-card__rating__total">{{ rating.total }}</p>
-      <p class="c-movie-card__rating__rt">
+      <!-- <p class="c-movie-card__rating__rt">
         {{ rating.rt && `${rating.rt}rt` }}
-      </p>
+      </p> -->
     </div>
     <div class="c-movie-card__meta">
-      <p v-show="dateSeen">Gesehen: {{ dateSeen }}</p>
-      <p>Erscheinungsjahr: {{ yearReleased }}</p>
-      <p v-show="movie.runtime">Länge: {{ movie.runtime }}min</p>
+      <p>
+        {{ yearReleased }}
+        <span v-show="movie.runtime"> • {{ movie.runtime }}min</span>
+      </p>
+      <p>Gesehen: {{ dateSeen || "?" }}</p>
     </div>
     <TablerIcon name="arrows-maximize" size="20" class="c-movie-card__expand" />
     <!-- </button> -->
@@ -54,7 +51,7 @@
     v-else
     :to="{ name: 'movie', params: { id: movie.id } }"
     class="g-btn-reset c-movie-card c-movie-card--mobile"
-  > -->
+  >
   <button v-else class="g-btn-reset c-movie-card c-movie-card--mobile">
     <div ref="movieTitleContainer" class="c-movie-card__title">
       <div class="c-movie-card__date">
@@ -75,7 +72,7 @@
       </details>
     </div>
   </button>
-  <!-- </NuxtLink> -->
+  </NuxtLink> -->
 </template>
 
 <script lang="ts">
@@ -87,12 +84,5 @@ export default (
   Vue as VueConstructor<Vue & InstanceType<typeof computedMovieData>>
 ).extend({
   mixins: [computedMovieData],
-
-  props: {
-    layout: {
-      type: String,
-      default: "mobile",
-    },
-  },
 })
 </script>

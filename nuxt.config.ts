@@ -24,6 +24,10 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~/assets/styles/main"],
 
+  styleResources: {
+    scss: "~/assets/styles/abstracts/*.scss"
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "~/plugins/vue-slider-component.client.ts",
@@ -38,6 +42,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
+    "@nuxtjs/style-resources"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

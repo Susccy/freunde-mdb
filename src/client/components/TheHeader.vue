@@ -1,7 +1,21 @@
+<template>
+  <header class="c-header c-header--desktop">
+    <NuxtLink to="/" class="c-header__logo">FREundE MDB</NuxtLink>
+    <HeaderNavbar />
+  </header>
+</template>
+
+<script lang="ts">
+import Vue from "vue"
+
+export default Vue.extend({})
+</script>
+
+<style lang="scss" scoped>
 .c-header {
   $self: &;
 
-  position: fixed;
+  position: sticky;
   height: 3.5rem;
   width: 100%;
   z-index: 100;
@@ -96,3 +110,4 @@
     padding: 0 5vw;
   }
 }
+</style>

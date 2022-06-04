@@ -1,15 +1,14 @@
 <template>
   <main class="page p-movie">
-    <Movie ref="movieComponent" :movie="movie" />
+    <MoviePageContent ref="movieComponent" :movie="movie" />
   </main>
 </template>
 
 <script lang="ts">
-import { Vue, Component, mixins } from "nuxt-property-decorator"
+import { Vue, Component } from "nuxt-property-decorator"
 import type { MetaInfo } from "vue-meta"
 import type { FetchReturn } from "@nuxt/content/types/query-builder"
 import type { MovieResponse } from "~/entities/movie.entity"
-import deviceLayout from "~/client/mixins/deviceLayout"
 
 @Component({
   async asyncData ({ params, $content, error }) {
@@ -32,7 +31,7 @@ import deviceLayout from "~/client/mixins/deviceLayout"
     return movie ? { movie } : error({ statusCode: 404 })
   },
 })
-export default class MoviePage extends mixins(deviceLayout) {
+export default class MoviePage extends Vue {
   movie!: MovieResponse
 
   head (): MetaInfo {

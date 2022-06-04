@@ -1,7 +1,4 @@
 <template>
-  <!-- @todo! index a single search query with all movies (e.g. ?sort=-rating.total) and mark all other searches as canonical, including the search page w/o a query itself-->
-  <!-- https://www.oncrawl.com/technical-seo/seo-internal-search-results/ -->
-  <!-- https://developers.google.com/search/docs/beginner/seo-starter-guide#for-non-sensitive-information,-block-unwanted-crawling-by-using-robots.txt (section "Avoid") -->
   <main class="page p-search">
     <h1>Film-Datenbank</h1>
     <div class="p-search__search-extended">
@@ -21,27 +18,28 @@
       :movie="movie"
       is-modal
     />
-    <div infinite-wrapper>
-      <InfiniteLoading
-        @infinite="infiniteHandler"
-        :identifier="infiniteID"
-        force-use-infinite-wrapper
-      ></InfiniteLoading>
-    </div>
+    <InfiniteLoading
+      @infinite="infiniteHandler"
+      :identifier="infiniteID"
+      spinner="spiral"
+    >
+      <div slot="spinner">Lädt...</div>
+      <div slot="no-more"></div>
+      <div slot="no-results"></div>
+    </InfiniteLoading>
   </main>
 </template>
 
 <script lang="ts">
-import { Component, mixins, Watch } from "nuxt-property-decorator"
-import type { Route, NavigationGuard } from "vue-router"
+import { Component, Vue, Watch } from "nuxt-property-decorator"
+import type { Route, NavigationGuardNext } from "vue-router"
 import type { MetaInfo } from "vue-meta"
 import type { FetchReturn } from "@nuxt/content/types/query-builder"
-import deviceLayout from "~/client/mixins/deviceLayout"
 import type { MovieResponse } from "~/entities/movie.entity"
 
 @Component
-export default class Search extends mixins(deviceLayout) {
-  beforeRouteLeave (to: Route, _from: Route, next: () => void) {
+export default class Search extends Vue {
+  beforeRouteLeave (to: Route, _from: Route, next: NavigationGuardNext) {
     if (to.name !== "movie-slug") return next()
     this.displayMovieModal(to)
   }
@@ -147,6 +145,8 @@ export default class Search extends mixins(deviceLayout) {
       sort: string | undefined
     }
 
+    console.log({validatedQuery})
+
     limit && !isNaN(parseInt(limit)) && (this.options.limit = parseInt(limit))
     this.options.page = (page && !isNaN(parseInt(page)) && parseInt(page)) || 0
     if (sort) {
@@ -180,17 +180,16 @@ export default class Search extends mixins(deviceLayout) {
       }
     }, {})
 
-    console.log(this.whereQuery)
-
     const titleQuery = this.$route.query.title
 
-    if (titleQuery && !Array.isArray(titleQuery)) this.titleQuery = titleQuery
+    if (!Array.isArray(titleQuery)) this.titleQuery = titleQuery
 
     this.movies = await this.contentRequest()
   }
 
   async contentRequest () {
-    console.log({ limit: this.options.limit })
+    if (this.queryIsEmpty) return []
+
     let contentQuery = this.$content("movies")
       .where(this.whereQuery)
       .search(this.titleQuery)
@@ -202,7 +201,9 @@ export default class Search extends mixins(deviceLayout) {
     if (!/(title\.original)|(rating\.total)/.test(this.options.sort.field))
       contentQuery = contentQuery.sortBy("title.original")
 
-    return (await contentQuery.fetch()) as (MovieResponse & FetchReturn)[]
+    const result = (await contentQuery.fetch()) as (MovieResponse & FetchReturn)[]
+    console.log({result})
+    return result
   }
 
   displayMovieModal (route: Route) {
