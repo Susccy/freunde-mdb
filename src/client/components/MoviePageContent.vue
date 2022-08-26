@@ -100,15 +100,15 @@
             <p>
               Rating:
               <span>
-                {{ (rating.ch && `${rating.ch}ch`) || "nur Gesamt" }}
+                {{ (rating.ch && `${rating.ch} Erich (ch)`) || "nur Gesamt" }}
               </span>
               |
-              <span>
+              <span style="font-size: 1.5rem; font-family: Oswald">
                 {{ rating.total }}
               </span>
               |
               <span>
-                {{ (rating.rt && `${rating.rt}rt`) || "nur Gesamt" }}
+                {{ (rating.rt && `${rating.rt} Eckert (rt)`) || "nur Gesamt" }}
               </span>
             </p>
           </div>

@@ -41,6 +41,52 @@
       </div>
       <MovieCardContainer :movie-data="latestMovies" />
     </div>
+    <div class="p-index__statistics">
+      <div class="p-index__statistics__movies">
+        <p>Filme gesehen:</p>
+        <p>{{ allMovies.length }}</p>
+        <p>Davon MindestMovies:</p>
+        <p>{{ allMovies.filter((movie) => movie.mm).length }}</p>
+      </div>
+      <div class="p-index__statistics__watchtime">
+        <p>Gesamtlänge:</p>
+        <p>
+          {{
+            Math.floor(
+              allMovies.reduce(
+                (length, movie) => length + (movie.runtime || 0),
+                0
+              ) / 60
+            )
+          }}h
+        </p>
+        <p>Davon im Kino:</p>
+        <p>
+          {{
+            Math.floor(
+              allMovies
+                .filter((movie) => movie.mm)
+                .reduce((length, movie) => length + (movie.runtime || 0), 0) /
+                60
+            )
+          }}h
+        </p>
+      </div>
+      <div class="p-index__statistics__genre">
+        <p>Meistgesehenes Genre:</p>
+        <p>Horror</p>
+        <p>
+          ({{
+            Math.floor(
+              (allMovies.filter((movie) => movie.genres.includes("Horror"))
+                .length /
+                allMovies.length) *
+                100
+            )
+          }}% aller Filme)
+        </p>
+      </div>
+    </div>
     <div class="p-index__movie-display">
       <div class="p-index__movie-display__heading">
         <h2><TablerIcon name="flame" size="30" />Beste neue Filme</h2>
@@ -81,11 +127,13 @@ export default Vue.extend({
   data (): {
     latestMovies: (MovieResponse & FetchReturn)[]
     bestRecentMovies: (MovieResponse & FetchReturn)[]
+    allMovies: (MovieResponse & FetchReturn)[]
     movie?: (MovieResponse & FetchReturn) | null
   } {
     return {
       latestMovies: [],
       bestRecentMovies: [],
+      allMovies: [],
       movie: null,
     }
   },
@@ -114,6 +162,11 @@ export default Vue.extend({
       .limit(10)
       .fetch<MovieResponse>()) as (MovieResponse & FetchReturn)[]
 
+    const allMoviesResponse = (await this.$content("movies")
+      .only(["mm", "runtime", "genres"])
+      .fetch<MovieResponse>()) as (MovieResponse & FetchReturn)[]
+
+    this.allMovies = allMoviesResponse
     this.latestMovies = latestMoviesResponse
     this.bestRecentMovies = bestRecentMoviesResponse
   },
@@ -189,6 +242,44 @@ export default Vue.extend({
         display: flex;
         align-items: flex-end;
         padding-bottom: 0.1rem;
+      }
+    }
+  }
+
+  &__statistics {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 6rem auto;
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-inline: 2rem;
+      gap: 0.5rem;
+      flex: 1 1 0px;
+
+      &:not(:last-child) {
+        border-right: 0.5rem solid background-layer-color(1);
+      }
+
+      > p {
+        text-align: center;
+        font-size: $lg;
+        font-family: Comfortaa;
+      }
+
+      > p:first-child {
+        font-size: $lg-3x;
+      }
+      > p:nth-child(2) {
+        font-size: $lg-5x;
+        font-weight: 600;
+        margin-block: 1rem;
+      }
+      > p:nth-child(4) {
+        font-size: $lg-2x;
       }
     }
   }
