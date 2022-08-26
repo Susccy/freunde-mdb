@@ -1,0 +1,26 @@
+{
+  "tmdbID": 602734,
+  "rating": {
+    "total": 550,
+    "rt": 400,
+    "ch": 700
+  },
+  "dateSeen": "2022-03-10T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "Spiral: From the Book of Saw",
+    "german": "Saw: Spiral"
+  },
+  "releaseDate": "2021-05-12T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Krimi",
+    "Mystery"
+  ],
+  "runtime": 93,
+  "posterURL": "/3rJvo14V6Tnv3h97oDKpU8Bdb5l.jpg",
+  "budget": 20000000,
+  "revenue": 40618920,
+  "overview": "Zusammen mit dem Polizeiveteranen Marcus untersuchen Detective Banks und sein Partner eine Reihe abscheulicher Morde, die an die grausame Vergangenheit der Stadt erinnern. Ohne es zu ahnen, wird Banks immer tiefer in das mörderische Geheimnis hineingezogen und findet sich plötzlich im Zentrum des morbiden Spiels eines bestialischen Killers wieder.",
+  "slug": "spiral-from-the-book-of-saw"
+}

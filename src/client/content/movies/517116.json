@@ -1,0 +1,25 @@
+{
+  "tmdbID": 517116,
+  "rating": {
+    "total": 300,
+    "rt": 150,
+    "ch": 450
+  },
+  "dateSeen": "2022-02-07T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "Haunt",
+    "german": "Halloween Haunt"
+  },
+  "releaseDate": "2019-09-13T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "runtime": 93,
+  "posterURL": "/8mVSC3eZKzE0Dn72ED2Mj0JpIdr.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Im Horrorthriller von den Autoren von \"A Quiet Place\" entdecken ein paar Freunde ein abgelegenes Spukhaus. Die Aussicht auf Nervenkitzel lässt die Teenager alle Bedenken ignorieren. Aus dem Spaß wird tödlicher Ernst, als in einer der Räume ein fremdes Mädchen zu Tode gefoltert wird. Aus dieser Hölle zu entkommen, scheint unmöglich. Wer wird das perfide Spiel überleben?",
+  "slug": "haunt"
+}

@@ -1,0 +1,26 @@
+{
+  "tmdbID": 445954,
+  "rating": {
+    "total": 500,
+    "rt": 500,
+    "ch": 500
+  },
+  "dateSeen": "2022-01-31T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Acts of Vengeance",
+    "german": "Pfad der Rache"
+  },
+  "releaseDate": "2017-10-27T00:00:00.000Z",
+  "genres": [
+    "Thriller",
+    "Action",
+    "Drama"
+  ],
+  "runtime": 83,
+  "posterURL": "/6deYDeSDGpAJlEROTLVAMcGyv2b.jpg",
+  "budget": 10000000,
+  "revenue": 320705,
+  "overview": "Die Ermordung seiner Frau Sue und der gemeinsamen Tochter Olivia stürzen den Familienvater und Anwalt Frank Valera nicht nur in ein Loch tiefer Trauer, sondern auch in einen Strudel der Verzweiflung. Weil Polizei und Justiz mit ihren Ermittlungen keinerlei Fortschritte machen, untersucht der redegewandte Strafverteidiger den Fall nun selbst und begibt sich ganz allein auf die gefährliche Suche nach den Mördern seiner Liebsten. Mit seiner steigenden Wut über den schmerzenden Verlust wächst auch seine Disziplin: Frank legt ein Schweigegelübde ab und macht aus seinem Körper mit Trainingseinheiten bis zur Erschöpfung eine stahlharte Waffe, um schließlich selbst Rache an den Tätern zu üben. Durch seine selbst auferlegte Mission wird nicht nur die russische Mafia auf ihn aufmerksam...",
+  "slug": "acts-of-vengeance"
+}

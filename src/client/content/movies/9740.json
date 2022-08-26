@@ -1,0 +1,27 @@
+{
+  "tmdbID": 9740,
+  "rating": {
+    "total": 475,
+    "rt": 450,
+    "ch": 500
+  },
+  "dateSeen": "2022-03-31T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "Hannibal",
+    "german": "Hannibal"
+  },
+  "releaseDate": "2001-02-08T00:00:00.000Z",
+  "genres": [
+    "Krimi",
+    "Drama",
+    "Thriller"
+  ],
+  "runtime": 131,
+  "posterURL": "/s9Hz5Vl2VRgsVx0rX4oOdPGLivh.jpg",
+  "budget": 87000000,
+  "revenue": 351692268,
+  "tagline": "Sein Genie ist unbestreitbar. Seine Bosheit unaussprechlich.",
+  "overview": "Zehn Jahre sind vergangen, seitdem die FBI-Agentin Clarice Starling ihre erste nervenaufreibende Begegnung mit dem kannibalistischen Schwerverbrecher und diabolischen Genie Dr. Hannibal Lecter hatte. Nach seiner spektakulären Flucht aus dem Gefängnis bewegt sich Lecter frei in Florenz umher, und die ahnungslose Welt ist ihm schutzlos ausgeliefert. Doch die Zeit heilt keine Wunden – der einst von Lecter verstümmelte Multimillionär Verger entwickelte sich, getrieben von unvorstellbar grausamen Racheplänen, zu dessen ebenbürtigen Rivalen. Als Patient von Lecter musste er sich selbst vor Jahren das Gesicht mit einer Scherbe häuten und sinnt auf bittere Rache für die Qualen und Entstellungen. Um Lecter endlich den Schweinen zum Fraß vorzuwerfen, braucht Verger einen unwiderstehlichen Köder: Clarice Starling.",
+  "slug": "hannibal"
+}

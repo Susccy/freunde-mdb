@@ -1,0 +1,26 @@
+{
+  "tmdbID": 646207,
+  "rating": {
+    "total": 525,
+    "rt": 500,
+    "ch": 550
+  },
+  "dateSeen": "2022-05-12T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "The Ice Road",
+    "german": "The Ice Road"
+  },
+  "releaseDate": "2021-06-24T00:00:00.000Z",
+  "genres": [
+    "Action",
+    "Thriller"
+  ],
+  "runtime": 109,
+  "posterURL": "/gPi79Qfl7zN30uBkCV1EVNYO1A3.jpg",
+  "budget": 0,
+  "revenue": 2147110,
+  "tagline": "Tödliche Mission auf Dünnem Eis",
+  "overview": "Nach dem Einsturz einer abgelegenen Diamantenmine, macht sich der erfahrene Ice Road-Trucker Mike McCann (Liam Neeson) mit seinem Bruder Gurty (Marcus Thomas) sowie einem Team mutiger Fahrer (Laurence Fishburne, Amber Midthunder) auf eine gefährliche Rettungsmission. Sie transportieren mit ihren Trucks die tonnenschwere Ausrüstung, die für die Bergung der verschütteten Kumpel dringend benötigt wird. Es gibt nur einen Weg zur Mine und der führt über die gefährlichen Ice Roads der gefrorenen Seen im äußersten Norden Kanadas. Die Mission gerät zum Wettlauf gegen die Zeit: Schmelzendes Eis, Lawinen sowie ein brutaler Schnee-Sturm sorgen für dramatische Situationen - während den eingeschlossenen Minenarbeitern der Sauerstoff ausgeht. Doch die eigentliche Bedrohung der spektakulären Mission kommt von ganz anderer Seite - jemand spielt ein falsches Spiel!",
+  "slug": "the-ice-road"
+}

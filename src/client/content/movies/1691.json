@@ -1,0 +1,24 @@
+{
+  "tmdbID": 1691,
+  "rating": {
+    "total": 675,
+    "rt": 600,
+    "ch": 750
+  },
+  "dateSeen": "2022-03-11T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "Hostel: Part II",
+    "german": "Hostel 2"
+  },
+  "releaseDate": "2007-06-08T00:00:00.000Z",
+  "genres": [
+    "Horror"
+  ],
+  "runtime": 93,
+  "posterURL": "/g3uSIARQC20MtPhbsrIhRN491B0.jpg",
+  "budget": 10200000,
+  "revenue": 35728183,
+  "overview": "Die drei amerikanischen Kunst-Studentinnen Beth, Whitney und Lorna verbringen ein Gastsemester in der italienischen Kulturstadt Rom. Um sich von all der geistigen Anstrengung zu erholen wollen die jungen Frauen mal richtig hemmungslos abfeiern und nehmen daher dankbar einen Tipp von einer Kommilitonin an. Diese empfiehlt den Studentinnen eine slowakische Herberge als Ort der Ekstase und der nie endenden Orgien. Und tatsächlich scheinen die Versprechungen nicht aus dem Nichts zu kommen. Schon kurz nach ihrer Ankunft genießen Beth, Whitney und Lorna ihren Ausflug hemmungslos und lassen sich von gut aussehenden Männern verführen. Doch schon bald entpuppt sich das Hostel als Ort des Grauens und zeigt sein wahres Gesicht: Eine finstere Folter-Mafia findet hier ihre hilflosen Opfer und auch die drei Amerikanerinnen stehen auf der Liste.",
+  "slug": "hostel-part-ii"
+}

@@ -1,0 +1,25 @@
+{
+  "tmdbID": 9012,
+  "rating": {
+    "total": 575,
+    "rt": 500,
+    "ch": 650
+  },
+  "dateSeen": "2022-05-21T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "Jackass: The Movie",
+    "german": "Jackass - Der Film"
+  },
+  "releaseDate": "2002-10-25T00:00:00.000Z",
+  "genres": [
+    "Komödie",
+    "Dokumentarfilm"
+  ],
+  "runtime": 85,
+  "posterURL": "/fAfqDAX0HE81K30KKtCThJUu5xw.jpg",
+  "budget": 5000000,
+  "revenue": 64282312,
+  "overview": "Auch in ihrer Kinoproduktion sind sich Johnny Knoxville, Steve-O, Bam Margera, Chris Pontius, Dave England, Ryan Dunn und Co. für keinen waghalsigen Stunt zu schade und für keine Perversität zu fein. Verrückte Aktionen wie beispielsweise das Bearbeiten des Körpers mit einem Muskelstimulator, ein Überquerungsversuch eines Alligatorbeckens, eine \"Off Road\" Tätowierung, diverse Fäkalstunts, sowie spektakuläre Mountainbike- und Skateboard-Akrobatik serviert die \"Jackass\" - Crew hier am laufenden Band.",
+  "slug": "jackass-the-movie"
+}

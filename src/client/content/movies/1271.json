@@ -1,0 +1,27 @@
+{
+  "tmdbID": 1271,
+  "rating": {
+    "total": 650,
+    "rt": 750,
+    "ch": 550
+  },
+  "dateSeen": "2022-03-01T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "300",
+    "german": "300"
+  },
+  "releaseDate": "2007-03-07T00:00:00.000Z",
+  "genres": [
+    "Action",
+    "Abenteuer",
+    "Kriegsfilm"
+  ],
+  "runtime": 116,
+  "posterURL": "/q8MnDwe4p0znuKGlLERdhNM4GPA.jpg",
+  "budget": 65000000,
+  "revenue": 422610419,
+  "tagline": "Noch heute speisen wir in der Hölle.",
+  "overview": "Wir schreiben das Jahr 480 vor Christus. König Leonidas marschiert mit einer kleinen Armee von loyalen Spartanern auf Thermopylen zu. Dort befindet sich eine hundertausende Soldaten umfassende Übermacht an Persern, die Griechenland erobern wollen. Leonidas gelingt es schließlich, seine Armee mit der der Arkadier zu vereinen und den Angriff der Perser vorerst abzuwehren. Deren König Xerxes bittet Leonidas zu einer Audienz und versucht, ihn zur Kapitulation zu bewegen. Lenonidas lehnt allerdings ab und schlägt auch die nächste Angriffswelle erfolgreich zurück. Als sich die Situation der Spartaner jedoch immer mehr verschlechtert, schickt Leonidas seinen Barden Dilios zurück, um den Griechen von der Schlacht zu berichten. Der König selbst bleibt mit seinen verbliebenen dreihundert Kämpfern zurück, um sich dem wohl endgültig letzten Gefecht zu stellen.",
+  "slug": "300"
+}

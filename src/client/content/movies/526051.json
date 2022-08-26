@@ -1,0 +1,26 @@
+{
+  "tmdbID": 526051,
+  "rating": {
+    "total": 650,
+    "rt": 650,
+    "ch": 650
+  },
+  "dateSeen": "2022-08-07T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Look Away",
+    "german": "Look Away"
+  },
+  "releaseDate": "2018-10-12T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Fantasy"
+  ],
+  "runtime": 103,
+  "posterURL": "/2MqeImQbizvaHNsO7xlfskIWYFa.jpg",
+  "budget": 0,
+  "revenue": 1119537,
+  "overview": "Die 18-jährige Maria hat es nicht leicht. In der Schule wird sie von ihren Mitschülern gemobbt, und auch zu Hause fühlt sie sich von ihren Eltern nicht verstanden. Eines Tages entdeckt sie in ihrem Spiegelbild ihre Zwillingsschwester, die bei ihrer gemeinsamen Geburt gestorben war. Sie kennt all die Geheimnisse, Ängste und Sorgen von Maria und ist zunächst ein guter Ansprechpartner für sie. Nach und nach möchte der Zwilling jedoch die Probleme selbst in die Hand nehmen und die Kontrolle übernehmen. Maria ist einverstanden und so wechseln sie die Seiten. Plötzlich ist Maria gefangen im Spiegel und ihr Gegenstück macht sich auf, sich an all den Menschen in Marias Umgebung zu rächen.",
+  "slug": "look-away"
+}

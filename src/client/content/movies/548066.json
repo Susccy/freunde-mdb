@@ -1,0 +1,25 @@
+{
+  "tmdbID": 548066,
+  "rating": {
+    "total": 400,
+    "rt": 450,
+    "ch": 350
+  },
+  "dateSeen": "2022-08-04T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Level 16",
+    "german": "Level 16"
+  },
+  "releaseDate": "2018-02-20T00:00:00.000Z",
+  "genres": [
+    "Science Fiction",
+    "Thriller"
+  ],
+  "runtime": 102,
+  "posterURL": "/nf4na9KjQcc1E2TYGkQ6xpiTHYO.jpg",
+  "budget": 0,
+  "revenue": 15575,
+  "overview": "Reinheit, Gehorsamkeit, Bescheidenheit sind die Tugenden, die auf der Vestalis-Akademie nach strengsten Regeln gelehrt werden. Nur mit Fleiß und Disziplin gelingt es den dort studierenden Mädchen, auf Level 16 – die finale Stufe der Akademie – zu erreichen. Und nur in diesem Fall haben sie die Chance, adoptiert zu werden. Das will auch die regeltreue Vivien die gerade frisch auf Level 16 angekommen ist, wo sie auf Sophia trifft. Diese rät auf die ominösen Vitamine zu verzichten, die sie täglich einnehmen müssen.",
+  "slug": "level-16"
+}

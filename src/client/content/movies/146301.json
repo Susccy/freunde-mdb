@@ -1,0 +1,26 @@
+{
+  "tmdbID": 146301,
+  "rating": {
+    "total": 425,
+    "rt": 450,
+    "ch": 400
+  },
+  "dateSeen": "2022-04-05T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Paranormal Activity: The Ghost Dimension",
+    "german": "Paranormal Activity: Ghost Dimension"
+  },
+  "releaseDate": "2015-10-21T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "runtime": 88,
+  "posterURL": "/tQL2vMX0T3XoLt417b6JKBSFZEN.jpg",
+  "budget": 10000000,
+  "revenue": 78096553,
+  "tagline": "Du wirst den Schrecken sehen.",
+  "overview": "Ryan und seine Frau Emily freuen sich gemeinsam mit Tochter Leila und Ryans Bruder Mike auf besinnliche Weihnachten in ihrem neuen Zuhause. Zufällig entdeckt Ryan im Haus eine alte Kamera mit VHS-Kassetten. Auf den Bändern sieht man die Geschwister Katie und Kristie, die zu merken scheinen, dass sie gerade von Ryan und Mike beobachtet werden. Spätestens als die Brüder festellen, dass sie durch die Kamera verstörende Erscheinungen sehen, die mit bloßem Auge nicht wahrnehmbar sind, und Leila plötzlich von einem unsichtbaren Freund erzählt, der sie regelmäßig besucht, beginnt ein dämonischer Albtraum für die junge Familie.",
+  "slug": "paranormal-activity-the-ghost-dimension"
+}

@@ -1,0 +1,29 @@
+{
+  "tmdbID": 19898,
+  "rating": {
+    "total": 450,
+    "rt": 450,
+    "ch": 450
+  },
+  "dateSeen": "2022-08-19T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Pandorum",
+    "german": "Pandorum"
+  },
+  "releaseDate": "2009-09-08T00:00:00.000Z",
+  "genres": [
+    "Action",
+    "Horror",
+    "Mystery",
+    "Science Fiction",
+    "Thriller"
+  ],
+  "runtime": 108,
+  "posterURL": "/qUipq1LTBLamEThverLreUXzIbz.jpg",
+  "budget": 33000000,
+  "revenue": 20648328,
+  "tagline": "Die Welt stirbt, die Angst überlebt.",
+  "overview": "Die Astronauten Payton und Bower erwachen aus einem Tiefschlaf und finden sich an Bord eines riesigen Raumschiffs wieder. Ihre Erinnerung ist komplett ausgelöscht: Weder wissen sie, wie lange sie geschlafen haben, noch, warum sie hier sind. Doch ihnen bleibt nicht viel Zeit zum Überlegen, denn das Energiesystem des Raumschiffs steht kurz vor dem Zusammenbruch. Per Funk lotst Payton Bower durch enge Luftschächte zum Reaktor, damit er diesen reparieren kann. Schnell wird klar, dass die beiden nicht allein sind und sich in großer Gefahr befinden.",
+  "slug": "pandorum"
+}

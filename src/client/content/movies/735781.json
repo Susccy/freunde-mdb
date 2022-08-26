@@ -1,0 +1,24 @@
+{
+  "tmdbID": 735781,
+  "rating": {
+    "total": 25,
+    "rt": 50,
+    "ch": 0
+  },
+  "dateSeen": "2022-04-14T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Das erste Mal",
+    "german": "Das erste Mal"
+  },
+  "releaseDate": "2017-04-16T00:00:00.000Z",
+  "genres": [
+    "Horror"
+  ],
+  "runtime": 3,
+  "posterURL": "/6npwVPCkRJFFFUwbJuPoD4PyX98.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Der Film handelt von einem jungen Mann, der über sein erstes Mal berichtet.",
+  "slug": "das-erste-mal"
+}

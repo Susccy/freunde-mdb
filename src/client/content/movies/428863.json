@@ -1,0 +1,25 @@
+{
+  "tmdbID": 428863,
+  "rating": {
+    "total": 75,
+    "rt": 50,
+    "ch": 100
+  },
+  "dateSeen": "2022-03-10T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "Snuff 102",
+    "german": "Snuff 102"
+  },
+  "releaseDate": "2007-03-01T00:00:00.000Z",
+  "genres": [
+    "Thriller",
+    "Horror"
+  ],
+  "runtime": 101,
+  "posterURL": "/fYk5eVxnK64sKTfiV4J3QxBxVeV.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Eine junge Reporterin beginnt damit, in den Tiefen einer geheimnisumwitterten Szene zu recherchieren: in den Tiefen der Snuff-Szene. Immer tiefer taucht sie in diese gewalttätigen Bilder ein, und lernt so kenne, wie brutal und grausam Menschen wirklich sein können!",
+  "slug": "snuff-102"
+}

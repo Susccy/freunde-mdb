@@ -1,0 +1,25 @@
+{
+  "tmdbID": 615469,
+  "rating": {
+    "total": 475,
+    "rt": 600,
+    "ch": 350
+  },
+  "dateSeen": "2022-06-23T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Spiderhead",
+    "german": "Der Spinnenkopf"
+  },
+  "releaseDate": "2022-06-15T00:00:00.000Z",
+  "genres": [
+    "Science Fiction",
+    "Thriller"
+  ],
+  "runtime": 106,
+  "posterURL": "/o90rssEVzJDy8K3CAFveNEjlaB0.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Der ebenso visionäre wie rätselhafte Wissenschaftler Steve Abnesti (Chris Hemsworth) führt ein modernes Gefängnis, in dem die Insassen durch die Teilnahme an verschiedenen Experimenten ihre Strafen verkürzen und gewisse Freiheiten genießen dürfen. Dabei werden sie einer Vielzahl neuartiger Drogen mit den unterschiedlichsten Wirkungsweisen ausgesetzt.  Mit diesen Substanzen kann die Steigerung der geistigen Fähigkeiten über die Intensivierung sexuellen Empfindens bis hin zur Erzeugung von Niedergeschlagenheit kontrolliert werden. Als Testperson Jeff (Miles Teller) eine Droge verabreicht bekommt, die bei ihm Gefühle für seine Mitgefangene Lizzy (Jurnee Smollett) auslöst, beginnt er an seinen eigenen Emotionen zu zweifeln und macht sich gemeinsam mit ihr auf die Suche nach der Wahrheit...",
+  "slug": "spiderhead"
+}

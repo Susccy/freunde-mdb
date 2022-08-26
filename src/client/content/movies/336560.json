@@ -1,0 +1,25 @@
+{
+  "tmdbID": 336560,
+  "rating": {
+    "total": 350,
+    "rt": 550,
+    "ch": 150
+  },
+  "dateSeen": "2022-05-03T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "Lake Placid vs. Anaconda",
+    "german": "Lake Placid vs. Anaconda"
+  },
+  "releaseDate": "2015-04-25T00:00:00.000Z",
+  "genres": [
+    "Action",
+    "Horror"
+  ],
+  "runtime": 92,
+  "posterURL": "/hhcGstzGTkrTH0PQ7EF0mJUmIlQ.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Während ein Team von Wissenschaftlern mit mutierten Zellen an Krokodilen experimentiert, brechen die Reptilien aus und machen das Gebiet um den Badesee Clear Lake unsicher. Hier befindet sich Beth mit ihrer Schwesternschaft, während ihr Dad (Entenwächter, vielleicht sogar Ranger) mit dem örtlichen Sheriff Reba (Yancy Butler) versucht, gegen die mutierten Viecher, zu denen sich auch bald Anakondas gesellen anzukämpfen...",
+  "slug": "lake-placid-vs-anaconda"
+}

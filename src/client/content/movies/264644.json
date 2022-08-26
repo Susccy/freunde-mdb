@@ -1,0 +1,25 @@
+{
+  "tmdbID": 264644,
+  "rating": {
+    "total": 575,
+    "rt": 600,
+    "ch": 550
+  },
+  "dateSeen": "2022-05-22T00:00:00.000Z",
+  "fsk": 12,
+  "title": {
+    "original": "Room",
+    "german": "Raum"
+  },
+  "releaseDate": "2015-10-16T00:00:00.000Z",
+  "genres": [
+    "Drama",
+    "Thriller"
+  ],
+  "runtime": 118,
+  "posterURL": "/lLg0WhEn4A5KvblzYBHtPpy2X7r.jpg",
+  "budget": 13000000,
+  "revenue": 35401758,
+  "overview": "Der aufgeweckte kleine Jack wird wie andere Jungen seines Alters von seiner fürsorglichen Mutter  geliebt und behütet. Ma wendet viel Zeit für den Fünfjährigen auf, liest ihm vor, spielt mit ihm und verbringt nahezu jeden Augenblick ihres Lebens mit ihrem Sohn. Doch ihr bleibt auch kaum etwas anderes übrig, da das Leben der Familie alles andere als normal ist: Denn die beiden sind in einer winzig kleinen, fensterlosen Hütte eingesperrt. Ma hat ihre Phantasie spielen lassen, um Jack die Wahrheit, dass sie von der Außenwelt abgeschnitten sind, zu verheimlichen und will ihrem Kind um jeden Preis ein erfülltes Leben ermöglichen. Doch irgendwann wird Jack neugierig und die Erklärungen werden brüchig. Gemeinsam beschließen Mutter und Sohn zu fliehen. Doch draußen wartet auf sie etwas ebenso Unbekanntes wie Furchteinflößendes: die reale Welt.",
+  "slug": "room"
+}

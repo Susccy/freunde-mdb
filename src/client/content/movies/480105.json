@@ -1,0 +1,26 @@
+{
+  "tmdbID": 480105,
+  "rating": {
+    "total": 150,
+    "rt": 150,
+    "ch": 150
+  },
+  "dateSeen": "2022-04-21T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "47 Meters Down: Uncaged",
+    "german": "47 Meters Down: Uncaged"
+  },
+  "releaseDate": "2019-08-15T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Drama",
+    "Abenteuer"
+  ],
+  "runtime": 89,
+  "posterURL": "/g4z7mDmJmx23vsVg6XNWcnXb6gc.jpg",
+  "budget": 12000000,
+  "revenue": 0,
+  "overview": "Nicole, Sasha, Alexa und Mia entdecken bei einem gemeinsamen Tauchgang eine versunkene Maya-Stadt. Doch ihr Staunen über die unerforschten Ruinen bleibt ihnen im Halse stecken und der Tauchgang wird zum Horror-Trip, denn die Unterwasser-Stadt entpuppt sich als Jagdgebiet riesiger, weißer Haie mit Killerinstinkt. Ein Katz-und-Maus-Spiel mit dem größten Schrecken des Ozeans beginnt. Während die Sauerstoffversorgung immer knapper wird, müssen sich Nicole, Sasha, Alexa und Mia aus dem Unterwasserlabyrinth voll enger Höhlen und unheimlicher Tunnel einen Weg aus ihrer Unterwasser-Hölle suchen. Ein Wettlauf mit der Zeit und ein atemloser Überlebenskampf beginnt …",
+  "slug": "47-meters-down-uncaged"
+}

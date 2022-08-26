@@ -1,0 +1,26 @@
+{
+  "tmdbID": 656663,
+  "rating": {
+    "total": 700,
+    "rt": 650,
+    "ch": 750
+  },
+  "dateSeen": "2022-04-02T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "Jackass Forever",
+    "german": "Jackass Forever"
+  },
+  "releaseDate": "2022-02-01T00:00:00.000Z",
+  "genres": [
+    "Komödie",
+    "Dokumentarfilm"
+  ],
+  "runtime": 96,
+  "posterURL": "/mngVoRTfXT2tV7zaC2Xnq3u8RAR.jpg",
+  "budget": 10000000,
+  "revenue": 80340218,
+  "tagline": "manche lernen es nie",
+  "overview": "Johnny Knoxville dreht zum letzten Mal durch! Der berühmte Draufgänger erlebt in diesem gigantischen Jackass-Spektakel den intensivsten Bullenritt seiner Karriere. Begleitet wird er bei seinen verrückten, Schmerz verursachenden Adrenalinkicks sowohl von Langzeitlegenden wie Steve-O als auch von neuen Gesichtern wie Stuntman Zach Holmes und Surfer Sean „Poopies“ McInerney.",
+  "slug": "jackass-forever"
+}

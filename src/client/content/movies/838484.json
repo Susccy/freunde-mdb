@@ -1,0 +1,27 @@
+{
+  "tmdbID": 838484,
+  "rating": {
+    "total": 525,
+    "rt": 550,
+    "ch": 500
+  },
+  "dateSeen": "2022-04-20T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Choose or Die",
+    "german": "Choose or Die"
+  },
+  "releaseDate": "2022-04-15T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Science Fiction"
+  ],
+  "runtime": 85,
+  "posterURL": "/qJae3ETq8FGn7twQzeMDePyaXMX.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "Spiel um dein Leben.",
+  "overview": "Die bankrotte Studentin Layla (Iola Evans) spielt in der Hoffnung auf ein Preisgeld von 125.000 Dollar ein obskures Survival-Computerspiel aus den 1980er Jahren. Nach einer Reihe von unerwarteten Schreckensmomenten wird ihr bald klar, dass sie nicht mehr um das Geld spielt, sondern um ihr eigenes Leben. Denn das Spiel namens „Curs>r“ hat ein eigenes Bewusstsein und liebt es, Menschen auf abscheuliche Weise das Zeitliche segnen zu lassen. Jede Entscheidung, die Layla im Spiel trifft, hat Einfluss auf die echte Welt – und zwar teils sehr brutale. Doch die Studentin hat keine Wahl: Entscheidet sie sich nicht, muss sie selbst sterben. Layla holt sich Unterstützung vom Gamer Isaac (Asa Butterfield), aus dessen Fundus sie das Spiel erhalten hat. Gemeinsam versuchen sie das Spiel zu schlagen und dessen Fluch zu brechen, bevor noch mehr grausame Dinge geschehen...",
+  "slug": "choose-or-die"
+}

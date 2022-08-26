@@ -1,0 +1,25 @@
+{
+  "tmdbID": 131995,
+  "rating": {
+    "total": 750,
+    "rt": 800,
+    "ch": 700
+  },
+  "dateSeen": "2022-02-26T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "The Necro Files",
+    "german": "The Necro Files"
+  },
+  "releaseDate": "1997-01-01T00:00:00.000Z",
+  "genres": [
+    "Komödie",
+    "Horror"
+  ],
+  "runtime": 72,
+  "posterURL": "/wB0ni2gNOxvUSV1o8zbdkQY6DFe.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Durch ein Satansritual auf einem Friedhof wird ein Verstorbener wahnsinniger Vergewaltiger und Frauenmörder zu neuem Leben erweckt. Als Zombie mit einem überdimensionalem Penis begibt er sich von nun an auf einen perversen Vergewaltigungsmarathon. Doch auch er hat einen Verfolger: Ein ebenfalls wiedererwecktes Zombie-Baby als Frucht einer seiner vielen Vergewaltigungen...",
+  "slug": "the-necro-files"
+}

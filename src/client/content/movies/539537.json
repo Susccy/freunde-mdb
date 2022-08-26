@@ -1,0 +1,28 @@
+{
+  "tmdbID": 539537,
+  "rating": {
+    "total": 300,
+    "rt": 300,
+    "ch": 300
+  },
+  "dateSeen": "2022-05-17T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Fantasy Island",
+    "german": "Fantasy Island"
+  },
+  "releaseDate": "2020-02-12T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Fantasy",
+    "Abenteuer",
+    "Mystery"
+  ],
+  "runtime": 110,
+  "posterURL": "/423C7XywXTkC6fDDprXFvL8nB4V.jpg",
+  "budget": 7000000,
+  "revenue": 47078545,
+  "tagline": "Alles, was du dir wünschst. Alles, wovor du dich fürchtest.",
+  "overview": "Fantasy Island ist die farbenprächtige und paradiesische Insel des mysteriösen Millionärs Mr. Roarke (Michael Pena), mitten im blauen Ozean gelegen, abseits der Zivilisation. Roarke, der über erstaunliche Kräfte zu verfügen scheint, bietet auf seinem Eiland für ein beträchtliches Entgelt der zahlenden Kundschaft an, ihre tiefsten Wünsche, Träume und Fantasien im wahrsten Sinne des Wortes zu erfüllen. Und die neuen Gäste wollen einiges – einige wollen Action und Krieg, andere Party und Sex, wieder andere sehnen sich danach, den größten Fehler ihres Lebens zu korrigieren oder Rache an alten Feinden zu nehmen. Doch der Urlaub auf Fantasy Island wird zum Horrortrip und das vermeintliche Paradies zur Todesfalle, als eine Mordserie die Insel erschüttert. Bald wird den von der Außenwelt isolierten Touristen klar, dass man sich ganz genau überlegen sollte, was man sich wünscht.",
+  "slug": "fantasy-island"
+}

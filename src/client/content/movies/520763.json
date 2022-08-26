@@ -1,0 +1,27 @@
+{
+  "tmdbID": 520763,
+  "rating": {
+    "total": 500,
+    "rt": 500,
+    "ch": 500
+  },
+  "dateSeen": "2022-03-28T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "A Quiet Place Part II",
+    "german": "A Quiet Place 2"
+  },
+  "releaseDate": "2021-05-21T00:00:00.000Z",
+  "genres": [
+    "Science Fiction",
+    "Thriller",
+    "Horror"
+  ],
+  "runtime": 100,
+  "posterURL": "/8Du4fXM0erTW6g7HPIMq1v4L54M.jpg",
+  "budget": 61000000,
+  "revenue": 297372261,
+  "tagline": "Stille war erst der Anfang",
+  "overview": "Die tödliche Gefahr durch die ebenso grausamen wie geräuschempfindlichen Kreaturen ist noch immer allgegenwärtig. Jeder noch so kleine Laut könnte ihr letzter sein. Evelyn ist mit ihren Kindern Regan, Marcus und dem Baby nun auf sich allein gestellt. Weiterhin muss die Familie ihren Alltag in absoluter Stille bestreiten. Als sie gezwungen sind, sich auf den Weg in das Unbekannte aufzumachen, merken sie schnell, dass hinter jeder Abzweigung weitere Gefahren lauern. Eine lautlose Jagd beginnt …",
+  "slug": "a-quiet-place-part-ii"
+}

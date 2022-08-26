@@ -1,0 +1,26 @@
+{
+  "tmdbID": 246403,
+  "rating": {
+    "total": 650,
+    "rt": 600,
+    "ch": 700
+  },
+  "dateSeen": "2022-01-13T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Tusk",
+    "german": "Tusk"
+  },
+  "releaseDate": "2014-09-19T00:00:00.000Z",
+  "genres": [
+    "Komödie",
+    "Horror"
+  ],
+  "runtime": 102,
+  "posterURL": "/pHghiDnQ63O7MiItD6CaSz2jjnr.jpg",
+  "budget": 3000000,
+  "revenue": 1882074,
+  "tagline": "Der Mensch ist das gefährlichste Tier",
+  "overview": "Für seinen Podcast reist Wallace durch Amerika und trifft sich mit vielen interessanten Menschen, die ihm ihre Lebensgeschichte erzählen wollen. Eines Tages erhält er einen Brief von einem alten Seefahrer namens Howard Howe und Wallace folgt der Einladung des alten Mannes nach Kanada. Als er dort eintrifft, offenbart im Howard eine schier unglaubliche Geschichte. Noch bevor der Journalist seinen Tee austrinken kann, fällt er betäubt in Ohnmacht und wird von Howard auf dessen Anwesen festgehalten, um von diesem Stück für Stück transformiert zu werden - in ein Walross! Während dieser Zeit sorgen sich Wallace Freundin Ally und sein bester Freund Teddy um ihn und entschließen sich, seinem Verschwinden auf den Grund zu gehen.",
+  "slug": "tusk"
+}

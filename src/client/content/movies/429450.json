@@ -1,0 +1,26 @@
+{
+  "tmdbID": 429450,
+  "rating": {
+    "total": 550,
+    "rt": 550,
+    "ch": 550
+  },
+  "dateSeen": "2022-04-14T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "판도라",
+    "german": "Pandora"
+  },
+  "releaseDate": "2016-12-07T00:00:00.000Z",
+  "genres": [
+    "Thriller",
+    "Drama",
+    "Action"
+  ],
+  "runtime": 136,
+  "posterURL": "/a1OakqMoPYvSCBFPc6F8nhI2qu.jpg",
+  "budget": 13938145,
+  "revenue": 30169000,
+  "overview": "In Pandora lebt Jae-Hyeok (Nam-gil Kim) mit seiner Familie in einer südkoreanischen Kleinstadt. Die Arbeit in einem Atomkraftwerk war zwar nicht dessen erste Wahl – sowohl sein Bruder als auch sein Vater starben bei Unfällen in der Anlage – doch der Stellenmarkt ist hart umkämpft und er braucht das Geld. Ebenfalls im Kraftwerk arbeitet Pyung-Sub (Jin-young Jung), der ständig seine Sorgen um die Sicherheit der Einrichtung kundtut. Seine Beschwerden werden ignoriert, doch eines Tages treffen die schlimmsten Befürchtungen des Arbeiters ein. Ein Erdbeben verursacht Explosionen im Kraftwerk und eine radioaktive Katastrophe scheint unausweichlich. Während die Nation in Panik versinkt, müssen Jae-Hyeok und seine Kollegen Schlimmeres verhindern.",
+  "slug": ""
+}

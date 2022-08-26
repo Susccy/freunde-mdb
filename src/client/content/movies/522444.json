@@ -1,0 +1,27 @@
+{
+  "tmdbID": 522444,
+  "rating": {
+    "total": 100,
+    "rt": 100,
+    "ch": 100
+  },
+  "dateSeen": "2022-02-13T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Black Water: Abyss",
+    "german": "Black Water - Abyss"
+  },
+  "releaseDate": "2020-07-09T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Abenteuer",
+    "Mystery"
+  ],
+  "runtime": 98,
+  "posterURL": "/17QGRfO7gTLtFkKv05NHEDsWLEZ.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Das abenteuerlustige Ehepaar Eric und Jennifer überreden ihre Freunde Yolanda und Viktor, ein abgelegenes, unerforschtes Höhlensystem in den Wäldern Nordaustraliens zu erforschen. Als sich ein tropischer Sturm nähert, seilen sie sich im Wissen, dass sie unter der Erde sicher sind, in den Höhleneingang ab. Doch als die Höhlen zu überfluten beginnen, nehmen die Spannungen zu. Sie wissen nicht, dass die feuchte Luft und das aufsteigende Wasser ihr geringstes Problem sind und entdecken, dass der Sturm ein Rudel gefährlicher Tiere mitgebracht hat - hungrige Krokodile. Als die Gefahr zunimmt, tauchen lang gehütete Geheimnisse auf, und die Freunde kämpfen ums nackte Überleben.",
+  "slug": "black-water-abyss"
+}

@@ -1,0 +1,27 @@
+{
+  "tmdbID": 300681,
+  "rating": {
+    "total": 600,
+    "rt": 550,
+    "ch": 650
+  },
+  "dateSeen": "2022-02-16T00:00:00.000Z",
+  "fsk": 12,
+  "title": {
+    "original": "Replicas",
+    "german": "Replicas"
+  },
+  "releaseDate": "2018-10-25T00:00:00.000Z",
+  "genres": [
+    "Science Fiction",
+    "Thriller",
+    "Drama"
+  ],
+  "runtime": 108,
+  "posterURL": "/4KXjM1V7ZpqC7CoOmtxa8WQJKEC.jpg",
+  "budget": 30000000,
+  "revenue": 8100000,
+  "tagline": "Einige Menschen sind nicht aufzuhalten",
+  "overview": "Nach dem tragischen Unfalltod seiner geliebten Familie, versucht der Neurowissenschaftler Will Foster alles, um sie zurück ins Leben zu holen. Der brillante Forscher experimentiert schließlich schon lange damit, Teile des Gehirns von Menschen in Roboterkörper zu transferieren. Was eigentlich verwundeten Soldaten helfen sollte, könnte jetzt seine Familie retten. Unterstützt wird er von seinem Kollegen Ed, mit dessen Hilfe ihm sein (illegaler) Plan zu gelingen scheint. Doch bald stellt sich für Will eine schwierige Frage: Er hat nur drei neue Körper für seine tote Frau und ihre gemeinsamen drei Kinder. Er muss also entscheiden, wen er nicht retten wird …",
+  "slug": "replicas"
+}

@@ -1,0 +1,25 @@
+{
+  "tmdbID": 132064,
+  "rating": {
+    "total": 100,
+    "rt": 50,
+    "ch": 150
+  },
+  "dateSeen": "2022-02-10T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "Vile",
+    "german": "Vile - Pain"
+  },
+  "releaseDate": "2011-08-25T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "runtime": 90,
+  "posterURL": "/wHxVSKv4plCpllQpBt4tOftKJ12.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Es ist ein unvorstellbarer Albtraum: Eine zufällig zusammengewürfelte Gruppe von Leuten findet sich in einem hermetisch abgeriegelten Haus wieder. Keiner weiß, wieso sie eingeschlossen sind und wer dahinter steckt. Den eingeschlossenen wird nur mitgeteilt, dass die Freiheit einzig durch die Absolvierung eines unmenschlichen Experimentes erlangt werden kann. Von einem tödlichen Countdown unter Druck gesetzt müssen sich die Gefangenen gegenseitig schlimmste Schmerzen zufügen. Das Ziel ist, im Gehirn einen chemischen Prozess auszulösen, der nur durch Leid und Qualen erreicht werden kann...",
+  "slug": "vile"
+}

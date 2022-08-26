@@ -1,0 +1,23 @@
+{
+  "tmdbID": 753453,
+  "rating": {
+    "total": 600,
+    "rt": 500,
+    "ch": 700
+  },
+  "dateSeen": "2022-02-27T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "V/H/S/94",
+    "german": "V/H/S/94"
+  },
+  "releaseDate": "2021-09-26T00:00:00.000Z",
+  "genres": [
+    "Horror"
+  ],
+  "runtime": 103,
+  "posterURL": "/9fSogEkqDfJQTuGHsTFloQz3Tw8.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "slug": "v-h-s-94"
+}

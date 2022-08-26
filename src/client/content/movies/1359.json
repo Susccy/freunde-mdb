@@ -1,0 +1,27 @@
+{
+  "tmdbID": 1359,
+  "rating": {
+    "total": 625,
+    "rt": 600,
+    "ch": 650
+  },
+  "dateSeen": "2022-03-21T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "American Psycho",
+    "german": "American Psycho"
+  },
+  "releaseDate": "2000-04-13T00:00:00.000Z",
+  "genres": [
+    "Thriller",
+    "Drama",
+    "Krimi"
+  ],
+  "runtime": 102,
+  "posterURL": "/sC286M2cD00bK1IDT2osoGrmNK4.jpg",
+  "budget": 7000000,
+  "revenue": 34266564,
+  "tagline": "Er ist perfekt. Er ist verführerisch. Er ist der Tod.",
+  "overview": "Auf den ersten Blick ist Patrick Bateman ein stinknormaler, egomanischer Wall-Street-Yuppie, doch hinter der Fassade des proper gewandten Lebemannes verbirgt sich ein mörderischer Abgrund aus Hass und Sadismus. Um die Leere seines einzig von Statussymbolen erhellten Daseins auszufüllen, ist Patrick auf den Serienmord gekommen, insbesondere junge Frauen, aber auch der eine oder andere unvorsichtige Geschäftspartner zählen zu seinen Opfern. Als es ihm zunehmend schwerfällt, zwischen Phantasie und Realität zu unterscheiden, tritt die Polizei auf den Plan.",
+  "slug": "american-psycho"
+}

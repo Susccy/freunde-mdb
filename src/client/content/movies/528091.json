@@ -1,0 +1,26 @@
+{
+  "tmdbID": 528091,
+  "rating": {
+    "total": 450,
+    "rt": 350,
+    "ch": 550
+  },
+  "dateSeen": "2022-05-16T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "The Furies",
+    "german": "The Furies"
+  },
+  "releaseDate": "2019-04-12T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Action",
+    "Thriller"
+  ],
+  "runtime": 82,
+  "posterURL": "/az3rk3vp1DmhM3KmpPNfDWW6mhN.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Eine junge Frau wird entführt und muss plötzlich bei einem tödlichen Spiel ums nackte Überleben kämpfen. Als sie im australischen Outback freigelassen wird, ist ihr Albtraum noch lange nicht zu Ende. Eine Gruppe maskierter Männer sind auf ihrer Fährte, denn sie ist die unfreiwillige Beute bei einer sadistischen Menschenjagd. Als sie auf zwei andere Frauen trifft, die ebenfalls auf der Flucht sind, wird ihr der Ernst der Lage bewusst.",
+  "slug": "the-furies"
+}

@@ -1,0 +1,25 @@
+{
+  "tmdbID": 532638,
+  "rating": {
+    "total": 450,
+    "rt": 300,
+    "ch": 600
+  },
+  "dateSeen": "2022-03-07T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Open 24 Hours",
+    "german": "Open 24 Hours"
+  },
+  "releaseDate": "2018-08-27T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "runtime": 102,
+  "posterURL": "/mVQH7nY15bBDJKkimeMj2u3ejHW.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Eigentlich hat Mary die Hölle schon hinter sich: Sie ist einem Mörder entkommen und selbst im Gefängnis gewesen. Traumata, die die junge Frau verfolgen. Dennoch will sie sich ein neues Leben aufbauen und nimmt deshalb einen Job in einer entlegenen Tankstelle an. Gleich die erste Nachtschicht wird jedoch ein Alptraum: Ist der Killer aus Marys Vergangenheit etwa zurück? Bis der Morgen dämmert und Mary die Wahrheit kennt, wird viel Blut fließen!",
+  "slug": "open-24-hours"
+}

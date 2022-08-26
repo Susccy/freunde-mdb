@@ -1,0 +1,26 @@
+{
+  "tmdbID": 465086,
+  "rating": {
+    "total": 475,
+    "rt": 500,
+    "ch": 450
+  },
+  "dateSeen": "2022-06-14T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "The Grudge",
+    "german": "The Grudge"
+  },
+  "releaseDate": "2020-01-01T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Mystery"
+  ],
+  "runtime": 93,
+  "posterURL": "/sVpA6uW6aFgRDtXxzwAQYkAvnqa.jpg",
+  "budget": 10000000,
+  "revenue": 42800000,
+  "tagline": "Es wird dich niemals gehen lassen.",
+  "overview": "Eine junge Mutter ermordet ihre Familie in ihrem eigenen Haus. Detective Muldoon , alleinerziehende Mutter und Polizistin, untersucht den Fall und ist fest entschlossen, ihn zu lösen. Später entdeckt sie, dass dieses Haus von einem rachsüchtigen Geist verflucht ist... Diejenigen, die eintreten, sterben eines gewaltsamen Todes. Nun liegt es an Muldoon sich und ihren Sohn vor den dämonischen Geistern aus dem verfluchten Haus zu beschützen und zu retten.",
+  "slug": "the-grudge-2"
+}

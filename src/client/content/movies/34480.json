@@ -1,0 +1,27 @@
+{
+  "tmdbID": 34480,
+  "rating": {
+    "total": 325,
+    "rt": 150,
+    "ch": 500
+  },
+  "dateSeen": "2022-03-11T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "The Descent: Part 2",
+    "german": "The Descent 2 - Die Jagd geht weiter"
+  },
+  "releaseDate": "2009-10-14T00:00:00.000Z",
+  "genres": [
+    "Abenteuer",
+    "Horror",
+    "Thriller"
+  ],
+  "runtime": 94,
+  "posterURL": "/bhMh7qg5mIvJhplGQefKaIcuVqB.jpg",
+  "budget": 6000200,
+  "revenue": 7048886,
+  "tagline": "Angst vor der Dunkelheit?",
+  "overview": "Sarah ist soeben aus dem Höhlenlabyrinth entkommen und gerät in den Verdacht, selbst etwas mit dem Verschwinden ihrer Freundinnen zu tun zu haben. Zusammen mit den Polizeibeamten Vaines und Rios sowie den drei Höhlenkletterspezialisten Cath, Dan und Greg sollen sie vor Ort das Verschwinden ihrer fünf Freundinnen aufklären. Neben den geräuschempfindlichen Fleischfressern warten weitere Überraschungen auf das Team.",
+  "slug": "the-descent-part-2"
+}

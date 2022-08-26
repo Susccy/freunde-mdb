@@ -1,0 +1,25 @@
+{
+  "tmdbID": 8363,
+  "rating": {
+    "total": 750,
+    "rt": 700,
+    "ch": 800
+  },
+  "dateSeen": "2022-08-06T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Superbad",
+    "german": "Superbad"
+  },
+  "releaseDate": "2007-03-20T00:00:00.000Z",
+  "genres": [
+    "Komödie"
+  ],
+  "runtime": 118,
+  "posterURL": "/cFGDxYBNvwZ6nQLN0dJxu85RRBN.jpg",
+  "budget": 20000000,
+  "revenue": 170812526,
+  "tagline": "Komm und hol es dir!",
+  "overview": "Nicht zusammengewachsen, aber mindestens ebenso unzertrennlich: Die beiden Freunde Seth und Evan machen seit den Kindertagen buchstäblich alles zusammen. Obwohl beide im Grunde ziemlich gegensätzlich sind. Eine nennenswerte Menge an Freunden haben die beiden dank ihres Loserimages nicht und die Schulzeit haben sie immerhin fast überstanden. Da droht die Katastrophe: Jeder ist an einem anderem College angenommen worden. Vorher planen die beiden aber die „Nacht der Nächte“ voller „Freunde“, Alkohol, Mädchen und dem geplanten Abschied vom Loserimage. So oder so – es wird einer dieser Nächte, an die man sich sein ganzes Leben erinnern wird …",
+  "slug": "superbad"
+}

@@ -1,0 +1,26 @@
+{
+  "tmdbID": 760104,
+  "rating": {
+    "total": 775,
+    "rt": 750,
+    "ch": 800
+  },
+  "dateSeen": "2022-05-20T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "X",
+    "german": "X"
+  },
+  "releaseDate": "2022-03-17T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Mystery",
+    "Thriller"
+  ],
+  "runtime": 106,
+  "posterURL": "/lopZSVtXzhFY603E9OqF7O1YKsh.jpg",
+  "budget": 10000000,
+  "revenue": 14257609,
+  "overview": "1979 im Süden der USA: Ein Filmteam erreicht ein abgelegenes Bauernhaus im tiefsten Texas, um einen Porno zu drehen. Davon haben Regisseur R.J., seine für den Sound zuständige Freundin Lorraine  sowie Schauspieler Jackson Hole  und die Stripperinnen Maxine  und Bobby-Lynne ihren Gastgeber  jedoch nichts erzählt. Dabei handelt es sich um ein isoliertes, älteres Ehepaar, das besonders großen Wert darauf legt, dass es ihren Gästen gut geht. Als jedoch die Nacht hereinbricht, wird das schon leicht aufdringliche Verhalten des Paaren plötzlich zusehends gewalttätig.",
+  "slug": "x"
+}

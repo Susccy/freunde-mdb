@@ -1,0 +1,25 @@
+{
+  "tmdbID": 15900,
+  "rating": {
+    "total": 750,
+    "rt": 750,
+    "ch": 750
+  },
+  "dateSeen": "2021-05-22T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "Faces of Death II",
+    "german": "Gesichter des Todes II"
+  },
+  "releaseDate": "1981-05-01T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Dokumentarfilm"
+  ],
+  "runtime": 85,
+  "posterURL": "/cZnHDJTIPus1U21ROV0JQNqFcF6.jpg",
+  "budget": 0,
+  "revenue": 0,
+  "overview": "Gesichter des Todes ist ein sogenannter Mondofilm, eine Art Dokumentation, die sich durch explizite Gewaltdarstellung auszeichnet. Der Film zeigt verschiedene, besonders grausame Todesfälle, die dem Zuschauer wie ein Zusammenschnitt verschiedener Nachrichtenausschnitte und Amateuraufnahmen erscheinen. Die meisten Szenen sind allerdings inszeniert.",
+  "slug": "faces-of-death-ii"
+}

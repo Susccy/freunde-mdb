@@ -1,0 +1,27 @@
+{
+  "tmdbID": 542224,
+  "rating": {
+    "total": 500,
+    "rt": 400,
+    "ch": 600
+  },
+  "dateSeen": "2022-03-10T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Gretel & Hansel",
+    "german": "Gretel & Hänsel"
+  },
+  "releaseDate": "2020-01-30T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Fantasy",
+    "Thriller"
+  ],
+  "runtime": 87,
+  "posterURL": "/yYFhBLspX5kqxjVtLqLnFmBJvkm.jpg",
+  "budget": 5000000,
+  "revenue": 22059211,
+  "tagline": "Ein Märchen neu erzählt",
+  "overview": "Vor langer Zeit, in einem verfluchten Land: Die verzweifelte Suche nach Nahrung und Arbeit zwingen die junge Gretel und ihren kleinen Bruder Hänsel dazu, das elterliche Haus zu verlassen. Völlig orientierungslos irren sie umher und verlaufen sich in einem tiefen, dunklen Wald. Als sie auf eine Hütte stoßen, in der eine alte, freundlich wirkende Frau lebt, glauben Gretel und Hänsel, Zuflucht gefunden zu haben. Aber die von der Alten in Zeiten der Hungersnot aufgetischten Festmähler, das unheimliche Gemurmel fremder Kinderstimmen und mysteriöse Erscheinungen im Haus, lassen Gretel erahnen, dass sich hinter ihrem scheinbaren Glück etwas Böses verbirgt. Kann sie ihren jüngeren Bruder beschützen oder wird sie den Versuchungen erliegen, die in ihr aufsteigen? Langsam bahnt sich das Grauen seinen Weg...",
+  "slug": "gretel-hansel"
+}

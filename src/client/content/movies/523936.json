@@ -1,0 +1,28 @@
+{
+  "tmdbID": 523936,
+  "rating": {
+    "total": 300,
+    "rt": 350,
+    "ch": 250
+  },
+  "dateSeen": "2022-02-22T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "Méandre",
+    "german": "Meander - Survival Instinct"
+  },
+  "releaseDate": "2021-05-26T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Science Fiction",
+    "Drama",
+    "Thriller"
+  ],
+  "runtime": 91,
+  "posterURL": "/wtD1mVBrWu7NvsU14FmgByueCQ7.jpg",
+  "budget": 0,
+  "revenue": 700000,
+  "tagline": "Wie weit wirst du gehen?",
+  "overview": "Nachdem sie von einem unbekannten Mann im Auto mitgenommen wurde, wacht Lisa in einer Röhre auf. An ihren Arm ist ein Armband mit einem Countdown geschnallt. Schnell begreift sie, dass alle 8 Minuten ein Abschnitt in Flammen aufgeht. Ihr bleibt nichts anderes übrig, als sich in sichere Abschnitte zu verkriechen, um zu überleben.",
+  "slug": "meandre"
+}

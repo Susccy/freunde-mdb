@@ -1,0 +1,27 @@
+{
+  "tmdbID": 514847,
+  "rating": {
+    "total": 600,
+    "rt": 650,
+    "ch": 550
+  },
+  "dateSeen": "2022-02-21T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "The Hunt",
+    "german": "The Hunt"
+  },
+  "releaseDate": "2020-03-11T00:00:00.000Z",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Horror"
+  ],
+  "runtime": 115,
+  "posterURL": "/nZD1rOkrBjKLeDFqMGYNaWS8uq6.jpg",
+  "budget": 14000000,
+  "revenue": 8621288,
+  "tagline": "Die Jagdsaison ist eröffnet.",
+  "overview": "Crystal erwacht zusammen mit elf anderen Menschen auf einer Lichtung im Wald, ohne zu wissen, wie und warum sie dort gelandet ist. Schon bald wird der bunt zusammengewürfelten Truppe an Normalos aber auf schmerzliche Weise vor Augen geführt, dass sie von einer reichen Sadistin ausgewählt wurden, um zu deren Belustigung als Opfer in einer perfiden Menschenjagd zu dienen. Doch haben die Veranstalter die Rechnung dabei ohne die toughe Crystal gemacht, die den Spieß kurzerhand umdreht und die Jäger zu Gejagten macht. Mit jedem ausgeschalteten Verfolger kommt sie dabei der rätselhaften Drahtzieherin hinter dem grausamen Katz- und Mausspiel einen Schritt näher...",
+  "slug": "the-hunt"
+}

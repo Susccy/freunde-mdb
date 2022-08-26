@@ -1,0 +1,28 @@
+{
+  "tmdbID": 346685,
+  "rating": {
+    "total": 550,
+    "rt": 750,
+    "ch": 350
+  },
+  "dateSeen": "2022-01-25T00:00:00.000Z",
+  "fsk": 16,
+  "title": {
+    "original": "The Girl on the Train",
+    "german": "Girl on the Train"
+  },
+  "releaseDate": "2016-10-05T00:00:00.000Z",
+  "genres": [
+    "Krimi",
+    "Drama",
+    "Mystery",
+    "Thriller"
+  ],
+  "runtime": 113,
+  "posterURL": "/803d6NaTKfVReAXRSh7BY36bE1S.jpg",
+  "budget": 45000000,
+  "revenue": 173185859,
+  "tagline": "Was hat sie gesehen? Was du siehst, kann dich verletzen.",
+  "overview": "Jeden Tag nimmt die geschiedene Rachel Watson den Zug, um nach Manhattan zur Arbeit zu kommen – zumindest tut sie so, denn vor Monaten hat sie ihren Job wegen ihres Alkoholproblems verloren und so fährt sie als reine Beschäftigungstherapie durch die Gegend. Und jeden Tag fährt sie damit an ihrem alten Haus vorbei, in dem sie mit ihrem Exmann gelebt hat. Dieser lebt noch immer in dem Haus, jetzt mit seiner neuen Frau und einem Kleinkind. Um sich von ihrem Schmerz abzulenken, fängt sie an, ein Pärchen zu beobachten, das ein paar Häuser weiter wohnt. Die perfekte, glückliche Familie. Doch als sie eines Tages wieder mit dem Zug vorbei fährt, beobachtet sie etwas Schockierendes.",
+  "slug": "the-girl-on-the-train"
+}

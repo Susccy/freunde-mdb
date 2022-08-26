@@ -1,0 +1,27 @@
+{
+  "tmdbID": 171424,
+  "rating": {
+    "total": 600,
+    "rt": 600,
+    "ch": 600
+  },
+  "dateSeen": "2022-08-22T00:00:00.000Z",
+  "fsk": 18,
+  "title": {
+    "original": "The Green Inferno",
+    "german": "The Green Inferno"
+  },
+  "releaseDate": "2013-09-08T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Abenteuer"
+  ],
+  "runtime": 100,
+  "posterURL": "/2mcdhj7a8PrlUkvTBeXq7Dv5eC1.jpg",
+  "budget": 5000000,
+  "revenue": 12666449,
+  "tagline": "Die Angst wird dich lebend auffressen",
+  "overview": "Eine Gruppe von Studenten und Weltverbesserern fliegt von New York City an den Amazonas, um dort einen bedrohten Volksstamm zu retten. Als ihr Flugzeug abstürzt, müssen sie sich jedoch völlig allein durch den peruanischen Dschungel schlagen. Unter ihnen befinden sich Justine, Alejandro, Jonah und Kaycee, die mit dem Überlebenskampf im exotischen Regenwald auf eine harte Probe gestellt werden. Endlich trifft die Gruppe auf die hilfsbereiten Einheimischen des Indio-Stammes, dem sie eigentlich helfen wollten. Doch die Erleichterung über die vermeintliche Rettung hält nicht lange vor: Zu spät bemerken sie, dass es sich bei ihren Rettern um Kannibalen handelt. Die Einwohner haben es auf das Fleisch der Überlebenden abgesehen und nehmen die Eindringlinge gefangen…",
+  "slug": "the-green-inferno"
+}

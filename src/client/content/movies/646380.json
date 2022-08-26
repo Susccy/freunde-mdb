@@ -1,0 +1,27 @@
+{
+  "tmdbID": 646380,
+  "rating": {
+    "total": 900,
+    "rt": 900,
+    "ch": 900
+  },
+  "dateSeen": "2022-02-23T00:00:00.000Z",
+  "fsk": 12,
+  "title": {
+    "original": "Don't Look Up",
+    "german": "Don't Look Up"
+  },
+  "releaseDate": "2021-12-07T00:00:00.000Z",
+  "genres": [
+    "Komödie",
+    "Drama",
+    "Science Fiction"
+  ],
+  "runtime": 145,
+  "posterURL": "/o8CF8S0ZoPUpgCusxQJTighyFQQ.jpg",
+  "budget": 75000000,
+  "revenue": 784681,
+  "tagline": "Wenn die Sterne Aufmerksamkeit fordern.",
+  "overview": "Die Menschheit ist in großer Gefahr! Ein riesiger Asteroid rast auf die Erde zu und wird die Bevölkerung restlos auslöschen. So lauten zumindest die Warnungen der beiden Astronomen Kate (Jennifer Lawrence) und Randall (Leonardo DiCaprio), die sich mit ihren bahnbrechenden Erkenntnissen an die Öffentlichkeit wagen und eine Katastrophe vermeiden wollen. Doch niemand interessiert sich für die Behauptungen der beiden Wissenschaftler, deren Belege und Thesen als unbestätigte Randnotiz verhallen. Um sich dennoch Gehör zu verschaffen, begeben sich Randall und Kate auf große Medientour. Selbst Präsidentin Orlean (Meryl Streep) steht auf der Liste der Wissenschaftler. Das ungewöhnliche Duo gibt sich redlich Mühe, die Erdbevölkerung auf das drohende Unheil aufmerksam zu machen. Aber sind ihre zahlreichen Berechnungen und Prognosen wirklich korrekt oder jagen sie einer Katastrophe hinterher, die sie selbst kreieren wollen?",
+  "slug": "don-t-look-up"
+}
