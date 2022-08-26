@@ -28,8 +28,8 @@
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 45% 1fr 2fr;
     border-radius: 10px;
-    height: 11rem;
-    flex: 0 0 22rem;
+    height: 10rem;
+    flex: 0 0 20rem;
 
     #{$self}__poster {
       @extend .placeholder-content;

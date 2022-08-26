@@ -5,9 +5,10 @@
       v-bind="$attrs"
       :drag-on-click="true"
       :contained="true"
-      :process-style="{ background: '#00999b' }"
+      :process-style="{ background: '#70e0dd' }"
       :tooltip-style="{
-        background: '#00999b',
+        background: '#70e0dd',
+        color: '#000000',
       }"
       :dot-options="{ focusStyle: { boxShadow: '0 0 2px 1px #70e0dd' } }"
     />

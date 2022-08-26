@@ -21,7 +21,7 @@ export default Vue.extend({})
   &__page {
     grid-row-start: 2;
     width: 90vw;
-    margin: 0 auto;
+    margin: 2rem auto;
   }
 
   > &__footer {

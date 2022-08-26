@@ -111,63 +111,65 @@
         font-size: $lg;
       }
 
-      &--dire {
-        background: linear-gradient(
-          90deg,
-          transparent,
-          hsla(0, 95%, 50%, 0.15),
-          transparent
-        );
-        #{$self}__rating__total {
-          color: hsl(0, 95%, 50%);
+      &.rating {
+        &--dire {
+          background: linear-gradient(
+            90deg,
+            transparent,
+            hsla(0, 95%, 50%, 0.15),
+            transparent
+          );
+          #{$self}__rating__total {
+            color: hsl(0, 95%, 50%);
+          }
         }
-      }
 
-      &--bad {
-        background: linear-gradient(
-          90deg,
-          transparent,
-          hsla(0, 70%, 53%, 0.1),
-          transparent
-        );
-        #{$self}__rating__total {
-          color: hsl(0, 70%, 53%);
+        &--bad {
+          background: linear-gradient(
+            90deg,
+            transparent,
+            hsla(0, 70%, 53%, 0.1),
+            transparent
+          );
+          #{$self}__rating__total {
+            color: hsl(0, 70%, 53%);
+          }
         }
-      }
 
-      &--meh {
-        background: linear-gradient(
-          90deg,
-          transparent,
-          hsla(33, 75%, 53%, 0.1),
-          transparent
-        );
-        #{$self}__rating__total {
-          color: hsl(33, 75%, 53%);
+        &--meh {
+          background: linear-gradient(
+            90deg,
+            transparent,
+            hsla(33, 75%, 53%, 0.1),
+            transparent
+          );
+          #{$self}__rating__total {
+            color: hsl(33, 75%, 53%);
+          }
         }
-      }
 
-      &--good {
-        background: linear-gradient(
-          90deg,
-          transparent,
-          hsla(120, 60%, 60%, 0.1),
-          transparent
-        );
-        #{$self}__rating__total {
-          color: hsl(120, 60%, 60%);
+        &--good {
+          background: linear-gradient(
+            90deg,
+            transparent,
+            hsla(120, 60%, 60%, 0.1),
+            transparent
+          );
+          #{$self}__rating__total {
+            color: hsl(120, 60%, 60%);
+          }
         }
-      }
 
-      &--great {
-        background: linear-gradient(
-          90deg,
-          transparent,
-          hsla(120, 95%, 50%, 0.15),
-          transparent
-        );
-        #{$self}__rating__total {
-          color: hsl(120, 95%, 50%);
+        &--great {
+          background: linear-gradient(
+            90deg,
+            transparent,
+            hsla(120, 95%, 50%, 0.15),
+            transparent
+          );
+          #{$self}__rating__total {
+            color: hsl(120, 95%, 50%);
+          }
         }
       }
     }

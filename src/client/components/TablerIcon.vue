@@ -14,6 +14,7 @@ import {
   ArrowsMaximizeIcon,
   FlameIcon,
   RotateClockwise2Icon,
+  ViewfinderIcon,
 } from "vue-tabler-icons"
 
 export default Vue.extend({
@@ -27,6 +28,7 @@ export default Vue.extend({
     ArrowsMaximizeIcon,
     FlameIcon,
     RotateClockwise2Icon,
+    ViewfinderIcon,
   },
   props: {
     name: {

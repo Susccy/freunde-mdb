@@ -1,43 +1,23 @@
 .c-movie-table {
+  $self: &;
+
   width: 100%;
   border-spacing: 0 1rem;
-  table-layout: fixed;
 
-  tr > * {
+  th {
+    width: 1px;
+    white-space: nowrap;
+    font-weight: 600;
+    // font-family: Oswald;
+
     &:first-child {
       width: 33px;
     }
 
     &:nth-child(2),
-    &:nth-child(3) {
-      // max-width: 20%;
-    }
-
-    &:nth-child(4),
-    &:nth-child(5) {
-      width: calc((48 / 16 * 1rem));
-    }
-
+    &:nth-child(3),
     &:nth-child(6) {
-      // max-width: 15%;
-    }
-
-    &:nth-child(7) {
-      width: calc(55 / 16 * 1rem);
-    }
-
-    &:nth-child(8) {
-      width: calc(63 / 16 * 1rem);
-    }
-
-    &:nth-child(9) {
-      width: calc(110 / 16 * 1rem);
-    }
-
-    &:nth-child(10),
-    &:nth-child(11),
-    &:last-child {
-      width: calc(66 / 16 * 1rem);
+      width: auto;
     }
   }
 
@@ -60,7 +40,6 @@
       height: $lg-5x;
       padding: 0 $sm-x;
       font-size: $md;
-      overflow: hidden;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -89,7 +68,9 @@
 
       &:nth-child(2),
       &:nth-child(3) {
-        font-weight: 600;
+        max-width: 7rem;
+        // font-weight: 400;
+        font-family: Oswald, sans-serif;
         text-align: left;
         font-size: $lg;
       }
@@ -103,6 +84,7 @@
       }
 
       &:nth-child(6) {
+        max-width: 5rem;
         text-align: left;
       }
 
@@ -112,6 +94,43 @@
         border-bottom-right-radius: inherit;
         font-size: $lg;
         font-weight: 600;
+      }
+
+      &.rating {
+        &--dire {
+          color: hsl(0, 95%, 50%);
+          &#{$self}__rating__total {
+            background-color: hsla(0, 95%, 50%, 0.15);
+          }
+        }
+
+        &--bad {
+          color: hsl(0, 70%, 53%);
+          &#{$self}__rating__total {
+            background-color: hsla(0, 70%, 53%, 0.1);
+          }
+        }
+
+        &--meh {
+          color: hsl(33, 75%, 53%);
+          &#{$self}__rating__total {
+            background-color: hsla(33, 75%, 53%, 0.1);
+          }
+        }
+
+        &--good {
+          color: hsl(120, 60%, 60%);
+          &#{$self}__rating__total {
+            background-color: hsla(120, 60%, 60%, 0.1);
+          }
+        }
+
+        &--great {
+          color: hsl(120, 95%, 50%);
+          &#{$self}__rating__total {
+            background-color: hsla(120, 95%, 50%, 0.15);
+          }
+        }
       }
     }
   }

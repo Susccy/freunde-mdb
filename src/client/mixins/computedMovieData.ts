@@ -51,19 +51,13 @@ export default Vue.extend({
       }
     },
     ratingModifier (): string {
-      const rating = parseFloat(this.rating.total)
-      return (
-        "c-movie-card__rating--" +
-        (rating < 1.0
-          ? "dire"
-          : rating <= 4.0
-          ? "bad"
-          : rating < 6.0
-          ? "meh"
-          : rating <= 9.0
-          ? "good"
-          : "great")
-      )
+      return this.getRatingClass(this.rating.total)
+    },
+    ratingModifierCH (): string {
+      return this.getRatingClass(this.rating.ch)
+    },
+    ratingModifierRT (): string {
+      return this.getRatingClass(this.rating.rt)
     },
   },
 
@@ -75,6 +69,23 @@ export default Vue.extend({
       return `https://image.tmdb.org/t/p/${
         size ? `w${size}` : "original"
       }${posterURL}`
+    },
+
+    getRatingClass (rating?: string) {
+      if (rating === undefined) return "rating--undefined"
+      const ratingParsed = parseFloat(rating)
+      return (
+        "rating--" +
+        (ratingParsed < 1.0
+          ? "dire"
+          : ratingParsed <= 4.0
+          ? "bad"
+          : ratingParsed < 6.0
+          ? "meh"
+          : ratingParsed <= 9.0
+          ? "good"
+          : "great")
+      )
     },
   },
 })

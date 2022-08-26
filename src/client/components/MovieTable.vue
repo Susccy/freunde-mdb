@@ -9,7 +9,7 @@
         <th>MM</th>
         <th>FSK</th>
         <th>Genres</th>
-        <th>min</th>
+        <th>Min.</th>
         <th>Ersch.</th>
         <th>Gesehen</th>
         <th>CH</th>

@@ -5,7 +5,7 @@
     <div class="p-index__search">
       <svg
         fill="white"
-        style="width: 100%; font-family:'Oswald'; font-weight: 400"
+        style="width: 100%; font-family: 'Oswald'; font-weight: 400"
         viewBox="0 0 150 50"
       >
         <text y="15" style="font-size: 0.8em">Film-Reviewer</text>
@@ -13,7 +13,7 @@
         <!-- <text style="text-anchor:start" y="30">Erich</text>
         <text style="text-anchor:middle" x="50%" y="30">und</text>
         <text style="text-anchor:end" x="100%" y="30">Eckert</text> -->
-        <text style="text-anchor:end; font-size: 0.8em" x="100%" y="45">
+        <text style="text-anchor: end; font-size: 0.8em" x="100%" y="45">
           Movie Database
         </text>
       </svg>
@@ -90,6 +90,8 @@ export default Vue.extend({
     }
   },
 
+  fetchOnServer: false,
+
   async fetch () {
     // @todo error handling
     const latestMoviesResponse = (await this.$content("movies")
@@ -105,7 +107,7 @@ export default Vue.extend({
         releaseDate: {
           $gte: new Date(now.getFullYear() - 1, now.getMonth()).toJSON(),
         },
-        "rating.total": { $gte: 500 },
+        "rating.total": { $gte: 600 },
       })
       .sortBy("rating.total", "desc")
       .sortBy("releaseDate", "desc")
@@ -179,13 +181,8 @@ export default Vue.extend({
       align-items: flex-end;
       justify-content: space-between;
 
-      h2 {
-        font-family: Comfortaa;
-        font-size: $lg-3x;
-
-        .c-icon {
-          margin: 0 0.5rem -0.2rem 0;
-        }
+      h2 .c-icon {
+        margin: 0 0.5rem -0.3rem 0;
       }
 
       a {

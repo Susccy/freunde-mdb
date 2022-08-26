@@ -5,9 +5,15 @@
       <div>
         <div class="c-search-extended__title">
           <label for="title">Filmtitel (deutsch oder original)</label>
-          <div>
+          <div class="c-search">
             <input id="title" v-model="title" type="text" />
-            <button @click="title = null" type="button">❌</button>
+            <button
+              @click="title = null"
+              type="button"
+              class="g-btn-reset c-search__btn"
+            >
+              <TablerIcon name="X" size="18" />
+            </button>
           </div>
         </div>
         <div>
@@ -28,7 +34,7 @@
           <label for="genre">Genre</label>
           <div>
             <select id="genre" v-model="genre">
-              <option value="horror">Horror</option>
+              <option value="Horror">Horror</option>
             </select>
             <button @click="genre = null" type="button">❌</button>
           </div>
@@ -214,7 +220,7 @@
     </div>
 
     <div class="c-search-extended__row">
-      <button type="submit">Suchen</button>
+      <button type="submit" class="g-btn-main">Suchen</button>
     </div>
   </form>
 </template>
@@ -269,7 +275,7 @@ export default Vue.extend({
         this.$route.query.sort?.indexOf("-") === 0
           ? this.$route.query.sort.slice(1)
           : this.$route.query.sort || "title.german",
-      sortOrder: "ASC",
+      sortOrder: this.$route.query.sort?.indexOf("-") === 0 ? "DES" : "ASC",
       STATIC,
     }
   },

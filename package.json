@@ -20,9 +20,7 @@
     "modern-normalize": "^1.1.0",
     "nuxt": "^2.15.7",
     "nuxt-property-decorator": "^2.9.1",
-    "url-slug": "^3.0.3",
     "vue-fragment": "^1.5.2",
-    "vue-infinite-loading": "^2.4.5",
     "vue-slider-component": "^3.2.15",
     "vue-tabler-icons": "^1.12.1"
   },
@@ -47,6 +45,7 @@
     "sass-loader": "^10.2.0",
     "ts-jest": "^27.0.3",
     "type-fest": "^2.1.0",
+    "url-slug": "^3.0.4",
     "vue-jest": "^3.0.4"
   }
 }

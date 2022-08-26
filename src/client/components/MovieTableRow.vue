@@ -26,13 +26,24 @@
       <img v-if="fskIcon" :src="fskIcon" :alt="`FSK ${movie.fsk}`" />
       <span v-else>?</span>
     </td>
-    <td>{{ genres }}</td>
+    <td>
+      {{ genres }}
+    </td>
     <td>{{ movie.runtime || "-" }}</td>
     <td>{{ yearReleased }}</td>
     <td>{{ dateSeen || "?" }}</td>
-    <td>{{ rating.ch || "n. G." }}</td>
-    <td>{{ rating.rt || "n. G." }}</td>
-    <td>{{ rating.total }}</td>
+    <td class="c-movie-table__rating" :class="[ratingModifierCH]">
+      {{ rating.ch || "--" }}
+    </td>
+    <td class="c-movie-table__rating" :class="[ratingModifierRT]">
+      {{ rating.rt || "--" }}
+    </td>
+    <td
+      class="c-movie-table__rating c-movie-table__rating__total"
+      :class="[ratingModifier]"
+    >
+      {{ rating.total }}
+    </td>
   </tr>
 </template>
 

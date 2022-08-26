@@ -1,32 +1,40 @@
 <template>
   <main class="page p-search">
-    <h1>Film-Datenbank</h1>
+    <div class="p-search__heading">
+      <h1>Filmdatenbank</h1>
+    </div>
     <div class="p-search__search-extended">
-      <h2>Suche</h2>
-      <SearchExtended />
+      <div>
+        <h2><TablerIcon name="search" size="28" />Suche</h2>
+        <SearchExtended />
+      </div>
     </div>
     <div class="p-search__results">
-      <h2>Ergebnisse</h2>
-      <p v-if="queryIsEmpty">Warte auf Suchanfrage...</p>
-      <p v-else-if="!movies.length">Keine Ergebnisse</p>
+      <h2><TablerIcon name="viewfinder" size="28" />Ergebnisse</h2>
+      <p v-if="loadingState === 'waiting'">Warte auf Suchanfrage...</p>
+      <p v-else-if="loadingState === 'finished' && !movies.length">
+        Keine Ergebnisse
+      </p>
       <MovieTable v-else :movie-data="movies" />
+      <button
+        v-if="loadingState !== 'finished' && movies.length"
+        @click="loadMoreResults"
+        class="p-search__show-more-btn g-btn-main"
+      >
+        Mehr Ergebnisse laden
+      </button>
+      <p v-if="loadingState === 'finished' && movies.length">
+        Alle {{ movies.length }} Ergebnisse geladen
+      </p>
     </div>
-    <Movie
+    <MoviePageContent
       v-if="movie"
       ref="movieModal"
       @close="hideMovieModal"
       :movie="movie"
       is-modal
+      class="modal"
     />
-    <InfiniteLoading
-      @infinite="infiniteHandler"
-      :identifier="infiniteID"
-      spinner="spiral"
-    >
-      <div slot="spinner">Lädt...</div>
-      <div slot="no-more"></div>
-      <div slot="no-results"></div>
-    </InfiniteLoading>
   </main>
 </template>
 
@@ -46,6 +54,7 @@ export default class Search extends Vue {
 
   movies: MovieResponse[] = []
   movie: MovieResponse | null = null
+  loadingState: "waiting" | "loading" | "done" | "finished" = "waiting"
   options: {
     limit: number
     page: number
@@ -58,7 +67,6 @@ export default class Search extends Vue {
 
   whereQuery = {}
   titleQuery = ""
-  infiniteID = +new Date()
 
   head (): MetaInfo {
     const { query } = this.$route
@@ -109,8 +117,6 @@ export default class Search extends Vue {
   async search () {
     if (this.queryIsEmpty) return
 
-    this.infiniteID++
-
     const validQueryParams = [
       ["limit", "limit"],
       ["page", "page"],
@@ -145,7 +151,7 @@ export default class Search extends Vue {
       sort: string | undefined
     }
 
-    console.log({validatedQuery})
+    console.log({ validatedQuery })
 
     limit && !isNaN(parseInt(limit)) && (this.options.limit = parseInt(limit))
     this.options.page = (page && !isNaN(parseInt(page)) && parseInt(page)) || 0
@@ -156,7 +162,8 @@ export default class Search extends Vue {
     }
 
     this.whereQuery = Object.entries(validatedQuery).reduce<{
-      [k: string]: string | any[] | { [k: string]: string } | undefined
+      [k: string]: string | number | any[] | { [k: string]: string } | undefined
+      // @ts-ignore
     }>((validQuery, [queryParamName, queryParamValue]) => {
       const validQueryParam = validQueryParams.find(
         (v) => v[0] === queryParamName
@@ -169,13 +176,36 @@ export default class Search extends Vue {
 
       const paramIsMin = /_min$/.test(validParamName)
       const paramIsMax = !paramIsMin && /_max$/.test(validParamName)
+      const paramIsGenre = validParamName === "genre"
+      const paramIsFSK = validParamName === "fsk"
 
+      // @todo use $between: [min, max] instead of $gte + $lte
       return {
         ...validQuery,
         [dbParamPath]: paramIsMin
-          ? { ...(validQuery[dbParamPath] as {}), $gte: queryParamValue }
+          ? {
+              ...(validQuery[dbParamPath] as {}),
+              $gte:
+                dbParamPath === "releaseDate"
+                  ? new Date(+queryParamValue, 0)
+                  : dbParamPath === "dateSeen"
+                  ? queryParamValue
+                  : +queryParamValue,
+            }
           : paramIsMax
-          ? { ...(validQuery[dbParamPath] as {}), $lte: queryParamValue }
+          ? {
+              ...(validQuery[dbParamPath] as {}),
+              $lte:
+                dbParamPath === "releaseDate"
+                  ? new Date(+queryParamValue, 11)
+                  : dbParamPath === "dateSeen"
+                  ? queryParamValue
+                  : +queryParamValue,
+            }
+          : paramIsGenre
+          ? { $contains: queryParamValue }
+          : paramIsFSK
+          ? +queryParamValue
           : queryParamValue,
       }
     }, {})
@@ -190,6 +220,10 @@ export default class Search extends Vue {
   async contentRequest () {
     if (this.queryIsEmpty) return []
 
+    console.log("WHERE", this.whereQuery)
+
+    this.loadingState = "loading"
+
     let contentQuery = this.$content("movies")
       .where(this.whereQuery)
       .search(this.titleQuery)
@@ -201,9 +235,17 @@ export default class Search extends Vue {
     if (!/(title\.original)|(rating\.total)/.test(this.options.sort.field))
       contentQuery = contentQuery.sortBy("title.original")
 
-    const result = (await contentQuery.fetch()) as (MovieResponse & FetchReturn)[]
-    console.log({result})
+    const result = (await contentQuery.fetch()) as (MovieResponse &
+      FetchReturn)[]
+    this.loadingState = result.length < this.options.limit ? "finished" : "done"
+    console.log({ result })
     return result
+  }
+
+  async loadMoreResults () {
+    this.options.page++
+    const results = await this.contentRequest()
+    this.movies.push(...results)
   }
 
   displayMovieModal (route: Route) {
@@ -219,16 +261,48 @@ export default class Search extends Vue {
     this.movie = null
     window.history.pushState({}, "", this.$route.fullPath)
   }
-
-  async infiniteHandler ($state: any) {
-    this.options.page++
-    const result = await this.contentRequest()
-    if (result.length) {
-      this.movies.push(...result)
-      $state.loaded()
-      return
-    }
-    $state.complete()
-  }
 }
 </script>
+
+<style lang="scss" scoped>
+.p-search {
+  $self: &;
+
+  > *:not(.modal) {
+    margin-block: 3rem;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__search-extended {
+    max-width: 60rem;
+    width: 80%;
+    margin-inline: auto;
+
+    div > * {
+      margin-block: 1rem;
+    }
+  }
+
+  h2 .c-icon {
+    margin: 0 0.5rem -0.3rem 0;
+  }
+
+  &__results {
+    > * {
+      margin-block: 1rem;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    #{$self}__show-more-btn {
+      display: block;
+      margin-inline: auto;
+    }
+  }
+}
+</style>

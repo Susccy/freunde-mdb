@@ -4,7 +4,8 @@
   - Gnadenlos
   - Das Ding aus einer anderen Welt
   - Wrong Turn - The Foundation
-  - ...
+  - Blood Feast
+  -
 
 - add MM to "Red Letter Day" (?)
 - removing a filter in search extended then clicking search again doesn't refresh results

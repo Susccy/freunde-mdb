@@ -14,7 +14,8 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "FREundE Movie Database - die Filmdatenbank Ihres Vertrauens.",
+        content:
+          "FREundE Movie Database - Nur die seriösesten Kritiken der Film-Reviewer Erich und Eckert",
       },
       { name: "format-detection", content: "telephone=no" },
     ],
@@ -25,14 +26,13 @@ export default {
   css: ["~/assets/styles/main"],
 
   styleResources: {
-    scss: "~/assets/styles/abstracts/*.scss"
+    scss: "~/assets/styles/abstracts/*.scss",
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "~/plugins/vue-slider-component.client.ts",
     "~/plugins/vue-fragment.ts",
-    "~/plugins/vue-infinite-loading.client.ts",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -42,7 +42,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
-    "@nuxtjs/style-resources"
+    "@nuxtjs/style-resources",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
