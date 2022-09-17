@@ -1,0 +1,27 @@
+{
+  "tmdbID": 493922,
+  "rating": {
+    "total": 700,
+    "rt": 750,
+    "ch": 650
+  },
+  "dateSeen": "2022-09-03",
+  "fsk": 16,
+  "title": {
+    "original": "Hereditary",
+    "german": "Hereditary - Das Vermächtnis"
+  },
+  "releaseDate": "2018-06-07T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Mystery",
+    "Thriller"
+  ],
+  "runtime": 127,
+  "posterURL": "/95oCum0rJgOLh7uPc5J8MwcJdaD.jpg",
+  "budget": 10000000,
+  "revenue": 80239658,
+  "tagline": "Jeder Stammbaum birgt ein Geheimnis.",
+  "overview": "Annie verliert ihre Mutter, die zugleich die Matriarchin der Familie war. Das Dahinscheiden der alten Dame hat für die Familie Graham, zu der auch Ehemann Steve, Sohn Peter und Tochter Charlie gehören, jedoch weitreichendere Konsequenzen als nur die Trauer um den Verlust der Großmutter. Eine dunkle Präsenz scheint als übernatürliche Kraft Einzug in ihren Haushalt zu halten und Annie muss nun tief in die Geheimnisse ihrer Vorfahren eintauchen, um einem ihr vererbten schrecklichen Schicksal zu entgehen.",
+  "slug": "hereditary"
+}

@@ -1,0 +1,27 @@
+{
+  "tmdbID": 57876,
+  "rating": {
+    "total": 450,
+    "rt": 450,
+    "ch": 450
+  },
+  "dateSeen": "2022-09-01",
+  "fsk": 16,
+  "title": {
+    "original": "Area 51",
+    "german": "Area 51"
+  },
+  "releaseDate": "2015-05-15T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Science Fiction",
+    "Mystery"
+  ],
+  "runtime": 91,
+  "posterURL": "/ochcUJTPQSfU5fDMA21y4xoDzeX.jpg",
+  "budget": 5000000,
+  "revenue": 7556,
+  "overview": "In „Area 51“ - einem Film von \"Paranormal Activity\"-Regissseur Oren Peli - geht es um eine Gruppe Studenten, die es sich zur Aufgabe machen, ein berühmtes militärisches Sperrgebiet in der Wüste von Nevada zu erkunden. Es handelt sich um das berühmte „Area 51“ im südlichen Nevada, unweit von Las Vegas, dass eng mit den Gerüchten um eine geheimgehaltene Landung von Außerirdischen verknüpft ist. Um die Wahrheit hinter den Gerüchten zu finden, begeben sich die Studenten ausgestattet mit eigenen Videokameras auf das abgelegene, eingezäunte Gelände. Als Enthüllungsjournalisten wollen die Freunde in die Geschichte eingehen und werden Teil etwas weitaus Größerem... Ihre Aufnahmen im Found-Footage-Stil in den geheimen Bunkern und Laboren der Einrichtung, sind ein Zeugnis des Grauens, dem sie begegnen.",
+  "slug": "area-51"
+}
