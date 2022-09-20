@@ -95,3 +95,6 @@ sw.*
 # generated movie data files
 combinedData.json
 FREUNDE_Filmliste_*_EDITED.csv
+
+# private config
+config.json

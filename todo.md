@@ -7,12 +7,7 @@
   - Blood Feast
   -
 
-- add MM to
-  - "Red Letter Day" (?)
-  - X
-  - Dark Glasses
 - add
-  - Countdown
   - Caged
 - removing a filter in search extended then clicking search again doesn't refresh results
 - $lte not regarded if $gte is present (string values?)

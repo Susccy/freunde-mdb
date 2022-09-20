@@ -1,23 +1,22 @@
 {
+  "tmdbID": 599975,
+  "rating": {
+    "total": 500
+  },
+  "dateSeen": "2021-02-04",
+  "mm": false,
+  "fsk": 16,
   "title": {
     "original": "Countdown",
     "german": "Countdown"
   },
-  "rating": {
-    "total": 500,
-    "ch": 500,
-    "rt": 500
-  },
-  "dateSeen": "2020-02-03T23:00:00.000Z",
-  "fsk": 16,
-  "tmdbID": 599975,
   "releaseDate": "2019-10-24T00:00:00.000Z",
-  "runtime": 91,
   "genres": [
     "Horror",
     "Thriller"
   ],
   "posterURL": "/42EOlUdd9qTPDQPGagKwYLNMwqp.jpg",
+  "runtime": 91,
   "budget": 6500000,
   "revenue": 48021766,
   "tagline": "Sterben? Da gibt's ne App für!",

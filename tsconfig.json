@@ -12,11 +12,15 @@
     "experimentalDecorators": true,
     "baseUrl": ".",
     "noErrorTruncation": true,
+    "resolveJsonModule": true,
     "paths": {
       "~/*": ["./src/*"],
       "~~/*": ["./*"]
     },
     "types": ["@nuxt/types", "@types/node", "@nuxt/content"]
   },
-  "exclude": ["node_modules", ".nuxt", "dist"]
+  "exclude": ["node_modules", ".nuxt", "dist"],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
 }

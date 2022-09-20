@@ -12,15 +12,13 @@
     "german": "Dark Glasses"
   },
   "releaseDate": "2022-02-24T00:00:00.000Z",
-  "genres": [
-    "Drama",
-    "Thriller"
-  ],
+  "genres": ["Drama", "Thriller"],
   "runtime": 90,
   "posterURL": "/f2y70z737GvbzDhaqFmpDOq0ErW.jpg",
   "budget": 0,
   "revenue": 0,
   "tagline": "Blinde Angst",
   "overview": "Diana, eine Edelprostituierte auf der Flucht vor einem Serienmörder, erleidet einen Autounfall, bei dem sie erblindet und die Familie von Chin, einem zehnjährigen Jungen, getötet wird.",
-  "slug": "occhiali-neri"
+  "slug": "occhiali-neri",
+  "mm": true
 }
