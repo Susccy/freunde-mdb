@@ -68,8 +68,14 @@ const validateNewMovieFile = (movie: {
     value !== null &&
     properties.every((propName) => propName in value)
 
-  const valueIsValidRating = (value: unknown): value is number =>
-    valueIsValidNumber(value) && value >= 0 && value <= 1000 && value % 50 === 0
+  const valueIsValidRating = (
+    value: unknown,
+    isTotal = false
+  ): value is number =>
+    valueIsValidNumber(value) &&
+    value >= 0 &&
+    value <= 1000 &&
+    value % (isTotal ? 25 : 50) === 0
 
   const optional = (value: unknown, condition: boolean) =>
     typeof value === "undefined" || value === null || condition
@@ -88,9 +94,9 @@ const validateNewMovieFile = (movie: {
     // rating
     [
       (valueIsValidObjectWithProperties(rating, ["ch", "rt"]) &&
-        [rating.ch, rating.rt].every(valueIsValidRating)) ||
+        [rating.ch, rating.rt].every((rating) => valueIsValidRating(rating))) ||
         (valueIsValidObjectWithProperties(rating, ["total"]) &&
-          valueIsValidRating(rating.total)),
+          valueIsValidRating(rating.total, true)),
       `Invalid rating (${rating})`,
     ],
     // dateSeen
@@ -132,8 +138,6 @@ function parseMovieDetailsResponse (response: MovieDetails) {
     tagline,
     overview,
   } = response
-
-  console.log({ release_date })
 
   const parsedResponse = {
     title: { original: original_title, german: title },

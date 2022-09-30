@@ -5,17 +5,14 @@
     "rt": 750,
     "ch": 750
   },
-  "dateSeen": "2021-05-22T00:00:00.000Z",
+  "dateSeen": "2022-05-22T00:00:00.000Z",
   "fsk": 18,
   "title": {
     "original": "Faces of Death II",
     "german": "Gesichter des Todes II"
   },
   "releaseDate": "1981-05-01T00:00:00.000Z",
-  "genres": [
-    "Horror",
-    "Dokumentarfilm"
-  ],
+  "genres": ["Horror", "Dokumentarfilm"],
   "runtime": 85,
   "posterURL": "/cZnHDJTIPus1U21ROV0JQNqFcF6.jpg",
   "budget": 0,

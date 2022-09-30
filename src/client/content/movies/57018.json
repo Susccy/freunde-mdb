@@ -1,0 +1,27 @@
+{
+  "tmdbID": 57018,
+  "rating": {
+    "ch": 500,
+    "rt": 400,
+    "total": 450
+  },
+  "dateSeen": "2022-03-06",
+  "mm": false,
+  "fsk": 18,
+  "title": {
+    "original": "Captifs",
+    "german": "Caged"
+  },
+  "releaseDate": "2010-10-06T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/EqAf6ViIB1k6027MkgXDgKb3Y6.jpg",
+  "runtime": 84,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "Jetzt beginnt der wahre Alptraum",
+  "overview": "Seit sie in frühen Jahren erlebte, wie ihre Spielgefährtin von einem Hund getötet wurde, ist Carole auf Versteckspielen im allgemeinen und Wuffis im speziellen nicht gut zu sprechen. Nun aber ist sie gezwungen, sich mit beiden wieder auseinanderzusetzen, als sie im Rahmen eines humanitären Einsatzes in Ex-Jugoslawien mit zwei männlichen Kollegen in den Hinterhalt und die Gefangenschaft finsterer Söldnertypen gerät. Was genau jene vorhaben, ist zunächst unklar. Fest steht bloß, dass es nichts Gutes ist. Und dass sie für Flüchtlinge scharfe Hunde bereithalten.",
+  "slug": "captifs"
+}

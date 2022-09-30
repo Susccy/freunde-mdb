@@ -1,0 +1,26 @@
+{
+  "tmdbID": 415010,
+  "rating": {
+    "total": 200
+  },
+  "dateSeen": "2018-04-22T22:00:00.000Z",
+  "mm": false,
+  "fsk": 18,
+  "title": {
+    "original": "Les affamés",
+    "german": "Hungrig"
+  },
+  "releaseDate": "2017-09-23T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Drama",
+    "Science Fiction"
+  ],
+  "posterURL": "/wYKcOWPYQB97JEIkKAhhYodMM0s.jpg",
+  "runtime": 100,
+  "budget": 3000000,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Nachdem ein Virus große Teile der Menschheit in gefährliche Fleischfresser verwandelt hat, streifen Bonin und Tania– wie so viele andere Überlebende – ohne Hoffnung und ohne jedes Ziel durchs Land, immer nur daran denkend, weiter zu überleben. Als sie in einem verlassenen Haus auf das Waisenmädchen Zoé treffen, nehmen sie sich ihrer an und haben nun ein Ziel: das Kind zu beschützen. Diesen Schutz könnte ein Bunker bieten. Gemeinsam mit weiteren Überlebenden versuchen sie diesen zu erreichen, doch die untoten Zombies lauern überall…",
+  "slug": "les-affames"
+}

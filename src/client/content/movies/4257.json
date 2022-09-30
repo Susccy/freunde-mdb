@@ -11,13 +11,12 @@
   "tmdbID": 4257,
   "releaseDate": "2006-04-12T00:00:00.000Z",
   "runtime": 83,
-  "genres": [
-    "Komödie"
-  ],
+  "genres": ["Komödie"],
   "posterURL": "/4SMqo8Me8aCT4KAVLeG9pk8VYiN.jpg",
   "budget": 45000000,
   "revenue": 178262620,
   "tagline": "Das vierte und letzte Kapitel der Trilogie.",
   "overview": "Die liebenswerte, aber reichlich naive Cindy Campell findet einen Job als Altenpflegerin bei einer geheimnisvollen alten Frau, in deren Haus Geister ihr Unwesen treiben. Dort lernt sie auch ihren gutaussehenden Nachbarn Tom Ryan kennen. Gemeinsam mit ihm und seinen Kindern flieht Cindy alsbald vor Außerirdischen, die die Weltherrschaft übernehmen wollen. Dabei werden sie unter anderem mit schrecklichen Flugzeugabstürzen, Dorfidioten, Körperöffnungen von Aliens und schließlich sogar Oprah Winfrey konfrontiert.",
-  "slug": "scary-movie-4"
+  "slug": "scary-movie-4",
+  "dateSeen": "2016-10-15"
 }

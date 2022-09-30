@@ -1,0 +1,24 @@
+{
+  "tmdbID": 303856,
+  "rating": {
+    "total": 425
+  },
+  "dateSeen": "2018-04-08T22:00:00.000Z",
+  "mm": false,
+  "fsk": 16,
+  "title": {
+    "original": "Die Präsenz",
+    "german": "Die Präsenz"
+  },
+  "releaseDate": "2014-10-31T00:00:00.000Z",
+  "genres": [
+    "Horror"
+  ],
+  "posterURL": "/lPPGivpv5Mup0Y15IznD7RH8bdM.jpg",
+  "runtime": 83,
+  "budget": 40000,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Markus ist Anthropologie-Student, in seinem Studium widmet er sich volkstümlichem Aberglauben und dem Phänomen der Poltergeister. Dann bekommt er die Möglichkeit, aus grauer Theorie gruselige Praxis zu machen. Sein Freund Lukas erfährt von einer Burg, auf der es angeblich Geister gibt. Die zwei Kumpels fahren hin, Markus' Freundin Rebecca im Schlepptau, die erst auf der Fahrt erzählt bekommt, was ihr blüht. Auf der Wasserburg angekommen bereiten die Studenten ihr Nachtlager – endlich können sie damit anfangen, paranormale Aktivitäten aufzuzeichnen! Die Neuankömmlinge freuen sich auf spaßige Tage, stattdessen aber erwartet sie der pure Horror: In der Burg scheint tatsächlich etwas Dämonisches umzugehen. Bald merken Markus, Lukas und Rebecca, wie ernst die Situation ist…",
+  "slug": "die-prasenz"
+}

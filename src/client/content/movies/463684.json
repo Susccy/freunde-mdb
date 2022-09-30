@@ -6,17 +6,13 @@
   "rating": {
     "total": 475
   },
-  "dateSeen": "2018-02-24T23:00:00.000Z",
+  "dateSeen": "2019-02-24T23:00:00.000Z",
   "fsk": 16,
   "mm": false,
   "tmdbID": 463684,
   "releaseDate": "2019-02-01T00:00:00.000Z",
   "runtime": 109,
-  "genres": [
-    "Thriller",
-    "Mystery",
-    "Horror"
-  ],
+  "genres": ["Thriller", "Mystery", "Horror"],
   "posterURL": "/9M9uC66w8mBxkmlrvNHmlf4SbSy.jpg",
   "budget": 21000000,
   "revenue": 0,

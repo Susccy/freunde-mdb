@@ -10,7 +10,8 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "test": "jest"
+    "test": "jest",
+    "add-movie": "ts-node --esm src/utils/insertNewMovie.mts"
   },
   "dependencies": {
     "@nuxt/content": "^1.15.1",
