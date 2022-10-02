@@ -32,7 +32,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "~/plugins/vue-slider-component.client.ts",
-    "~/plugins/vue-fragment.ts",
+    "~/plugins/vue-fragment.client.ts",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
