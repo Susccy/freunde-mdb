@@ -1,0 +1,28 @@
+{
+  "tmdbID": 882598,
+  "rating": {
+    "ch": 650,
+    "rt": 750,
+    "total": 700
+  },
+  "dateSeen": "2022-09-30",
+  "mm": false,
+  "fsk": 16,
+  "title": {
+    "original": "Smile",
+    "german": "Smile - Siehst du es auch?"
+  },
+  "releaseDate": "2022-09-23T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Mystery",
+    "Thriller"
+  ],
+  "posterURL": "/hiaeZKzwsk4y4atFhmncO5KRxeT.jpg",
+  "runtime": 115,
+  "budget": 17000000,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "",
+  "slug": "smile"
+}

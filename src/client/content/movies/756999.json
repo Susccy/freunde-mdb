@@ -1,0 +1,27 @@
+{
+  "tmdbID": 756999,
+  "rating": {
+    "ch": 750,
+    "rt": 800,
+    "total": 775
+  },
+  "dateSeen": "2022-09-28",
+  "mm": false,
+  "fsk": 16,
+  "title": {
+    "original": "The Black Phone",
+    "german": "The Black Phone"
+  },
+  "releaseDate": "2021-06-24T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/cgkDTMydKHIymC0Gkvhk5ThVqb1.jpg",
+  "runtime": 103,
+  "budget": 18800000,
+  "revenue": 157000000,
+  "tagline": "Sprich nie mit Fremden",
+  "overview": "Finney Shaw, ein schüchterner, aber kluger 13-jähriger Junge, wird von einem sadistischen Mörder entführt und in einem schalldichten Keller gefangen gehalten, wo Schreien wenig nützt. Als ein nicht angeschlossenes Telefon an der Wand zu klingeln beginnt, entdeckt Finney, dass er die Stimmen der früheren Opfer des Mörders hören kann. Und sie sind fest entschlossen, dafür zu sorgen, dass das, was ihnen passiert ist, Finney nicht passiert.",
+  "slug": "the-black-phone"
+}
