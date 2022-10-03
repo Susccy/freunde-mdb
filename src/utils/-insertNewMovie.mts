@@ -189,9 +189,16 @@ const sanitizeMovieContentData = (
 
   const validatedNewMovieData = validateNewMovieFile(movie)
 
-  const tmdbMovieData = (
-    await tmdbAPI.get<MovieDetails>(`/movie/${movie.tmdbID}`)
-  ).data
+  const tmdbMovieData = await tmdbAPI
+    .get<MovieDetails>(`/movie/${movie.tmdbID}`)
+    .then((r) => r.data)
+    .catch((e) => {
+      throw new Error(
+        e.response.status === 404
+          ? `No movie found with TMDB ID ${movie.tmdbID}.`
+          : e
+      )
+    })
 
   const parsedTMDBMovieData = parseMovieDetailsResponse(tmdbMovieData)
 
@@ -209,5 +216,7 @@ const sanitizeMovieContentData = (
     JSON.stringify(sanitizedMovieData, null, 2)
   )
 
-  console.log(`${fileName} created.`)
+  return fileName
 })()
+  .then((fileName) => console.log(`${fileName} created.`))
+  .catch(console.error)
