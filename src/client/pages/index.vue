@@ -153,7 +153,7 @@ export default Vue.extend({
     const bestRecentMoviesResponse = (await this.$content("movies")
       .where({
         releaseDate: {
-          $gte: new Date(now.getFullYear() - 1, now.getMonth()).toJSON(),
+          $gte: new Date(now.getFullYear() - 2, now.getMonth()).toJSON(),
         },
         "rating.total": { $gte: 600 },
       })
