@@ -11,8 +11,8 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "test": "jest",
-    "add-movie": "ts-node --esm src/utils/insertNewMovie.mts",
-    "add-movie:legacy": "node --experimental-json-modules --loader ts-node/esm ./src/utils/-insertNewMovie.legacy.mts"
+    "add-movie": "ts-node --esm devtools/insertNewMovie.mts",
+    "add-movie:legacy": "node --experimental-json-modules --loader ts-node/esm devtools/insertNewMovie.legacy.mts"
   },
   "dependencies": {
     "@nuxt/content": "^1.15.1",

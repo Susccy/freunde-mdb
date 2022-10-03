@@ -1,6 +1,6 @@
 import Vue from "vue"
 import type { PropType } from "vue"
-import formatDateDE from "../../utils/formatDateDE"
+import formatDateDE from "../utils/formatDateDE"
 import type { MovieResponse } from "~/entities/movie.entity"
 
 export default Vue.extend({

@@ -51,8 +51,6 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  ignore: ["src/utils/*.mts"],
-
   srcDir: "./src/client",
 
   alias: {

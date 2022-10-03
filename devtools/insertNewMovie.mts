@@ -6,6 +6,7 @@ import axios from "axios"
 import urlSlug from "url-slug"
 import type { MovieDetails } from "tmdb-ts"
 import movie from "./movie.json" assert { type: "json" }
+// @ts-ignore
 import CONFIG from "./config.json" assert { type: "json" }
 
 const __filename = fileURLToPath(import.meta.url)
