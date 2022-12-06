@@ -1,0 +1,27 @@
+{
+  "tmdbID": 652004,
+  "rating": {
+    "ch": 600,
+    "rt": 700,
+    "total": 650
+  },
+  "dateSeen": "2022-11-18",
+  "mm": false,
+  "fsk": 16,
+  "title": {
+    "original": "The Wolf of Snow Hollow",
+    "german": "The Wolf of Snow Hollow"
+  },
+  "releaseDate": "2020-10-23T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/nXeTSXR5ryFwxrlpmD9hhXJTAuc.jpg",
+  "runtime": 84,
+  "budget": 2000000,
+  "revenue": 239828,
+  "tagline": "Willkommen in Snow Hollow",
+  "overview": "In der kleinen Bergstadt Snow Hollow herrschen Angst und Schrecken, als nach jeder Vollmondnacht verstümmelte Leichen auftauchen. Bald machen sich Gerüchte über einen Werwolf breit, der dort sein Unwesen treiben soll. Der örtliche Sheriff John Marshall besteht jedoch darauf, dass es sich um einen menschlichen Serienmörder handelt. Doch seine persönlichen Probleme mit Alkohol, Wutausbrüchen, einer Tochter im Teenageralter und einem kranken Vater erschweren die Ermittlungen.",
+  "slug": "the-wolf-of-snow-hollow"
+}

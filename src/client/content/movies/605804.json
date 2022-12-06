@@ -1,0 +1,28 @@
+{
+  "tmdbID": 605804,
+  "rating": {
+    "ch": 350,
+    "rt": 350,
+    "total": 350
+  },
+  "dateSeen": "2022-10-17",
+  "mm": false,
+  "fsk": 16,
+  "title": {
+    "original": "The Wretched",
+    "german": "The Witch Next Door"
+  },
+  "releaseDate": "2020-03-09T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Mystery",
+    "Thriller"
+  ],
+  "posterURL": "/tM2DR6j1WsNEdlbSgC7RveVD8Q5.jpg",
+  "runtime": 95,
+  "budget": 0,
+  "revenue": 3758846,
+  "tagline": "Das Grauen wartet nebenan.",
+  "overview": "Nach der Trennung seiner Eltern verbringt Teenager Ben die Sommerferien bei seinem Vater in einer kleinen Küstenstadt. Dabei lernt er Mallory kennen, in der er schnell eine Freundin findet. Doch so idyllisch und friedlich, wie der verschlafene Ort zwischen Meer und dichtem Wald auf den ersten Blick erscheint, ist er nicht. Seine Vergangenheit ist geheimnisvoll und düster. Ben beobachtet seltsame Ereignisse im Haus nebenan. Als plötzlich die beiden Nachbarskinder spurlos verschwinden und niemand davon Notiz zu nehmen scheint, ist sich Ben sicher: Nebenan hat sich eine Hexe eingeschlichen!",
+  "slug": "the-wretched"
+}

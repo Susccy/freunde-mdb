@@ -1,0 +1,26 @@
+{
+  "tmdbID": 299551,
+  "rating": {
+    "ch": 300,
+    "rt": 400,
+    "total": 350
+  },
+  "dateSeen": "2022-09-26",
+  "mm": false,
+  "fsk": 16,
+  "title": {
+    "original": "The Atticus Institute",
+    "german": "The Atticus Institute"
+  },
+  "releaseDate": "2015-01-20T00:00:00.000Z",
+  "genres": [
+    "Horror"
+  ],
+  "posterURL": "/43dvapnp9DvDvc8JbLCdq63h3zq.jpg",
+  "runtime": 92,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "Teuflische Experimente",
+  "overview": "Anfang der 1970er gründete Dr. Henry West (William Mapother) das Atticus Institute, um Menschen mit übernatürlichen Fähigkeiten zu untersuchen, die hellsehen oder per Gedanken Gegenstände bewegen können. Dr. West und seine Kollegen hatten es mit einigen bemerkenswerten Fällen zu tun, aber richtig herausgefordert wurden sie erst durch Judith Winstead (Rya Kihlstedt). Die Frau war von einer dunklen, gefährlichen Macht besessen, die bald das Verteidigungsministerium auf den Plan rief. Waffen sollten Winstead in Schach halten. Doch je länger an der Frau experimentiert wurde, desto klarer wurde die Sinnlosigkeit einer militärischen Kontrolle – Soldaten konnten nichts ausrichten gegen die Kraft, mit der sie es zu tun hatten. Erst 40 Jahre nach den unerklärlichen Ereignissen werden detaillierte, bis dato unter Verschluss gehaltene Informationen der Angelegenheit publik gemacht…",
+  "slug": "the-atticus-institute"
+}

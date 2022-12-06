@@ -1,0 +1,27 @@
+{
+  "tmdbID": 672437,
+  "rating": {
+    "ch": 300,
+    "rt": 450,
+    "total": 375
+  },
+  "dateSeen": "2022-10-30",
+  "mm": false,
+  "fsk": 16,
+  "title": {
+    "original": "Brain Freeze",
+    "german": "Brain Freeze"
+  },
+  "releaseDate": "2021-10-29T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Komödie"
+  ],
+  "posterURL": "/iUN2LvOWi3afThQidankPMIPBQd.jpg",
+  "runtime": 91,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Ein Düngemittel, das in einer exklusiven kanadischen Gemeinde zum Einsatz kommt, lässt nicht nur wie gewünscht den Schnee auf dem Golfplatz schmelzen, sondern auch die reichen Anwohner zu Zombies mutieren. Teenager André und seine kleine Schwester Annie versuchen dem Grauen zu entkommen, bevor auch sie sich entweder in Untote oder direkt in saftiges, grünes Gras verwandeln.",
+  "slug": "brain-freeze"
+}

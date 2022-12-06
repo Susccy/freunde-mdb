@@ -1,0 +1,26 @@
+{
+  "tmdbID": 71868,
+  "rating": {
+    "ch": 450,
+    "rt": 300,
+    "total": 375
+  },
+  "dateSeen": "2022-10-31",
+  "mm": false,
+  "fsk": 18,
+  "title": {
+    "original": "One Way Trip",
+    "german": "One Way Trip"
+  },
+  "releaseDate": "2011-09-22T00:00:00.000Z",
+  "genres": [
+    "Horror"
+  ],
+  "posterURL": "/mm9q5luDalDDSxMHysQlSH0cqvC.jpg",
+  "runtime": 86,
+  "budget": 0,
+  "revenue": 1105114,
+  "tagline": "",
+  "overview": "Acht junge Leute fahren mit Proviant und Zelten in den Jura. Es ist Herbst und Hochsaison für den Spitzkegeligen Kahlkopf – den eigentlichen Grund des Ausflugs. Dieser kleine und unscheinbare Pilz hat es in sich: kurz nach Einnahme verschiebt sich die Realität und für einige Stunden hat man einen wunderbaren Trip. Nach einigen Schwierigkeiten hat die Gruppe tief im Wald den richtigen Ort gefunden, die Zelte aufgebaut, die Pilze gesammelt und es kann losgehen. Alles läuft bestens, bis einer der Jungs mit zerschlagenem und blutüberströmtem Gesicht vom Bierholen zurückkommt und im Schein des Lagerfeuers vor die anderen hinfällt. Als sie merken, dass die Telefone nicht funktionieren und ihr Auto platte Reifen hat, bricht Panik aus. Sie suchen Schutz in einem nahegelegenen Bauernhof, doch das ist ein Schritt vom Regen in die Traufe – jetzt sitzen sie in der Falle. Gejagt von ihren unheimlichen Verfolgern beginnt ein rasanter Todesrausch...",
+  "slug": "one-way-trip"
+}

@@ -1,0 +1,28 @@
+{
+  "tmdbID": 593643,
+  "rating": {
+    "ch": 550,
+    "rt": 800,
+    "total": 675
+  },
+  "dateSeen": "2022-12-02",
+  "mm": false,
+  "fsk": 16,
+  "title": {
+    "original": "The Menu",
+    "german": "The Menu"
+  },
+  "releaseDate": "2022-11-17T00:00:00.000Z",
+  "genres": [
+    "Komödie",
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/v31MsWhF9WFh7Qooq6xSBbmJxoG.jpg",
+  "runtime": 108,
+  "budget": 35000000,
+  "revenue": 33000000,
+  "tagline": "Sorgfältig vorbereitet. Brillant ausgeführt.",
+  "overview": "Ein Paar reist auf eine Küsteninsel, um in einem exklusiven Restaurant zu essen, wo der Chefkoch ein üppiges Menü mit einigen schockierenden Überraschungen zubereitet hat.",
+  "slug": "the-menu"
+}

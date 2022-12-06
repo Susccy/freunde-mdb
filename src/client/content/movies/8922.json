@@ -1,0 +1,27 @@
+{
+  "tmdbID": 8922,
+  "rating": {
+    "ch": 450,
+    "rt": 150,
+    "total": 300
+  },
+  "dateSeen": "2022-11-30",
+  "mm": false,
+  "fsk": 16,
+  "title": {
+    "original": "Jeepers Creepers",
+    "german": "Jeepers Creepers"
+  },
+  "releaseDate": "2001-07-01T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/lNZzEgRRyb91JT4QUasdtW4Ztqm.jpg",
+  "runtime": 91,
+  "budget": 10000000,
+  "revenue": 59217789,
+  "tagline": "Er kann dich riechen. Er wird dich jagen.",
+  "overview": "Die Geschwister Trish und Darry befinden sich auf der Heimfahrt vom College in die Sommerferien zu ihren Eltern. Plötzlich werden sie auf einer abgelegenen, einsamen Landstraße mitten im Niemandsland von einem alten, verdreckten Truck von der Straße gedrängt. Schockiert setzen sie ihre Fahrt fort und sehen kurze Zeit später den besagten Truck an einer alten Kirche stehen. Im Vorbeifahren beobachten sie, wie eine massige Gestalt ein menschengroßes, in ein Laken gehülltes Bündel, von der Ladefläche hebt und in einem Erdschacht verschwinden lässt. Die große Angst vor dem Fremden wird schließlich von Darrys Neugier besiegt und die beiden kehren wider jegliche Vernunft um und machen eine grauenvolle Entdeckung. Sie untersuchen die Erdröhre, dabei verliert Darry den Halt und stürzt in die dunkle Tiefe.",
+  "slug": "jeepers-creepers"
+}

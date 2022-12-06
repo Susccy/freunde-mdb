@@ -1,0 +1,26 @@
+{
+  "tmdbID": 999722,
+  "rating": {
+    "ch": 500,
+    "rt": 500,
+    "total": 500
+  },
+  "dateSeen": "2022-12-03",
+  "mm": false,
+  "fsk": 16,
+  "title": {
+    "original": "Old People",
+    "german": "Old People"
+  },
+  "releaseDate": "2022-10-07T00:00:00.000Z",
+  "genres": [
+    "Horror"
+  ],
+  "posterURL": "/zHyk5TJCnQb3Qchr0y0IfwEHSer.jpg",
+  "runtime": 101,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Während einer Hochzeitsfeier auf dem Land, irgendwo im kargen Osten Deutschlands, geschehen seltsame Dinge, als von einem Tag auf den anderen die Bewohner eines nahegelegenen Altenheims plötzlich gewalttätig werden. Scheinbar ohne Grund rotten sie sich zusammen und töten alles, was jünger ist als sie",
+  "slug": "old-people"
+}
