@@ -1,0 +1,27 @@
+{
+  "tmdbID": 397514,
+  "rating": {
+    "ch": 300,
+    "rt": 350,
+    "total": 325
+  },
+  "dateSeen": "2022-12-06",
+  "mm": false,
+  "fsk": 18,
+  "title": {
+    "original": "The Windmill Massacre",
+    "german": "The Windmill Massacre"
+  },
+  "releaseDate": "2016-08-29T00:00:00.000Z",
+  "genres": [
+    "Drama",
+    "Horror"
+  ],
+  "posterURL": "/mgmCDsQsbaZelwSAOY1D1ktOJt2.jpg",
+  "runtime": 85,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Nach einem mißglückten Neustart in Amsterdam verlässt die Australierin Jennifer (Charlotte Beaumont) fluchtartig die holländische Grachtenmetropole. Gemeinsam mit einem wortkargen Ex-Marine, einem abgehalfterten Arzt und einer Handvoll anderer seltsamer Touristen landet sie in einem klapprigen Sightseeing-Bus, der die Besucher auf eine Reise in das ländliche, das echte Holland mitnimmt und dann genau dort seinen Dienst verweigert. Die halb verfallene Windmühle in der Nähe, die auf keiner Karte verzeichnet ist, bietet dem zusammengewürfelten Grüppchen mit ihrem morbiden Charme Unterschlupf. Sie erfahren dort von der blutrünstigen Legende, die besagt, dass ein teufelsanbetender Müller damals die Knochen der Einwohner in der Getreidemühle mahlte. Und da sie alle durch dunkle Geheimnisse geeint werden, lauert im dunklen Tann bereits die untote Sagengestalt, um mit Hilfe ihrer mörderisch scharfen Sense an den ahnungslosen Todgeweihten Rache zu üben.",
+  "slug": "the-windmill-massacre"
+}
