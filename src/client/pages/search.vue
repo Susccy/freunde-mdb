@@ -62,7 +62,7 @@ export default class Search extends Vue {
   } = {
     limit: 20,
     page: 0,
-    sort: { field: "title.german", direction: "asc" },
+    sort: { field: "title.german", direction: "desc" },
   }
 
   whereQuery = {}
