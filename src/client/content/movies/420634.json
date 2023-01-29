@@ -1,0 +1,27 @@
+{
+  "tmdbID": 420634,
+  "rating": {
+    "ch": 650,
+    "rt": 400,
+    "total": 525
+  },
+  "dateSeen": "2022-12-11",
+  "mm": false,
+  "fsk": 18,
+  "title": {
+    "original": "Terrifier",
+    "german": "Terrifier - Ein wirklich böser Clown"
+  },
+  "releaseDate": "2016-03-15T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/6PQqC4SbY910VvyVad6mvsboILU.jpg",
+  "runtime": 85,
+  "budget": 100000,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Es ist die Nacht zu Halloween, in der Dawn und Tara dem schlimmsten Killer aller Zeiten in die blutigen Arme laufen. Die beiden Freundinnen sind auf der Suche nach der besten Party in der Stadt, als sie ihr Weg in ein kleines Diner führt. Keine ahnt, dass sich hinter der verrückten Clown-Maskerade ein blutrünstiger Killer verbirgt, als sie Art, den Clown um ein Selfie bitten. Der bitterböse Killerclown hat in den beiden jungen Frauen seine nächsten Opfer gefunden. Als sich in der gleichen Nacht ihre Wege erneut kreuzen, beginnt für Dawn und Tara der Horror auf Erden.",
+  "slug": "terrifier"
+}

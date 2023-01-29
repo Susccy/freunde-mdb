@@ -1,0 +1,28 @@
+{
+  "tmdbID": 16617,
+  "rating": {
+    "ch": 250,
+    "rt": 500,
+    "total": 375
+  },
+  "dateSeen": "2023-01-09",
+  "mm": false,
+  "fsk": 16,
+  "title": {
+    "original": "Mindhunters",
+    "german": "Mindhunters"
+  },
+  "releaseDate": "2004-05-07T00:00:00.000Z",
+  "genres": [
+    "Mystery",
+    "Thriller",
+    "Krimi"
+  ],
+  "posterURL": "/kUiYjSKit0nZktAafynIJ5sR8gr.jpg",
+  "runtime": 106,
+  "budget": 27000000,
+  "revenue": 21148829,
+  "tagline": "Jede Sekunde zählt ...",
+  "overview": "Sie sind die sieben besten jungen Agenten des FBI, ausgebildet als Profiler, um sich in die Gedankenwelt von psychopathischen Killern versetzen zu können. In ihrer Abschlussprüfung sollen die ehrgeizigen Nachwuchs-Agenten auf einer verlassenen Insel simulierte Mordfälle aufklären. Daß der Wettstreit um Erfolg und Ehre allerdings zum Kampf um das eigene Leben wird, ahnt keiner von ihnen. Hochmotiviert stürzen sich die jungen Profiler auf ihren Übungsfall, verfolgen Spuren, untersuchen Indizien und tappen dabei in einen perfekt inszenierten Hinterhalt. Aus der Simulation wird urplötzlich tödlicher Ernst – ein echter Mörder geht um, und ein Agent nach dem nächsten fällt ihm zum Opfer. Es beginnt ein gnadenloser Wettlauf gegen die Zeit – und gegen das wachsende Misstrauen, denn der Täter kann nur einer von ihnen sein.",
+  "slug": "mindhunters"
+}

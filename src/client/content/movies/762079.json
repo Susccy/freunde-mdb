@@ -1,0 +1,27 @@
+{
+  "tmdbID": 762079,
+  "rating": {
+    "ch": 650,
+    "rt": 650,
+    "total": 650
+  },
+  "dateSeen": "2023-01-19",
+  "mm": false,
+  "fsk": 16,
+  "title": {
+    "original": "Le Calendrier",
+    "german": "The Advent Calendar"
+  },
+  "releaseDate": "2021-12-01T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/t0gfUqrUqrTkZcodX7Y66RUC9qL.jpg",
+  "runtime": 104,
+  "budget": 0,
+  "revenue": 350413,
+  "tagline": "Traust du dich, das erste Türchen zu öffnen?",
+  "overview": "Eva (Eugénie Derouand) sitzt aufgrund einer Querschnittslähmung im Rollstuhl. Als die ehemalige Tänzerin von ihrer Freundin Sophie (Honorine Magnier) besucht wird und diese ihr kurz vor Weihnachten einen antiken Adventskalender gibt, erkennt Eva, dass jedes Fenster eine handfeste Überraschung bereithält, die Auswirkungen auf das wirkliche Leben in Bewegung setzen: einige von ihnen positiv, die meisten allerdings schlecht. Jetzt muss Eva entscheiden, was sie mit dem Kalender anstellt.",
+  "slug": "le-calendrier"
+}

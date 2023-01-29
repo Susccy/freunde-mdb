@@ -1,0 +1,28 @@
+{
+  "tmdbID": 787723,
+  "rating": {
+    "ch": 100,
+    "rt": 100,
+    "total": 100
+  },
+  "dateSeen": "2023-01-29",
+  "mm": false,
+  "fsk": 12,
+  "title": {
+    "original": "13 Minutes",
+    "german": "13 Minutes"
+  },
+  "releaseDate": "2021-10-29T00:00:00.000Z",
+  "genres": [
+    "Action",
+    "Drama",
+    "Thriller"
+  ],
+  "posterURL": "/tYWCQhkUcs9gqDtqpRIkNvf1QvI.jpg",
+  "runtime": 108,
+  "budget": 0,
+  "revenue": 67413,
+  "tagline": "Jede Sekunde zählt",
+  "overview": "Vier Familien in einer Stadt in den Heartlands werden auf die Probe gestellt, als ein gewaltiger Sturm aufzieht. Sie haben nur 13 Minuten Zeit, um sich in Sicherheit zu bringen, bevor der größte Tornado aller Zeiten die Stadt verwüstet und sie auf der Suche nach ihren Angehörigen zurücklässt, während sie um ihr Leben kämpfen. Nach der totalen Verwüstung müssen alle ihre Differenzen überwinden und Stärke in sich selbst - und in den anderen - finden, um zu überleben.",
+  "slug": "13-minutes"
+}

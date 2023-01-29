@@ -1,0 +1,28 @@
+{
+  "tmdbID": 536554,
+  "rating": {
+    "ch": 700,
+    "rt": 550,
+    "total": 625
+  },
+  "dateSeen": "2023-01-21",
+  "mm": false,
+  "fsk": 16,
+  "title": {
+    "original": "M3GAN",
+    "german": "M3GAN"
+  },
+  "releaseDate": "2022-12-28T00:00:00.000Z",
+  "genres": [
+    "Science Fiction",
+    "Horror",
+    "Komödie"
+  ],
+  "posterURL": "/xMuQKqI2FDzF9M9xFORC3gpkEAd.jpg",
+  "runtime": 102,
+  "budget": 12000000,
+  "revenue": 146000000,
+  "tagline": "Programmiert auf Freundschaft.",
+  "overview": "Eine brillante Robotikerin einer Spielzeugfirma nutzt künstliche Intelligenz, um M3GAN zu entwickeln, eine lebensechte Puppe, die so programmiert ist, dass sie sich emotional mit ihrer frisch verwaisten Nichte verbindet. Aber als die Programmierung der Puppe zu gut funktioniert, wird sie ihrem neuen Freund gegenüber überfürsorglich, was erschreckende Folgen hat.",
+  "slug": "m3gan"
+}
