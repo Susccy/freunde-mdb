@@ -1,0 +1,5 @@
+# Node 16 reproduziert die urspruengliche Build-Umgebung dieses Nuxt-2-Projekts:
+# OpenSSL 1.1.1 (kein --openssl-legacy-provider noetig) und `fibers` baut sauber.
+# Build-Command und Publish-Verzeichnis bleiben wie im Netlify-UI konfiguriert.
+[build.environment]
+  NODE_VERSION = "16"

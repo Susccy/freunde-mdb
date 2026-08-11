@@ -1,0 +1,25 @@
+{
+  "tmdbID": 482373,
+  "rating": {
+    "ch": 500,
+    "rt": 500,
+    "total": 500
+  },
+  "dateSeen": "2025-08-03",
+  "title": {
+    "original": "Don't Breathe 2",
+    "german": "Don't Breathe 2"
+  },
+  "releaseDate": "2021-08-12T00:00:00.000Z",
+  "genres": [
+    "Thriller",
+    "Horror"
+  ],
+  "posterURL": "/jxdXp1ZAE47AiaktKRJtoG0xYpq.jpg",
+  "runtime": 98,
+  "budget": 15000000,
+  "revenue": 53785551,
+  "tagline": "Bösen Menschen passieren böse Dinge.",
+  "overview": "Der Blinde Mann versteckt sich seit Jahren in einer abgelegenen Hütte und hat ein junges Mädchen aufgenommen und aufgezogen, das seine Eltern bei einem Hausbrand verloren hat. Als das Mädchen jedoch von einer Gruppe Entführern mitgenommen wird, ist er gezwungen, seinen sicheren Zufluchtsort zu verlassen, um sie zu retten.",
+  "slug": "don-t-breathe-2"
+}

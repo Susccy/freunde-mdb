@@ -1,0 +1,25 @@
+{
+  "tmdbID": 359246,
+  "rating": {
+    "ch": 700,
+    "rt": 450,
+    "total": 575
+  },
+  "dateSeen": "2025-11-30",
+  "title": {
+    "original": "Hell House LLC",
+    "german": "Hell House LLC"
+  },
+  "releaseDate": "2015-10-16T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Mystery"
+  ],
+  "posterURL": "/xUSCQEbbAy3Lv6r00RfXtdxhRDX.jpg",
+  "runtime": 91,
+  "budget": 25000,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Fünf Jahre nachdem eine unerklärliche Fehlfunktion am Eröffnungsabend einer Halloween-Spukhaustour den Tod von 15 Tourbesuchern und Mitarbeitern verursacht, reist ein Dokumentarfilmteam zurück zum Ort der Tragödie, um herauszufinden, was wirklich passiert ist.",
+  "slug": "hell-house-llc"
+}

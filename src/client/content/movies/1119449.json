@@ -1,0 +1,26 @@
+{
+  "tmdbID": 1119449,
+  "rating": {
+    "ch": 500,
+    "rt": 700,
+    "total": 600
+  },
+  "dateSeen": "2026-04-12",
+  "title": {
+    "original": "Good Luck, Have Fun, Don't Die",
+    "german": "Good Luck, Have Fun, Don't Die"
+  },
+  "releaseDate": "2026-02-13T00:00:00.000Z",
+  "genres": [
+    "Science Fiction",
+    "Action",
+    "Komödie"
+  ],
+  "posterURL": "/2OhJW16MkwSqMCBZrUNOXYrQ3LN.jpg",
+  "runtime": 135,
+  "budget": 20000000,
+  "revenue": 9755038,
+  "tagline": "Die Zeit läuft ab. Bist du bereit, dich der Revolution anzuschließen?",
+  "overview": "Ein mysteriöser \"Mann aus der Zukunft\" betritt ein unscheinbares Diner in Los Angeles. Dort trifft er auf eine bunte Mischung von Gästen. Doch diese scheinbar gewöhnliche Begegnung entpuppt sich schnell als alles andere als zufällig. Der Mann aus der Zukunft enthüllt, dass er dringend eine Gruppe von Menschen braucht, um an einer nächtlichen Mission teilzunehmen, die das Schicksal der Welt entscheiden könnte.",
+  "slug": "good-luck-have-fun-don-t-die"
+}

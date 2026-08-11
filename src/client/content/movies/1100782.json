@@ -1,0 +1,27 @@
+{
+  "tmdbID": 1100782,
+  "rating": {
+    "ch": 700,
+    "rt": 800,
+    "total": 750
+  },
+  "dateSeen": "2024-10-31",
+  "title": {
+    "original": "Smile 2",
+    "german": "Smile 2 - Siehst du es auch?"
+  },
+  "releaseDate": "2024-10-16T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Musik",
+    "Mystery",
+    "Thriller"
+  ],
+  "posterURL": "/9BfRw1fzFreEbRaGTCNtvR9jyOT.jpg",
+  "runtime": 132,
+  "budget": 28000000,
+  "revenue": 138128854,
+  "tagline": "",
+  "overview": "Kurz vor dem Beginn ihrer nächsten Welttournee sieht sich der international gefeierte Popstar Skye Riley (Naomi Scott) mit immer unerklärlicheren Ereignissen konfrontiert. Überwältigt von den grausamen Vorfällen und dem Druck des Ruhms, muss sich Skye ihrer düsteren Vergangenheit stellen. Bereit, bis an ihre Grenzen zu gehen, versucht sie die Kontrolle über ihr Leben zurückzugewinnen, bevor es völlig aus den Fugen gerät.",
+  "slug": "smile-2"
+}

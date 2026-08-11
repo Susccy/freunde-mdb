@@ -1,0 +1,25 @@
+{
+  "tmdbID": 1339713,
+  "rating": {
+    "ch": 700,
+    "rt": 950,
+    "total": 825
+  },
+  "dateSeen": "2026-07-10",
+  "title": {
+    "original": "Obsession",
+    "german": "Obsession – Du sollst mich lieben"
+  },
+  "releaseDate": "2026-05-13T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/1bAhSRf3BVOCI9zNzTLrsJA1LAq.jpg",
+  "runtime": 109,
+  "budget": 750000,
+  "revenue": 488117950,
+  "tagline": "Sei vorsichtig, wen du dir wünschst...",
+  "overview": "Als der hoffnungslose Romantiker Bear einen magischen Gegenstand nutzt, damit sein Crush endlich Gefühle für ihn entwickelt, muss er feststellen, dass manche Wünsche einen finsteren, unheimlichen Tribut fordern.",
+  "slug": "obsession"
+}

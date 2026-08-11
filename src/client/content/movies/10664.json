@@ -1,0 +1,25 @@
+{
+  "tmdbID": 10664,
+  "rating": {
+    "ch": 700,
+    "rt": 450,
+    "total": 575
+  },
+  "dateSeen": "2026-02-01",
+  "title": {
+    "original": "[REC]²",
+    "german": "[REC]²"
+  },
+  "releaseDate": "2009-09-15T00:00:00.000Z",
+  "genres": [
+    "Thriller",
+    "Horror"
+  ],
+  "posterURL": "/55N3eU23tzzisWjb8WhceMCqxvB.jpg",
+  "runtime": 85,
+  "budget": 5600000,
+  "revenue": 18469680,
+  "tagline": "Die nächste Dimension des Grauens.",
+  "overview": "Ein schwerbewaffnetes Einsatzkommando dringt unter der Führung des unheimlichen Dr. Owen in das unter Quarantäne stehende Wohnhaus ein. Auftrag der Mission ist es, eine Blutprobe des ominösen Mädchens Niña Medeiros zu nehmen, um so schnell wie möglich ein Gegenmittel gegen den Zombie-Virus herzustellen. Die ersten Infizierten lassen auch nicht lange auf sich warten und der mysteriöse Doktor scheint seine eigenen Ziele zu verfolgen. Schon bald wimmelt es überall von blutdürstigen Zombies und das tödliche Grauen bricht erneut los!",
+  "slug": "rec-2"
+}

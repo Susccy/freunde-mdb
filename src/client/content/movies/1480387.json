@@ -1,0 +1,25 @@
+{
+  "tmdbID": 1480387,
+  "rating": {
+    "ch": 750,
+    "rt": 650,
+    "total": 700
+  },
+  "dateSeen": "2026-07-19",
+  "title": {
+    "original": "undertone",
+    "german": "undertone"
+  },
+  "releaseDate": "2026-03-12T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Mystery"
+  ],
+  "posterURL": "/2PFgFMnrdCPXWiZl1PUvky7Mo9D.jpg",
+  "runtime": 94,
+  "budget": 500000,
+  "revenue": 21581552,
+  "tagline": "",
+  "overview": "Die Moderatorin eines Podcasts, der sich mit unheimlichen Phänomenen befasst, zieht in das Haus ihrer sterbenden Mutter, um deren Pflege zu übernehmen. Kurz darauf erhält ihre Sendung eine Reihe von Tonaufnahmen eines jungen, schwangeren Paares, das von rätselhaften Geräuschen und paranormalen Ereignissen berichtet. Mit jeder neuen Aufnahme erkennt sie zunehmend Parallelen zwischen der geschilderten Situation und ihrem eigenen Leben. Die Überschneidungen wirken zunehmend verstörend und nagen an ihrer Wahrnehmung, bis sie sich unaufhaltsam in eine Entwicklung verstrickt, der sie sich nicht mehr entziehen kann.",
+  "slug": "undertone"
+}

@@ -1,0 +1,26 @@
+{
+  "tmdbID": 723419,
+  "rating": {
+    "ch": 350,
+    "rt": 400,
+    "total": 375
+  },
+  "dateSeen": "2025-10-25",
+  "title": {
+    "original": "Mr. Harrigan's Phone",
+    "german": "Mr. Harrigan's Phone"
+  },
+  "releaseDate": "2022-09-28T00:00:00.000Z",
+  "genres": [
+    "Drama",
+    "Horror",
+    "Mystery"
+  ],
+  "posterURL": "/gPn9e8eP7TeKQU4IeWAMzOajR40.jpg",
+  "runtime": 105,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Schon im Kindesalter bekommt Craig (Jaeden Martell) seinen ersten Job von Mr. Harrigan (Donald Sutherland) – für Taschengeld hilft er im Garten und liest dem alten Mann vor. Nachdem der ihm Jahre später ein Rubbellos schenkt, mit dem Craig einen schönen Gewinn absahnt, beschließt er, Mr. Harrigan mit dem Geld ein Handy zu kaufen. Als dieser kurz darauf stirbt, steckt Craig ihm das Telefon beim Begräbnis in die Tasche – und wundert sich, als er wenig später eine Nachricht von dem Verstorbenen bekommt.",
+  "slug": "mr-harrigan-s-phone"
+}

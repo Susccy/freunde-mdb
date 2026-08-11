@@ -1,0 +1,26 @@
+{
+  "tmdbID": 762441,
+  "rating": {
+    "ch": 350,
+    "rt": 350,
+    "total": 350
+  },
+  "dateSeen": "2026-02-14",
+  "title": {
+    "original": "A Quiet Place: Day One",
+    "german": "A Quiet Place: Tag Eins"
+  },
+  "releaseDate": "2024-06-26T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Science Fiction",
+    "Thriller"
+  ],
+  "posterURL": "/rTz7VGuUcHovmR8x6Cf6ZX6CFjH.jpg",
+  "runtime": 100,
+  "budget": 67000000,
+  "revenue": 261907653,
+  "tagline": "Stille ist überleben",
+  "overview": "Aus dem Nichts heraus wird New York City Ziel einer Alieninvasion. Die monströsen Kreaturen schnappen sich jeden Menschen, der ihnen über den Weg läuft. Doch die Aliens können offenbar gar nichts sehen, sondern scheinen sich ausschließlich anhand von Geräuschen in ihrer Umgebung zu orientieren. Wer in der Nähe der Aliens auch nur einen Mucks von sich gibt, hat damit praktisch sein Todesurteil unterschrieben. Mittendrin steckt eine junge Frau namens Sam, die alles tun muss, um zu überleben, während die Stadt um sie herum in Chaos und Zerstörung versinkt.",
+  "slug": "a-quiet-place-day-one"
+}

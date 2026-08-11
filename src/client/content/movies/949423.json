@@ -1,0 +1,24 @@
+{
+  "tmdbID": 949423,
+  "rating": {
+    "ch": 450,
+    "rt": 600,
+    "total": 525
+  },
+  "dateSeen": "2026-01-10",
+  "title": {
+    "original": "Pearl",
+    "german": "Pearl"
+  },
+  "releaseDate": "2022-09-16T00:00:00.000Z",
+  "genres": [
+    "Horror"
+  ],
+  "posterURL": "/enGQwfUiLPi7klFtvLSP3BPzhL3.jpg",
+  "runtime": 103,
+  "budget": 1000000,
+  "revenue": 9847490,
+  "tagline": "",
+  "overview": "Pearl lebt 1918 auf einem Familienbauernhof auf dem Land. Die junge Frau fühlt sich gefangen und isoliert, da sie sich dort um ihren komatösen und kranken Vater kümmern und gleichzeitig eine herrische Mutter ertragen muss. Pearl träumt von einem glamourösen Leben wie in den Filmen, die sie sich ansieht. Eine Reihe von Ereignissen führt dazu, dass sie langsam zusammenbricht, woraufhin sich die Frage stellt, ob sie jemals zu ihrem früheren Leben zurückkehren kann.",
+  "slug": "pearl"
+}

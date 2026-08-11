@@ -1,0 +1,26 @@
+{
+  "tmdbID": 585216,
+  "rating": {
+    "ch": 600,
+    "rt": 450,
+    "total": 525
+  },
+  "dateSeen": "2023-05-23",
+  "title": {
+    "original": "Escape Room: Tournament of Champions",
+    "german": "Escape Room 2: No Way Out"
+  },
+  "releaseDate": "2021-07-01T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Mystery"
+  ],
+  "posterURL": "/7n4G6SxvdWoFlePn5WcHomH6tCP.jpg",
+  "runtime": 88,
+  "budget": 15000000,
+  "revenue": 65774490,
+  "tagline": "Gewinnen war erst der Anfang.",
+  "overview": "Sechs Menschen finden sich unwissentlich in einer weiteren Serie von Escape Rooms eingesperrt und entdecken langsam, was sie gemeinsam haben, um zu überleben. Als sie sich mit zwei der ursprünglichen Überlebenden zusammentun, bemerken sie bald, dass sie alle das Spiel schon einmal gespielt haben.",
+  "slug": "escape-room-tournament-of-champions"
+}

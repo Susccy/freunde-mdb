@@ -1,0 +1,26 @@
+{
+  "tmdbID": 1190868,
+  "rating": {
+    "ch": 450,
+    "rt": 650,
+    "total": 550
+  },
+  "dateSeen": "2025-10-31",
+  "title": {
+    "original": "V/H/S/Beyond",
+    "german": "V/H/S/Beyond"
+  },
+  "releaseDate": "2024-09-20T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Science Fiction",
+    "Thriller"
+  ],
+  "posterURL": "/wXaf6VGNHIGU7qivapGOF7o4o4N.jpg",
+  "runtime": 114,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Eine mysteriöse VHS-Kassette führt einen besessenen Sammler auf die Spur verstörender Aufnahmen – jede davon dokumentiert eine andere Begegnung mit dem Unbekannten. Von brutalen Alien-Entführungen über tödliche Filmsets bis hin zu abgründigen Kreaturen in einer Hundetagesstätte – fünf visionäre Regisseurinnen und Regisseure entführen dich in eine neue Dimension des Found-Footage-Horrors.  Schau hin... wenn du dich traust.",
+  "slug": "v-h-s-beyond"
+}

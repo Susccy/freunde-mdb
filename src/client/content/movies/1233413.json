@@ -1,0 +1,26 @@
+{
+  "tmdbID": 1233413,
+  "rating": {
+    "ch": 750,
+    "rt": 700,
+    "total": 725
+  },
+  "dateSeen": "2026-07-19",
+  "title": {
+    "original": "Sinners",
+    "german": "Blood & Sinners"
+  },
+  "releaseDate": "2025-04-16T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Action",
+    "Thriller"
+  ],
+  "posterURL": "/445HsfnktkmM5y4cr62vYGzfo6h.jpg",
+  "runtime": 138,
+  "budget": 100000000,
+  "revenue": 371368759,
+  "tagline": "Wenn du ständig mit dem Teufel tanzt, dann folgt er dir eines Tages nach Hause.",
+  "overview": "Beim Versuch, ihr von Problemen geplagtes Leben hinter sich zu lassen, kehren Zwillingsbrüder in ihre Heimatstadt zurück, um dort einen Neuanfang zu wagen. Doch schon bald müssen sie feststellen, dass bei ihrer Rückkehr ein noch größeres Übel auf sie wartet.",
+  "slug": "sinners"
+}

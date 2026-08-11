@@ -1,0 +1,26 @@
+{
+  "tmdbID": 1100988,
+  "rating": {
+    "ch": 550,
+    "rt": 550,
+    "total": 550
+  },
+  "dateSeen": "2025-07-13",
+  "title": {
+    "original": "28 Years Later",
+    "german": "28 Years Later"
+  },
+  "releaseDate": "2025-06-18T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Science Fiction"
+  ],
+  "posterURL": "/ygCqIBzLOgm1QmBDhDwKs9XE5PY.jpg",
+  "runtime": 115,
+  "budget": 60000000,
+  "revenue": 151308832,
+  "tagline": "Zeit heilt nicht alles.",
+  "overview": "Es ist fast drei Jahrzehnte her, dass das Rage-Virus aus einem biologischen Waffenlabor entkommen ist, und noch immer gilt eine strikt verordnete Quarantäne. Einige Menschen haben Wege gefunden, inmitten der Infizierten zu existieren. Eine solche Gruppe von Überlebenden lebt auf einer kleinen Insel, die durch einen einzigen, stark verteidigten Damm mit dem Festland verbunden ist. Als einer der Bewohner die Insel verlässt, um in das dunkle Innere des Festlandes vorzudringen, entdeckt er Geheimnisse, Wunder und Schrecken und dass nicht nur die Infizierten, sondern auch die Überlebenden mutiert sind.",
+  "slug": "28-years-later"
+}

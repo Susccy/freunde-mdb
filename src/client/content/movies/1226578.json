@@ -1,0 +1,26 @@
+{
+  "tmdbID": 1226578,
+  "rating": {
+    "ch": 650,
+    "rt": 700,
+    "total": 675
+  },
+  "dateSeen": "2024-09-13",
+  "title": {
+    "original": "Longlegs",
+    "german": "Longlegs"
+  },
+  "releaseDate": "2024-07-10T00:00:00.000Z",
+  "genres": [
+    "Krimi",
+    "Horror",
+    "Mystery"
+  ],
+  "posterURL": "/x3OhhbqQeFUo1WAFyRf9rHXnvFS.jpg",
+  "runtime": 101,
+  "budget": 10000000,
+  "revenue": 127961936,
+  "tagline": "",
+  "overview": "Die junge FBI-Agentin Lee Harker entdeckt eine Reihe okkulter Hinweise in einem Serienmörder-Fall. Als sie eine persönliche Verbindung zu dem Serienmörder aufdeckt, nimmt der Fall eine unerwartete Wendung…",
+  "slug": "longlegs"
+}

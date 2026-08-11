@@ -1,0 +1,25 @@
+{
+  "tmdbID": 507089,
+  "rating": {
+    "ch": 650,
+    "rt": 650,
+    "total": 650
+  },
+  "dateSeen": "2025-12-19",
+  "title": {
+    "original": "Five Nights at Freddy's",
+    "german": "Five Nights at Freddy's"
+  },
+  "releaseDate": "2023-10-25T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/xA0wrPuZYGuiprTajHJ6RzS7umo.jpg",
+  "runtime": 109,
+  "budget": 20000000,
+  "revenue": 297242145,
+  "tagline": "",
+  "overview": "Mike Schmidt tritt bei \"Freddy Fazbear's Pizza!\" einen Posten als Nachtwächter an. Doch gleich im Verlauf der ersten Nacht muss er erkennen, dass die Nachtschicht in dem verlassenen Restaurant alles andere als ruhig werden wird.",
+  "slug": "five-nights-at-freddy-s"
+}

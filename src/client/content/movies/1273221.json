@@ -1,0 +1,24 @@
+{
+  "tmdbID": 1273221,
+  "rating": {
+    "ch": 350,
+    "rt": 600,
+    "total": 475
+  },
+  "dateSeen": "2026-07-18",
+  "title": {
+    "original": "Scary Movie",
+    "german": "Scary Movie 6"
+  },
+  "releaseDate": "2026-06-03T00:00:00.000Z",
+  "genres": [
+    "Komödie"
+  ],
+  "posterURL": "/5udDsOLWcXDt3hUTD7FpJLGDBmW.jpg",
+  "runtime": 95,
+  "budget": 30000000,
+  "revenue": 231467451,
+  "tagline": "Jede Grenze wird überschritten.",
+  "overview": "Sechsundzwanzig Jahre nachdem sie einem verdächtig vertrauten maskierten Killer („Ghostface\") entkommen sind, geraten die Core Four erneut ins Visier des Mörders – und kein Horror-Franchise ist mehr sicher.",
+  "slug": "scary-movie-6"
+}

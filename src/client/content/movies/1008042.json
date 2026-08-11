@@ -1,0 +1,25 @@
+{
+  "tmdbID": 1008042,
+  "rating": {
+    "ch": 450,
+    "rt": 650,
+    "total": 550
+  },
+  "dateSeen": "2023-08-26",
+  "title": {
+    "original": "Talk to Me",
+    "german": "Talk to Me"
+  },
+  "releaseDate": "2023-07-26T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/fEAU4gZg3F8HCrbK4RwqpAVOVrK.jpg",
+  "runtime": 95,
+  "budget": 4500000,
+  "revenue": 91959188,
+  "tagline": "Du rufst. Sie werden antworten.",
+  "overview": "Eine mysteriöse einbalsamierte Hand stellt das Leben einer ganzen australischen Kleinstadt auf den Kopf. Denn mit Hilfe der Hand kann man andere in Trance versetzen und sogar Tote aus dem Jenseits beschwören. Jedenfalls macht diese Erzählung immer wieder die Runde. Der Sache dann doch selbst einmal auf den Grund gehen wollen Mia und Jade, als an ihrer Schule Handyvideos von Schulkameraden, die scheinbar besessen sind, in Umlauf gebracht werden. Also schließen sie sich kurzerhand einer Séance an. Als dann plötzlich Mias verstorbene Mutter durch die einbalsamierte Hand Kontakt mit der Welt der Lebenden sucht, wird Mia klar, dass das kein Spiel mehr ist. Auf einmal muss sie sich zwischen der Welt der Lebenden und der der Toten entscheiden – und es ist nicht klar, wer auf welcher Seite steht und wem sie beim Treffen dieser Entscheidung wirklich noch vertrauen kann.",
+  "slug": "talk-to-me"
+}

@@ -1,0 +1,24 @@
+{
+  "tmdbID": 663712,
+  "rating": {
+    "ch": 750,
+    "rt": 600,
+    "total": 675
+  },
+  "dateSeen": "2023-02-04",
+  "title": {
+    "original": "Terrifier 2",
+    "german": "Terrifier 2"
+  },
+  "releaseDate": "2022-10-06T00:00:00.000Z",
+  "genres": [
+    "Horror"
+  ],
+  "posterURL": "/qEAlwXbYk6IHA4ztoS2XFFaa7Xo.jpg",
+  "runtime": 138,
+  "budget": 250000,
+  "revenue": 15815602,
+  "tagline": "Wer lacht jetzt noch?",
+  "overview": "Der Horror-Clown Art kehrt im Sequel blutrünstiger als je zuvor zurück. Zusammen mit einem unheimlichen Clown-Mädchen macht er sich auf die Jagd nach den Teenagern Sienna und ihrem Bruder Jonathan. Art zieht eine blutige Spur durch die verschlafene Kleinstadt Miles County und entführt Jonathans. Im nervenaufreibenden Finale lockt er Sienna zu einer verlassenen Geisterbahn.",
+  "slug": "terrifier-2"
+}

@@ -1,0 +1,24 @@
+{
+  "tmdbID": 740985,
+  "rating": {
+    "ch": 750,
+    "rt": 600,
+    "total": 675
+  },
+  "dateSeen": "2025-08-24",
+  "title": {
+    "original": "Borat Subsequent Moviefilm: Delivery of Prodigious Bribe to American Regime for Make Benefit Once Glorious Nation of Kazakhstan",
+    "german": "Borat Anschluss-Moviefilm"
+  },
+  "releaseDate": "2020-10-23T00:00:00.000Z",
+  "genres": [
+    "Komödie"
+  ],
+  "posterURL": "/91DpO6CuLu301HXT6nUmYdmToXK.jpg",
+  "runtime": 96,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "14 Jahre nach seinem Film über seine Reise durch die USA riskiert Borat Leib und Leben, als er mit seiner Tochter in die Staaten zurückkehrt und noch mehr über die amerikanische Kultur, die COVID-19 Pandemie und die Wahlen enthüllt.",
+  "slug": "borat-subsequent-moviefilm-delivery-of-prodigious-bribe-to-american-regime-for-make-benefit-once-glorious-nation-of-kazakhstan"
+}

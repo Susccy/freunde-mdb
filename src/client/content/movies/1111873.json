@@ -1,0 +1,26 @@
+{
+  "tmdbID": 1111873,
+  "rating": {
+    "ch": 450,
+    "rt": 600,
+    "total": 525
+  },
+  "dateSeen": "2025-12-20",
+  "title": {
+    "original": "Abigail",
+    "german": "Abigail"
+  },
+  "releaseDate": "2024-04-16T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Komödie"
+  ],
+  "posterURL": "/sTjzc7qp08uHxzPTN6jh85Cy9UH.jpg",
+  "runtime": 109,
+  "budget": 28000000,
+  "revenue": 43015969,
+  "tagline": "Kinder können solche Monster sein",
+  "overview": "Ein junges Mädchen wird aus ihrem Haus in Boston entführt, um ein Lösegeld von ihrem reichen, zwielichtigen Vater zu erpressen. Doch was wie eine einfache Entführung aussah, entpuppt sich als deutlich komplizierter, als ihre Entführer sich vorstellen konnten.",
+  "slug": "abigail"
+}

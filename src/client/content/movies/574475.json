@@ -1,0 +1,25 @@
+{
+  "tmdbID": 574475,
+  "rating": {
+    "ch": 900,
+    "rt": 850,
+    "total": 875
+  },
+  "dateSeen": "2025-07-06",
+  "title": {
+    "original": "Final Destination Bloodlines",
+    "german": "Final Destination Bloodlines"
+  },
+  "releaseDate": "2025-05-14T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Mystery"
+  ],
+  "posterURL": "/pIi5OLyatMvQBHg5ql2rzzuLIxG.jpg",
+  "runtime": 110,
+  "budget": 50000000,
+  "revenue": 317854739,
+  "tagline": "Der Tod liegt in der Familie.",
+  "overview": "Immer wieder wird die Studentin Stefanie von einem schrecklichen Albtraum heimgesucht. Sie beschließt, in ihre Heimatstadt zurückzukehren. Dort hofft sie, die einzige Person zu finden, die den Teufelskreis durchbrechen und ihre gesamte Familie vor dem grausamen Tod bewahren kann, der sie alle unweigerlich erwartet …",
+  "slug": "final-destination-bloodlines"
+}

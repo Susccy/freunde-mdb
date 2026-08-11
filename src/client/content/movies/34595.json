@@ -1,0 +1,26 @@
+{
+  "tmdbID": 34595,
+  "rating": {
+    "ch": 200,
+    "rt": 650,
+    "total": 425
+  },
+  "dateSeen": "2023-03-12",
+  "title": {
+    "original": "Alexandra's Project",
+    "german": "Alexandra's Project"
+  },
+  "releaseDate": "2003-05-16T00:00:00.000Z",
+  "genres": [
+    "Mystery",
+    "Drama",
+    "Thriller"
+  ],
+  "posterURL": "/28S5YzEF4DmygcZhyyMfvKJZWdD.jpg",
+  "runtime": 99,
+  "budget": 2000000,
+  "revenue": 1224975,
+  "tagline": "",
+  "overview": "Eigentlich dachte Steve, dass ihn zuhause eine Schar von Gästen zu seinem Geburtstag überraschen würde, doch in seiner stockdunklen, verlassenen Wohnung erwartet ihn nur ein Videoband mit der Aufschrift Spiel mich. Als er es abspielt, sieht er zunächst seine Frau Alexandra und seine Kinder, die ihn fröhlich beglückwünschen. Dann schickt Alexandra die Kids auf ihr Zimmer und beginnt einen verführerischen Striptease. Doch dann hält sie sich plötzlich eine Waffe an den Kopf. Steve stoppt das Band und versucht die Polizei anzurufen, doch das Telefon ist tot und er muss zudem feststellen, dass er in seiner Wohnung eingeschlossen wurde. Er sieht sich das Band weiter an und was er im weiteren Verlauf der Aufnahme sehen muss, übersteigt seine allergrößten Ängste...",
+  "slug": "alexandra-s-project"
+}

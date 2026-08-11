@@ -1,0 +1,25 @@
+{
+  "tmdbID": 1032948,
+  "rating": {
+    "ch": 750,
+    "rt": 700,
+    "total": 725
+  },
+  "dateSeen": "2025-05-03",
+  "title": {
+    "original": "V/H/S/85",
+    "german": "V/H/S/85"
+  },
+  "releaseDate": "2023-11-23T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/aM3wnZTKEuPLDwxuMWcHDibOkiw.jpg",
+  "runtime": 111,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Eine Naturkatastrophe führt zu einer erschreckenden Entdeckung, zu schockierendem Terror auf einem sonnenüberfluteten See und zu einem Performance-Kunstwerk, das versucht, mit einem neuen Gott Kontakt aufzunehmen. Wie hängen diese Ideen zusammen? Der Found-Footage-Franchise kehrt zurück mit mehr noch mehr unheimlichen Wesen als zuvor.",
+  "slug": "v-h-s-85"
+}

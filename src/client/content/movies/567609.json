@@ -1,0 +1,24 @@
+{
+  "tmdbID": 567609,
+  "rating": {
+    "ch": 750,
+    "rt": 650,
+    "total": 700
+  },
+  "title": {
+    "original": "Ready or Not",
+    "german": "Ready or Not - Auf die Plätze, fertig, tot"
+  },
+  "releaseDate": "2019-08-21T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Komödie"
+  ],
+  "posterURL": "/8KxdQAakZ3mhM8e887ppuX2BVWG.jpg",
+  "runtime": 96,
+  "budget": 6000000,
+  "revenue": 57615777,
+  "tagline": "Das Spiel beginnt.",
+  "overview": "Es sollte eigentlich der schönste Tag ihres Lebens werden, denn die junge Grace steht kurz davor, ihren geliebten Alex Le Domas zu heiraten. Die Einführung in die ebenso exzentrische wie schwer reiche Familie geht allerdings alles andere als feierlich vonstatten. Anlässlich der Hochzeit gilt es für den Le-Domas-Klan nämlich allen voran, eine Tradition zu wahren. Und die besagt nun mal, dass ein neues Familienmitglied mit einem Spiel eingeführt werden soll. Und ehe sich Grace versieht, befindet sie sich in einem perfiden Katz-und-Maus-Spiel um Leben und Tod in dem riesigen Anwesen, das über das altbekannte Versteckspiel weit hinausgeht. Brutal und mit allen möglichen Waffen wird Jagd auf Grace gemacht, doch die frisch gebackene Ehefrau hat gar nicht vor, kampflos aufzugeben - und bekommt in dem unerbittlichen Kampf ums Überleben außerdem schon bald Unterstützung...",
+  "slug": "ready-or-not"
+}

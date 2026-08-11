@@ -1,0 +1,25 @@
+{
+  "tmdbID": 619778,
+  "rating": {
+    "ch": 650,
+    "rt": 800,
+    "total": 725
+  },
+  "dateSeen": "2023-07-11",
+  "title": {
+    "original": "Malignant",
+    "german": "Malignant"
+  },
+  "releaseDate": "2021-09-01T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Mystery"
+  ],
+  "posterURL": "/7MtE8auHJwWIccRvSlXuCneegO0.jpg",
+  "runtime": 111,
+  "budget": 40000000,
+  "revenue": 34891791,
+  "tagline": "",
+  "overview": "Madison wurde einst als traumatisiertes Mädchen von einer liebevollen Pflegefamilie adoptiert. Als erwachsene Frau wird sie nun von ihrer tragischen Vergangenheit eingeholt, denn Gabriel, ihr vermeintlich imaginärer bester Freund aus Kindheitstagen, scheint sehr wohl zu existieren. Allerdings verfolgt ihr einstiger Wegbegleiter keineswegs gute Absichten, sondern reißt Madison vielmehr mit in einen dunklen Strudel hinab: Gabriel begeht nämlich eine Reihe brutaler Morde, die Madison aufgrund ihrer besonderen Verbindung zu ihm mit ansieht, als wäre sie live selbst mit dabei. Aber geschehen die Taten wirklich oder existieren die blutigen Vorfälle nur in ihren Gedanken? Die Grenze zwischen Wahrheit und Einbildung sind längst verschwommen.",
+  "slug": "malignant"
+}

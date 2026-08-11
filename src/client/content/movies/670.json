@@ -1,0 +1,25 @@
+{
+  "tmdbID": 670,
+  "rating": {
+    "ch": 700,
+    "rt": 900,
+    "total": 800
+  },
+  "dateSeen": "2023-07-23",
+  "title": {
+    "original": "올드보이",
+    "german": "Oldboy"
+  },
+  "releaseDate": "2003-11-21T00:00:00.000Z",
+  "genres": [
+    "Thriller",
+    "Mystery"
+  ],
+  "posterURL": "/9ta0fcqLOn7qv2tEHyPbAnwpy8T.jpg",
+  "runtime": 120,
+  "budget": 3000000,
+  "revenue": 17500000,
+  "tagline": "15 Jahre eingesperrt. 5 Tage Zeit für Rache. Einer von uns muss sterben.",
+  "overview": "15 Jahre. So lange wird Oh Dae-su, ein ganz durchschnittlicher Geschäftsmann und Familienmensch, in einem Ein-Zimmer-Appartment ohne Fenster eingesperrt, nachdem er von unbekannten Gangstern überwältigt und entführt wurde. 15 Jahre ohne jeden menschlichen Kontakt und in völliger Unklarheit darüber, warum und wie lange er festgehalten wird. Aus den Fernsehnachrichten erfährt er vom Mord an seiner Ehefrau, den die Täter ihm in die Schuhe schieben. Als er ebenso unvermittelt, wie er seiner Freiheit beraubt wurde, wieder in diese entlassen wird, stellt ihm sein Entführer die Aufgabe, den Grund für die unaussprechliche Tortur herauszufinden. Doch Oh Dae-su kennt nur ein Ziel: Er will Rache üben. Rache an denen, die sein Leben zerstört, seine Frau getötet und seinen Seelenfrieden für immer auf dem Gewissen haben.",
+  "slug": ""
+}

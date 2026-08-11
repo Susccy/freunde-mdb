@@ -1,0 +1,25 @@
+{
+  "tmdbID": 298312,
+  "rating": {
+    "ch": 700,
+    "rt": 700,
+    "total": 700
+  },
+  "dateSeen": "2023-09-30",
+  "title": {
+    "original": "The Visit",
+    "german": "The Visit"
+  },
+  "releaseDate": "2015-09-10T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/wwz2J8fJGqQPbzSNd7b6CHHbcCM.jpg",
+  "runtime": 94,
+  "budget": 5000000,
+  "revenue": 98450062,
+  "tagline": "Keiner hat dich so lieb wie Oma und Opa.",
+  "overview": "Als eine junge Mutter von ihren Eltern gefragt wird, ob ihre Enkel eine Woche bei ihnen verbringen können, treten Rebecca und Tyler freudig die Zugfahrt zur abgelegenen Farm ihrer Großeltern an. Dort angekommen, verbringen die Vier zunächst einen harmonischen und spaßigen Tag miteinander. Lediglich die strenge Vorgabe des Großvaters, das Zimmer nach 21.30 Uhr nicht mehr zu verlassen, lässt die beiden Kinder etwas stutzig werden. Doch schon wenig später müssen sie feststellen, dass die Regel nicht ohne Grund existiert.",
+  "slug": "the-visit"
+}

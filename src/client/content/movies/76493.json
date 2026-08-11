@@ -1,0 +1,24 @@
+{
+  "tmdbID": 76493,
+  "rating": {
+    "ch": 800,
+    "rt": 750,
+    "total": 775
+  },
+  "dateSeen": "2025-08-24",
+  "title": {
+    "original": "The Dictator",
+    "german": "Der Diktator"
+  },
+  "releaseDate": "2012-05-15T00:00:00.000Z",
+  "genres": [
+    "Komödie"
+  ],
+  "posterURL": "/drOn9dDn8uIigE5cd18ZDqLWfaJ.jpg",
+  "runtime": 83,
+  "budget": 65000000,
+  "revenue": 179379533,
+  "tagline": "Die Zeiten der Tyrannenherrschaften sind vorbei. Von wegen!",
+  "overview": "Die Zeiten der Tyrannenherrschaften sind vorbei. Von wegen! Der Diktator schickt sich an, diese Herrschaftsform salonfähig zu machen. Der Diktator - das ist General Aladeen. Und in seinem Selbstverständnis von Gewaltmonopolisierung setzt er alles daran, die ungeliebte Herrschaftsform namens Demokratie von seinem Land, dass er so gern unterdrückt, fernzuhalten. Also begibt sich der Diktator auf die Reise in die USA, seine geliebte ‘Republik’ von Wadiya hinter sich lassend, begleitet von einem Tross seiner engsten Vertrauten sowie seiner weiblichen Sicherheitskräfte. In den USA, wo er die westliche Lebenswelt kennen lernen will, macht der Diktator so manch befremdende Erfahrung und hat u.a. Sex mit Megan Fox.",
+  "slug": "the-dictator"
+}

@@ -1,0 +1,25 @@
+{
+  "tmdbID": 1161048,
+  "rating": {
+    "ch": 400,
+    "rt": 700,
+    "total": 550
+  },
+  "dateSeen": "2024-03-12",
+  "title": {
+    "original": "Konferensen",
+    "german": "Konferensen"
+  },
+  "releaseDate": "2023-10-13T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Komödie"
+  ],
+  "posterURL": "/oWA8KhmVkGRhceRaPB1MzgRBuUt.jpg",
+  "runtime": 101,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Konflikte am Arbeitsplatz sind für eine bunte Truppe öffentlicher Angestellter das geringste Problem, denn ein blutrünstiger Killer hat es auf einer Konferenz auf sie abgesehen.",
+  "slug": "konferensen"
+}

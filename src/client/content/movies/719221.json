@@ -1,0 +1,23 @@
+{
+  "tmdbID": 719221,
+  "rating": {
+    "ch": 700,
+    "rt": 600,
+    "total": 650
+  },
+  "title": {
+    "original": "Tarot",
+    "german": "Tarot - Tödliche Prophezeiung"
+  },
+  "releaseDate": "2024-05-01T00:00:00.000Z",
+  "genres": [
+    "Horror"
+  ],
+  "posterURL": "/r6aIRq7kjQBIYvCHFirsq5g3tRU.jpg",
+  "runtime": 92,
+  "budget": 8000000,
+  "revenue": 49256239,
+  "tagline": "Dein Schicksal liegt in den Karten",
+  "overview": "Als eine Gruppe von Freunden leichtsinnig gegen die heilige Regel des Tarot-Lesens verstößt, setzen sie unwissentlich ein unaussprechliches Übel frei, das in den verfluchten Karten gefangen ist. Einer nach dem anderen werden sie mit dem Schicksal konfrontiert und geraten in einen Wettlauf mit dem Tod.",
+  "slug": "tarot"
+}

@@ -1,0 +1,24 @@
+{
+  "tmdbID": 15050,
+  "rating": {
+    "ch": 550,
+    "rt": 600,
+    "total": 575
+  },
+  "title": {
+    "original": "Brainstorm",
+    "german": "Projekt Brainstorm"
+  },
+  "releaseDate": "1983-09-30T00:00:00.000Z",
+  "genres": [
+    "Science Fiction",
+    "Thriller"
+  ],
+  "posterURL": "/wGmgDX6E4wbNNCD2kFFk0dcNw5L.jpg",
+  "runtime": 102,
+  "budget": 18000000,
+  "revenue": 10219460,
+  "tagline": "… Die ultimative Erfahrung",
+  "overview": "Die Wissenschaftler Brace und Reynolds haben eine Methode entwickelt, Erfahrungen und Gefühle von Menschen über die höheren Gehirnfunktionen auf Band aufzuzeichnen. Während Brace damit noch hofft, sich seiner Frau wieder anzunähern, greift schon die Regierung ein und verbannt beide aus dem Projekt, um die militäre Nutzung voranzutreiben. Die Verwendung der Regierung fördert mittels der Apparatur Psychosen. Doch als Reynolds während einer Aufnahmeprozedur an einem Herzinfarkt stirbt, bleibt das wertvollste Band überhaupt zurück: eine Begegnung mit dem Tod selbst …",
+  "slug": "brainstorm"
+}

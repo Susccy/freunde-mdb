@@ -1,0 +1,26 @@
+{
+  "tmdbID": 431075,
+  "rating": {
+    "ch": 500,
+    "rt": 400,
+    "total": 450
+  },
+  "dateSeen": "2023-06-05",
+  "title": {
+    "original": "Polaroid",
+    "german": "Polaroid"
+  },
+  "releaseDate": "2019-01-10T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Mystery",
+    "Thriller"
+  ],
+  "posterURL": "/oa9PtYxkAcW8r3JXjr1kYMwWfbC.jpg",
+  "runtime": 88,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "Du weißt nicht, was du auslöst",
+  "overview": "Die Schülerin Bird Fitcher ist ganz begeistert von ihrem neuen Spielzeug, das sie in einem unscheinbaren Antiquitätenladen aufgetrieben hat: eine alte Sofortbildkamera! Doch schon nach den ersten Schnappschüssen muss sie erkennen, dass der Apparat ein tödliches Geheimnis birgt. Denn wer von ihm fotografiert wird, findet noch in derselben Nacht sein tragisches und gewaltsames Ende.",
+  "slug": "polaroid"
+}

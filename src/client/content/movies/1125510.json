@@ -1,0 +1,26 @@
+{
+  "tmdbID": 1125510,
+  "rating": {
+    "ch": 550,
+    "rt": 600,
+    "total": 575
+  },
+  "dateSeen": "2024-11-26",
+  "title": {
+    "original": "El hoyo 2",
+    "german": "Der Schacht 2"
+  },
+  "releaseDate": "2024-09-27T00:00:00.000Z",
+  "genres": [
+    "Science Fiction",
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/qYLF55ou0hjNldDP09wLigAjDPK.jpg",
+  "runtime": 101,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Als ein geheimnisvoller Anführer sein Gesetz in einem brutalen System aus vertikalen Zellen durchsetzt, kämpft ein Neuzugang gegen die zweifelhafte Verteilungsmethode.",
+  "slug": "el-hoyo-2"
+}

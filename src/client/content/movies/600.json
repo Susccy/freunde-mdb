@@ -1,0 +1,25 @@
+{
+  "tmdbID": 600,
+  "rating": {
+    "ch": 850,
+    "rt": 850,
+    "total": 850
+  },
+  "dateSeen": "2024-03-30",
+  "title": {
+    "original": "Full Metal Jacket",
+    "german": "Full Metal Jacket"
+  },
+  "releaseDate": "1987-06-26T00:00:00.000Z",
+  "genres": [
+    "Drama",
+    "Kriegsfilm"
+  ],
+  "posterURL": "/hi9TcrQZ6HjFoNMhgnxTM7wF4Gy.jpg",
+  "runtime": 116,
+  "budget": 30000000,
+  "revenue": 46357676,
+  "tagline": "Eine epische Geschichte des Vietnam-Krieges",
+  "overview": "South Carolina 1967. Im Camp von Parris Island werden Joker und seine Kameraden auf traditionell-brutale Art zu Marines gedrillt. Der Ausbilder bezahlt seine Profiarbeit mit dem Leben: Leonard, sein Lieblingsopfer, erschießt den Schinder, bevor er sich selbst tötet. An der Dschungelfront in Vietnam, nach der Tet-Offensive, geraten Joker – der inzwischen als Journalist Heldenberichte für die Soldatenzeitung „Stars and Stripes“ schreibt – und seine Kameraden in den Hinterhalt eines Heckenschützen. Die scheinbar einfache Wiedereroberung Huếs gerät zum verlustreichen Desaster. Der Scharfschütze, ein Vietcong-Mädchen, wird von den Soldaten getötet. Und der Wahnsinn geht weiter …",
+  "slug": "full-metal-jacket"
+}

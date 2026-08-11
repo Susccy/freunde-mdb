@@ -1,0 +1,25 @@
+{
+  "tmdbID": 1269208,
+  "rating": {
+    "ch": 600,
+    "rt": 600,
+    "total": 600
+  },
+  "dateSeen": "2026-04-26",
+  "title": {
+    "original": "84제곱미터",
+    "german": "84 m²"
+  },
+  "releaseDate": "2025-07-17T00:00:00.000Z",
+  "genres": [
+    "Thriller",
+    "Drama"
+  ],
+  "posterURL": "/xk9U863Tupw4ODrvgDjeWvi2qgm.jpg",
+  "runtime": 118,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Ein Mann, der all seine Ersparnisse in eine neue Wohnung gesteckt hat, stößt auf beunruhigende Geräusche aus den Wänden, feindselige Nachbarn und grausige Geheimnisse.",
+  "slug": "84"
+}

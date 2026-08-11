@@ -1,0 +1,26 @@
+{
+  "tmdbID": 59115,
+  "rating": {
+    "ch": 500,
+    "rt": 400,
+    "total": 450
+  },
+  "dateSeen": "2025-06-14",
+  "title": {
+    "original": "Quarantine 2: Terminal",
+    "german": "Quarantäne 2 - Terminal"
+  },
+  "releaseDate": "2011-06-16T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Mystery",
+    "Science Fiction"
+  ],
+  "posterURL": "/638nlhshDSoJVNipu8JFvVUIZ1.jpg",
+  "runtime": 83,
+  "budget": 4000000,
+  "revenue": 0,
+  "tagline": "Der Tod ist schon an Bord",
+  "overview": "Auf einem Inlandsflug von der Ost- an die Westküste kommt es zu einem merkwürdigen Zwischenfall. Ein Passagier läuft plötzlich Amok, verletzt Mitreisende wie Flugbegleiter, versucht gar, ins Cockpit einzudringen. Nachdem der Mann mit Mühe überwältigt wurde und die Maschine auf einem Provinzflughafen notlandet, gehen die Probleme erst richtig los. Polizei und Armee umstellen das Flughafengebäude, riegeln es hermetisch ab und töten jeden, der hinaus will. Innen aber nimmt das Unheil seinen ansteckenden Lauf.",
+  "slug": "quarantine-2-terminal"
+}

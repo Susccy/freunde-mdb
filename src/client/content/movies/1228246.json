@@ -1,0 +1,25 @@
+{
+  "tmdbID": 1228246,
+  "rating": {
+    "ch": 650,
+    "rt": 550,
+    "total": 600
+  },
+  "dateSeen": "2025-12-20",
+  "title": {
+    "original": "Five Nights at Freddy's 2",
+    "german": "Five Nights at Freddy's 2"
+  },
+  "releaseDate": "2025-12-03T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/byFxrm3IS9wErulqpqDIsaLaTeG.jpg",
+  "runtime": 104,
+  "budget": 36000000,
+  "revenue": 239568877,
+  "tagline": "Fünf Nächte kann jeder überleben. Doch dieses Mal gibt es keine zweite Chance.",
+  "overview": "Sie sind nicht mehr nur bei Freddy’s … Seit den albtraumhaften Geschehnissen in Freddy’s Pizzeria ist ein Jahr vergangen. Die Geschichten darüber, was sich dort genau abgespielt hat, haben sich längst zu einem lokalen Mythos verklärt – ein Mythos, der so populär ist, dass die Stadt nun sogar das erste „Fazfest“ abhalten will. Der ehemalige Wachmann Mike und die Polizistin Vanessa haben Mikes elfjähriger Schwester Abby die Wahrheit über das Schicksal ihrer animatronischen Freunde bislang verschwiegen. Eines Tages schleicht sich Abby heimlich davon, um sich mit Freddy, Bonnie, Chica und Foxy zu treffen. Sie ahnt nicht, dass sie damit eine Reihe von schrecklichen Ereignissen in Gang setzt, die dunkle Geheimnisse über den Ursprung von Freddy’s Pizzeria enthüllen – und einen Schrecken entfesseln, der seit Jahrzehnten verborgen lag.",
+  "slug": "five-nights-at-freddy-s-2"
+}

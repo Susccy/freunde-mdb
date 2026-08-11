@@ -1,0 +1,26 @@
+{
+  "tmdbID": 614696,
+  "rating": {
+    "ch": 150,
+    "rt": 50,
+    "total": 100
+  },
+  "dateSeen": "2023-11-12",
+  "title": {
+    "original": "#살아있다",
+    "german": "#amLeben"
+  },
+  "releaseDate": "2020-06-24T00:00:00.000Z",
+  "genres": [
+    "Action",
+    "Horror",
+    "Science Fiction"
+  ],
+  "posterURL": "/zb06eXz3Pg5JzytPnMFb3cIDV7B.jpg",
+  "runtime": 98,
+  "budget": 6300000,
+  "revenue": 13416285,
+  "tagline": "",
+  "overview": "In der Stadt wütet ein entsetzliches Virus. Ein Mann sitzt hilflos und allein in seiner von der Außenwelt abgeschnittenen Wohnung und sucht verzweifelt nach einem Ausweg.",
+  "slug": ""
+}

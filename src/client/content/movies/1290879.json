@@ -1,0 +1,26 @@
+{
+  "tmdbID": 1290879,
+  "rating": {
+    "ch": 650,
+    "rt": 500,
+    "total": 575
+  },
+  "dateSeen": "2026-05-23",
+  "title": {
+    "original": "The Woman in Cabin 10",
+    "german": "The Woman in Cabin 10"
+  },
+  "releaseDate": "2025-10-09T00:00:00.000Z",
+  "genres": [
+    "Mystery",
+    "Thriller",
+    "Krimi"
+  ],
+  "posterURL": "/r95Twdq3YUs1UfWTMbHJB2oGjc2.jpg",
+  "runtime": 95,
+  "budget": 0,
+  "revenue": 0,
+  "tagline": "",
+  "overview": "Eine Reporterin beobachtet auf einer Luxusyacht, wie jemand über Bord fällt. Doch als ihr niemand glaubt, riskiert sie ihr Leben, um die Wahrheit aufzudecken.",
+  "slug": "the-woman-in-cabin-10"
+}

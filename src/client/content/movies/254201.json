@@ -1,0 +1,24 @@
+{
+  "tmdbID": 254201,
+  "rating": {
+    "ch": 450,
+    "rt": 700,
+    "total": 575
+  },
+  "dateSeen": "2023-02-20",
+  "title": {
+    "original": "Fasandræberne",
+    "german": "Schändung"
+  },
+  "releaseDate": "2014-10-02T00:00:00.000Z",
+  "genres": [
+    "Thriller"
+  ],
+  "posterURL": "/zPxHdJ47RZZufjSc4Aucqw9pxzI.jpg",
+  "runtime": 120,
+  "budget": 5800000,
+  "revenue": 11500000,
+  "tagline": "Die Fasanentöter",
+  "overview": "Vor 20 Jahren wurden Zwillingsgeschwister brutal umgebracht. Die Ermittlungen gegen die des Doppelmords verdächtigte Schüler-Clique eines Nobelinternats wurden bald eingestellt, die Zeugin, die damals panisch einen telefonischen Notruf absetzte, nie verhört. Da findet Carl Mørck bei einem Selbstmörder eine an ihn adressierte Akte, die neue Details zum Fall enthält. Er prüft die Unterlagen, entdeckt Unstimmigkeiten und beginnt sehr zum Ärger seiner Vorgesetzten mit seinem Kollegen Assad zu recherchieren.",
+  "slug": "fasandr-berne"
+}

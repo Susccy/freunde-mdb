@@ -1,0 +1,26 @@
+{
+  "tmdbID": 1195506,
+  "rating": {
+    "ch": 700,
+    "rt": 750,
+    "total": 725
+  },
+  "dateSeen": "2025-03-29",
+  "title": {
+    "original": "Novocaine",
+    "german": "Mr. No Pain"
+  },
+  "releaseDate": "2025-03-03T00:00:00.000Z",
+  "genres": [
+    "Action",
+    "Komödie",
+    "Thriller"
+  ],
+  "posterURL": "/rJVahovivkYuXciC1sAhocyTWf7.jpg",
+  "runtime": 120,
+  "budget": 18000000,
+  "revenue": 34536061,
+  "tagline": "Kein Schmerz. Kein Scherz.",
+  "overview": "Als seine große Liebe entführt wird, sieht der unscheinbare Nate keine andere Wahl, als sich auf eine gefährliche Rettungsmission zu begeben. Was zunächst nach einer hoffnungslosen Aufgabe aussieht, wird zu seinem Vorteil, als er eine ungewöhnliche Fähigkeit entdeckt: Er kann keinen Schmerz empfinden. Diese besondere Stärke gibt Nate den Mut, sich über alle Hindernisse hinwegzusetzen, um das Leben der Frau, die ihm alles bedeutet, zu retten.",
+  "slug": "novocaine"
+}

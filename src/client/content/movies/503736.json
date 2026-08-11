@@ -1,0 +1,26 @@
+{
+  "tmdbID": 503736,
+  "rating": {
+    "ch": 200,
+    "rt": 500,
+    "total": 350
+  },
+  "dateSeen": "2026-01-04",
+  "title": {
+    "original": "Army of the Dead",
+    "german": "Army of the Dead"
+  },
+  "releaseDate": "2021-05-14T00:00:00.000Z",
+  "genres": [
+    "Krimi",
+    "Action",
+    "Horror"
+  ],
+  "posterURL": "/gCIsRxzcxvmuLYeAvWgoOuSxszF.jpg",
+  "runtime": 138,
+  "budget": 90000000,
+  "revenue": 190700000,
+  "tagline": "Die Überlebenden bekommen alles.",
+  "overview": "Bei einer Zombieplage in Las Vegas stellt sich eine Truppe Söldner der ultimativen Gefahr und wagt sich für den größten Coup aller Zeiten in die Höhle des Löwen.",
+  "slug": "army-of-the-dead"
+}

@@ -1,0 +1,24 @@
+{
+  "tmdbID": 1023922,
+  "rating": {
+    "ch": 700,
+    "rt": 700,
+    "total": 700
+  },
+  "dateSeen": "2026-01-10",
+  "title": {
+    "original": "MaXXXine",
+    "german": "MaXXXine"
+  },
+  "releaseDate": "2024-07-04T00:00:00.000Z",
+  "genres": [
+    "Horror"
+  ],
+  "posterURL": "/lU41c0YzLnMsLqDMoLO8FGIvAoF.jpg",
+  "runtime": 105,
+  "budget": 10000000,
+  "revenue": 22057160,
+  "tagline": "Hollywood ist ein Killer",
+  "overview": "Mitte der 1980er Jahre hat Maxine Minx ein Blutbad in Texas überlebt und kommt nach Los Angeles, um in Hollywood Fuß zu fassen. Hier will sie ihre Karriere vom Porno-Star auf die nächste Ebene einer angesehenen Schauspielerin heben, denn den Traum von einem Filmstar-Dasein hat sie immer noch nicht aufgegeben.",
+  "slug": "ma-xx-xine"
+}

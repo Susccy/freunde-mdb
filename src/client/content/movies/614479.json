@@ -1,0 +1,25 @@
+{
+  "tmdbID": 614479,
+  "rating": {
+    "ch": 700,
+    "rt": 650,
+    "total": 675
+  },
+  "dateSeen": "2023-07-22",
+  "title": {
+    "original": "Insidious: The Red Door",
+    "german": "Insidious: The Red Door"
+  },
+  "releaseDate": "2023-07-05T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "posterURL": "/6Jv15W3aKAPnjlNmFtDGTmBCePP.jpg",
+  "runtime": 107,
+  "budget": 16000000,
+  "revenue": 189086877,
+  "tagline": "Es endet, wo alles begann",
+  "overview": "Zehn Jahre nach den Ereignissen von ,,Insidious: Chapter 2“ geht Josh Lamberts einst von dunklen Mächten heimgesuchter Sohn Dalton aufs College. Doch auch dort ist er vor bösen Geistern nicht sicher - ein Dämon aus der Vergangenheit macht ihm das Leben zur Hölle. Sein Dad sieht keinen anderen Ausweg: Gemeinsam mit seinem Sohn begibt sich Josh erneut in die Zwischenwelt des ,,Ewigreichs“, um dem teuflischen Treiben ein für alle Mal ein Ende zu setzen. Hinter der roten Tür warten neue, noch furchteinflößendere Schrecken auf sie.",
+  "slug": "insidious-the-red-door"
+}

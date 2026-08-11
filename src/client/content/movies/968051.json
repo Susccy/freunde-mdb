@@ -1,0 +1,24 @@
+{
+  "tmdbID": 968051,
+  "rating": {
+    "ch": 450,
+    "rt": 350,
+    "total": 400
+  },
+  "dateSeen": "2025-11-22",
+  "title": {
+    "original": "The Nun II",
+    "german": "The Nun II"
+  },
+  "releaseDate": "2023-09-06T00:00:00.000Z",
+  "genres": [
+    "Horror"
+  ],
+  "posterURL": "/tPynKTxF9fJrY6cdLS243Cv6TxB.jpg",
+  "runtime": 110,
+  "budget": 38500000,
+  "revenue": 269670590,
+  "tagline": "Bekenne deine Sünden.",
+  "overview": "Der Film spielt vier Jahre nach dem Ende von The Nun und folgt Schwester Irene bei ihren Ermittlungen in einem Mordfall in einem Internat in Frankreich. Während ihrer Ermittlungen ist sie erneut gezwungen, sich der dämonischen Kraft Valak, der Nonne, zu stellen.",
+  "slug": "the-nun-ii"
+}

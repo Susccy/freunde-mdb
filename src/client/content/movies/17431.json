@@ -1,0 +1,25 @@
+{
+  "tmdbID": 17431,
+  "rating": {
+    "ch": 550,
+    "rt": 600,
+    "total": 575
+  },
+  "dateSeen": "2023-03-26",
+  "title": {
+    "original": "Moon",
+    "german": "Moon"
+  },
+  "releaseDate": "2009-06-12T00:00:00.000Z",
+  "genres": [
+    "Science Fiction",
+    "Drama"
+  ],
+  "posterURL": "/wVXMA2iqJfcDHpH798pVw5qfcme.jpg",
+  "runtime": 97,
+  "budget": 5000000,
+  "revenue": 9760104,
+  "tagline": "Wer bist du wirklich?",
+  "overview": "Sam Bell ist der Mann im Mond, oder besser: Der einzige Mann auf dem Mond. Nach drei langen Jahren steht er kurz vor der Ablösung; seine monotone Wartungsarbeit hat der Astronaut längst über. Schließlich hat die Lunar Corporation, die die Energieprobleme der Erde mit einem Schlag gelöst hat, noch andere Mitarbeiter – Sam will nun bloß noch zurück zu Frau und Tochter. Doch als er plötzlich auf einen weiteren Mondbewohner stößt, dessen Präsenz sich selbst Bordcomputer Gerty nicht erklären kann, gerät Sam kurz vor seiner Rückkehr zur Erde in große Gefahr...",
+  "slug": "moon"
+}

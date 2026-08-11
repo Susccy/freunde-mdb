@@ -1,0 +1,25 @@
+{
+  "tmdbID": 516632,
+  "rating": {
+    "ch": 400,
+    "rt": 600,
+    "total": 500
+  },
+  "dateSeen": "2026-04-12",
+  "title": {
+    "original": "The Empty Man",
+    "german": "The Empty Man"
+  },
+  "releaseDate": "2020-10-22T00:00:00.000Z",
+  "genres": [
+    "Horror",
+    "Mystery"
+  ],
+  "posterURL": "/kmA4hKEOZFyKFMDk8X5vBSFhHdd.jpg",
+  "runtime": 137,
+  "budget": 16000000,
+  "revenue": 4796993,
+  "tagline": "In der ersten Nacht hörst du ihn. In der zweiten Nacht siehst du ihn. In der dritten Nacht findet er dich.",
+  "overview": "Nachdem eine Gruppe von Teenagern aus einer kleinen Stadt im Mittleren Westen auf mysteriöse Weise verschwindet, glauben die Einheimischen, dass dies das Werk einer urbanen Legende ist, die als \"The Empty Man\" bekannt ist. Als ein pensionierter Polizist ermittelt und versucht, sich einen Reim auf die Geschichten zu machen, entdeckt er ein schreckliches Geheimnis, das sein Leben - und das Leben derer, die ihm nahe stehen - in große Gefahr bringt.",
+  "slug": "the-empty-man"
+}

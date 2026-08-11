@@ -1,0 +1,26 @@
+{
+  "tmdbID": 819,
+  "rating": {
+    "ch": 850,
+    "rt": 750,
+    "total": 800
+  },
+  "dateSeen": "2026-08-06",
+  "title": {
+    "original": "Sleepers",
+    "german": "Sleepers"
+  },
+  "releaseDate": "1996-10-18T00:00:00.000Z",
+  "genres": [
+    "Krimi",
+    "Drama",
+    "Thriller"
+  ],
+  "posterURL": "/yUpiEk2EojS9ZEXb3nIQonQCYYF.jpg",
+  "runtime": 147,
+  "budget": 44000000,
+  "revenue": 165600000,
+  "tagline": "Vier Freunde machen einen Fehler, der ihr Leben für immer verändern wird.",
+  "overview": "Eine Gruppe Jugendlicher wächst in “Hell’s Kitchen”, einem Arbeiterviertel von New York, auf. Ihre einzige Vertrauensperson ist der Pater Bobby, dem sie auch als Messdiener in seiner Kirche helfen. trotzdem besteht ihr Leben zu einem großen Teil aus Kriminalität, wenn auch nur im kleinen Rahmen: sie überbringen Schmiergelder an Polizisten und stehlen hier und da mal eine Kleinigkeit. Dieses schöne Leben verschwindet von einem Tag auf den anderen, weil sie durch einen Unfall einen Passanten schwer verletzen und zu einer Jugendstrafe verurteilt werden. Im Gefängnis werden die Jugendlichen von den Wärtern geschlagen, gefoltert und vergewaltigt, vor allem von Sean Nokes. Nachdem sie ihre Strafe abgesessen haben, ist nichts mehr so wie vorher. 13 Jahre später im Jahre 1981: Thommy und John leben immer noch in der gleichen Gegend. Eines abends entdecken sie ihren ehemaligen Peiniger in einer Bar ihres Viertels und töten ihn...",
+  "slug": "sleepers"
+}

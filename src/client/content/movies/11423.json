@@ -1,0 +1,26 @@
+{
+  "tmdbID": 11423,
+  "rating": {
+    "ch": 250,
+    "rt": 650,
+    "total": 450
+  },
+  "dateSeen": "2023-02-27",
+  "title": {
+    "original": "살인의 추억",
+    "german": "Memories of Murder"
+  },
+  "releaseDate": "2003-04-25T00:00:00.000Z",
+  "genres": [
+    "Krimi",
+    "Drama",
+    "Thriller"
+  ],
+  "posterURL": "/nxJjY6GL5BfMD2YEzOsXaHEzBx5.jpg",
+  "runtime": 127,
+  "budget": 2800000,
+  "revenue": 26000000,
+  "tagline": "Basierend auf einer wahren Begebenheit.",
+  "overview": "In einem Dorf in Südkorea des Jahres 1986 treibt ein Frauenmörder sein Unwesen. Zwei Polizisten konnten zwar durch etliche Foltermethoden Geständnisse aus verschiedenen Verdächtigen herauslocken, aber der Richtige war bisher nicht dabei. Da kommt ein gewitzter Polizist aus Seoul den beiden zur Hilfe.",
+  "slug": ""
+}
